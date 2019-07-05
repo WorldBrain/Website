@@ -1,0 +1,14 @@
+{
+    "sniperoo": {
+        "awscloudformation": {
+            "AuthRoleName": "reactgatsbysnipcart-sniperoo-20190626225439-authRole",
+            "UnauthRoleArn": "arn:aws:iam::690100638201:role/reactgatsbysnipcart-sniperoo-20190626225439-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::690100638201:role/reactgatsbysnipcart-sniperoo-20190626225439-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "reactgatsbysnipcart-sniperoo-20190626225439-deployment",
+            "UnauthRoleName": "reactgatsbysnipcart-sniperoo-20190626225439-unauthRole",
+            "StackName": "reactgatsbysnipcart-sniperoo-20190626225439",
+            "StackId": "arn:aws:cloudformation:us-east-1:690100638201:stack/reactgatsbysnipcart-sniperoo-20190626225439/9debc560-9854-11e9-a38b-12c395c1242e"
+        }
+    }
+}
