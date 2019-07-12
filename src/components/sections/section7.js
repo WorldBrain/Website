@@ -11,8 +11,8 @@ export default () =>
                    <div class="elementor-element elementor-element-1ca0f1f elementor-widget elementor-widget-image" data-id="1ca0f1f" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img width="1270" height="760" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/04/annotate_raw1270x760.gif" class="attachment-full size-full" alt="" />
-                            <noscript><img width="1270" height="760" src="https://worldbrain.io/wp-content/uploads/2019/04/annotate_raw1270x760.gif" class="attachment-full size-full" alt="" /></noscript>
+                            <img width="1270" height="760" src="/images/annotate_raw1270x760.gif" data-lazy-src="/images/annotate_raw1270x760.gif" class="attachment-full size-full" alt="" />
+                            <noscript><img width="1270" height="760" src="/images/annotate_raw1270x760.gif" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>
@@ -25,8 +25,8 @@ export default () =>
                    <div class="elementor-element elementor-element-5766bb9 elementor-widget elementor-widget-image" data-id="5766bb9" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/03/notes_person.svg" class="attachment-full size-full" alt="" />
-                            <noscript><img src="https://worldbrain.io/wp-content/uploads/2019/03/notes_person.svg" class="attachment-full size-full" alt="" /></noscript>
+                            <img src="/images/notes_person.svg" data-lazy-src="/images/notes_person.svg" class="attachment-full size-full" alt="" />
+                            <noscript><img src="/images/notes_person.svg" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>

@@ -36,8 +36,14 @@ class Layout extends Component {
     if (!firebase) return null
 
     return (
+      /*
       <FirebaseContext.Provider value={firebase}>
         {authenticated ? this.props.children : <SignIn />}
+      </FirebaseContext.Provider>
+    */
+
+      <FirebaseContext.Provider value={firebase}>
+        {this.props.children}
       </FirebaseContext.Provider>
     )
   }

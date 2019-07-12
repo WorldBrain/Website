@@ -26,7 +26,7 @@ export default () =>
                                      </div>
                                      <div class="elementor-element elementor-element-a35184e elementor-widget elementor-widget-heading" data-id="a35184e" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                           <h2 class="elementor-heading-title elementor-size-default">Nobody has access to your data unless you share it with someone. Your data is not our business model. <a style={{fontWeight:'700'}} href="https://worldbrain.io/manifesto">Learn More &gt;&gt;</a></h2>
+                                           <h2 class="elementor-heading-title elementor-size-default">Nobody has access to your data unless you share it with someone. Your data is not our business model. <a style={{fontWeight:'700'}} href="/manifesto">Learn More &gt;&gt;</a></h2>
                                         </div>
                                      </div>
                                   </div>

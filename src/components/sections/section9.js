@@ -11,8 +11,8 @@ export default () =>
                    <div class="elementor-element elementor-element-5477522 elementor-widget elementor-widget-image" data-id="5477522" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/03/book_person.svg" class="attachment-full size-full" alt="" />
-                            <noscript><img src="https://worldbrain.io/wp-content/uploads/2019/03/book_person.svg" class="attachment-full size-full" alt="" /></noscript>
+                            <img src="/images/book_person.svg" data-lazy-src="/images/book_person.svg" class="attachment-full size-full" alt="" />
+                            <noscript><img src="/images/book_person.svg" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>
@@ -25,8 +25,8 @@ export default () =>
                    <div class="elementor-element elementor-element-4fb9ee4 elementor-widget elementor-widget-image" data-id="4fb9ee4" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img width="1270" height="760" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/04/organisation.gif" class="attachment-full size-full" alt="" />
-                            <noscript><img width="1270" height="760" src="https://worldbrain.io/wp-content/uploads/2019/04/organisation.gif" class="attachment-full size-full" alt="" /></noscript>
+                            <img width="1270" height="760" src="/images/organisation.gif" data-lazy-src="/images/organisation.gif" class="attachment-full size-full" alt="" />
+                            <noscript><img width="1270" height="760" src="/images/organisation.gif" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>

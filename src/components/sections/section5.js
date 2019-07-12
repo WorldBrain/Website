@@ -11,8 +11,8 @@ const Section = () =>
                    <div class="elementor-element elementor-element-5760fd6 elementor-widget elementor-widget-image" data-id="5760fd6" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/03/search_person.svg" class="attachment-full size-full" alt="" />
-                            <noscript><img src="https://worldbrain.io/wp-content/uploads/2019/03/search_person.svg" class="attachment-full size-full" alt="" /></noscript>
+                            <img src="/images/search_person.svg" data-lazy-src="/images/search_person.svg" class="attachment-full size-full" alt="" />
+                            <noscript><img src="/images/search_person.svg" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>
@@ -25,8 +25,8 @@ const Section = () =>
                    <div class="elementor-element elementor-element-28ea4bb elementor-widget elementor-widget-image" data-id="28ea4bb" data-element_type="widget" data-widget_type="image.default">
                       <div class="elementor-widget-container">
                          <div class="elementor-image">
-                            <img width="1270" height="760" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://worldbrain.io/wp-content/uploads/2019/04/search-1270-760.gif" class="attachment-full size-full" alt="" />
-                            <noscript><img width="1270" height="760" src="https://worldbrain.io/wp-content/uploads/2019/04/search-1270-760.gif" class="attachment-full size-full" alt="" /></noscript>
+                            <img width="1270" height="760" src="/images/search-1270-760.gif" data-lazy-src="/images/search-1270-760.gif" class="attachment-full size-full" alt="" />
+                            <noscript><img width="1270" height="760" src="/images/search-1270-760.gif" class="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>

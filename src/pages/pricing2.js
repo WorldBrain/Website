@@ -21,7 +21,7 @@ const Pricing = () => (
       { 
         type: 'text/javascript',
         id: "snipcart",
-        "data-api-key": "NzFmMzk5OWYtYmVmMC00NmQ2LTliY2YtYTU2MmFkN2U0NDhmNjM2OTcxNjgyOTE1MjIzNDQ4",
+        "data-api-key": process.env.SNIPCART_API_KEY,
         src:"https://cdn.snipcart.com/scripts/2.0/snipcart.js" 
       },
       {
@@ -48,7 +48,7 @@ const Pricing = () => (
        className="snipcart-add-item"
        data-item-name="Monthly Subcription"
        data-item-id="subscription"
-       data-item-url="https://master.d29ju0mnpjd1z1.amplifyapp.com/homepage"
+       data-item-url={process.env.SNIPCART_PRODUCT_URL}
        data-item-price="10.00"
        data-item-payment-interval="Month"
        data-item-payment-interval-count="1"

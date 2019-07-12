@@ -15,7 +15,7 @@ export default () =>
                                <div class="elementor-column-wrap  elementor-element-populated">
                                   <div class="elementor-widget-wrap">
                                      <div class="elementor-element elementor-element-8b54618 elementor-widget elementor-widget-heading" data-id="8b54618" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
+                                        <div class="elementor-widget-container" style={{padding: '0'}}>
                                            <h2 class="elementor-heading-title elementor-size-default"><span style={{fontFamily: 'Inter'}}>📱</span>Use Memex on All Devices</h2>
                                         </div>
                                      </div>
