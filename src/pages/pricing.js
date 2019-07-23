@@ -8,8 +8,6 @@ if (typeof window !== `undefined`) {
   window.$ = window.jQuery = jQuery;
 }
 
-import pricingStyles from "../css/modules/pricing.module.css"
-
 export default class Pricing extends React.Component {
 
 componentDidMount() { 
