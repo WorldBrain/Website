@@ -105,12 +105,13 @@ return(
                                           <button className="elementor-button-link elementor-button elementor-size-sm snipcart-add-item"
                                              data-item-name="Year Subcription"
                                              data-item-id="subscriptionYear"
-                                             data-item-url={process.env.SNIPCART_PRODUCT_URL}
+                                             data-item-url={process.env.GATSBY_SNIPCART_PRODUCT_URL}
                                              data-item-price="12.00"
                                              data-item-payment-interval="Year"
                                              data-item-payment-interval-count="1"
                                              data-item-quantity="1"
                                              data-item-max-quantity="1"
+                                             data-item-shippable={false}
                                           > 
                                             <span className="elementor-button-content-wrapper"> <span className="elementor-button-icon elementor-align-icon-right"> 
                                               <FaAngleRight /> </span> 

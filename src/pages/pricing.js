@@ -34,7 +34,7 @@ return(
     { 
       type: 'text/javascript',
       id: "snipcart",
-      "data-api-key": process.env.SNIPCART_API_KEY,
+      "data-api-key": process.env.GATSBY_SNIPCART_API_KEY,
       src:"https://cdn.snipcart.com/scripts/2.0/snipcart.js" 
     },
     {
@@ -47,7 +47,7 @@ return(
   <body className="page-template-default page page-id-7320 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-7320 th-sticky-header loaded headhesive" />
 </Helmet>
 
-<Header />{console.log(process.env.SNIPCART_PRODUCT_URL)}
+<Header />{console.log(process.env.GATSBY_SNIPCART_PRODUCT_URL)}
 
 <div className="wrap" role="document">
   <div className="content">
@@ -92,7 +92,7 @@ return(
                                                                 <button className="elementor-button-link elementor-button elementor-size-sm snipcart-add-item"
                                                                    data-item-name="Year Subscription"
                                                                    data-item-id="subscriptionyear"
-                                                                   data-item-url="https://upbeat-swirles-e7d26c.netlify.com/pricing"
+                                                                   data-item-url={process.env.GATSBY_SNIPCART_PRODUCT_URL}
                                                                    data-item-price="12"
                                                                    data-item-payment-interval="Year"
                                                                    data-item-payment-interval-count="1"
@@ -110,7 +110,7 @@ return(
                                                                 {/*<button className="snipcart-add-item"
                                                                    data-item-name="Year Subscription"
                                                                    data-item-id="subscription"
-                                                                   data-item-url="https://worldbrain.netlify.com/pricing/"
+                                                                   data-item-url={process.env.GATSBY_SNIPCART_PRODUCT_URL}
                                                                    data-item-price="12"
                                                                    data-item-payment-interval="Year"
                                                                    data-item-payment-interval-count="1"
@@ -268,12 +268,13 @@ return(
                                                                                             <button className="elementor-price-table__button elementor-button elementor-size-md snipcart-add-item"
                                                                                               data-item-name="Monthly Subscription"
                                                                                                data-item-id="subscription"
-                                                                                               data-item-url="https://worldbrain.netlify.com/pricing/"
+                                                                                               data-item-url={process.env.GATSBY_SNIPCART_PRODUCT_URL}
                                                                                                data-item-price="1.5"
                                                                                                data-item-payment-interval="Month"
                                                                                                data-item-payment-interval-count="1"
                                                                                                data-item-quantity="1"
                                                                                                data-item-max-quantity="1"
+                                                                                               data-item-shippable={false}
                                                                                                >
                                                                                                Upgrade
                                                                                             </button>
@@ -390,7 +391,7 @@ return(
                                                                                           <button className="elementor-price-table__button elementor-button elementor-size-md snipcart-add-item"
                                                                                            data-item-name="Year Subscription"
                                                                                            data-item-id="subscriptionyear2"
-                                                                                           data-item-url="https://worldbrain.netlify.com/pricing/"
+                                                                                           data-item-url={process.env.GATSBY_SNIPCART_PRODUCT_URL}
                                                                                            data-item-price="12.00"
                                                                                            data-item-payment-interval="Year"
                                                                                            data-item-payment-interval-count="1"
