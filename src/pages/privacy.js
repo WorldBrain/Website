@@ -11,26 +11,26 @@ export default () =>(
 
 <Header />
 
-<div class="wrap" role="document">
-  <div class="content">
-     <div class="inner-container">
-        <h1 class="entry-title">Privacy Policy</h1>
-        <section class="content-editor">
-           <div data-elementor-type="post" data-elementor-id="4011" class="elementor elementor-4011 elementor-bc-flex-widget" data-elementor-settings="[]">
-              <div class="elementor-inner">
-                 <div class="elementor-section-wrap">
-                    <section class="elementor-element elementor-element-23a8738 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="23a8738" data-element_type="section">
-                       <div class="elementor-container elementor-column-gap-default">
-                          <div class="elementor-row">
-                             <div class="elementor-element elementor-element-e0150c5 elementor-column elementor-col-100 elementor-top-column" data-id="e0150c5" data-element_type="column">
-                                <div class="elementor-column-wrap  elementor-element-populated">
-                                   <div class="elementor-widget-wrap">
-                                      <div class="elementor-element elementor-element-a02269b elementor-widget elementor-widget-toggle" data-id="a02269b" data-element_type="widget" data-widget_type="toggle.default">
-                                         <div class="elementor-widget-container">
-                                            <div class="elementor-toggle" role="tablist">
-                                               <div class="elementor-toggle-item">
-                                                  <div id="elementor-tab-title-1671" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1671"> <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true"> <i class="elementor-toggle-icon-closed fa fa-caret-right"></i> <i class="elementor-toggle-icon-opened fa fa-caret-up"></i> </span> <a href="">General Policy</a></div>
-                                                  <div id="elementor-tab-content-1671" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1671">
+<div className="wrap" role="document">
+  <div className="content">
+     <div className="inner-container">
+        <h1 className="entry-title">Privacy Policy</h1>
+        <section className="content-editor">
+           <div data-elementor-type="post" data-elementor-id="4011" className="elementor elementor-4011 elementor-bc-flex-widget" data-elementor-settings="[]">
+              <div className="elementor-inner">
+                 <div className="elementor-section-wrap">
+                    <section className="elementor-element elementor-element-23a8738 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="23a8738" data-element_type="section">
+                       <div className="elementor-container elementor-column-gap-default">
+                          <div className="elementor-row">
+                             <div className="elementor-element elementor-element-e0150c5 elementor-column elementor-col-100 elementor-top-column" data-id="e0150c5" data-element_type="column">
+                                <div className="elementor-column-wrap  elementor-element-populated">
+                                   <div className="elementor-widget-wrap">
+                                      <div className="elementor-element elementor-element-a02269b elementor-widget elementor-widget-toggle" data-id="a02269b" data-element_type="widget" data-widget_type="toggle.default">
+                                         <div className="elementor-widget-container">
+                                            <div className="elementor-toggle" role="tablist">
+                                               <div className="elementor-toggle-item">
+                                                  <div id="elementor-tab-title-1671" className="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1671"> <span className="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true"> <i className="elementor-toggle-icon-closed fa fa-caret-right"></i> <i className="elementor-toggle-icon-opened fa fa-caret-up"></i> </span> <a href="">General Policy</a></div>
+                                                  <div id="elementor-tab-content-1671" className="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1671">
                                                      <h4>Your personal data is yours</h4>
                                                      <p>All your personal data is stored locally on your computer.<br />Noone will EVER have access to it by default, only if you proactively share it. <br />Later, you will be able to voluntarily share it with friends, followers and other applications. For more information on that you can read our <a style={{backgroundColor: '#fbfcfd'}} href="https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8">vision post.</a></p>
                                                      <p>To provide you the service of creating hyperlinks to highlights with Memex.Link, we need to store the url on which the link has been created and the highlighted text on our servers. <br />We do use Amazon S3 and Lambda functions for that and do not store or process any personally identifiable information about users sending or requesting those links (like IP addresses). We do however collect statistics about usage, in order to optimise our infrastructure and to identify misuse of the service. <br />You can ensure yourself about this fact in our <a href="https://github.com/WorldBrain/direct-linking-backend">GitHub repository</a>. </p>
@@ -52,9 +52,9 @@ export default () =>(
                                                      <p><b>Downloadable Products:</b> (Memex Browser Extensions).</p>
                                                   </div>
                                                </div>
-                                               <div class="elementor-toggle-item">
-                                                  <div id="elementor-tab-title-1672" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-1672"> <span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true"> <i class="elementor-toggle-icon-closed fa fa-caret-right"></i> <i class="elementor-toggle-icon-opened fa fa-caret-up"></i> </span> <a href="">Anonymous Usage Statistics Details</a></div>
-                                                  <div id="elementor-tab-content-1672" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1672">
+                                               <div className="elementor-toggle-item">
+                                                  <div id="elementor-tab-title-1672" className="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-1672"> <span className="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true"> <i className="elementor-toggle-icon-closed fa fa-caret-right"></i> <i className="elementor-toggle-icon-opened fa fa-caret-up"></i> </span> <a href="">Anonymous Usage Statistics Details</a></div>
+                                                  <div id="elementor-tab-content-1672" className="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-1672">
                                                      <p>The only data that is sent to us, are some basic, <span style={{color: '#333333', fontSize: '16px', fontWeight: 'bold', backgroundColor: '#ffffff'}}>anonymised usage statistics </span><span style={{backgroundColor: '#ffffff'}}>about how people use the extension. <br />None of your personally identifiable data like the urls you visit, bookmark, blacklist or terms you search for are sent to us. <br /></span><span style={{color: '#333333', fontSize: '16px', backgroundColor: '#ffffff'}}>You can always opt-out from that and we respect your browser&#8217;s &#8220;do-not-track&#8221; request. </span></p>
                                                      <h3>On the worldbrain.io website</h3>
                                                      <div>
@@ -138,9 +138,9 @@ export default () =>(
               </div>
            </div>
         </section>
-        <div class='container'>
-           <div class="row">
-              <div class="col-md-12"></div>
+        <div className='container'>
+           <div className="row">
+              <div className="col-md-12"></div>
            </div>
         </div>
      </div>

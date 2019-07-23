@@ -7,7 +7,7 @@
 }
 
 .navbar .navbar-toggle{
-	top: 0; /* no top spacing on mobile */
+	top: 6px !important; /* no top spacing on mobile */
 }
 
 .headhesive--clone #logo{

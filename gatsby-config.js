@@ -30,7 +30,7 @@ module.exports = {
         icon: `src/assets/logo.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    //`gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -60,6 +60,6 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },*/
-    'gatsby-plugin-layout'
+    //'gatsby-plugin-layout'
   ],
 }

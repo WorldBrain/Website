@@ -21,13 +21,13 @@ const Index = () =>
 (
 <>
 <Header />
-<div class="wrap" role="document">
-   <div class="content">
-      <div class="inner-container">
-         <section class="content-editor">
-            <div data-elementor-type="post" data-elementor-id="8547" class="elementor elementor-8547" data-elementor-settings="[]">
-               <div class="elementor-inner">
-                  <div class="elementor-section-wrap">
+<div className="wrap" role="document">
+   <div className="content">
+      <div className="inner-container">
+         <section className="content-editor">
+            <div data-elementor-type="post" data-elementor-id="8547" className="elementor elementor-8547" data-elementor-settings="[]">
+               <div className="elementor-inner">
+                  <div className="elementor-section-wrap">
                      <Section1 />
                      <Section2 />
                      <Section3 />
@@ -46,9 +46,9 @@ const Index = () =>
                </div>
             </div>
          </section>
-         <div class='container'>
-            <div class="row">
-               <div class="col-md-12"></div>
+         <div className='container'>
+            <div className="row">
+               <div className="col-md-12"></div>
             </div>
          </div>
       </div>

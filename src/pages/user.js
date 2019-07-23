@@ -55,11 +55,11 @@ export default () => (
                                          <div className="elementor-widget-container">
                                             <h5 className="elementor-heading-title elementor-size-default">
 
-                                              <div class="snipcart-summary">
-                                                <a href="#" class="snipcart-user-profile" style={{textDecoration: 'underline'}}>
+                                              <div className="snipcart-summary">
+                                                <a href="#" className="snipcart-user-profile" style={{textDecoration: 'underline'}}>
                                                   My Orders
                                                 </a> {` | `} 
-                                                <a href="#" class="snipcart-edit-profile" style={{textDecoration: 'underline'}}>
+                                                <a href="#" className="snipcart-edit-profile" style={{textDecoration: 'underline'}}>
                                                   My profile
                                                 </a>
                                               </div> 

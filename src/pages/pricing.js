@@ -8,6 +8,8 @@ if (typeof window !== `undefined`) {
   window.$ = window.jQuery = jQuery;
 }
 
+import pricingStyles from "../css/modules/pricing.module.css"
+
 export default class Pricing extends React.Component {
 
 componentDidMount() { 
@@ -47,7 +49,7 @@ return(
   <body className="page-template-default page page-id-7320 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-7320 th-sticky-header loaded headhesive" />
 </Helmet>
 
-<Header />
+<Header />{console.log(process.env.SNIPCART_PRODUCT_URL)}
 
 <div className="wrap" role="document">
   <div className="content">
@@ -90,20 +92,39 @@ return(
                                                            <div className="elementor-widget-container">
                                                               <div className="elementor-button-wrapper"> 
                                                                 <button className="elementor-button-link elementor-button elementor-size-sm snipcart-add-item"
-                                                                   data-item-name="Year Subcription"
-                                                                   data-item-id="subscriptionYear"
-                                                                   data-item-url={process.env.SNIPCART_PRODUCT_URL}
-                                                                   data-item-price="12.00"
+                                                                   data-item-name="Year Subscription"
+                                                                   data-item-id="subscriptionyear"
+                                                                   data-item-url="https://upbeat-swirles-e7d26c.netlify.com/pricing"
+                                                                   data-item-price="12"
                                                                    data-item-payment-interval="Year"
                                                                    data-item-payment-interval-count="1"
                                                                    data-item-quantity="1"
                                                                    data-item-max-quantity="1"
+                                                                   data-item-shippable={false}
+
                                                                    >
                                                                 
                                                                   <span className="elementor-button-content-wrapper"> 
                                                                     <span className="elementor-button-text">Count me in!</span> 
                                                                   </span> 
                                                                 </button>
+
+                                                                {/*<button className="snipcart-add-item"
+                                                                   data-item-name="Year Subscription"
+                                                                   data-item-id="subscription"
+                                                                   data-item-url="https://worldbrain.netlify.com/pricing/"
+                                                                   data-item-price="12"
+                                                                   data-item-payment-interval="Year"
+                                                                   data-item-payment-interval-count="1"
+                                                                   data-item-quantity="1"
+                                                                   data-item-max-quantity="1"
+                                                                   data-item-shippable={false}
+                                                                   >
+                                                                
+                                                                  
+                                                                    Count me in!
+                                                                  
+                                                                </button>*/}
                                                               </div>
                                                            </div>
                                                         </div>
@@ -247,9 +268,9 @@ return(
                                                                                          </ul>
                                                                                          <div className="elementor-price-table__footer"> 
                                                                                             <button className="elementor-price-table__button elementor-button elementor-size-md snipcart-add-item"
-                                                                                              data-item-name="Monthly Subcription"
-                                                                                               data-item-id="subscriptionMonthly"
-                                                                                               data-item-url={process.env.SNIPCART_PRODUCT_URL}
+                                                                                              data-item-name="Monthly Subscription"
+                                                                                               data-item-id="subscription"
+                                                                                               data-item-url="https://worldbrain.netlify.com/pricing/"
                                                                                                data-item-price="1.5"
                                                                                                data-item-payment-interval="Month"
                                                                                                data-item-payment-interval-count="1"
@@ -369,9 +390,9 @@ return(
                                                                                          </ul>
                                                                                          <div className="elementor-price-table__footer"> 
                                                                                           <button className="elementor-price-table__button elementor-button elementor-size-md snipcart-add-item"
-                                                                                           data-item-name="Year Subcription"
-                                                                                           data-item-id="subscriptionYear"
-                                                                                           data-item-url={process.env.SNIPCART_PRODUCT_URL}
+                                                                                           data-item-name="Year Subscription"
+                                                                                           data-item-id="subscriptionyear2"
+                                                                                           data-item-url="https://worldbrain.netlify.com/pricing/"
                                                                                            data-item-price="12.00"
                                                                                            data-item-payment-interval="Year"
                                                                                            data-item-payment-interval-count="1"

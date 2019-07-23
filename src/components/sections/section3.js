@@ -2,24 +2,24 @@ import React from 'react'
 
 const Section = () =>
 (
-<section class="elementor-element elementor-element-58f019d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="58f019d" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-default">
-       <div class="elementor-row">
-          <div class="elementor-element elementor-element-4a4ff97 elementor-column elementor-col-20 elementor-top-column" data-id="4a4ff97" data-element_type="column">
-             <div class="elementor-column-wrap">
-                <div class="elementor-widget-wrap"></div>
+<section className="elementor-element elementor-element-58f019d elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="58f019d" data-element_type="section">
+    <div className="elementor-container elementor-column-gap-default">
+       <div className="elementor-row">
+          <div className="elementor-element elementor-element-4a4ff97 elementor-column elementor-col-20 elementor-top-column" data-id="4a4ff97" data-element_type="column">
+             <div className="elementor-column-wrap">
+                <div className="elementor-widget-wrap"></div>
              </div>
           </div>
-          <div class="elementor-element elementor-element-b79d9eb elementor-column elementor-col-20 elementor-top-column" data-id="b79d9eb" data-element_type="column">
-             <div class="elementor-column-wrap">
-                <div class="elementor-widget-wrap"></div>
+          <div className="elementor-element elementor-element-b79d9eb elementor-column elementor-col-20 elementor-top-column" data-id="b79d9eb" data-element_type="column">
+             <div className="elementor-column-wrap">
+                <div className="elementor-widget-wrap"></div>
              </div>
           </div>
-          <div class="elementor-element elementor-element-111aadd elementor-column elementor-col-20 elementor-top-column" data-id="111aadd" data-element_type="column">
-             <div class="elementor-column-wrap  elementor-element-populated">
-                <div class="elementor-widget-wrap">
-                   <div class="elementor-element elementor-element-8c5ed25 elementor-widget elementor-widget-html" data-id="8c5ed25" data-element_type="widget" data-widget_type="html.default">
-                      <div class="elementor-widget-container">
+          <div className="elementor-element elementor-element-111aadd elementor-column elementor-col-20 elementor-top-column" data-id="111aadd" data-element_type="column">
+             <div className="elementor-column-wrap  elementor-element-populated">
+                <div className="elementor-widget-wrap">
+                   <div className="elementor-element elementor-element-8c5ed25 elementor-widget elementor-widget-html" data-id="8c5ed25" data-element_type="widget" data-widget_type="html.default">
+                      <div className="elementor-widget-container">
                          <div style={{
                             width: '100px',
                             borderRadius: '30px',
@@ -34,14 +34,14 @@ const Section = () =>
                 </div>
              </div>
           </div>
-          <div class="elementor-element elementor-element-ceb36ea elementor-column elementor-col-20 elementor-top-column" data-id="ceb36ea" data-element_type="column">
-             <div class="elementor-column-wrap">
-                <div class="elementor-widget-wrap"></div>
+          <div className="elementor-element elementor-element-ceb36ea elementor-column elementor-col-20 elementor-top-column" data-id="ceb36ea" data-element_type="column">
+             <div className="elementor-column-wrap">
+                <div className="elementor-widget-wrap"></div>
              </div>
           </div>
-          <div class="elementor-element elementor-element-796a307 elementor-column elementor-col-20 elementor-top-column" data-id="796a307" data-element_type="column">
-             <div class="elementor-column-wrap">
-                <div class="elementor-widget-wrap"></div>
+          <div className="elementor-element elementor-element-796a307 elementor-column elementor-col-20 elementor-top-column" data-id="796a307" data-element_type="column">
+             <div className="elementor-column-wrap">
+                <div className="elementor-widget-wrap"></div>
              </div>
           </div>
        </div>

@@ -53,6 +53,7 @@ export default function HTML(props) {
         }}  
         />*/}
 
+        
         <script
         dangerouslySetInnerHTML={{
             __html: `
@@ -101,7 +102,7 @@ export default function HTML(props) {
         }}  
         />
   
-        <div class='xlwcty_header_passed' style={{display: 'none'}}></div>
+        <div className='xlwcty_header_passed' style={{display: 'none'}}></div>
 
       </body>
     </html>
