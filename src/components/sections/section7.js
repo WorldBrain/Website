@@ -1,4 +1,7 @@
 import React from 'react'
+import annotateGif from '../../img/annotate_raw1270x760.gif'
+//it's recommended to import GIF's directly instead of using Gatsby image: 
+//https://www.gatsbyjs.org/docs/working-with-gifs/
 
 export default () =>
 (
@@ -11,8 +14,8 @@ export default () =>
                    <div className="elementor-element elementor-element-1ca0f1f elementor-widget elementor-widget-image" data-id="1ca0f1f" data-element_type="widget" data-widget_type="image.default">
                       <div className="elementor-widget-container">
                          <div className="elementor-image">
-                            <img width="1270" height="760" src="/images/annotate_raw1270x760.gif" data-lazy-src="/images/annotate_raw1270x760.gif" className="attachment-full size-full" alt="" />
-                            <noscript><img width="1270" height="760" src="/images/annotate_raw1270x760.gif" className="attachment-full size-full" alt="" /></noscript>
+                            <img width="1270" height="760" src={annotateGif} data-lazy-src="/images/annotate_raw1270x760.gif" className="attachment-full size-full" alt="" />
+                            <noscript><img width="1270" height="760" src={annotateGif} className="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>

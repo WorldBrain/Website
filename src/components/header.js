@@ -1,16 +1,19 @@
 import React from 'react'
-
+import SEO from './seo'
 
 const NavBar = () =>
 (
 <>
+<SEO />
 <header className="banner navbar navbar-default navbar-static-top headhesive--clone headhesive--stick" 
 role="banner">
     <div className="container">
         <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
             <div id="logo">
-                <a href="/"> <img className="logo-main logo-reg" src="/images/logo_horizontal_small-164x40.png" height='40' width='164' alt="Memex by worldbrain.io" /> </a>
+                <a href="/"> 
+                    <img className="" src="/images/logo_horizontal_small-164x40.png" alt="Memex by worldbrain.io" /> 
+                </a>
             </div>
         </div>
         <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">

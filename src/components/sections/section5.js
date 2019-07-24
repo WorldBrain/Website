@@ -1,4 +1,7 @@
 import React from 'react'
+import searchGif from '../../img/search-1270-760.gif'
+//it's recommended to import GIF's directly instead of using Gatsby image: 
+//https://www.gatsbyjs.org/docs/working-with-gifs/
 
 const Section = () =>
 (
@@ -25,8 +28,8 @@ const Section = () =>
                    <div className="elementor-element elementor-element-28ea4bb elementor-widget elementor-widget-image" data-id="28ea4bb" data-element_type="widget" data-widget_type="image.default">
                       <div className="elementor-widget-container">
                          <div className="elementor-image">
-                            <img width="1270" height="760" src="/images/search-1270-760.gif" data-lazy-src="/images/search-1270-760.gif" className="attachment-full size-full" alt="" />
-                            <noscript><img width="1270" height="760" src="/images/search-1270-760.gif" className="attachment-full size-full" alt="" /></noscript>
+                            <img width="1270" height="760" src={searchGif} data-lazy-src="/images/search-1270-760.gif" className="attachment-full size-full" alt="" />
+                            <noscript><img width="1270" height="760" src={searchGif} className="attachment-full size-full" alt="" /></noscript>
                          </div>
                       </div>
                    </div>

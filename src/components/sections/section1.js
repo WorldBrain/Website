@@ -49,11 +49,11 @@ return(
                                      <div className="elementor-element elementor-element-face03b elementor-mobile-align-center elementor-widget elementor-widget-popup" data-id="face03b" data-element_type="widget" data-widget_type="popup.default">
                                         <div className="elementor-widget-container">
                                            <div className="elementor-button-wrapper">
-                                              <a className="elementor-button elementor-size-sm modal-popup" data-target="#popup-4832" onClick={this.openModal}> <span className="elementor-button-content-wrapper"> <span className="elementor-button-text">Download for Free</span> </span>
+                                              <a className="elementor-button elementor-size-sm modal-popup" data-target="#popup-4833" onClick={this.openModal}> <span className="elementor-button-content-wrapper"> <span className="elementor-button-text">Download for Free</span> </span>
                                               </a>
                                            </div>
                                            
-                                           <div className="modal fade in" id="popup-4832" tabIndex="-1" role="dialog" aria-labelledby="popup-4832-label" aria-hidden={this.state.showModal ? "false" : "true"} style={{display: this.state.showModal ? "block" : "none"}}>
+                                           <div className="modal fade in" id="popup-4833" tabIndex="-1" role="dialog" aria-labelledby="popup-4833-label" aria-hidden={this.state.showModal ? "false" : "true"} style={{display: this.state.showModal ? "block" : "none"}}>
                                             <div className="modal-content">
 
                                                <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.closeModal}> 
@@ -93,7 +93,7 @@ return(
                                                                                       <div className="elementor-element elementor-element-5027f8e2 elementor-column elementor-col-33 elementor-inner-column" data-id="5027f8e2" data-element_type="column">
                                                                                          <div className="elementor-column-wrap  elementor-element-populated">
                                                                                             <div className="elementor-widget-wrap">
-                                                                                               <div className="elementor-element elementor-element-5c4af95 elementor-widget elementor-widget-image" data-id="5c4af95" data-element_type="widget" id="firefox" data-widget_type="image.default">
+                                                                                               <div className="elementor-element elementor-element-5c4af95 elementor-widget elementor-widget-image" data-id="5c4af96" data-element_type="widget" id="firefox1" data-widget_type="image.default">
                                                                                                   <div className="elementor-widget-container">
                                                                                                      <div className="elementor-image">
                                                                                                         <a href="https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali" data-elementor-open-lightbox="">
@@ -125,7 +125,7 @@ return(
                                                                                       <div className="elementor-element elementor-element-2ec6e6db elementor-column elementor-col-33 elementor-inner-column" data-id="2ec6e6db" data-element_type="column">
                                                                                          <div className="elementor-column-wrap  elementor-element-populated">
                                                                                             <div className="elementor-widget-wrap">
-                                                                                               <div className="elementor-element elementor-element-aeb4cf1 elementor-widget elementor-widget-image" data-id="aeb4cf1" data-element_type="widget" id="firefox" data-widget_type="image.default">
+                                                                                               <div className="elementor-element elementor-element-aeb4cf1 elementor-widget elementor-widget-image" data-id="aeb4cf1" data-element_type="widget" id="vivaldi" data-widget_type="image.default">
                                                                                                   <div className="elementor-widget-container">
                                                                                                      <div className="elementor-image">
                                                                                                         <a href="https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali" data-elementor-open-lightbox="">

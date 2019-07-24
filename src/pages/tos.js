@@ -1,16 +1,13 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import Header from '../components/header'
-import Footer from '../components/footer'
-
+import Layout from "../components/layout"
 
 export default () => (
 <>
+<Layout>
 <Helmet>
     <body className="page-template-default page page-id-4322 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-4322 th-sticky-header loaded headhesive" />
 </Helmet>
-
-<Header />
 
 <div className="wrap" role="document">
   <div className="content">
@@ -135,7 +132,7 @@ export default () => (
   </div>
 </div>
 
-<Footer />
+</ Layout>
 
 </>
 )

@@ -1,10 +1,7 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import Header from '../components/header'
-import Footer from '../components/footer'
-
+import Layout from "../components/layout"
 import { FaAngleRight, FaAngleUp} from 'react-icons/fa';
-
 
 import jQuery from "jquery";
 if (typeof window !== `undefined`) {
@@ -39,11 +36,10 @@ componentDidMount() {
 render(){
 return(
 <>
+<Layout>
 <Helmet>
   <body className="page-template-default page page-id-9415 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-9415 th-sticky-header loaded headhesive" />
 </Helmet>
-
-<Header />
 
 <div className="wrap" role="document">
   <div className="content">
@@ -325,7 +321,7 @@ return(
   </div>
 </div>
 
-<Footer />
+</Layout>
 
 </>
 )}

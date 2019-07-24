@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Layout from "../components/layout"
 import { FaAngleRight, FaRegCircle} from 'react-icons/fa';
 
 export default class Manifesto extends React.Component {
@@ -24,7 +23,7 @@ handleClick (e, divName) {
 render(){
 return(
 <>
-
+<Layout>
 <Helmet
     htmlAttributes={{ lang: 'en' }}
     meta={[{ name: 'description', content: "Memex" }]}
@@ -50,8 +49,6 @@ return(
 <Helmet>
     <body className="page-template-default page page-id-6090 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-6090 th-sticky-header loaded headhesive" />
 </Helmet>
-
-<Header />
 
 <div className="wrap" role="document">
 <div className="content">
@@ -618,7 +615,7 @@ return(
 </div>
 </div>
 
-<Footer />
+</Layout>
 </>
 )}
 }

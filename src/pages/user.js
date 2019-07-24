@@ -1,12 +1,10 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import Header from '../components/header'
-import Footer from '../components/footer'
-
+import Layout from "../components/layout"
 
 export default () => (
 <>
-
+<Layout>
 <Helmet
     htmlAttributes={{ lang: 'en' }}
     meta={[{ name: 'description', content: "Memex" }]}
@@ -20,7 +18,7 @@ export default () => (
     { 
       type: 'text/javascript',
       id: "snipcart",
-      "data-api-key": process.env.SNIPCART_API_KEY,
+      "data-api-key": process.env.GATSBY_SNIPCART_API_KEY,
       src:"https://cdn.snipcart.com/scripts/2.0/snipcart.js" 
     },
     {
@@ -32,8 +30,6 @@ export default () => (
 <Helmet>
     <body className="page-template-default page page-id-4322 woocommerce-js yith-ctpw elementor-default elementor-page elementor-page-4322 th-sticky-header loaded headhesive" />
 </Helmet>
-
-<Header />
 
 <div className="wrap" role="document">
   <div className="content">
@@ -95,7 +91,7 @@ export default () => (
   </div>
 </div>
 
-<Footer />
+</ Layout>
 
 </>
 )

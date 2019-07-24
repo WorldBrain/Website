@@ -2,10 +2,12 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'Memex by worldbrain.io',
-    author: "worldbrain.io",
-    description: "Eliminate time spent bookmarking, retracing steps to recall a webpage, or copy-pasting notes into scattered documents.",
-    siteUrl: 'https://worldbrain.io/',
+    defaultTitle: `Memex by worldbrain.io`,
+    titleTemplate: ``,
+    defaultDescription: `Eliminate time spent bookmarking, retracing steps to recall a webpage, or copy-pasting notes into scattered documents.`,
+    twitterUsername: `@worldbrain`,
+    siteUrl: `https://worldbrain.io/`,
+    defaultImage: `https://worldbrain.io/icons/icon-270x270.png`
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -15,6 +17,10 @@ module.exports = {
         path: `${__dirname}/src/pages`,
         name: 'pages',
       },
+      options: {
+      name: `img`,
+      path: `${__dirname}/src/img/`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -30,7 +36,6 @@ module.exports = {
         icon: `src/assets/logo.png`,
       },
     },
-    //`gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -61,5 +66,6 @@ module.exports = {
       },
     },*/
     //'gatsby-plugin-layout'
+    `gatsby-plugin-offline`
   ],
 }

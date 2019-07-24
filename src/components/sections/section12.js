@@ -87,7 +87,7 @@ return(
                                                                       <div className="elementor-element elementor-element-5027f8e2 elementor-column elementor-col-33 elementor-inner-column" data-id="5027f8e2" data-element_type="column">
                                                                          <div className="elementor-column-wrap  elementor-element-populated">
                                                                             <div className="elementor-widget-wrap">
-                                                                               <div className="elementor-element elementor-element-5c4af95 elementor-widget elementor-widget-image" data-id="5c4af95" data-element_type="widget" id="firefox" data-widget_type="image.default">
+                                                                               <div className="elementor-element elementor-element-5c4af95 elementor-widget elementor-widget-image" data-id="5c4af95" data-element_type="widget" id="chrome" data-widget_type="image.default">
                                                                                   <div className="elementor-widget-container">
                                                                                      <div className="elementor-image">
                                                                                         <a href="https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali" data-elementor-open-lightbox="">
@@ -103,7 +103,7 @@ return(
                                                                       <div className="elementor-element elementor-element-7bd4f25b elementor-column elementor-col-33 elementor-inner-column" data-id="7bd4f25b" data-element_type="column">
                                                                          <div className="elementor-column-wrap  elementor-element-populated">
                                                                             <div className="elementor-widget-wrap">
-                                                                               <div className="elementor-element elementor-element-36b1f984 elementor-widget elementor-widget-image" data-id="36b1f984" data-element_type="widget" id="firefox" data-widget_type="image.default">
+                                                                               <div className="elementor-element elementor-element-36b1f984 elementor-widget elementor-widget-image" data-id="36b1f984" data-element_type="widget" id="firefox2" data-widget_type="image.default">
                                                                                   <div className="elementor-widget-container">
                                                                                      <div className="elementor-image">
                                                                                         <a href="https://addons.mozilla.org/en-US/firefox/addon/worldbrain/" data-elementor-open-lightbox="">
@@ -119,7 +119,7 @@ return(
                                                                       <div className="elementor-element elementor-element-2ec6e6db elementor-column elementor-col-33 elementor-inner-column" data-id="2ec6e6db" data-element_type="column">
                                                                          <div className="elementor-column-wrap  elementor-element-populated">
                                                                             <div className="elementor-widget-wrap">
-                                                                               <div className="elementor-element elementor-element-aeb4cf1 elementor-widget elementor-widget-image" data-id="aeb4cf1" data-element_type="widget" id="firefox" data-widget_type="image.default">
+                                                                               <div className="elementor-element elementor-element-aeb4cf1 elementor-widget elementor-widget-image" data-id="aeb4cf1" data-element_type="widget" id="vivaldi2" data-widget_type="image.default">
                                                                                   <div className="elementor-widget-container">
                                                                                      <div className="elementor-image">
                                                                                         <a href="https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali" data-elementor-open-lightbox="">

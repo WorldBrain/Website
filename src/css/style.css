@@ -87663,7 +87663,7 @@ span.dropcap {
 }
 
 .headhesive--clone #logo img {
-    max-height: 30px!important;
+    /*max-height: 30px!important;*/
     width: auto
 }
 

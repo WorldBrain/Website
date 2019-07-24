@@ -1,15 +1,13 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Layout from "../components/layout"
 
 export default () =>(
 <>
+<Layout>
 <Helmet>
     <body className="" />
 </Helmet>
-
-<Header />
 
 <div className="wrap" role="document">
   <div className="content">
@@ -147,6 +145,6 @@ export default () =>(
   </div>
 </div>
 
-<Footer />
+</ Layout>
 </>
 )
