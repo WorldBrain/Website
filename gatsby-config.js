@@ -59,6 +59,12 @@ module.exports = {
         endpoint: 'https://worldbrain.us9.list-manage.com/subscribe/post?u=de9ed6b3382658d5ebebfe2a4&amp;id=f1b887a214', 
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // any options here
+      },
+    },
     /*{
       resolve: 'gatsby-plugin-typography',
       options: {

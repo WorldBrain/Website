@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  InterFont
+} from "../StyledComponents.jsx";
 
 export default () =>
 (
@@ -16,7 +19,7 @@ export default () =>
                                   <div className="elementor-widget-wrap">
                                      <div className="elementor-element elementor-element-8b54618 elementor-widget elementor-widget-heading" data-id="8b54618" data-element_type="widget" data-widget_type="heading.default">
                                         <div className="elementor-widget-container" style={{padding: '0'}}>
-                                           <h2 className="elementor-heading-title elementor-size-default"><span style={{fontFamily: 'Inter'}}>📱</span>Use Memex on All Devices</h2>
+                                           <h2 className="elementor-heading-title elementor-size-default"><InterFont>📱</InterFont>Use Memex on All Devices</h2>
                                         </div>
                                      </div>
                                   </div>

@@ -397,7 +397,7 @@ legend.frm_hidden {
 }
 
 .with_frm_style .frm_none_container .frm_primary_label,.with_frm_style .frm_pos_none,.frm_pos_none,.frm_none_container .frm_primary_label {
-    display: none
+    /*display: none*/
 }
 
 .with_frm_style .frm_section_heading.frm_hide_section {
@@ -405,7 +405,7 @@ legend.frm_hidden {
 }
 
 .with_frm_style .frm_hidden_container .frm_primary_label,.with_frm_style .frm_pos_hidden,.frm_hidden_container .frm_primary_label {
-    visibility: hidden;
+    /*visibility: hidden;*/
     white-space: nowrap
 }
 
@@ -673,7 +673,7 @@ legend.frm_hidden {
 }
 
 .frm_style_formidable-style.with_frm_style .frm_none_container .frm_primary_label,.frm_style_formidable-style.with_frm_style .frm_pos_none {
-    display: none
+    /*display: none*/
 }
 
 .frm_style_formidable-style.with_frm_style .frm_scale label {

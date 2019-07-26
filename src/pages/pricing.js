@@ -2,6 +2,10 @@ import React from 'react'
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 
+import {
+  PricingMarginTop, PricingContainer, WorkInProgress
+} from "../components/StyledComponents.jsx";
+
 import jQuery from "jquery";
 if (typeof window !== `undefined`) {
   window.$ = window.jQuery = jQuery;
@@ -64,14 +68,13 @@ return(
                                             <div id="crowdfund" className="elementor-menu-anchor"></div>
                                          </div>
                                       </div>
-                                      <div className="elementor-element elementor-element-4b71b73 elementor-widget elementor-widget-heading" 
+                                      <PricingMarginTop className="elementor-element elementor-element-4b71b73 elementor-widget elementor-widget-heading" 
                                         data-id="4b71b73" data-element_type="widget" data-widget_type="heading.default"
-                                        style={{marginTop: '80'}}
                                       >
-                                         <div className="elementor-widget-container" style={{padding: '120px 0 0 0'}}>
+                                         <PricingContainer className="elementor-widget-container">
                                             <h2 className="elementor-heading-title elementor-size-default">We crowdfund 50.000€ to develop Memex' multi-device sync &amp; mobile apps.</h2>
-                                         </div>
-                                      </div>
+                                         </PricingContainer>
+                                      </PricingMarginTop>
                                       <div className="elementor-element elementor-element-30be1ee elementor-widget elementor-widget-heading" data-id="30be1ee" data-element_type="widget" data-widget_type="heading.default">
                                          <div className="elementor-widget-container">
                                             <p className="elementor-heading-title elementor-size-default">Chip in 10€ now and get 40€ in premium credits once they are released.</p>
@@ -253,7 +256,7 @@ return(
                                                                                             <li className="elementor-repeater-item-qpuxonp">
                                                                                                <div className="elementor-price-table__feature-inner">
                                                                                                   <span>
-                                                                                                     <p title="Sync your Memex data across multiple computers &amp; mobile phones. 2 devices included. 1€ per additional device" className="tooltips">Sync between your devices <br /><span style={{backgroundColor:'#5cd9a6', color: 'white', borderRadius: '3px', padding: '0.2em 0.5em', fontSize: '14px', fontWeight: '600', marginLeft: '5px'}}>Work in Progress</span></p>
+                                                                                                     <p title="Sync your Memex data across multiple computers &amp; mobile phones. 2 devices included. 1€ per additional device" className="tooltips">Sync between your devices <br /><WorkInProgress>Work in Progress</WorkInProgress></p>
                                                                                                   </span>
                                                                                                </div>
                                                                                             </li>
@@ -376,7 +379,7 @@ return(
                                                                                             <li className="elementor-repeater-item-qpuxonp">
                                                                                                <div className="elementor-price-table__feature-inner">
                                                                                                   <span>
-                                                                                                     <p title="Sync your Memex data across multiple computers &amp; mobile phones. 2 devices included. 1€ per additional device" className="tooltips">Sync between your devices <br /><span style={{backgroundColor:'#5cd9a6', color: 'white', borderRadius: '3px', padding: '0.2em 0.5em', fontSize: '14px', fontWeight: '600', marginLeft: '5px'}}>Work in Progress</span></p>
+                                                                                                     <p title="Sync your Memex data across multiple computers &amp; mobile phones. 2 devices included. 1€ per additional device" className="tooltips">Sync between your devices <br /><WorkInProgress>Work in Progress</WorkInProgress></p>
                                                                                                   </span>
                                                                                                </div>
                                                                                             </li>

@@ -8,6 +8,10 @@ if (typeof window !== `undefined`) {
   window.$ = window.jQuery = jQuery;
 }
 
+import {
+  SectionTop, Underline
+} from "../components/StyledComponents.jsx";
+
 export default class FAQ extends React.Component {
 
 constructor() {
@@ -48,7 +52,7 @@ return(
            <div data-elementor-type="post" data-elementor-id="9415" className="elementor elementor-9415" data-elementor-settings="[]">
               <div className="elementor-inner">
                  <div className="elementor-section-wrap">
-                    <section style={{marginTop: '130px'}} className="elementor-element elementor-element-54e88730 elementor-section-stretched elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="54e88730" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                    <SectionTop className="elementor-element elementor-element-54e88730 elementor-section-stretched elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="54e88730" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                        <div className="elementor-container elementor-column-gap-no">
                           <div className="elementor-row">
                              <div className="elementor-element elementor-element-7919e4b7 elementor-column elementor-col-100 elementor-top-column" data-id="7919e4b7" data-element_type="column">
@@ -94,7 +98,7 @@ return(
                                                     style={{display: this.state.activeDiv && this.state.activeDiv === '3802' ? 'block' : 'none'}}
                                                   >
                                                      <p>Our business model does not depend on analysing and/or selling your data. <br />We want to be profitable because we deliver real value to you and other users through the premium services we offer now and in the future. </p>
-                                                     <p>To protect your privacy and not lock you into our services for the necessity to grow at all costs, <em>worldbrain.io </em>does not take venture capital funding. Instead we finance the company through a model called <span style={{textDecoration: 'underline'}}><em><a href="https://purpose-economy.org/en/">Steward Ownership</a></em></span>. It is a profit sharing model with capped returns for investors and team members. </p>
+                                                     <p>To protect your privacy and not lock you into our services for the necessity to grow at all costs, <em>worldbrain.io </em>does not take venture capital funding. Instead we finance the company through a model called <Underline><em><a href="https://purpose-economy.org/en/">Steward Ownership</a></em></Underline>. It is a profit sharing model with capped returns for investors and team members. </p>
                                                   </div>
                                                </div>
 
@@ -144,7 +148,7 @@ return(
                              </div>
                           </div>
                        </div>
-                    </section>
+                    </SectionTop>
                     <section className="elementor-element elementor-element-976ce4d elementor-section-stretched elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="976ce4d" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                        <div className="elementor-container elementor-column-gap-no">
                           <div className="elementor-row">

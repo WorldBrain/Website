@@ -2,6 +2,10 @@ import React from 'react'
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 
+import {
+  Underline
+} from "../components/StyledComponents.jsx";
+
 export default () => (
 <>
 <Layout>
@@ -52,11 +56,15 @@ export default () => (
                                             <h5 className="elementor-heading-title elementor-size-default">
 
                                               <div className="snipcart-summary">
-                                                <a href="#" className="snipcart-user-profile" style={{textDecoration: 'underline'}}>
-                                                  My Orders
+                                                <a href="#" className="snipcart-user-profile">
+                                                  <Underline>
+                                                    My Orders
+                                                  </Underline>
                                                 </a> {` | `} 
-                                                <a href="#" className="snipcart-edit-profile" style={{textDecoration: 'underline'}}>
-                                                  My profile
+                                                <a href="#" className="snipcart-edit-profile">
+                                                  <Underline>
+                                                    My profile
+                                                  </Underline>
                                                 </a>
                                               </div> 
                                              
