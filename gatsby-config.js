@@ -62,12 +62,15 @@ module.exports = {
       },
     },
     'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
+
     /*{
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
-    },*/ //'gatsby-plugin-layout'
+    },*/
+    //'gatsby-plugin-layout'
     `gatsby-plugin-offline`,
   ],
 }
