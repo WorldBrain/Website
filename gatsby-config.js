@@ -61,13 +61,13 @@ module.exports = {
           'https://worldbrain.us9.list-manage.com/subscribe/post?u=de9ed6b3382658d5ebebfe2a4&amp;id=f1b887a214',
       },
     },
+    'gatsby-plugin-typescript',
     /*{
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
-    },*/
-    //'gatsby-plugin-layout'
+    },*/ //'gatsby-plugin-layout'
     `gatsby-plugin-offline`,
   ],
 }

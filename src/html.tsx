@@ -15,13 +15,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body
-        {...props.bodyAttributes}
-        className="home page-template-default page page-id-8547 woocommerce-no-js 
-      yith-ctpw elementor-default elementor-page elementor-page-8547 th-sticky-header
-      loaded headhesive
-      "
-      >
+      <body {...props.bodyAttributes}>
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
         </noscript>
