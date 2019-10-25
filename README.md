@@ -1,7 +1,14 @@
 # Website
+
 All data related to our website
 
-# Development practices
+## Developing
+
+1. Check out this repo
+2. Run `yarn`
+3. Run `yarn start`
+
+## Development practices
 
 * All components and code are written in TypeScript
 * All components which have styles are in a folder where the component is index.tsx, and the styles are styles.module.css. Example in `src/components/layout/header`
