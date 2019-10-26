@@ -63,6 +63,7 @@ module.exports = {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-sass',
 
     /*{
       resolve: 'gatsby-plugin-typography',

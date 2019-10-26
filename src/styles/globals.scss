@@ -1,0 +1,50 @@
+@import('./color.scss');
+
+a {
+  color: $link-color;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &.btn-secondary {
+    background: $btn-bg-secondary;
+    color: $link-color;
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+input {
+  &[type=text] {
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}

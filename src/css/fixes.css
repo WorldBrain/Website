@@ -1,0 +1,20 @@
+.elementor-8547 .elementor-element.elementor-element-7a108a6c {
+	margin-top: 80px;
+}
+
+.headhesive--clone .navbar-nav{
+	margin-top: 0px;
+}
+
+.navbar .navbar-toggle{
+	top: 6px !important; /* no top spacing on mobile */
+}
+
+.headhesive--clone #logo{
+	margin-top: none;
+	margin-bottom: none;
+}
+
+.banner.navbar.navbar-default.navbar-static-top.headhesive--clone.headhesive--stick{
+
+}
