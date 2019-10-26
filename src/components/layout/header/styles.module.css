@@ -1,6 +1,0 @@
-@import '../../../styles/globals.module.css';
-
-.container {
-  font-size: 2em;
-  color: $color-primary;
-}
