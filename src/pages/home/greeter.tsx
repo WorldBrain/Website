@@ -1,7 +1,7 @@
 import React from 'react'
 import { UIServices } from '../../types'
 
-export class Greeter extends React.Component<{ services: UIServices<'auth'> }> {
+export default class Greeter extends React.Component<{ services: UIServices<'auth'> }> {
   constructor(props) {
     super(props)
   }
