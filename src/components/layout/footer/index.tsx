@@ -1,10 +1,11 @@
 import React from 'react'
 import SubscribeForm from '../../subscribe-form'
+import { Footer as FooterStyle } from './styles.scss';
 
 export default class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className={FooterStyle}>
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-sm-6">

@@ -1,7 +1,9 @@
 import React from 'react'
 
-import Header from '../header'
-import Footer from '../footer'
+import Header from '../header';
+import Footer from '../footer';
+
+import './styles.scss';
 
 export interface DefaultPageLayoutProps {
   pageTitle: string
@@ -15,7 +17,6 @@ export default class DefaultPageLayout extends React.Component<
     return (
       <React.Fragment>
         <Header />
-        <h1>{this.props.pageTitle}</h1>
         {this.props.children}
         <Footer />
       </React.Fragment>
