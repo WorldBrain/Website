@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default class SubscribeForm extends React.Component {
+  handleSubmit = (e) => {
+    // TODO: Code me pls
+  }
+
   render() {
     return (
       <section className="widget frm_show_form-7 widget_frm_show_form">
@@ -13,7 +17,7 @@ export default class SubscribeForm extends React.Component {
               className="frm_forms  with_frm_style frm_style_formidable-style"
             >
               <form
-                encType="multipart/form-data"
+                onSubmit={this.handleSubmit}
                 method="post"
                 className="frm-show-form Formidable Style"
               >

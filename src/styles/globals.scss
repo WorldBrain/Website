@@ -1,4 +1,17 @@
-@import('./color.scss');
+@import './colors.scss';
+
+h1 {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.3em;
+}
 
 a {
   color: $link-color;
@@ -7,6 +20,7 @@ a {
 
   &:hover {
     color: $link-color-hover;
+    text-decoration: none;
   }
 }
 
@@ -15,17 +29,36 @@ a {
 }
 
 .btn {
-  padding: 12px;
+  padding: 13px;
   border-radius: 3px;
   font-weight: 700;
   font-size: 18px;
   margin: 0;
   box-sizing: border-box;
   display: inline-block;
+  color: $link-color;
+  border: none;
+  line-height: 24px;
+
+  &.btn-large {
+    padding: 18px 36px;
+  }
+
+  &.btn-primary {
+    background: $primary-bg;
+    
+    &:hover {
+      color: $link-color;
+      background: $primary-color;
+    }
+  }
 
   &.btn-secondary {
     background: $btn-bg-secondary;
-    color: $link-color;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &.btn-block {
@@ -42,9 +75,14 @@ input {
     height: 50px;
     width: 100%;
     padding: 0 15px;
+    background-color: transparent;
 
     &::placeholder {
       color: #fff;
     }
   }
+}
+
+ .row-eq-height {
+  display: flex;
 }
