@@ -9,7 +9,11 @@ export default class Greeter extends React.Component<{ services: UIServices<'aut
   render() {
     const { props } = this
 
-    const user = props.services.auth.getAuthenticatedUser()
+    // const user = props.services.auth.getAuthenticatedUser()
+    const user = {
+      displayName: 'Join Doe',
+    };
+    
     return <div>Hello {user ? user.displayName : 'World'}!</div>
   }
 }
