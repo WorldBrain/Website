@@ -1,7 +1,6 @@
 import React from 'react'
 import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
-import { Greeter } from './greeter'
 import Section1 from './section1'
 import Section2 from './section2'
 import Section3 from './section3'
