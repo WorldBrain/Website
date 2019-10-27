@@ -1011,14 +1011,9 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 body{
     background:#fbfcfd;
     font-family:Inter;
-    color:#5c5c5c;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     overflow-x:hidden
-}
-img{
-    max-width:100%;
-    height:auto!important
 }
 .banner{
     z-index:20
@@ -1230,7 +1225,6 @@ li,p{
 p{
     font-family:Inter;
     font-weight:400;
-    color:#5c5c5c;
     -webkit-font-smoothing:antialiased
 }
 a{
@@ -1239,14 +1233,11 @@ a{
     -moz-transition:all .2s ease-in-out;
     transition:all .2s ease-in-out
 }
-a:hover{
-    color:#5c5c5c
-}
+
 h1,h2,h3,h4,h5,h6{
     font-family:Inter;
     font-weight:600;
     line-height:1.1;
-    color:#515151;
     -webkit-font-smoothing:antialiased
 }
 h1{

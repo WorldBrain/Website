@@ -24,6 +24,14 @@ a {
   }
 }
 
+h1,h2,h3,h4,h5 {
+  color: $text-color-primary;
+}
+
+body {
+  color: #8c8c8c;
+}
+
 .form-field {
   margin-bottom: 15px;
 }
@@ -83,6 +91,6 @@ input {
   }
 }
 
- .row-eq-height {
+.row-eq-height {
   display: flex;
 }

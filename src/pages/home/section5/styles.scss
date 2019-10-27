@@ -1,4 +1,6 @@
-:local(.Section3) {
+@import '../../../styles/colors.scss';
+
+:local(.Section5) {
   background-color: #f6f6f8;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -8,6 +10,24 @@
     text-align: center;
     font-size: 40px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 18px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    line-height: 30px;
+
+    margin-left: 20px;
+
+    &.tag-primary {
+      color: #fff;
+      background-color: $primary-color;
+    }
   }
 
   .emoji {

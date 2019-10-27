@@ -12,7 +12,7 @@ export default class Section6 extends React.Component {
           </h1>
           <h2>Import your existing bookmarks & web history from Pocket, Diigo, Raindrop.io and many more.</h2>
 
-          <a href="#" className="btn btn-primary">
+          <a href="#" className="btn btn-primary btn-large">
             Download for Free
           </a>
         </div>

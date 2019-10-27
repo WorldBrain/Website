@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Section3 as SectionStyle } from './styles.scss';
+import { Section5 as SectionStyle } from './styles.scss';
 
-export default class Section3 extends React.Component {
+export default class Section5 extends React.Component {
   render() {
     return (
       <section className={SectionStyle}>
@@ -13,7 +13,7 @@ export default class Section3 extends React.Component {
                 <img className="emoji" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f4f1.svg" />
                 {" "}Use Memex on All Devices
 
-                <a href="#" className="btn btn-primary">COMING SOON</a>
+                <span className="tag tag-primary">COMING SOON</span>
               </h1>
 
               <h3>
