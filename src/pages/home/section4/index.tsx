@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Section5 as SectionStyle } from './styles.scss';
+import { Section4 as SectionStyle } from './styles.scss';
 
-export default class Section5 extends React.Component {
+export default class Section4 extends React.Component {
   render() {
     return (
       <section className={SectionStyle}>

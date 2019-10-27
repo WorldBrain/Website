@@ -5,7 +5,7 @@
 
   h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
   }
 
@@ -46,22 +46,28 @@
     }
   }
 
-  .organize-discoveries {
-    text-align: right;
+  .privacy-competencies {
+    max-width: 1000px;
+    margin: 20px auto;
 
-    h1 {
-      text-align: right;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 30px;
+    a {
+      &:hover {
+        color: #646462;
+      }
     }
 
     h3 {
-      font-size: 20px;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 1.5em;
-      color: #8c8c8c;
+      font-size: 25px;
+    }
+
+    .row {
+      >div {
+        padding: 30px;
+      }
+    }
+
+    p {
+      font-size: 18px;
     }
   }
 }
