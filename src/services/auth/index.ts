@@ -27,7 +27,8 @@ export class AuthService {
   public user = null;
 
   constructor() {
-    if (!firebase.apps.length) {
+    // Check on static build
+    if (typeof window !== 'undefined' && !firebase.apps.length) {
       firebase.initializeApp(
         process.env.NODE_ENV === 'production'
           ? firebaseConfig.production
@@ -36,19 +37,9 @@ export class AuthService {
 
       this.firebase = firebase;
     }
-
-    this.firebase.auth().onAuthStateChanged((user) => {
-      console.log('Auth state change');
-      if (user) {
-        this.user = user;
-      }
-      console.log(this.user);
-    });
-
-    window.firebase = firebase;
   }
 
   currentUser(): AuthenticatedUser | null {
-    return this.user;
+    return this.firebase.currentUser;
   }
 }
