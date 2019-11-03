@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { SubscribeForm as SubscribeFormStyle } from './styles.scss';
+
 export default class SubscribeForm extends React.Component {
   handleSubmit = (e) => {
     // TODO: Code me pls
@@ -7,7 +9,7 @@ export default class SubscribeForm extends React.Component {
 
   render() {
     return (
-      <section className="widget frm_show_form-7 widget_frm_show_form">
+      <section className={SubscribeFormStyle}>
         <div className="widget-inner">
           <div className="frm_form_widget">
             <h3 className="widget-title">

@@ -42,7 +42,7 @@
     align-items: flex-end;
     
     img {
-      height: 300px;
+      height: 250px;
       width: auto;
     }
   }
@@ -63,6 +63,11 @@
       font-style: normal;
       line-height: 1.5em;
       color: #8c8c8c;
+    }
+
+    .section-img {
+      margin-top: 20px;
+      width: 100%;
     }
   }
 }

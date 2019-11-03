@@ -62,7 +62,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-typescript',
-    'gatsby-plugin-postcss',
+    // 'gatsby-plugin-postcss',
     'gatsby-plugin-sass',
 
     /*{
