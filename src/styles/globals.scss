@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 h1 {
   font-size: 45px;
@@ -19,7 +20,7 @@ a {
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: $link-color-hover;
+    color: lighten($link-color, 20%);
     text-decoration: none;
   }
 }
@@ -76,21 +77,29 @@ body {
 }
 
 input {
-  &[type=text] {
+  &[type=text], &[type=password] {
     border-radius: 3px;
-    color: #fff;
-    border: 1px solid #fff;
+    color: $text-color-primary;
+    border: 1px solid $text-color-primary;
     height: 50px;
     width: 100%;
     padding: 0 15px;
     background-color: transparent;
 
     &::placeholder {
-      color: #fff;
+      color: lighten($text-color-primary, 40%);
     }
   }
 }
 
 .row-eq-height {
   display: flex;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-container {
+  margin: 0 auto;
 }

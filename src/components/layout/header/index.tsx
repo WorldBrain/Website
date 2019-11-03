@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby"
 
 import { Header as HeaderClass } from './styles.scss';
 
@@ -10,9 +11,9 @@ export default class Header extends React.Component {
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
             <div id="logo">
-              <a href="/">
+              <Link to="/">
                 <img width="164" height="40" src="/images/logo_horizontal_small-164x40.png" alt="Memex by worldbrain.io" />
-              </a>
+              </Link>
             </div>
           </div>
           <nav className="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -27,8 +28,8 @@ export default class Header extends React.Component {
                 </ul>
               </li>
               <li className="menu-github"><a href="https://github.com/WorldBrain">GitHub</a></li>
-              <li className="menu-upgrade"><a href="/pricing">Upgrade</a></li>
-              <li className="menu-login"><a href="/user">Login</a></li>
+              <li className="menu-upgrade"><Link to="/pricing">Upgrade</Link></li>
+              <li className="menu-login"><Link to="/login">Login</Link></li>
             </ul>
           </nav>
         </div>
