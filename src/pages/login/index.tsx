@@ -1,7 +1,8 @@
 import React from 'react'
 import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
-import LoginForm from '../../components/login-form'
+import SignInForm from '../../components/sign-in-form'
+import SignUpForm from '../../components/sign-up-form';
 
 export default class LoginPage extends Page {
   render() {
@@ -9,7 +10,14 @@ export default class LoginPage extends Page {
 
     return (
       <DefaultPageLayout pageTitle="Login">
-        <LoginForm authService={auth} currentUser={auth.user} />
+        <div className="row">
+          <div className="col-sm-6">
+            <SignInForm authService={auth} currentUser={auth.user} />
+          </div>
+          <div className="col-sm-6">
+            <SignUpForm authService={auth} currentUser={auth.user} />
+          </div>
+        </div>
       </DefaultPageLayout>
     )
   }

@@ -25,8 +25,10 @@ class FirebaseProvider extends Page {
   }
 
   render() {
+    const { auth } = this.getServices();
+
     const childrenWithProps = React.Children.map(this.props.children, child =>
-      React.cloneElement(child, { user: this.state.user })
+      React.cloneElement(child, { auth, user: this.state.user })
     );
     return childrenWithProps;
   }

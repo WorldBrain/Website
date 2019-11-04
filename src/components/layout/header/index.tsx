@@ -4,6 +4,13 @@ import { Link } from 'gatsby';
 import { Header as HeaderClass } from './styles.scss';
 
 export default class Header extends React.Component {
+  handleLogOut = (e: Event) => {
+    e.preventDefault();
+    const { auth } = this.props;
+
+    auth.logOut();
+  }
+
   render() {
     const { user } = this.props;
     console.log(this.props);
@@ -31,7 +38,17 @@ export default class Header extends React.Component {
               </li>
               <li className="menu-github"><a href="https://github.com/WorldBrain">GitHub</a></li>
               <li className="menu-upgrade"><Link to="/pricing">Upgrade</Link></li>
-              {user ? <li className="menu-login"><Link to="/account">Account</Link></li> : <li className="menu-login"><Link to="/login">Login</Link></li>}
+              {user ? (
+                <li className="dropdown menu-about"><a className="dropdown-toggle">Account</a>
+                  <ul className="dropdown-menu">
+                    <li><Link to="/profile">Account Data</Link></li>
+                    <li><Link to="/subscription">Subscriptions</Link></li>
+                    <li><a onClick={this.handleLogOut} href="#">Log out</a></li>
+                  </ul>
+                </li>
+              )
+                :
+                <li className="menu-login"><Link to="/login">Sign In / Sign Up</Link></li>}
             </ul>
           </nav>
         </div>

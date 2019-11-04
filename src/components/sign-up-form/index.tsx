@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { navigate } from 'gatsby';
 
-import { LoginForm as LoginFormStyle } from './styles.scss';
+import { SignUpForm as SignUpStyle } from './styles.scss';
 
-export default class LoginForm extends Component {
+export default class SignUpForm extends Component {
   constructor(props) {
     super(props);
 
@@ -29,29 +29,21 @@ export default class LoginForm extends Component {
     });
   }
 
-  handleOnLogin = (e) => {
+  handleSignUp = (e) => {
     const { firebase, email, password } = this.state;
     if (firebase) {
-      firebase.auth().signInWithEmailAndPassword(email, password)
+      firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(data => {
           // TODO: Shoud navigate back to last state
           // Eg: Shoping cart
+          console.log(data);
           navigate('/');
 
         })
         .catch(error => {
-          console.log(error);
-          switch (error.code) {
-            case 'auth/user-not-found':
-              this.setState({
-                error: 'Not found any credential. Did you sign up?'
-              });
-              break;
-            default:
-              this.setState({
-                error: error.message
-              });
-          }
+          this.setState({
+            error: error.message
+          });
         })
     }
   }
@@ -81,8 +73,8 @@ export default class LoginForm extends Component {
     }
 
     return (
-      <div className={LoginFormStyle}>
-        <h3 className="center">Login</h3>
+      <div className={SignUpStyle}>
+        <h3 className="center">Sign Up</h3>
         <div
           className="form-field"
         >
@@ -107,16 +99,12 @@ export default class LoginForm extends Component {
           />
         </div>
 
-        <p>
-          <a href="#">I forgot my password</a>
-        </p>
-
         {error && <p className="error">
           <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
         </p>}
 
         <div className="center">
-          <input type="submit" onClick={this.handleOnLogin} className="btn btn-primary btn-large" value="Next" />
+          <input type="submit" onClick={this.handleSignUp} className="btn btn-primary btn-large" value="Next" />
         </div>
       </div>
     )

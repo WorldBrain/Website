@@ -42,4 +42,8 @@ export class AuthService {
   currentUser(): AuthenticatedUser | null {
     return this.firebase.currentUser;
   }
+
+  logOut(): null {
+    return this.firebase.auth().signOut();
+  }
 }
