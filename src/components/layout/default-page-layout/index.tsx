@@ -4,6 +4,7 @@ import Header from '../header';
 import Footer from '../footer';
 
 import './styles.scss';
+import FirebaseProvider from '../../../store';
 
 export interface DefaultPageLayoutProps {
   pageTitle: string
@@ -12,14 +13,14 @@ export interface DefaultPageLayoutProps {
 
 export default class DefaultPageLayout extends React.Component<
   DefaultPageLayoutProps
-> {
+  > {
   render() {
     return (
-      <React.Fragment>
+      <FirebaseProvider>
         <Header />
         {this.props.children}
         <Footer />
-      </React.Fragment>
+      </FirebaseProvider>
     )
   }
 }

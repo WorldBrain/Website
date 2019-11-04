@@ -1,10 +1,12 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 
 import { Header as HeaderClass } from './styles.scss';
 
 export default class Header extends React.Component {
   render() {
+    const { user } = this.props;
+    console.log(this.props);
     return (
       <header className={HeaderClass} role="banner">
         <div className="container">
@@ -29,7 +31,7 @@ export default class Header extends React.Component {
               </li>
               <li className="menu-github"><a href="https://github.com/WorldBrain">GitHub</a></li>
               <li className="menu-upgrade"><Link to="/pricing">Upgrade</Link></li>
-              <li className="menu-login"><Link to="/login">Login</Link></li>
+              {user ? <li className="menu-login"><Link to="/account">Account</Link></li> : <li className="menu-login"><Link to="/login">Login</Link></li>}
             </ul>
           </nav>
         </div>
