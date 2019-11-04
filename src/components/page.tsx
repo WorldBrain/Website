@@ -24,7 +24,7 @@ export interface PageProps {
 export default class Page<State extends {} = {}> extends React.Component<
   PageProps,
   State
-> {
+  > {
   protected getServices() {
     return this.props.services || dependenciesSingleton().services
   }
