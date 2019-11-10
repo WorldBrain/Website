@@ -36,7 +36,6 @@ export default class SignUpForm extends Component {
         .then(data => {
           // TODO: Shoud navigate back to last state
           // Eg: Shoping cart
-          console.log(data);
           navigate('/');
 
         })
@@ -48,20 +47,9 @@ export default class SignUpForm extends Component {
     }
   }
 
-  handleSignInSuccess = (e) => {
-    console.log('Sign in success');
-    console.log(e);
-  }
-
-  handleSignInFailure = (e) => {
-    console.log('Sign in failure');
-    console.log(e);
-  }
-
   render() {
     const { authService, currentUser } = this.props;
     const { firebase, error, email, password } = this.state;
-    console.log(currentUser);
     if (currentUser) {
       return (
         <p>Hello {currentUser.displayName}</p>
