@@ -3,6 +3,7 @@ import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
 import ScriptLoader from 'react-script-loader-hoc';
 import styles from './styles.scss';
+import { navigate } from 'gatsby';
 
 const chargeBeeScriptSource = 'https://js.chargebee.com/v2/chargebee.js'
 
@@ -35,7 +36,6 @@ class PricingPage extends Page {
     this._initChargebee();
   }
 
-
   handleOnClickBuy = (planId) => {
     const { payment } = this.getServices();
 
@@ -47,6 +47,11 @@ class PricingPage extends Page {
       this.chargebeeInstance.openCheckout({
         hostedPage: () => checkoutLink,
         success: id => alert(`Charged ${id}, redirect me to success page`),
+        error: (error) => {
+          console.log(error);
+          alert('You need login or Internal Error');
+          navigate('/login');
+        },
         close: () => console.log('closed'),
       })
 
