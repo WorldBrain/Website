@@ -56,20 +56,10 @@ export default class SignInForm extends Component {
     }
   }
 
-  handleSignInSuccess = (e) => {
-    console.log('Sign in success');
-    console.log(e);
-  }
-
-  handleSignInFailure = (e) => {
-    console.log('Sign in failure');
-    console.log(e);
-  }
-
   render() {
     const { authService, currentUser } = this.props;
     const { firebase, error, email, password } = this.state;
-    console.log(currentUser);
+
     if (currentUser) {
       return (
         <p>Hello {currentUser.displayName}</p>
