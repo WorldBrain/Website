@@ -40,6 +40,7 @@
     "react-firebaseui": "^4.0.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.7.0",
+    "react-script-loader-hoc": "^1.2.2",
     "react-typography": "^0.16.13",
     "styled-components": "^4.3.2",
     "tslib": "^1.10.0",
