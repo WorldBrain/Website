@@ -1,0 +1,17 @@
+:local(.pricingPage) {
+    width: 70%;
+    margin: 30px auto;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    button + button {
+        margin-left: 20px;
+    }
+
+    .upgrade-btn {
+        text-align: center;
+    }
+}
