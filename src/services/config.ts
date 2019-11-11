@@ -20,9 +20,11 @@ export const firebaseConfig = {
 
 export const chargebeeConfig = {
   staging: {
-    site: 'worldbrain-test'
+    site: 'worldbrain-test',
+    domain: 'memex-gatsby.netlify.com'
   },
   production: {
-    site: 'worldbrain'
+    site: 'worldbrain',
+    domain: 'worldbrain.io'
   }
 }
