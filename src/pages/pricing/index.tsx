@@ -25,7 +25,7 @@ class PricingPage extends Page {
 
     this.chargebeeInstance = window['Chargebee'].init({
       site: payment.chargebeeConfig.site,
-      domain: payment.chargebeeConfig.domain
+      // domain: payment.chargebeeConfig.domain
     })
   }
 
