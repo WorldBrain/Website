@@ -23,8 +23,9 @@ export const chargebeeConfig = {
     site: 'worldbrain-test',
     domain: 'memex-gatsby.netlify.com'
   },
+  // TODO: Add production keys
   production: {
-    site: 'worldbrain',
-    domain: 'worldbrain.io'
+    site: 'worldbrain-test',
+    domain: 'memex-gatsby.netlify.com'
   }
 }
