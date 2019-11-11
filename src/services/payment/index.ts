@@ -5,7 +5,7 @@ import { CheckoutLinkResult } from './types';
 
 export class PaymentService {
   public firebase = null;
-  public siteUrl = process.env.NODE_ENV === 'production' ? chargebeeConfig.production : chargebeeConfig.staging
+  public chargebeeConfig = process.env.NODE_ENV === 'production' ? chargebeeConfig.production : chargebeeConfig.staging
 
   constructor() {
     // Check on static build
