@@ -25,6 +25,7 @@ class PricingPage extends Page {
 
     this.chargebeeInstance = window['Chargebee'].init({
       site: payment.siteUrl,
+      domain: 'memex-gatsby.netlify.com'
     })
   }
 
