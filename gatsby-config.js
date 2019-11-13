@@ -11,6 +11,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +21,23 @@ module.exports = {
       options: {
         name: `img`,
         path: `${__dirname}/src/img/`,
+      },
+      options: {
+        name: `data`,
+        path: `./common/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `common`,
+        path: `./common/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        minify: false, // Breaks styles if not set to false
       },
     },
     `gatsby-transformer-sharp`,
