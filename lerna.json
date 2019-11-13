@@ -1,0 +1,9 @@
+{
+  "packages": [
+    ".",
+    "common",
+    "reusecore"
+  ],
+  "version": "independent",
+  "useWorkspaces": false
+}
