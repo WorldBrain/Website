@@ -6,6 +6,12 @@
 	"bugs": {
 		"url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
 	},
+	"private": true,
+	"workspaces": [
+		".",
+		"common",
+		"reusecore"
+	],
 	"dependencies": {
 		"@redq/reuse-modal": "^1.2.4",
 		"babel-plugin-styled-components": "^1.10.6",

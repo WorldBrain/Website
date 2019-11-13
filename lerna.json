@@ -4,6 +4,7 @@
     "common",
     "reusecore"
   ],
+  "npmClient": "yarn",
   "version": "independent",
-  "useWorkspaces": false
+  "useWorkspaces": true
 }
