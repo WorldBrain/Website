@@ -1,5 +1,5 @@
-import { appTheme } from './app';
+import { saasTheme } from './saas';
 
 export const theme = {
-  appTheme
+  saasTheme
 };
