@@ -49,100 +49,50 @@
   ],
   "Footer_Data": [
     {
-      "title": "About Us",
+      "title": "About",
       "menuItems": [
         {
           "url": "#",
-          "text": "Support Center"
+          "text": "Vision"
         },
         {
           "url": "#",
-          "text": "Customer Support"
+          "text": "Roadmap"
         },
         {
           "url": "#",
-          "text": "About Us"
+          "text": "Blog"
         },
         {
           "url": "#",
-          "text": "Copyright"
+          "text": "Community"
         },
         {
           "url": "#",
-          "text": "Popular Campaign"
+          "text": "GitHub"
         }
       ]
     },
     {
-      "title": "Our Information",
+      "title": "Legal",
       "menuItems": [
-        {
-          "url": "#",
-          "text": "Return Policy"
-        },
         {
           "url": "#",
           "text": "Privacy Policy"
         },
         {
           "url": "#",
-          "text": "Terms & Conditions"
+          "text": "Terms of Service"
         },
         {
           "url": "#",
-          "text": "Site Map"
-        },
-        {
-          "url": "#",
-          "text": "Store Hours"
+          "text": "Imprint"
         }
       ]
     },
     {
-      "title": "My Account",
-      "menuItems": [
-        {
-          "url": "#",
-          "text": "Press inquiries"
-        },
-        {
-          "url": "#",
-          "text": "Social media directories"
-        },
-        {
-          "url": "#",
-          "text": "Images & B-roll"
-        },
-        {
-          "url": "#",
-          "text": "Permissions"
-        },
-        {
-          "url": "#",
-          "text": "Speaker requests"
-        }
-      ]
-    },
-    {
-      "title": "Policy",
-      "menuItems": [
-        {
-          "url": "#",
-          "text": "Application security"
-        },
-        {
-          "url": "#",
-          "text": "Software principles"
-        },
-        {
-          "url": "#",
-          "text": "Unwanted software policy"
-        },
-        {
-          "url": "#",
-          "text": "Responsible supply chain"
-        }
-      ]
+      "title": "Stay up to date!",
+      "menuItems": []
     }
   ],
   "Service": [
