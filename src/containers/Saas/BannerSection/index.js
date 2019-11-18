@@ -16,25 +16,23 @@ import BannerWrapper, {
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
 import BannerObject2 from '../../../img/main_screen_new.png';
 
+import ChromeIcon from '../../../img/logo-chrome.svg';
+import FirefoxIcon from '../../../img/logo-firefox.svg';
+import BraveIcon from '../../../img/logo-brave.svg';
+
 const BannerSection = ({
   row,
   col,
   title,
   btnStyle,
   description,
-  discountText,
-  discountAmount,
-  outlineBtnStyle,
 }) => {
   const ButtonGroup = () => (
     <Fragment>
       <Button title="Download for free" {...btnStyle} />
-      <Button
-        className="outlined"
-        title="EXPLORE MORE"
-        variant="outlined"
-        {...outlineBtnStyle}
-      />
+      <Image src={ChromeIcon} className="browser-icon" />
+      <Image src={FirefoxIcon} className="browser-icon" />
+      <Image src={BraveIcon} className="browser-icon" />
     </Fragment>
   );
   return (
@@ -64,7 +62,7 @@ const BannerSection = ({
       </Container>
       <BannerObject>
         <div className="objectWrapper">
-          <Image src={BannerObject1} alt="BannerObject1" />
+          <Image src={BannerObject1} className="banner-bg" />
           <div className="dashboardWrapper">
             <Image src={BannerObject2} alt="BannerObject2" />
           </div>
@@ -79,7 +77,7 @@ BannerSection.propTypes = {
   btnStyle: PropTypes.object,
   description: PropTypes.object,
   contentStyle: PropTypes.object,
-  discountText: PropTypes.object,
+  contentStyle: PropTypes.object,
   discountAmount: PropTypes.object,
   outlineBtnStyle: PropTypes.object,
 };
@@ -95,25 +93,27 @@ BannerSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: [1, '70%', '50%', '45%'],
+    width: [1, '70%', '60%', '55%'],
   },
   title: {
-    fontSize: ['22px', '34px', '30px', '55px'],
-    fontWeight: '700',
+    fontSize: ['22px', '34px', '30px', '40px'],
+    fontWeight: '600',
     color: '#0f2137',
     letterSpacing: '-0.025em',
     mb: ['20px', '25px'],
-    lineHeight: '1.5',
+    lineHeight: '1.4',
+    width: '80%',
   },
   description: {
     fontSize: '16px',
     color: '#343d48cc',
     lineHeight: '1.75',
     mb: '0',
+    width: '80%',
   },
   btnStyle: {
     minWidth: ['120px', '120px', '120px', '156px'],
-    fontSize: ['13px', '14px'],
+    fontSize: ['28px', '28px'],
     fontWeight: '500',
     colors: 'primaryWithBg',
   },

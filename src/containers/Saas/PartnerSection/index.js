@@ -35,11 +35,6 @@ const PartnerSection = ({
               {...description}
               content="Import your existing bookmarks & web history from Pocket, Diigo, Raindrop.io and many more."
             />
-            <Box>
-              <a href="#1">
-                <Button {...button} title="LEARN MORE" />
-              </a>
-            </Box>
           </Box>
         </Box>
       </Container>

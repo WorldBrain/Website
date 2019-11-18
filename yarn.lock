@@ -22691,6 +22691,11 @@ typeface-montserrat@0.0.43:
   resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.43.tgz#c70d76b85ab613a9f4855c061c354eac561c1aae"
   integrity sha512-lWyRVih5jJqZyOAj1+sCj8MijF+roNHrN11eD4fOGpj1dV7nS82kTnYVoz0TIGTu8/Arqw0eCytV1XdFe/i2aw==
 
+typeface-poppins@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-0.0.72.tgz#3262d6533dea2e99a5cafb3be7d8fa876e105206"
+  integrity sha512-FgzdU4XfGYc4aTq6WZD9FC+le4Foz6cyzjdjDvVnQePTQSUD0dkrXiVaTK/cyNVXQrEl2ykV39PxeKeFqqkrTA==
+
 typeface-pt-sans@0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-pt-sans/-/typeface-pt-sans-0.0.72.tgz#c47d198510b2ed1272ad6329cf1ae5f782ebf4cf"

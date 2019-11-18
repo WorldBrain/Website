@@ -30,21 +30,28 @@
   "Features": [
     {
       "id": 1,
-      "icon": "flaticon-creative",
-      "title": "Powerful Features",
-      "description": "Automate time consuming tasks like organising expenses ,tracking your time and following up with clients "
+      "icon": "fulltext-search",
+      "title": "Full text search"
     },
     {
       "id": 2,
-      "icon": "flaticon-briefing",
-      "title": "Easy Invoicing",
-      "description": "Want to surprice your clients with professional looking invoices ? Then you are some clicks behind ."
+      "icon": "annotations",
+      "title": "Annotations on the web"
     },
     {
       "id": 3,
-      "icon": "flaticon-flask",
-      "title": "Easy To Use",
-      "description": "Very Simple and intuitive. So you have to spend less time in paperwork and impress your customer with looks"
+      "icon": "tags-collections",
+      "title": "Tags and collections"
+    },
+    {
+      "id": 4,
+      "icon": "stored-locally",
+      "title": "All data stored locally"
+    },
+    {
+      "id": 5,
+      "icon": "sync-devices",
+      "title": "Sync between devices"
     }
   ],
   "Footer_Data": [
@@ -200,9 +207,9 @@
   "MONTHLY_PRICING_TABLE": [
     {
       "freePlan": true,
-      "name": "Basic Account",
+      "name": "Free",
       "description": "For Small teams or group who need to build website ",
-      "price": "$0",
+      "price": "€ 0",
       "priceLabel": "Only for first month",
       "buttonLabel": "CREATE FREE ACCOUNT",
       "url": "#",
@@ -225,34 +232,9 @@
       ]
     },
     {
-      "name": "Business Account",
+      "name": "Pro",
       "description": "For Mediums teams or group who need to build website ",
-      "price": "$9.87",
-      "priceLabel": "Per month & subscription yearly",
-      "buttonLabel": "START FREE TRIAL",
-      "url": "#",
-      "listItems": [
-        {
-          "content": "Drag & Drop Builder"
-        },
-        {
-          "content": "1,000s of Templates Ready"
-        },
-        {
-          "content": "Blog Tools"
-        },
-        {
-          "content": "eCommerce Store "
-        },
-        {
-          "content": "30+ Webmaster Tools"
-        }
-      ]
-    },
-    {
-      "name": "Premium Account",
-      "description": "For Large teams or group who need to build website ",
-      "price": "$12.98",
+      "price": "€ 1",
       "priceLabel": "Per month & subscription yearly",
       "buttonLabel": "START FREE TRIAL",
       "url": "#",
@@ -278,7 +260,7 @@
   "YEARLY_PRICING_TABLE": [
     {
       "freePlan": true,
-      "name": "Basic Account",
+      "name": "Free",
       "description": "For a single client or team who need to build website ",
       "price": "$0",
       "priceLabel": "Only for first month",
@@ -303,7 +285,7 @@
       ]
     },
     {
-      "name": "Business Account",
+      "name": "Pro",
       "description": "For Small teams or group who need to build website ",
       "price": "$6.00",
       "priceLabel": "Per month & subscription yearly",
@@ -324,31 +306,6 @@
         },
         {
           "content": "50+ Webmaster Tools"
-        }
-      ]
-    },
-    {
-      "name": "Premium Account",
-      "description": "For Large teams or group who need to build website ",
-      "price": "$9.99",
-      "priceLabel": "Per month & subscription yearly",
-      "buttonLabel": "START FREE TRIAL",
-      "url": "#",
-      "listItems": [
-        {
-          "content": "Drag & Drop Builder"
-        },
-        {
-          "content": "3,000s of Templates Ready"
-        },
-        {
-          "content": "Advanced branding"
-        },
-        {
-          "content": "Knowledge base support"
-        },
-        {
-          "content": "80+ Webmaster Tools"
         }
       ]
     }

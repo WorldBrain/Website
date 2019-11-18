@@ -176,11 +176,11 @@ const PricingSection = ({
                             {...buttonStyle}
                           />
                         ) : (
-                          <Button
-                            title={pricingTable.buttonLabel}
-                            {...buttonFillStyle}
-                          />
-                        )}
+                            <Button
+                              title={pricingTable.buttonLabel}
+                              {...buttonFillStyle}
+                            />
+                          )}
                       </a>
                     </PricingButton>
                     <PricingList>
@@ -257,7 +257,7 @@ PricingSection.defaultProps = {
     mb: '0',
   },
   col: {
-    width: [1, 1 / 2, 1 / 2, 1 / 3],
+    width: [1, 1 / 2, 1 / 2, 1 / 2],
     pr: '15px',
     pl: '15px',
   },

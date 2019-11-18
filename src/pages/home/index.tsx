@@ -7,7 +7,7 @@ import { GlobalStyle, ContentWrapper } from '../../containers/Saas/saas.style';
 import Navbar from '../../containers/Saas/Navbar';
 import BannerSection from '../../containers/Saas/BannerSection';
 import FeatureSection from '../../containers/Saas/FeatureSection';
-import VisitorSection from '../../containers/Saas/VisitorSection';
+import FulltextSearchSection from '../../containers/Saas/FulltextSearchSection';
 import ServiceSection from '../../containers/Saas/ServiceSection';
 import FaqSection from '../../containers/Saas/FaqSection';
 import Footer from '../../containers/Saas/Footer';
@@ -19,6 +19,8 @@ import PartnerSection from '../../containers/Saas/PartnerSection';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import FlexiblyOrganise from '../../containers/Saas/FlexiblyOrganise';
 import StoreLocal from '../../containers/StoreLocal';
+import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
+import MobileSection from '../../containers/Saas/MobileSection';
 
 export default () => {
   return (
@@ -34,16 +36,13 @@ export default () => {
           </Sticky>
           <BannerSection />
           <FeatureSection />
-          <VisitorSection />
+          <FulltextSearchSection />
+          <AnnotationsSection />
           <FlexiblyOrganise />
-          <ServiceSection />
+          <MobileSection />
           <StoreLocal />
-          <PricingSection />
-          <TestimonialSection />
           <PartnerSection />
-          <TimelineSection />
-          <FaqSection />
-          <TrialSection />
+          <PricingSection />
           <Footer />
         </ContentWrapper>
       </Fragment>

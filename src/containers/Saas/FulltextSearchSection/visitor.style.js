@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const VisitorSectionWrapper = styled.section`
+const FulltextSearchSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
@@ -53,4 +53,4 @@ const SectionObject = styled.div`
 
 export { SectionObject };
 
-export default VisitorSectionWrapper;
+export default FulltextSearchSectionWrapper;
