@@ -15,7 +15,7 @@ const FeatureSection = ({
   sectionTitle,
   sectionSubTitle,
   featureTitle,
-  featureDescription,
+  iconStyles,
   iconStyle,
   contentStyle,
   blockWrapperStyle,
@@ -26,7 +26,6 @@ const FeatureSection = ({
         Features {
           id
           title
-          description
           icon
         }
       }
@@ -37,11 +36,7 @@ const FeatureSection = ({
     <FeatureSectionWrapper id="service_section">
       <Container>
         <Box {...sectionHeader}>
-          <Text content="OUR SERVICES" {...sectionSubTitle} />
-          <Heading
-            content="Featured Service that We Provide"
-            {...sectionTitle}
-          />
+          <Text content="FEATURES" />
         </Box>
         <Box className="row" {...row}>
           {Data.saasJson.Features.map((feature, index) => (
@@ -51,10 +46,8 @@ const FeatureSection = ({
                 wrapperStyle={blockWrapperStyle}
                 iconStyle={iconStyle}
                 contentStyle={contentStyle}
+                iconPosition="left"
                 title={<Heading content={feature.title} {...featureTitle} />}
-                description={
-                  <Text content={feature.description} {...featureDescription} />
-                }
                 className="saasFeature"
               />
             </Box>
@@ -114,13 +107,14 @@ FeatureSection.defaultProps = {
   // feature block wrapper default style
   blockWrapperStyle: {
     p: ['30px', '20px', '20px', '20px'],
+    alignItems: 'center'
   },
   // feature icon default style
   iconStyle: {
-    width: ['70px', '75px', '75px', '84px'],
-    height: ['70px', '75px', '75px', '84px'],
+    width: ['60px', '60px', '60px', '60px'],
+    height: ['60px', '60px', '60px', '60px'],
     borderRadius: '50%',
-    bg: '#93d26e',
+    // bg: '#93d26e',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

@@ -10,12 +10,12 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import VisitorSectionWrapper, { SectionObject } from './visitor.style';
+import MobileSectionWrapper, { SectionObject } from './visitor.style';
 
-import ImageOne from '../../../img/search-1270-760.gif';
+import ImageOne from '../../../img/annotate_raw1270x760.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
-const VisitorSection = ({
+const MobileSection = ({
   title,
   description,
   textArea,
@@ -23,51 +23,51 @@ const VisitorSection = ({
   gifStyle,
 }) => {
   return (
-    <VisitorSectionWrapper id="visitorSection">
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
-          </Zoom>
-          <Card className="dashboardWrapper" {...gifStyle}>
-            <Fade left>
-              <Image src={ImageOne} alt="VisitorDashboard1" />
-            </Fade>
-          </Card>
-        </Card>
-      </SectionObject>
+    <MobileSectionWrapper id="visitorSection">
       <Container>
         <Box {...textArea}>
           <FeatureBlock
             title={
               <Heading
-                content="Full Text Search "
+                content="Quickly save & organise content on the go"
                 {...title}
               />
             }
             description={
               <Text
-                content="Instantly recover anything you've seen before without doing any upfront work."
+                content="Securely sync your Memex between browsers, iOS & Android devices."
                 {...description}
               />
             }
           />
         </Box>
       </Container>
-    </VisitorSectionWrapper>
+      <SectionObject>
+        <Card className="objectWrapper" {...imageWrapper}>
+          <Zoom>
+            <Image src={ImageBg} alt="BgImage" />
+          </Zoom>
+          <Card className="dashboardWrapper" {...gifStyle}>
+            <Fade right>
+              <Image src={ImageOne} alt="VisitorDashboard1" />
+            </Fade>
+          </Card>
+        </Card>
+      </SectionObject>
+    </MobileSectionWrapper>
   );
 };
 
-VisitorSection.propTypes = {
+MobileSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
 };
 
-VisitorSection.defaultProps = {
+MobileSection.defaultProps = {
   textArea: {
     width: ['100%', '100%', '45%'],
-    ml: [0, 0, '58%'],
+    mr: [0, 0, '58%'],
   },
   imageWrapper: {
     boxShadow: 'none',
@@ -104,4 +104,4 @@ VisitorSection.defaultProps = {
   },
 };
 
-export default VisitorSection;
+export default MobileSection;

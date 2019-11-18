@@ -3,8 +3,8 @@ import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
 const BannerWrapper = styled.section`
-  padding-top: 210px;
-  padding-bottom: 160px;
+  padding-top: 120px;
+  padding-bottom: 250px;
   background-image: url(${BannerBG});
   background-size: cover;
   background-position: center;
@@ -28,6 +28,10 @@ const BannerWrapper = styled.section`
     background: none;
   }
 
+  .content__wrapper {
+    margin-top: 65px;
+  }
+
   .particle {
     position: absolute;
     width: 50%;
@@ -49,6 +53,7 @@ const BannerWrapper = styled.section`
   }
 
   .button__wrapper {
+    display: flex;
     margin-top: 40px;
     @media (max-width: 767px) {
       margin-bottom: 30px;
@@ -58,6 +63,12 @@ const BannerWrapper = styled.section`
         border-color: rgba(82, 104, 219, 0.2);
       }
     }
+
+    .browser-icon {
+      width: 58px;
+      height: 58px;
+      margin-left: 20px;
+    }
   }
 `;
 
@@ -65,7 +76,7 @@ const BannerObject = styled.div`
   position: absolute;
   width: 50%;
   height: 100%;
-  top: 0;
+  top: 30px;
   right: 0;
   display: flex;
   align-items: center;
@@ -75,10 +86,14 @@ const BannerObject = styled.div`
   .objectWrapper {
     margin-left: auto;
     position: relative;
+
+    .banner-bg {
+      width: 85%;
+    }
     .dashboardWrapper {
       position: absolute;
       top: 50px;
-      right: 0;
+      right: -40px;
       .chatObject {
         position: absolute;
         top: 20px;

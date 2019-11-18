@@ -8,7 +8,7 @@ const colors = {
   inactiveField: '#f2f2f2', // 5
   inactiveButton: '#b7dbdd', // 6
   inactiveIcon: '#EBEBEB', // 7
-  primary: '#5268db', // 8
+  primary: '#5CD9A6', // 8
   primaryHover: '#5268db', // 9
   secondary: '#ff5b60', // 10
   secondaryHover: '#FF282F', // 11

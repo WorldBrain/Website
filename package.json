@@ -70,6 +70,7 @@
 		"typeface-inter": "^3.7.0",
 		"typeface-merriweather": "0.0.43",
 		"typeface-montserrat": "0.0.43",
+		"typeface-poppins": "^0.0.72",
 		"typeface-pt-sans": "0.0.72",
 		"typography": "^0.16.17"
 	},
