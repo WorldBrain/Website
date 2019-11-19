@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import FooterImage from 'common/src/assets/image/hosting/footer-bg.png';
 
 const FooterWrapper = styled.footer`
   position: relative;
@@ -13,12 +12,11 @@ const FooterWrapper = styled.footer`
       position: absolute;
       width: 104%;
       padding-bottom: 104%;
-      border-top-right-radius: 11%;
-      top: 14%;
-      left: 0;
+      top: 25%;
+      left: -50px;
       pointer-events: none;
-      background-color: #fff;
-      transform: rotate(-6deg);
+      background: linear-gradient(180deg, rgba(99, 242, 199, 0.44) 0%, rgba(22, 213, 155, 0.44) 87.98%);
+      transform: rotate(3deg);
       @media (max-width: 767px) {
         padding-bottom: 150%;
       }
@@ -26,14 +24,9 @@ const FooterWrapper = styled.footer`
   }
 
   .footer_container {
-    background-repeat: no-repeat;
-    background-position: center 50px;
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
-    @media (min-width: 576px) {
-      background-image: url(${FooterImage});
-    }
     @media (max-width: 990px) {
       padding-bottom: 20px;
     }
