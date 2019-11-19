@@ -55,6 +55,7 @@ const BannerWrapper = styled.section`
   .button__wrapper {
     display: flex;
     margin-top: 40px;
+    margin-bottom: 32px;
     @media (max-width: 767px) {
       margin-bottom: 30px;
     }

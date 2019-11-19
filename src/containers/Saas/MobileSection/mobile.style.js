@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const VisitorSectionWrapper = styled.section`
+const MobileSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
@@ -18,6 +18,11 @@ const VisitorSectionWrapper = styled.section`
     min-height: auto;
     display: block;
   }
+
+  .mobileDownload {
+    opacity: 0.5;
+    margin-left: -15px;
+  }
 `;
 
 const SectionObject = styled.div`
@@ -25,7 +30,7 @@ const SectionObject = styled.div`
   width: 55%;
   height: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -43,14 +48,32 @@ const SectionObject = styled.div`
   .objectWrapper {
     margin-right: auto;
     position: relative;
-    .dashboardWrapper {
+
+    .bg-image {
+      opacity: 0.6;
+    }
+
+    .imageOne {
       position: absolute;
       top: 4vw;
       left: 0;
+
+      .mobile-img {
+        width: 600px;
+      }
+    }
+    .imageTwo {
+      position: absolute;
+      top: 2vw;
+      left: 200px;
+
+      .mobile-img {
+        width: 600px;
+      }
     }
   }
 `;
 
 export { SectionObject };
 
-export default VisitorSectionWrapper;
+export default MobileSectionWrapper;

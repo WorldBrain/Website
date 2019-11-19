@@ -10,12 +10,12 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import VisitorSectionWrapper, { SectionObject } from './visitor.style';
+import StoreLocalSectionWrapper, { SectionObject } from './storeLocal.style';
 
-import ImageOne from '../../../img/organisation.gif';
+import ImageOne from '../../img/store_local.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
-const FlexiblyOrganise = ({
+const StoreLocalSection = ({
   title,
   description,
   textArea,
@@ -23,15 +23,15 @@ const FlexiblyOrganise = ({
   gifStyle,
 }) => {
   return (
-    <VisitorSectionWrapper id="visitorSection">
+    <StoreLocalSectionWrapper id="storeLocalSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>
             <Image src={ImageBg} alt="BgImage" />
           </Zoom>
-          <Card className="dashboardWrapper" {...gifStyle}>
+          <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade left>
-              <Image src={ImageOne} alt="VisitorDashboard1" />
+              <Image src={ImageOne} alt="Store local" />
             </Fade>
           </Card>
         </Card>
@@ -41,30 +41,30 @@ const FlexiblyOrganise = ({
           <FeatureBlock
             title={
               <Heading
-                content="Flexibly Organise"
+                content="All Data Stored Locally"
                 {...title}
               />
             }
             description={
               <Text
-                content="Tag and sort what you find online into full-text searchable collections."
+                content="Offline first - Your data is stored locally unless you choose to backup to a cloud service provider."
                 {...description}
               />
             }
           />
         </Box>
       </Container>
-    </VisitorSectionWrapper>
+    </StoreLocalSectionWrapper>
   );
 };
 
-FlexiblyOrganise.propTypes = {
+StoreLocalSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
 };
 
-FlexiblyOrganise.defaultProps = {
+StoreLocalSection.defaultProps = {
   textArea: {
     width: ['100%', '100%', '45%'],
     ml: [0, 0, '58%'],
@@ -72,18 +72,21 @@ FlexiblyOrganise.defaultProps = {
   imageWrapper: {
     boxShadow: 'none',
   },
-  gifStyle: {
-    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.2)',
-    borderRadius: '5px',
-  },
   title: {
-    fontSize: ['20px', '26px', '26px', '36px', '48px'],
+    fontSize: ['20px', '26px', '26px', '36px', '36px'],
     fontWeight: '400',
     color: '#0f2137',
     letterSpacing: '-0.010em',
     mb: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.5',
+    lineHeight: '1.4',
+  },
+  description: {
+    fontSize: '20px',
+    lineHeight: '30px',
+    color: '#757280',
+    mb: '33px',
+    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   description: {
     fontSize: '16px',
@@ -104,4 +107,4 @@ FlexiblyOrganise.defaultProps = {
   },
 };
 
-export default FlexiblyOrganise;
+export default StoreLocalSection;

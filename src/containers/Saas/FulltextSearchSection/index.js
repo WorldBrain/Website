@@ -10,7 +10,7 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import FulltextSearchSectionWrapper, { SectionObject } from './visitor.style';
+import FulltextSearchSectionWrapper, { SectionObject } from './fulltextSearch.style';
 
 import ImageOne from '../../../img/search-1270-760.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
@@ -20,7 +20,6 @@ const FulltextSearchSection = ({
   description,
   textArea,
   imageWrapper,
-  gifStyle,
 }) => {
   return (
     <FulltextSearchSectionWrapper id="visitorSection">
@@ -29,9 +28,9 @@ const FulltextSearchSection = ({
           <Zoom>
             <Image src={ImageBg} alt="BgImage" />
           </Zoom>
-          <Card className="dashboardWrapper" {...gifStyle}>
+          <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade left>
-              <Image src={ImageOne} alt="VisitorDashboard1" />
+              <Image src={ImageOne} className="banner-img" alt="Full text search" />
             </Fade>
           </Card>
         </Card>
@@ -72,18 +71,14 @@ FulltextSearchSection.defaultProps = {
   imageWrapper: {
     boxShadow: 'none',
   },
-  gifStyle: {
-    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.2)',
-    borderRadius: '5px',
-  },
   title: {
-    fontSize: ['20px', '26px', '26px', '36px', '48px'],
+    fontSize: ['20px', '26px', '26px', '36px', '36px'],
     fontWeight: '400',
     color: '#0f2137',
     letterSpacing: '-0.010em',
     mb: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.5',
+    lineHeight: '1.4',
   },
   description: {
     fontSize: '16px',

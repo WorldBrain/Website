@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MobileSectionWrapper = styled.section`
+const StoreLocalSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
@@ -22,10 +22,10 @@ const MobileSectionWrapper = styled.section`
 
 const SectionObject = styled.div`
   position: absolute;
-  width: 55%;
+  width: 51%;
   height: 100%;
   top: 0;
-  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -44,6 +44,7 @@ const SectionObject = styled.div`
     margin-right: auto;
     position: relative;
     .dashboardWrapper {
+      box-shadow: none;
       position: absolute;
       top: 4vw;
       left: 0;
@@ -53,4 +54,4 @@ const SectionObject = styled.div`
 
 export { SectionObject };
 
-export default MobileSectionWrapper;
+export default StoreLocalSectionWrapper;

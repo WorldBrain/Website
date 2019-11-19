@@ -52,13 +52,13 @@ export const GlobalStyle = createGlobalStyle`
               font-size: 18px;
             }
             &:hover {
-              color: #eb4d4b;
+              color: #5671CF;
             }
             &:before{
               content: '';
               width: 7px;
               height: 7px;
-              background: #eb4d4b;
+              background: #5671CF;
               border-radius: 50%;
               position: absolute;
               top: 50%;
@@ -69,7 +69,7 @@ export const GlobalStyle = createGlobalStyle`
           }
           &.is-current {
             a {
-              color: #eb4d4b;
+              color: #5671CF;
               &:before{
                 opacity: 1;
               }
@@ -100,7 +100,7 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #eb4d4b;
+        color: #5671CF;
         transform: rotate(45deg);
         display: block;
       }
@@ -153,7 +153,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #eb4d4b;
+            color: #5671CF;
           }
         }
         a {
@@ -163,7 +163,7 @@ export const ContentWrapper = styled.div`
           color: #343d48;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #eb4d4b;
+            color: #5671CF;
           }
         }
       }

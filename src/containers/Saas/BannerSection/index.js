@@ -26,6 +26,7 @@ const BannerSection = ({
   title,
   btnStyle,
   description,
+  downloadDescription,
 }) => {
   const ButtonGroup = () => (
     <Fragment>
@@ -56,6 +57,14 @@ const BannerSection = ({
                 />
               }
               button={<ButtonGroup />}
+            />
+            <Text
+              content="Get started in less than 30 seconds."
+              {...downloadDescription}
+            />
+            <Text
+              content="No account necessary. All data stored locally."
+              {...downloadDescription}
             />
           </Box>
         </Box>
@@ -110,6 +119,13 @@ BannerSection.defaultProps = {
     lineHeight: '1.75',
     mb: '0',
     width: '80%',
+  },
+  downloadDescription: {
+    fontSize: '14px',
+    color: '#757280',
+    lineHeight: '21px',
+    width: '320px',
+    mb: '5px',
   },
   btnStyle: {
     minWidth: ['120px', '120px', '120px', '156px'],
