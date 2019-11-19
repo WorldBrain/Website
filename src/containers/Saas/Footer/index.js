@@ -8,16 +8,17 @@ import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
 import FooterWrapper, { List, ListItem } from './footer.style';
 
-import LogoImage from 'common/src/assets/image/saas/logo.png';
+import LogoImage from '../../../img/worldbrain_logo_1.svg';
+import SubscribeForm from '../../../components/subscribe-form';
+import Link from 'reusecore/src/elements/Link';
 
 const Footer = ({
   row,
   col,
-  colOne,
   colTwo,
   titleStyle,
+  endlink,
   logoStyle,
-  textStyle,
 }) => {
   const Data = useStaticQuery(graphql`
     query {
@@ -37,17 +38,6 @@ const Footer = ({
     <FooterWrapper>
       <Container className="footer_container">
         <Box className="row" {...row}>
-          <Box {...colOne}>
-            <Logo
-              href="#"
-              logoSrc={LogoImage}
-              title="Hosting"
-              logoStyle={logoStyle}
-            />
-            <Text content="hello@redq.io" {...textStyle} />
-            <Text content="+479-443-9334" {...textStyle} />
-          </Box>
-          {/* End of footer logo column */}
           <Box {...colTwo}>
             {Data.saasJson.Footer_Data.map((widget, index) => (
               <Box className="col" {...col} key={`footer-widget-${index}`}>
@@ -63,8 +53,29 @@ const Footer = ({
                 </List>
               </Box>
             ))}
+
+            <Box className="col" {...col}>
+              <Heading content="Stay up to date!" {...titleStyle} />
+              {/* <SubscribeForm /> */}
+            </Box>
           </Box>
           {/* End of footer List column */}
+        </Box>
+
+        <Box className="row" {...endlink}>
+          <Logo
+            logoSrc={LogoImage}
+            logoStyle={logoStyle}
+          />
+          <Link>
+            support@worldbrain.io
+            </Link>
+          <Link>
+            Report a bug
+            </Link>
+          <Link>
+            Icons by <u>Smashicons</u> from <u>Flaticons.com</u>
+          </Link>
         </Box>
       </Container>
     </FooterWrapper>
@@ -91,23 +102,15 @@ Footer.defaultProps = {
     ml: '-15px',
     mr: '-15px',
   },
-  // Footer col one style
-  colOne: {
-    width: [1, '35%', '35%', '23%'],
-    mt: [0, '13px'],
-    mb: ['30px', 0],
-    pl: ['15px', 0],
-    pr: ['15px', '15px', 0],
-  },
   // Footer col two style
   colTwo: {
-    width: ['100%', '65%', '65%', '77%'],
+    width: ['100%'],
     flexBox: true,
     flexWrap: 'wrap',
   },
   // Footer col default style
   col: {
-    width: ['100%', '50%', '50%', '25%'],
+    width: ['100%', '50%', '50%', '33%'],
     pl: '15px',
     pr: '15px',
     mb: '30px',
@@ -119,10 +122,14 @@ Footer.defaultProps = {
     fontWeight: '700',
     mb: '30px',
   },
+  endlink: {
+    flexBox: true,
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
   // Default logo size
   logoStyle: {
-    width: '100px',
-    mb: '15px',
+    width: '250px',
   },
   // widget text default style
   textStyle: {
