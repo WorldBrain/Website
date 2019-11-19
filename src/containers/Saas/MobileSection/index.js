@@ -5,27 +5,33 @@ import Zoom from 'react-reveal/Zoom';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
-import Button from 'reusecore/src/elements/Button';
 import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import MobileSectionWrapper, { SectionObject } from './visitor.style';
+import MobileSectionWrapper, { SectionObject } from './mobile.style';
 
-import ImageOne from '../../../img/annotate_raw1270x760.gif';
-import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
+import ImageOne from '../../../img/phone-screen-1@2x.png';
+import ImageTwo from '../../../img/phone-screen-2@2x.png';
+import DownloadMobile from '../../../img/download-mobile.png';
+import ImageBg from 'common/src/assets/image/saas/banner/bannerObject1.png';
 
 const MobileSection = ({
+  tag,
   title,
   description,
   textArea,
   imageWrapper,
-  gifStyle,
+  imageDownload,
 }) => {
   return (
-    <MobileSectionWrapper id="visitorSection">
+    <MobileSectionWrapper id="mobileSection">
       <Container>
         <Box {...textArea}>
+          <Heading
+            content="Comming soon"
+            {...tag}
+          />
           <FeatureBlock
             title={
               <Heading
@@ -40,16 +46,22 @@ const MobileSection = ({
               />
             }
           />
+          <Image src={DownloadMobile} {...imageDownload} className="mobileDownload" alt="Download mobile" />
         </Box>
       </Container>
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
+            <Image src={ImageBg} className="bg-image" alt="BgImage" />
           </Zoom>
-          <Card className="dashboardWrapper" {...gifStyle}>
+          <Card className="imageOne" {...imageWrapper}>
             <Fade right>
-              <Image src={ImageOne} alt="VisitorDashboard1" />
+              <Image src={ImageOne} className="mobile-img" alt="Mobile 1" />
+            </Fade>
+          </Card>
+          <Card className="imageTwo" {...imageWrapper}>
+            <Fade right>
+              <Image src={ImageTwo} className="mobile-img" alt="Mobile 2" />
             </Fade>
           </Card>
         </Card>
@@ -72,25 +84,29 @@ MobileSection.defaultProps = {
   imageWrapper: {
     boxShadow: 'none',
   },
-  gifStyle: {
-    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.2)',
-    borderRadius: '5px',
+  tag: {
+    fontWeight: 'bold',
+    fontSize: '50px'
   },
   title: {
-    fontSize: ['20px', '26px', '26px', '36px', '48px'],
+    fontSize: ['20px', '26px', '26px', '36px', '36px'],
     fontWeight: '400',
     color: '#0f2137',
     letterSpacing: '-0.010em',
     mb: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.5',
+    lineHeight: '1.4',
   },
   description: {
-    fontSize: '16px',
-    color: '#343d48cc',
-    lineHeight: '1.75',
+    fontSize: '20px',
+    lineHeight: '30px',
+    color: '#757280',
     mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+  },
+  imageDownload: {
+    opacity: 0.5,
+    height: '80px',
   },
   btnStyle: {
     minWidth: '156px',

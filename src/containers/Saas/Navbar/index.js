@@ -41,7 +41,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
           <Logo
             href="#"
             logoSrc={LogoImage}
-            title="Agency"
+            title="Memex"
             logoStyle={logoStyle}
           />
           <Box {...menuWrapper}>
@@ -92,7 +92,7 @@ Navbar.defaultProps = {
       'space-between',
       'space-between',
       'space-between',
-      'flex-start',
+      'space-between',
     ],
     width: '100%',
   },

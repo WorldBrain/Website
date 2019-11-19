@@ -4,6 +4,7 @@ import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { DrawerContext } from '../../contexts/DrawerContext';
+import Button from 'reusecore/src/elements/Button';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
@@ -42,24 +43,27 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           {menu.staticLink ? (
             <a href={menu.path}>{menu.label}</a>
           ) : (
-            <>
-              {drawerClose ? (
-                <AnchorLink
-                  href={menu.path}
-                  offset={menu.offset}
-                  onClick={toggleDrawer}
-                >
-                  {menu.label}
-                </AnchorLink>
-              ) : (
-                <AnchorLink href={menu.path} offset={menu.offset}>
-                  {menu.label}
-                </AnchorLink>
-              )}
-            </>
-          )}
+              <>
+                {drawerClose ? (
+                  <AnchorLink
+                    href={menu.path}
+                    offset={menu.offset}
+                    onClick={toggleDrawer}
+                  >
+                    {menu.label}
+                  </AnchorLink>
+                ) : (
+                    <AnchorLink href={menu.path} offset={menu.offset}>
+                      {menu.label}
+                    </AnchorLink>
+                  )}
+              </>
+            )}
         </li>
       ))}
+      <li>
+        <Button title="Download" />
+      </li>
     </Scrollspy>
   );
 };
