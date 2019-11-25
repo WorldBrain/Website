@@ -5,11 +5,6 @@ import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 const BannerWrapper = styled.section`
   padding-top: 120px;
   padding-bottom: 250px;
-  background-image: url(${BannerBG});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -19,32 +14,13 @@ const BannerWrapper = styled.section`
     min-height: auto;
   }
   @media (max-width: 767px) {
-    padding-top: 130px;
+    padding-top: 50px;
     padding-bottom: 20px;
     min-height: auto;
   }
 
-  @media only screen and (max-width: 480px) {
-    background: none;
-  }
-
   .content__wrapper {
     margin-top: 65px;
-  }
-
-  .particle {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    @media (max-width: 767px) {
-      display: none;
-    }
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-    }
   }
 
   .row {
@@ -66,8 +42,8 @@ const BannerWrapper = styled.section`
     }
 
     .browser-icon {
-      width: 58px;
-      height: 58px;
+      width: 48px;
+      height: 48px;
       margin-left: 20px;
     }
   }
@@ -81,9 +57,7 @@ const BannerObject = styled.div`
   right: 0;
   display: flex;
   align-items: center;
-  @media (max-width: 767px) {
-    display: none;
-  }
+
   .objectWrapper {
     margin-left: auto;
     position: relative;

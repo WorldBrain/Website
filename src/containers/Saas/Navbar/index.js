@@ -53,7 +53,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
             <Drawer
               width="420px"
               placement="right"
-              drawerHandler={<HamburgMenu barColor="#eb4d4b" />}
+              drawerHandler={<HamburgMenu barColor="#5CD9A6" />}
               open={state.isOpen}
               toggleHandler={toggleHandler}
             >
@@ -103,14 +103,10 @@ Navbar.defaultProps = {
   button: {
     type: 'button',
     fontSize: '13px',
-    fontWeight: '600',
     color: 'white',
-    borderRadius: '4px',
     pl: '15px',
     pr: '15px',
     colors: 'primaryWithBg',
-    minHeight: 'auto',
-    height: `${1}`,
   },
   menuWrapper: {
     flexBox: true,

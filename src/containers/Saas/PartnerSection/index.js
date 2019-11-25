@@ -24,7 +24,7 @@ const PartnerSection = ({
       <Container>
         <Box {...row}>
           <Box {...col} {...imageArea}>
-            <Image src={Partner} alt="Domain Image" />
+            <Image src={Partner} alt="An image showing the logos of Pocket, Diigo, Raindrop, Chrome, Firefox and Instapaper " />
           </Box>
           <Box {...col} {...textArea}>
             <Heading
@@ -71,29 +71,25 @@ PartnerSection.defaultProps = {
     width: ['100%', '100%', '55%', '50%', '42%'],
   },
   imageArea: {
-    width: ['100%', '100%', '45%', '50%', '58%'],
+    width: ['100%', '100%', '45%', '50%', '48%'],
     mb: ['40px', '40px', '0', '0', '0'],
   },
   title: {
-    fontSize: ['26px', '30px', '30px', '36px', '36px'],
+    fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
-    color: '#0f2137',
-    letterSpacing: '-0.025em',
+    color: 'headingColor',
     mb: '15px',
     lineHeight: '1.5',
   },
   description: {
-    fontSize: '20px',
-    color: '#757280',
-    lineHeight: '1.75',
+    fontSize: '1.125rem',
+    lineHeight: '1.5',
+    color: 'textColor',
     mb: '33px',
   },
   button: {
     type: 'button',
-    fontSize: '14px',
-    fontWeight: '600',
     color: '#fff',
-    borderRadius: '4px',
     pl: '22px',
     pr: '22px',
     colors: 'primaryWithBg',

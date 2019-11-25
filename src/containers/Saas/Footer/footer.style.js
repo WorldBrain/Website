@@ -4,7 +4,14 @@ const FooterWrapper = styled.footer`
   position: relative;
   background-color: #f9fbfd;
   overflow: hidden;
+  font-size: 0.875rem;
   background: linear-gradient(to bottom, #f7f8fd 0%, #fafbff 100%);
+  a {
+    color: #265A4E;
+  }
+  a:hover {
+    color: #13382F;
+  }
   @media (min-width: 576px) {
     padding-top: 130px;
     &:before {
@@ -24,8 +31,8 @@ const FooterWrapper = styled.footer`
   }
 
   .footer_container {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
     @media (max-width: 990px) {
       padding-bottom: 20px;
@@ -37,15 +44,11 @@ const List = styled.ul``;
 
 const ListItem = styled.li`
   a {
-    color: rgba(52, 61, 72, 0.8);
-    font-size: 14px;
-    line-height: 36px;
     transition: all 0.2s ease;
     &:hover,
     &:focus {
       outline: 0;
       text-decoration: none;
-      color: #343d48;
     }
   }
 `;

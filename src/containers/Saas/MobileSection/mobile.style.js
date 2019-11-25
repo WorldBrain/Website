@@ -55,20 +55,20 @@ const SectionObject = styled.div`
 
     .imageOne {
       position: absolute;
-      top: 4vw;
+      top: 5vw;
       left: 0;
 
       .mobile-img {
-        width: 600px;
+        width: 500px;
       }
     }
     .imageTwo {
       position: absolute;
       top: 2vw;
-      left: 200px;
+      left: 180px;
 
       .mobile-img {
-        width: 600px;
+        width: 500px;
       }
     }
   }
