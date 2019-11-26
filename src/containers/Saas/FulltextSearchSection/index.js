@@ -12,7 +12,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FulltextSearchSectionWrapper, { SectionObject } from './fulltextSearch.style';
 
-import ImageOne from '../../../img/search-1270-760.gif';
+import ImageOne from '../../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
 const FulltextSearchSection = ({
@@ -30,7 +30,7 @@ const FulltextSearchSection = ({
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade left>
-              <Image src={ImageOne} className="banner-img" alt="Full text search" />
+              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Fade>
           </Card>
         </Card>
@@ -72,27 +72,24 @@ FulltextSearchSection.defaultProps = {
     boxShadow: 'none',
   },
   title: {
-    fontSize: ['20px', '26px', '26px', '36px', '36px'],
+    fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
-    color: '#0f2137',
-    letterSpacing: '-0.010em',
+    color: 'headingColor',
     mb: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.4',
+    lineHeight: '1.5',
   },
   description: {
-    fontSize: '16px',
-    color: '#343d48cc',
-    lineHeight: '1.75',
+    fontSize: '1.125rem',
+    lineHeight: '1.5',
+    color: 'textColor',
     mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {
     minWidth: '156px',
-    fontSize: '14px',
-    fontWeight: '500',
+    fontSize: '0.875rem',
     color: '#fff',
-    borderRadius: '4px',
     pl: '22px',
     pr: '22px',
     colors: 'primaryWithBg',

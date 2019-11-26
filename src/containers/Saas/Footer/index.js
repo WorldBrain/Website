@@ -6,7 +6,7 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
-import FooterWrapper, { List, ListItem } from './footer.style';
+import FooterWrapper, { List, ListItem, FooterLink } from './footer.style';
 
 import LogoImage from '../../../img/worldbrain_logo_1.svg';
 import SubscribeForm from '../../../components/subscribe-form';
@@ -110,17 +110,16 @@ Footer.defaultProps = {
   },
   // Footer col default style
   col: {
-    width: ['100%', '50%', '50%', '33%'],
+    width: ['100%', '33%', '33%', '33%'],
     pl: '15px',
     pr: '15px',
     mb: '30px',
   },
   // widget title default style
   titleStyle: {
-    color: '#343d48',
-    fontSize: '16px',
+    color: 'footerColor',
+    fontSize: '1rem',
     fontWeight: '700',
-    mb: '30px',
   },
   endlink: {
     flexBox: true,
@@ -133,8 +132,8 @@ Footer.defaultProps = {
   },
   // widget text default style
   textStyle: {
-    color: '#0f2137',
-    fontSize: '16px',
+    color: 'footerColor',
+    fontSize: '44px',
     mb: '10px',
   },
 };

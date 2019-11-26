@@ -30,7 +30,7 @@ const FlexiblyOrganiseSection = ({
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade left>
-              <Image src={ImageOne} alt="VisitorDashboard1" />
+              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
             </Fade>
           </Card>
         </Card>
@@ -72,27 +72,24 @@ FlexiblyOrganiseSection.defaultProps = {
     boxShadow: 'none',
   },
   title: {
-    fontSize: ['20px', '26px', '26px', '36px', '36px'],
+    fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
-    color: '#0f2137',
-    letterSpacing: '-0.010em',
+    color: 'headingColor',
     mb: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.4',
+    lineHeight: '1.5',
   },
   description: {
-    fontSize: '20px',
-    lineHeight: '30px',
-    color: '#757280',
+    fontSize: '1.125rem',
+    lineHeight: '1.5',
+    color: 'textColor',
     mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {
     minWidth: '156px',
-    fontSize: '14px',
-    fontWeight: '500',
+    fontSize: '0.875rem',
     color: '#fff',
-    borderRadius: '4px',
     pl: '22px',
     pr: '22px',
     colors: 'primaryWithBg',
