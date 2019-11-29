@@ -90,8 +90,8 @@ FeatureSection.defaultProps = {
     alignItems: 'center'
   },
 
-  title: {
-    color: 'headingColor',
+  heading: {
+    fontSize: '2rem',
   },
   // feature icon default style
   iconStyle: {
