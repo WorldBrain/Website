@@ -98,15 +98,7 @@ Navbar.defaultProps = {
   },
   logoStyle: {
     maxWidth: '130px',
-    mr: [0, 0, 0, '166px'],
-  },
-  button: {
-    type: 'button',
-    fontSize: '13px',
-    color: 'white',
-    pl: '15px',
-    pr: '15px',
-    colors: 'primaryWithBg',
+    mr: [0, 0, 0, '120px'],
   },
   menuWrapper: {
     flexBox: true,

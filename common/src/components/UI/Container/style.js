@@ -16,15 +16,13 @@ const ContainerWrapper = styled.div`
         padding-right: 0;
       `) ||
     css`
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
     `};
   @media (min-width: 768px) {
-    max-width: 750px;
     width: 100%;
   }
   @media (min-width: 992px) {
-    max-width: 970px;
     width: 100%;
   }
   @media (min-width: 1220px) {

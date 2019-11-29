@@ -73,7 +73,7 @@ FeatureSection.propTypes = {
 FeatureSection.defaultProps = {
   // section header default style
   sectionHeader: {
-    mb: ['40px', '40px', '40px', '80px'],
+    mb: ['40px', '40px', '40px', '40px'],
   },
   // feature row default style
   row: {
@@ -97,7 +97,6 @@ FeatureSection.defaultProps = {
   iconStyle: {
     width: ['60px', '60px', '60px', '60px'],
     height: ['60px', '60px', '60px', '60px'],
-    borderRadius: '50%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -105,7 +104,6 @@ FeatureSection.defaultProps = {
     color: '#ffffff',
     overflow: 'hidden',
     mb: ['20px', '20px', '20px', '30px'],
-    borderBottomLeftRadius: '50%',
   },
   // feature content default style
   contentStyle: {
@@ -116,7 +114,7 @@ FeatureSection.defaultProps = {
   featureTitle: {
     fontSize: '1.125rem',
     fontWeight: '400',
-    color: 'headingColor',
+    color: 'textColor',
     lineHeight: '1.5',
     mb: ['10px', '10px', '10px', '20px'],
   },

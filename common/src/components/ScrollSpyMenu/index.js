@@ -2,11 +2,10 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
 
-const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
+const ScrollSpyMenu = ({btnStyle, className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
@@ -62,7 +61,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
         </li>
       ))}
       <li>
-        <Button title="Download" />
+        <Button title="Download" {...btnStyle} />
       </li>
     </Scrollspy>
   );
@@ -99,11 +98,16 @@ ScrollSpyMenu.propTypes = {
    * Function to be executed when the active item has been updated [optional].
    */
   onUpdate: PropTypes.func,
+
+  btnStyle: PropTypes.object,
 };
 
 ScrollSpyMenu.defaultProps = {
   componentTag: 'ul',
   currentClassName: 'is-current',
+  btnStyle: {
+    fontSize: ['18px', '18px', '18px', '13px'],
+  },
 };
 
 export default ScrollSpyMenu;

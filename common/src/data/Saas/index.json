@@ -59,23 +59,23 @@
       "title": "About",
       "menuItems": [
         {
-          "url": "#",
+          "url": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
           "text": "Vision"
         },
         {
-          "url": "#",
+          "url": "https://www.notion.so/worldbrain/Release-Notes-Roadmap-262a367f7a2a48ff8115d2c71f700c14",
           "text": "Roadmap"
         },
         {
-          "url": "#",
+          "url": "https://medium.com/@WorldBrain",
           "text": "Blog"
         },
         {
-          "url": "#",
+          "url": "https://community.worldbrain.io/",
           "text": "Community"
         },
         {
-          "url": "#",
+          "url": "https://github.com/WorldBrain",
           "text": "GitHub"
         }
       ]
@@ -84,15 +84,15 @@
       "title": "Legal",
       "menuItems": [
         {
-          "url": "#",
+          "url": "https://www.notion.so/worldbrain/Privacy-Policy-061ac77759f8445282c36fcf6702a81c",
           "text": "Privacy Policy"
         },
         {
-          "url": "#",
+          "url": "https://worldbrain.io/tos/",
           "text": "Terms of Service"
         },
         {
-          "url": "#",
+          "url": "https://worldbrain.io/imprint/",
           "text": "Imprint"
         }
       ]
@@ -171,8 +171,9 @@
   "MENU_ITEMS": [
     {
       "label": "Values",
-      "path": "#banner_section",
-      "offset": "70"
+      "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
+      "offset": "70",
+      "url": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8"
     },
     {
       "label": "Upgrade",

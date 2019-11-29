@@ -10,6 +10,7 @@ import Container from 'common/src/components/UI/Container';
 import BannerWrapper, {
   DiscountLabel,
   BannerObject,
+  BrowserIcons,
 } from './bannerSection.style';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
@@ -30,9 +31,11 @@ const BannerSection = ({
   const ButtonGroup = () => (
     <Fragment>
       <Button title="Download for free" {...btnStyle} />
-      <Image src={ChromeIcon} className="browser-icon" />
-      <Image src={FirefoxIcon} className="browser-icon" />
-      <Image src={BraveIcon} className="browser-icon" />
+      <BrowserIcons>
+        <Image src={ChromeIcon} className="browser-icon" />
+        <Image src={FirefoxIcon} className="browser-icon" />
+        <Image src={BraveIcon} className="browser-icon" />
+      </BrowserIcons>
     </Fragment>
   );
   return (
@@ -103,31 +106,30 @@ BannerSection.defaultProps = {
     width: [1, '70%', '70%', '55%'],
   },
   title: {
-    fontSize: ['1.375rem', '2.125rem', '1.875rem', '2rem'],
+    fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.5rem'],
     fontWeight: '600',
     color: 'headingColor',
-    letterSpacing: '-0.025em',
     mb: ['20px', '25px'],
     lineHeight: '1.3',
-    width: '80%',
+    width: ['100%', '70%', '70%', '80%'],
   },
   description: {
     fontSize: '1.125rem',
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
-    width: '80%',
+    width: ['100%', '70%', '70%', '80%'],
   },
   downloadDescription: {
     fontSize: '0.8125rem',
     color: 'lightestText',
     lineHeight: '1.5',
-    width: '320px',
+    width: ['100%', '320px'],
     mb: '5px',
   },
   btnStyle: {
-    minWidth: ['120px', '120px', '120px', '156px'],
-    fontSize: ['1.125rem', '1.125rem', '1.375rem'],
+    minWidth: ['100%', '100%', '120px', '265px'],
+    fontSize: ['1.125rem', '1.125rem', '1rem', '1.375rem'],
     colors: 'primaryWithBg',
   },
   outlineBtnStyle: {

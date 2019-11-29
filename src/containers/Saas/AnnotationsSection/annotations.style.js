@@ -32,6 +32,7 @@ const SectionObject = styled.div`
   @media (max-width: 767px) {
     width: 100%;
     position: relative;
+    padding: 0 30px;
     height: auto;
     top: auto;
     left: auto;
@@ -43,6 +44,7 @@ const SectionObject = styled.div`
   .objectWrapper {
     margin-right: auto;
     position: relative;
+
     .dashboardWrapper {
       position: absolute;
       top: 4vw;
