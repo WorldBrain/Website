@@ -23,7 +23,7 @@ const AnnotationsSection = ({
   gifStyle,
 }) => {
   return (
-    <AnnotationsSectionWrapper id="visitorSection">
+    <AnnotationsSectionWrapper id="annotationsSection">
       <Container>
         <Box {...textArea}>
           <FeatureBlock
@@ -77,6 +77,7 @@ AnnotationsSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
+    mt: '-20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

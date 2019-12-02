@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import background from './icon-features-sprite.svg';
 
 const FeatureSectionWrapper = styled.section`
-  padding: 40px 0 40px 0;
+  background: #f9fbfd;
+  padding: 40px 0 60px 0;
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
   }

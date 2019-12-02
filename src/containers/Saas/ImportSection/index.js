@@ -7,10 +7,10 @@ import Button from 'reusecore/src/elements/Button';
 import Image from 'reusecore/src/elements/Image';
 import Container from 'common/src/components/UI/Container';
 
-import PartnerSectionWrapper from './partner.style';
-import Partner from '../../../img/migrate_logo.svg';
+import ImportSectionWrapper from './import.style';
+import Import from '../../../img/migrate_logo.svg';
 
-const PartnerSection = ({
+const ImportSection = ({
   row,
   col,
   title,
@@ -20,11 +20,11 @@ const PartnerSection = ({
   imageArea,
 }) => {
   return (
-    <PartnerSectionWrapper>
+    <ImportSectionWrapper>
       <Container>
         <Box {...row}>
           <Box {...col} {...imageArea}>
-            <Image src={Partner} alt="An image showing the logos of Pocket, Diigo, Raindrop, Chrome, Firefox and Instapaper " />
+            <Image src={Import} alt="An image showing the logos of Pocket, Diigo, Raindrop, Chrome, Firefox and Instapaper " />
           </Box>
           <Box {...col} {...textArea}>
             <Heading
@@ -38,11 +38,11 @@ const PartnerSection = ({
           </Box>
         </Box>
       </Container>
-    </PartnerSectionWrapper>
+    </ImportSectionWrapper>
   );
 };
 
-PartnerSection.propTypes = {
+ImportSection.propTypes = {
   row: PropTypes.object,
   col: PropTypes.object,
   title: PropTypes.object,
@@ -52,7 +52,7 @@ PartnerSection.propTypes = {
   imageArea: PropTypes.object,
 };
 
-PartnerSection.defaultProps = {
+ImportSection.defaultProps = {
   row: {
     flexBox: true,
     flexWrap: 'wrap',
@@ -96,4 +96,4 @@ PartnerSection.defaultProps = {
   },
 };
 
-export default PartnerSection;
+export default ImportSection;

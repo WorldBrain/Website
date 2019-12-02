@@ -25,7 +25,7 @@ const MobileSection = ({
   imageDownload,
 }) => {
   return (
-    <MobileSectionWrapper id="mobileSection">
+    <MobileSectionWrapper id="deviceSection">
       <Container>
         <Box {...textArea}>
           <Heading

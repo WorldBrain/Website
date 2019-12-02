@@ -67,6 +67,7 @@ const Footer = ({
           <Logo
             logoSrc={LogoImage}
             logoStyle={logoStyle}
+            title="Memex"
           />
           <Link href="https://community.worldbrain.io/">
             support@worldbrain.io

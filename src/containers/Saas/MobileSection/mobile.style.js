@@ -4,11 +4,10 @@ const MobileSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
-    margin-bottom: 45px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 370px;
@@ -35,7 +34,6 @@ const SectionObject = styled.div`
   align-items: center;
   justify-content: flex-end;
   @media (max-width: 767px) {
-    width: 100%;
     position: relative;
     height: auto;
     top: auto;
@@ -59,16 +57,18 @@ const SectionObject = styled.div`
       left: 0;
 
       .mobile-img {
-        width: 500px;
+        width: auto;
+        height: 500px;
       }
     }
     .imageTwo {
       position: absolute;
-      top: 2vw;
-      left: 180px;
+      top: 2.5vw;
+      left: 170px;
 
       .mobile-img {
-        width: 500px;
+        width: auto;
+        height: 500px;
       }
     }
   }

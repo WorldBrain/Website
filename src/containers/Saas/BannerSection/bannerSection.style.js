@@ -26,7 +26,7 @@ const BrowserIcons = styled.div`
 
 const BannerWrapper = styled.section`
   padding-top: 120px;
-  padding-bottom: 250px;
+  padding-bottom: 120px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;

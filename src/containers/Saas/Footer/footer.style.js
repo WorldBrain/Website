@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
   background-color: #f9fbfd;
   overflow: hidden;
   font-size: 1rem;;
-  background: linear-gradient(to bottom, #f7f8fd 0%, #fafbff 100%);
+  background: linear-gradient(to bottom, #f9fbfd 0%, #fafbff 100%);
   a, p {
     color: #265A4E;
   }

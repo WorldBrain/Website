@@ -31,27 +31,58 @@
     {
       "id": 1,
       "icon": "fulltext-search",
-      "title": "Full text search"
+      "title": "Full text search",
+      "path": "#fullTextSearchSection"
     },
     {
       "id": 2,
       "icon": "annotations",
-      "title": "Annotations on the web"
+      "title": "Annotations on the web",
+      "path": "#annotationsSection"
     },
     {
       "id": 3,
       "icon": "tags-collections",
-      "title": "Tags and collections"
+      "title": "Tags and collections",
+      "path": "#tagsSection"
     },
     {
       "id": 4,
       "icon": "stored-locally",
-      "title": "All data stored locally"
+      "title": "All data stored locally",
+      "path": "#dataSection"
     },
     {
       "id": 5,
       "icon": "sync-devices",
-      "title": "Sync between devices"
+      "title": "Sync between devices",
+      "path": "#deviceSection"
+    }
+  ],
+  "Sponsors": [
+    {
+      "id": 1,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "European Comission",
+      "url": "https://ec.europa.eu"
+    },
+    {
+      "id": 2,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Ledger",
+      "url": "https://ledgerproject.eu"
+    },
+    {
+      "id":3,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Mozilla",
+      "url": "https://foundation.mozilla.org/en/"
+    },
+    {
+      "id": 4,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Digital Science",
+      "url": "https://www.digital-science.com"
     }
   ],
   "Footer_Data": [
@@ -172,84 +203,71 @@
     {
       "label": "Values",
       "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
-      "offset": "70",
-      "url": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8"
+      "offset": "70"
     },
     {
       "label": "Upgrade",
-      "path": "#pricing_section",
+      "path": "#pricingSection",
       "offset": "70"
     },
     {
       "label": "Community",
-      "path": "#feature_section",
+      "path": "#communitySection",
       "offset": "70"
     },
     {
       "label": "Blog",
-      "path": "#pricing_section",
+      "path": "#",
       "offset": "70"
     },
     {
       "label": "GitHub",
-      "path": "#testimonial_section",
+      "path": "#",
       "offset": "70"
     },
     {
       "label": "Login",
-      "path": "#faq_section",
+      "path": "#",
       "offset": "70"
     }
   ],
   "MONTHLY_PRICING_TABLE": [
     {
       "freePlan": true,
-      "name": "Free",
-      "description": "For Small teams or group who need to build website ",
-      "price": "€ 0",
-      "priceLabel": "Only for first month",
-      "buttonLabel": "CREATE FREE ACCOUNT",
+      "name": "Basic",
+      "price": "Free",
+      "buttonLabel": "Get started",
       "url": "#",
+      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
         {
-          "content": "Drag & Drop Builder"
+          "content": "Full-text history search"
         },
         {
-          "content": "1,000s of Templates Ready"
+          "content": "Annotations"
         },
         {
-          "content": "Blog Tools"
+          "content": "Collections & tags"
         },
         {
-          "content": "eCommerce Store "
-        },
-        {
-          "content": "30+ Webmaster Tools"
+          "content": "Manual backup to any cloud provider"
         }
       ]
     },
     {
       "name": "Pro",
-      "description": "For Mediums teams or group who need to build website ",
-      "price": "€ 1",
-      "priceLabel": "Per month & subscription yearly",
-      "buttonLabel": "START FREE TRIAL",
+      "price": "€1",
+      "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
         {
-          "content": "Drag & Drop Builder"
+          "content": "Everything in basic"
         },
         {
-          "content": "1,000s of Templates Ready"
+          "content": "+ Automatic backups"
         },
         {
-          "content": "Blog Tools"
-        },
-        {
-          "content": "eCommerce Store "
-        },
-        {
-          "content": "30+ Webmaster Tools"
+          "content": "Sync between your devices"
         }
       ]
     }
@@ -257,52 +275,40 @@
   "YEARLY_PRICING_TABLE": [
     {
       "freePlan": true,
-      "name": "Free",
-      "description": "For a single client or team who need to build website ",
-      "price": "$0",
-      "priceLabel": "Only for first month",
-      "buttonLabel": "CREATE FREE ACCOUNT",
+      "name": "Basic",
+      "price": "Free",
+      "buttonLabel": "Get started",
       "url": "#",
+      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
         {
-          "content": "Drag & Drop Builder"
+          "content": "Full-text history search"
         },
         {
-          "content": "1,000s of Templates Ready"
+          "content": "Annotations"
         },
         {
-          "content": "Blog Tools"
+          "content": "Collections & tags"
         },
         {
-          "content": "eCommerce Store "
-        },
-        {
-          "content": "30+ Webmaster Tools"
+          "content": "Manual backup to any cloud provider"
         }
       ]
     },
     {
       "name": "Pro",
-      "description": "For Small teams or group who need to build website ",
-      "price": "$6.00",
-      "priceLabel": "Per month & subscription yearly",
-      "buttonLabel": "START FREE TRIAL",
+      "price": "€12.00",
+      "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
         {
-          "content": "Unlimited secure storage"
+          "content": "Everything in basic"
         },
         {
-          "content": "2,000s of Templates Ready"
+          "content": "+ Automatic backups"
         },
         {
-          "content": "Blog Tools"
-        },
-        {
-          "content": "24/7 phone support"
-        },
-        {
-          "content": "50+ Webmaster Tools"
+          "content": "+ Sync between your devices"
         }
       ]
     }

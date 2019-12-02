@@ -2,34 +2,60 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 
 const PricingTable = styled.div`
-  border: 1px solid #f2f4f7;
   border-radius: 5px;
   padding: 60px 45px;
   border-radius: 5px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 600px;
+  width: 40%;
+  max-width: 400px;
+
+  &.free-plan {
+    border: 3px solid ${themeGet('colors.primary')};
+    margin-right: 15px;
+    h2 {
+      color: ${themeGet('colors.primary')};
+    }
+  }
+
+  &.pro-plan {
+    border: 3px solid ${themeGet('colors.secondary')};
+    margin-left: 15px;
+    h2 {
+      color: ${themeGet('colors.secondary')};
+    }
+  }
+
   @media (max-width: 767px) {
     padding: 45px 35px;
   }
 `;
 
 const PricingHead = styled.div`
-  margin-bottom: 40px;
+  display: flex;
 `;
 
 const PricingPrice = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  display: flex;
 `;
 
 const PricingButton = styled.div`
-  text-align: center;
-  margin-bottom: 55px;
+  flex-direction: column;
 `;
 
-const PricingList = styled.div``;
+const PricingList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const ListItem = styled.div`
-  display: flex;
   margin-bottom: 19px;
+  display: inline-flex;
   &:last-child {
     margin-bottom: 0;
   }
@@ -46,7 +72,7 @@ const SwitchWrapper = styled.div`
     .reusecore__field-label {
       font-size: 16px;
       font-weight: 400;
-      color: #5c636c;
+      color: ${themeGet('colors.secondary')}
       cursor: pointer;
     }
     input[type='checkbox'] {
@@ -82,13 +108,13 @@ const PricingButtonWrapper = styled.div`
   text-align: center;
   margin-top: 30px;
   .reusecore__button {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    color: #6f7a87;
+    color: ${themeGet('colors.headingColor')};
     background: #fff;
     height: 50px;
     width: 165px;
-    border: 1px solid #e4e9ee;
+    border: 1px solid ${themeGet('colors.headingColor')};
     &:nth-child(1) {
       border-top-left-radius: 5px;
       border-top-right-radius: 0;
@@ -104,8 +130,9 @@ const PricingButtonWrapper = styled.div`
       border-left-color: transparent;
     }
     &.active-item {
-      color: #5167db;
-      border-color: #5167db;
+      color: #fff;
+      background: ${themeGet('colors.secondary')};
+      border-color: ${themeGet('colors.secondary')};
     }
     @media (max-width: 575px) {
       font-size: 14px;

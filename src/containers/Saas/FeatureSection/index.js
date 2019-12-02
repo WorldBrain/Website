@@ -7,6 +7,8 @@ import Heading from 'reusecore/src/elements/Heading';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FeatureSectionWrapper from './featureSection.style';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Fade from 'react-reveal/Fade';
 
 const FeatureSection = ({
   row,
@@ -25,34 +27,39 @@ const FeatureSection = ({
       saasJson {
         Features {
           id
-          title
           icon
+          title
+          path
         }
       }
     }
   `);
 
   return (
-    <FeatureSectionWrapper id="service_section">
+    <FeatureSectionWrapper>
       <Container>
-        <Box {...sectionHeader}>
-        <Heading content="Features" />
-        </Box>
-        <Box className="row" {...row}>
-          {Data.saasJson.Features.map((feature, index) => (
-            <Box className="col" {...col} key={index}>
-              <FeatureBlock
-                icon={<i className={feature.icon} />}
-                wrapperStyle={blockWrapperStyle}
-                iconStyle={iconStyle}
-                contentStyle={contentStyle}
-                iconPosition="left"
-                title={<Heading content={feature.title} {...featureTitle} />}
-                className="saasFeature"
-              />
-            </Box>
-          ))}
-        </Box>
+        <Fade>
+          <Box {...sectionHeader}>
+          <Heading content="Features" />
+          </Box>
+          <Box className="row" {...row}>
+            {Data.saasJson.Features.map((feature, index) => (
+              <Box className="col" {...col} key={index}>
+                <AnchorLink href={feature.path}>
+                  <FeatureBlock
+                    icon={<i className={feature.icon} />}
+                    wrapperStyle={blockWrapperStyle}
+                    iconStyle={iconStyle}
+                    contentStyle={contentStyle}
+                    iconPosition="left"
+                    title={<Heading as="h3" content={feature.title} {...featureTitle} />}
+                    className="saasFeature"
+                  />
+                </AnchorLink>
+              </Box>
+            ))}
+          </Box>
+        </Fade>
       </Container>
     </FeatureSectionWrapper>
   );
