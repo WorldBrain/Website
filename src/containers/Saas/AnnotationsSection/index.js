@@ -24,28 +24,30 @@ const AnnotationsSection = ({
 }) => {
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
-      <Container>
-        <Box {...textArea}>
-          <FeatureBlock
-            title={
-              <Heading
-                content="Annotations on the web"
-                {...title}
-              />
-            }
-            description={
-              <Text
-                content="Keep your thoughts organized with their original context."
-                {...description}
-              />
-            }
-          />
-        </Box>
-      </Container>
+
+        <Container className="text-container">
+          <Box {...textArea}>
+            <FeatureBlock
+              title={
+                <Heading
+                  content="Annotations on the web"
+                  {...title}
+                />
+              }
+              description={
+                <Text
+                  content="Keep your thoughts organized with their original context."
+                  {...description}
+                />
+              }
+            />
+          </Box>
+        </Container>
+
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
+            <Image src={ImageBg} className="bg-img" alt="Background image" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade right>
@@ -77,7 +79,7 @@ AnnotationsSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
-    mt: '-20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

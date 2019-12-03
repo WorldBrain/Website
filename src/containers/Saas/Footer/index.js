@@ -7,7 +7,6 @@ import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
 import FooterWrapper, { List, ListItem, FooterLink } from './footer.style';
-
 import LogoImage from '../../../img/worldbrain_logo_1.svg';
 import SubscribeForm from '../../../components/subscribe-form';
 import Link from 'reusecore/src/elements/Link';
@@ -57,7 +56,7 @@ const Footer = ({
             <Box className="col subscribe" {...col}>
               <Heading content="Stay up to date!" {...titleStyle} />
               <p>Get a monthly updates on our progress and a reading list of our team.</p>
-              {/* <SubscribeForm /> */}
+              <SubscribeForm />
             </Box>
           </Box>
           {/* End of footer List column */}
@@ -80,6 +79,7 @@ const Footer = ({
           </Link>
         </Box>
       </Container>
+      
     </FooterWrapper>
   );
 };

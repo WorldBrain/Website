@@ -10,9 +10,7 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import MobileSectionWrapper, { SectionObject } from './mobile.style';
-
-import ImageOne from '../../../img/phone-screen-1@2x.png';
-import ImageTwo from '../../../img/phone-screen-2@2x.png';
+import MobileSync from '../../../img/mobileSync.png';
 import DownloadMobile from '../../../img/download-mobile.png';
 import ImageBg from 'common/src/assets/image/saas/banner/bannerObject1.png';
 
@@ -56,12 +54,7 @@ const MobileSection = ({
           </Zoom>
           <Card className="imageOne" {...imageWrapper}>
             <Fade right>
-              <Image src={ImageOne} className="mobile-img" alt="Mobile 1" />
-            </Fade>
-          </Card>
-          <Card className="imageTwo" {...imageWrapper}>
-            <Fade right>
-              <Image src={ImageTwo} className="mobile-img" alt="Mobile 2" />
+              <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
             </Fade>
           </Card>
         </Card>

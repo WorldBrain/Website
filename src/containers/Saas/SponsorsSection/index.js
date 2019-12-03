@@ -1,65 +1,53 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
 import Box from 'reusecore/src/elements/Box';
 import Link from 'reusecore/src/elements/Link';
 import Text from 'reusecore/src/elements/Text';
-import Image from 'gatsby-image';
+import Image from 'reusecore/src/elements/Image';
 import Heading from 'reusecore/src/elements/Heading';
 import Container from 'common/src/components/UI/Container';
+import EuComissionLogo from '../../../img/logos/logo-eu.png';
+import LedgerLogo from '../../../img/logos/logo-ledger.png';
+import DigitalScienceLogo from '../../../img/logos/logo-digitalscience.png';
+import MozillaLogo from '../../../img/logos/logo-mozilla.svg';
 import SponsorsWrapper from './sponsorsSection.style';
-import Fade from 'react-reveal/Fade';
 
 const SponsorsSection = ({
   row,
   col,
   sectionTitle,
   sectionHeader,
-  blockWrapperStyle,
+  sectionWrapper,
   text,
+  image,
 }) => {
-  const Data = useStaticQuery(graphql`
-    query {
-      saasJson {
-        Sponsors {
-          id
-          logo {
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          company
-          url
-        }
-      }
-    }
-  `);
 
   return (
-    <SponsorsWrapper>
+    <SponsorsWrapper id="sponsorsSection">
       <Container>
-          <Box {...sectionHeader}>
+        <Box>
           <Heading 
             as="h5" 
             content="Supported by"
             {...sectionTitle}
           />
-          <Text content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
-          </Box>
-          <Box className="row" {...row}>
-            {Data.saasJson.Sponsors.map((sponsor, index) => (
-              <Box className="col" {...col} key={index}>
-              <a href={sponsor.url}>
-                  <Image
-                    fluid={sponsor.logo.childImageSharp.fluid}
-                      alt="Client Image"
-                  />
-                </a>
-              </Box>
-            ))}
-          </Box>
+          <Text className="sub-text" content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
+        </Box>
+        <Box className="row" {...row}>
+          <Link href="http://https://ec.europa.eu">
+            <Image width="100px" src={EuComissionLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+          </Link>
+          <Link href="https://ledgerproject.eu">
+            <Image {...image} src={LedgerLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+          </Link>
+          <Link href="https://foundation.mozilla.org/en">
+          <Image {...image} src={MozillaLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+          </Link>
+          <Link href="https://www.digital-science.com">
+          <Image {...image} src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+          </Link>
+        </Box>
       </Container>
     </SponsorsWrapper>
   );
@@ -67,7 +55,6 @@ const SponsorsSection = ({
 
 // FeatureSection style props
 SponsorsSection.propTypes = {
-  sectionHeader: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
 };
@@ -82,16 +69,13 @@ SponsorsSection.defaultProps = {
   row: {
     flexBox: true,
     flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   // feature col default style
   col: {
     width: [1, 1 / 2, 1 / 3, 1 / 4],
     textAlign: 'center',
-  },
-  // feature block wrapper default style
-  blockWrapperStyle: {
-    p: ['30px', '20px', '20px', '20px'],
-    alignItems: 'center'
   },
   sectionTitle: {
     textAlign: 'center',
@@ -99,10 +83,14 @@ SponsorsSection.defaultProps = {
     fontWeight: '500',
   },
   text: {
-    color: 'textColor',
-    fontSize: '0.875rem',
-    width: '70%',
-    display: 'flex'
+    color: 'lightestText',
+    fontSize: '0.8125rem',
+    display: 'flex',
+    textAlign: 'center',
+  },
+  image: {
+    width: '150px',
+    mt: ['20px', '20px' , 0, 0]
   }
 };
 

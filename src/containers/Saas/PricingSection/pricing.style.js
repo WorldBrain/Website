@@ -20,6 +20,9 @@ const PricingTable = styled.div`
     h2 {
       color: ${themeGet('colors.primary')};
     }
+    @media (max-width: 767px) {
+      margin-right: 0;
+    }
   }
 
   &.pro-plan {
@@ -28,12 +31,33 @@ const PricingTable = styled.div`
     h2 {
       color: ${themeGet('colors.secondary')};
     }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 767px) {
-    padding: 45px 35px;
+    padding: 35px 25px;
+    width: 100%;
+    min-height: 0;
   }
 `;
+
+const DeviceSelection = styled.div`
+  color: ${themeGet('colors.secondary')};
+  input {
+    border: 1px solid ${themeGet('colors.secondary')};
+    width: 55px;
+    margin: 0 10px;
+    &:focus {
+      border: 1px solid ${themeGet('colors.secondary')};
+    }
+  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
 
 const PricingHead = styled.div`
   display: flex;
@@ -151,5 +175,6 @@ export {
   ListItem,
   SwitchWrapper,
   PricingButtonWrapper,
+  DeviceSelection,
 };
 export default PricingTable;

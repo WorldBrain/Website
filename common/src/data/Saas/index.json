@@ -203,7 +203,8 @@
     {
       "label": "Values",
       "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
-      "offset": "70"
+      "offset": "70",
+      "staticLink" : true
     },
     {
       "label": "Upgrade",
@@ -217,13 +218,15 @@
     },
     {
       "label": "Blog",
-      "path": "#",
-      "offset": "70"
+      "path": "https://medium.com/@WorldBrain",
+      "offset": "70",
+      "staticLink": true
     },
     {
       "label": "GitHub",
-      "path": "#",
-      "offset": "70"
+      "path": "https://github.com/WorldBrain",
+      "offset": "70",
+      "staticLink": true
     },
     {
       "label": "Login",

@@ -7,6 +7,7 @@ const FeatureSectionWrapper = styled.section`
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
   }
+
   @media (max-width: 767px) {
     padding: 60px 0 30px 0;
   }
@@ -16,9 +17,7 @@ const FeatureSectionWrapper = styled.section`
     height: 100%;
     transition: box-shadow 0.3s ease;
     padding-left: 0;
-    @media (max-width: 500px) {
-      padding: 30px 0;
-    }
+
     &:hover {
       cursor: pointer;
     }
@@ -27,6 +26,10 @@ const FeatureSectionWrapper = styled.section`
     }
     &:hover i.tags-collections {
       background-position-x: -154px
+    }
+
+    @media (max-width: 775px) {
+      display: none;
     }
   }
 

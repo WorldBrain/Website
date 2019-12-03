@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   position: relative;
-  background-color: #f9fbfd;
+  background-color: #fff;
   overflow: hidden;
   font-size: 1rem;;
-  background: linear-gradient(to bottom, #f9fbfd 0%, #fafbff 100%);
+  background: linear-gradient(to bottom, #fff 0%, #fafbff 100%);
   a, p {
     color: #265A4E;
   }

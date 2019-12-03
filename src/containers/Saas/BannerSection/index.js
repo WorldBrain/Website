@@ -8,7 +8,6 @@ import Button from 'reusecore/src/elements/Button';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import BannerWrapper, {
-  DiscountLabel,
   BannerObject,
   BrowserIcons,
 } from './bannerSection.style';

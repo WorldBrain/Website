@@ -15,7 +15,11 @@ const AnnotationsSectionWrapper = styled.section`
   }
   @media (max-width: 767px) {
     min-height: auto;
-    display: block;
+    flex-direction: column;
+    .text-container {
+      order: 1;
+      width: 100%;
+    }
   }
 `;
 
@@ -28,6 +32,7 @@ const SectionObject = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  order: 0;
   @media (max-width: 767px) {
     width: 100%;
     position: relative;
@@ -35,6 +40,9 @@ const SectionObject = styled.div`
     height: auto;
     top: auto;
     left: auto;
+    .bg-img {
+      display: none;
+    }
   }
   img {
     margin-right: 20px;
@@ -48,6 +56,9 @@ const SectionObject = styled.div`
       position: absolute;
       top: 4vw;
       left: 0;
+      @media (max-width: 767px) {
+        position: static;
+      }
 
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);

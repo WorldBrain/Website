@@ -16,11 +16,16 @@ const MobileSectionWrapper = styled.section`
   @media (max-width: 767px) {
     min-height: auto;
     display: block;
+    text-align: center;
+
   }
 
   .mobileDownload {
     opacity: 0.5;
     margin-left: -15px;
+    @media (max-width: 767px) {
+      margin: auto;
+    }
   }
 `;
 
@@ -35,6 +40,7 @@ const SectionObject = styled.div`
   justify-content: flex-end;
   @media (max-width: 767px) {
     position: relative;
+    width: auto;
     height: auto;
     top: auto;
     left: auto;
@@ -49,26 +55,25 @@ const SectionObject = styled.div`
 
     .bg-image {
       opacity: 0.6;
+      @media (max-width: 575px) {
+        display: none;
+      }
     }
 
     .imageOne {
       position: absolute;
       top: 5vw;
-      left: 0;
+      left: 160px;
 
-      .mobile-img {
-        width: auto;
-        height: 500px;
+      @media (max-width: 575px) {
+        position: static;
+        width: 80%;
+        margin: auto;
       }
-    }
-    .imageTwo {
-      position: absolute;
-      top: 2.5vw;
-      left: 170px;
 
       .mobile-img {
         width: auto;
-        height: 500px;
+        max-height: 600px;
       }
     }
   }

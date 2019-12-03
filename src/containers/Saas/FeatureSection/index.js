@@ -20,6 +20,7 @@ const FeatureSection = ({
   iconStyles,
   iconStyle,
   contentStyle,
+  heading,
   blockWrapperStyle,
 }) => {
   const Data = useStaticQuery(graphql`
@@ -40,7 +41,7 @@ const FeatureSection = ({
       <Container>
         <Fade>
           <Box {...sectionHeader}>
-          <Heading content="Features" />
+          <Heading content="Features" {...heading} />
           </Box>
           <Box className="row" {...row}>
             {Data.saasJson.Features.map((feature, index) => (
@@ -98,7 +99,7 @@ FeatureSection.defaultProps = {
   },
 
   heading: {
-    fontSize: '2rem',
+    fontSize: ['1.5625rem', '2rem', '2rem'],
   },
   // feature icon default style
   iconStyle: {

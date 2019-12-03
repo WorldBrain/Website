@@ -7,6 +7,7 @@ import Button from 'reusecore/src/elements/Button';
 import Heading from 'reusecore/src/elements/Heading';
 import Container from 'common/src/components/UI/Container';
 import Fade from 'react-reveal/Fade';
+import CommunityWrapper from './communitySection.style';
 
 const CommunitySection = ({
   row,
@@ -18,26 +19,28 @@ const CommunitySection = ({
 
   return (
 
-    <Container>
-      <Box className="row" {...row}>
-        <Box {...col}>
-          <Heading 
-            as="h2" 
-            content="Join the Community"
-            {...title}
-          />
-          <Text content="Copy. Modify. Innovate. Contribute. Adapt Memex' code and move your data to a version that suits you best." {...text}/>
+    <CommunityWrapper id="communitySection">
+      <Container>
+        <Box className="row" {...row}>
+          <Box {...col}>
+            <Heading 
+              as="h2" 
+              content="Join the Community"
+              {...title}
+            />
+            <Text content="Copy. Modify. Innovate. Contribute. Adapt Memex' code and move your data to a version that suits you best." {...text}/>
+          </Box>
+          <Box {...col}>
+            <Heading 
+              as="h2" 
+              content="Open Source"
+              {...title}
+            />
+            <Text content="Leave your feature ideas, engage in the feedback process and shape the future of Memex" {...text}/>
+          </Box>
         </Box>
-        <Box {...col}>
-          <Heading 
-            as="h2" 
-            content="Open Source"
-            {...title}
-          />
-          <Text content="Leave your feature ideas, engage in the feedback process and shape the future of Memex" {...text}/>
-        </Box>
-      </Box>
-    </Container>
+      </Container>
+    </CommunityWrapper>
   );
 };
 

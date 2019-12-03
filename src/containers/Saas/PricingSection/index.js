@@ -7,6 +7,9 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Container from 'common/src/components/UI/Container';
+import Input2 from 'common/src/components/Input';
+
+import Input from 'reusecore/src/elements/Input';
 
 import PricingTable, {
   PricingHead,
@@ -14,7 +17,8 @@ import PricingTable, {
   PricingButton,
   PricingList,
   ListItem,
-  PricingButtonWrapper
+  PricingButtonWrapper,
+  DeviceSelection,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -111,6 +115,14 @@ const PricingSection = ({
                   <PricingPrice>
                     <Text content={pricingTable.price} {...priceStyle} />
                   </PricingPrice>
+                  
+                  <span>TODO - hide on free, make functional</span>
+                  <DeviceSelection>
+                    <span>for</span>
+                    <Input inputType="number" value="1" />
+                    <span>device</span>
+                  </DeviceSelection>
+
                   <PricingList>
                     {pricingTable.listItems.map((item, index) => (
                       <ListItem key={`pricing-table-list-${index}`}>
