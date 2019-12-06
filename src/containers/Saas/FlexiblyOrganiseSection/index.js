@@ -11,7 +11,6 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FlexiblyOrganiseSectionWrapper, { SectionObject } from './flexibly.style';
-
 import ImageOne from '../../../img/organisation.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 

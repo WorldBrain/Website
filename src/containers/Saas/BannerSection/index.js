@@ -14,9 +14,9 @@ import BannerWrapper, {
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
 import BannerObject2 from '../../../img/main_screen_new.png';
-import ChromeIcon from '../../../img/logo-chrome.svg';
-import FirefoxIcon from '../../../img/logo-firefox.svg';
-import BraveIcon from '../../../img/logo-brave.svg';
+import ChromeIcon from '../../../img/logos/logo-chrome.svg';
+import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
+import BraveIcon from '../../../img/logos/logo-brave.svg';
 import Fade from 'react-reveal/Fade';
 const BannerSection = ({
   row,

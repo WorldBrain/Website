@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
 const SubscribeFormStyle = styled.div`
-  background: pink;
-  padding: 40px 0 60px 0;
+  fieldset {
+  	border: none;
+  	padding: 0;
+  }
+  input {
+  	margin-bottom: 5px;
+  }
 `;
 
 export default SubscribeFormStyle;

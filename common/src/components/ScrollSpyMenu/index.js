@@ -61,6 +61,9 @@ const ScrollSpyMenu = ({btnStyle, className, menuItems, drawerClose, ...props })
         </li>
       ))}
       <li>
+        <a href="/login">Login</a>
+      </li>
+      <li>
         <Button title="Download" {...btnStyle} />
       </li>
     </Scrollspy>

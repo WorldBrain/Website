@@ -129,76 +129,6 @@
       ]
     }
   ],
-  "Service": [
-    {
-      "id": 1,
-      "icon": "flaticon-briefing",
-      "title": "App Development",
-      "description": "We are specialized at custom Saas Application Development and special features ."
-    },
-    {
-      "id": 2,
-      "icon": "flaticon-trophy",
-      "title": "10 Times Award",
-      "description": "We are globally recognised for our services and won a lot of prices around the world ."
-    },
-    {
-      "id": 3,
-      "icon": "flaticon-atom",
-      "title": "Cloud Stroage",
-      "description": "LiteSpeed Web Server known for its high performance and low resource consumption."
-    },
-    {
-      "id": 4,
-      "icon": "flaticon-ruler",
-      "title": "Client Satisfaction",
-      "description": "Client Satisfaction is our first priority and We are best at it .Keep In Touch."
-    },
-    {
-      "id": 5,
-      "icon": "flaticon-creative",
-      "title": "UX Planning",
-      "description": "We provide the best UI/UX Design by following the latest trends of the market  ."
-    },
-    {
-      "id": 6,
-      "icon": "flaticon-conversation",
-      "title": "Customer Support",
-      "description": "A Dedicated support team is always ready to provide best support to our customers."
-    }
-  ],
-  "Timeline": [
-    {
-      "title": "Wireframing for project",
-      "description": "We respect our customer opinions and deals with them with perfect wireframing."
-    },
-    {
-      "title": "UI/UX for project",
-      "description": "We provide the best UI/UX Design by following the latest trends of the market ."
-    },
-    {
-      "title": "Negotiation about project",
-      "description": "After the negotiation is done , We start to build the project with latest technology ."
-    }
-  ],
-  "Testimonial": [
-    {
-      "id": 1,
-      "name": "Jon Doe",
-      "designation": "Ceo of Invission Co.",
-      "comment": "Love to work with this designer in every our future project to ensure we are going to build best prototyping features.",
-      "avatar_url": "../../assets/image/saas/testimonial/client-1.jpg",
-      "social_icon": "flaticon-instagram"
-    },
-    {
-      "id": 2,
-      "name": "Roman Ul Oman",
-      "designation": "Co-founder of QatarDiaries",
-      "comment": "Impressed with master class support of the team and really look forward for the future. A true passionate team.",
-      "avatar_url": "../../assets/image/agency/client/denny.png",
-      "social_icon": "flaticon-twitter-logo-silhouette"
-    }
-  ],
   "MENU_ITEMS": [
     {
       "label": "Values",
@@ -227,11 +157,6 @@
       "path": "https://github.com/WorldBrain",
       "offset": "70",
       "staticLink": true
-    },
-    {
-      "label": "Login",
-      "path": "#",
-      "offset": "70"
     }
   ],
   "MONTHLY_PRICING_TABLE": [

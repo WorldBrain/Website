@@ -10,7 +10,7 @@ import Container from 'common/src/components/UI/Container';
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
 import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 
-import LogoImage from '../../../img/logo.svg';
+import LogoImage from '../../../img/logos/logo-memex.svg';
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const Data = useStaticQuery(graphql`
@@ -40,7 +40,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
       <Container>
         <Box {...row}>
           <Logo
-            href="#"
+            href="/"
             logoSrc={LogoImage}
             title="Memex"
             logoStyle={logoStyle}

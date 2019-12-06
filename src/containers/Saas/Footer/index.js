@@ -7,7 +7,7 @@ import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
 import FooterWrapper, { List, ListItem, FooterLink } from './footer.style';
-import LogoImage from '../../../img/worldbrain_logo_1.svg';
+import LogoWorldbrain from '../../../img/logos/logo-worldbrain.svg';
 import SubscribeForm from '../../../components/subscribe-form';
 import Link from 'reusecore/src/elements/Link';
 
@@ -64,7 +64,7 @@ const Footer = ({
 
         <Box className="row support-links" {...endlink}>
           <Logo
-            logoSrc={LogoImage}
+            logoSrc={LogoWorldbrain}
             logoStyle={logoStyle}
             title="Memex"
           />

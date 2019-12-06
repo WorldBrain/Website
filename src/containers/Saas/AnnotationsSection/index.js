@@ -25,24 +25,24 @@ const AnnotationsSection = ({
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
 
-        <Container className="text-container">
-          <Box {...textArea}>
-            <FeatureBlock
-              title={
-                <Heading
-                  content="Annotations on the web"
-                  {...title}
-                />
-              }
-              description={
-                <Text
-                  content="Keep your thoughts organized with their original context."
-                  {...description}
-                />
-              }
-            />
-          </Box>
-        </Container>
+      <Container className="text-container">
+        <Box {...textArea}>
+          <FeatureBlock
+            title={
+              <Heading
+                content="Annotations on the web"
+                {...title}
+              />
+            }
+            description={
+              <Text
+                content="Keep your thoughts organized with their original context."
+                {...description}
+              />
+            }
+          />
+        </Box>
+      </Container>
 
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
