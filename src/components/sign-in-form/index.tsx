@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { navigate } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
+import Input from 'reusecore/src/elements/Input';
 import SignInWrapper, { ErrorMessage } from './signin.style';
 
 export default class SignInForm extends Component {
@@ -24,13 +25,15 @@ export default class SignInForm extends Component {
 
   }
 
-  handleFieldChange = (field) => (e: Event) => {
+  handleFieldChange = (field) => (value) => {
     this.setState({
-      [field]: e.target.value,
+      [field]: value,
     });
   }
 
-  handleOnLogin = (e) => {
+  handleOnLogin = (e: Event) => {
+    e.preventDefault();
+
     const { firebase, email, password } = this.state;
     if (firebase) {
       firebase.auth().signInWithEmailAndPassword(email, password)
@@ -60,6 +63,7 @@ export default class SignInForm extends Component {
   render() {
     const { authService, currentUser } = this.props;
     const { firebase, error, email, password } = this.state;
+    console.log({ currentUser })
 
     if (currentUser) {
       return (
@@ -73,32 +77,35 @@ export default class SignInForm extends Component {
 
     return (
       <SignInWrapper>
-        <Heading as="h3" content="Login"/>
-        <label for="email">Email</label>
-        <input
-          type="text"
-          name="email"
-          placeholder="Your email"
-          value={email}
-          onChange={this.handleFieldChange('email')}
-        />
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={this.handleFieldChange('password')}
-        />
+        <form onSubmit={this.handleOnLogin}>
+          <Heading as="h3" content="Login" />
+          <label forhtml="email">Email</label>
+          <Input
+            inputType="email"
+            name="email"
+            placeholder="Your email"
+            value={email}
+            onChange={this.handleFieldChange('email')}
+          />
+          <br />
+          <label forhtml="password">Password</label>
+          <Input
+            inputType="password"
+            passwordShowHide
+            placeholder="Password"
+            value={password}
+            onChange={this.handleFieldChange('password')}
+          />
+          <br />
 
-        {error && <p className="error">
-          <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
-        </p>}
+          {error && <ErrorMessage>
+            <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
+          </ErrorMessage>}
 
-        <Button type="submit" onClick={this.handleOnLogin} title="Login" />
-        
-        <a href="#">I forgot my password</a>
+          <Button type="submit" onClick={this.handleOnLogin} title="Login" />
 
+          <a href="#">I forgot my password</a>
+        </form>
       </SignInWrapper>
     )
   }

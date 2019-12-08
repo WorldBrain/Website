@@ -4,8 +4,9 @@ import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
+import { Link } from 'gatsby';
 
-const ScrollSpyMenu = ({btnStyle, className, menuItems, drawerClose, ...props }) => {
+const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
@@ -60,9 +61,17 @@ const ScrollSpyMenu = ({btnStyle, className, menuItems, drawerClose, ...props })
             )}
         </li>
       ))}
-      <li>
-        <a href="/login">Login</a>
-      </li>
+      {user ? (
+        <li>
+          <Link to="/account">Hello {user.displayName}</Link>
+        </li>
+      ) : (
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        )
+      }
+
       <li>
         <Button title="Download" {...btnStyle} />
       </li>
