@@ -4,11 +4,10 @@ const MobileSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
-    margin-bottom: 45px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 370px;
@@ -17,11 +16,16 @@ const MobileSectionWrapper = styled.section`
   @media (max-width: 767px) {
     min-height: auto;
     display: block;
+    text-align: center;
+
   }
 
   .mobileDownload {
     opacity: 0.5;
     margin-left: -15px;
+    @media (max-width: 767px) {
+      margin: auto;
+    }
   }
 `;
 
@@ -35,8 +39,8 @@ const SectionObject = styled.div`
   align-items: center;
   justify-content: flex-end;
   @media (max-width: 767px) {
-    width: 100%;
     position: relative;
+    width: auto;
     height: auto;
     top: auto;
     left: auto;
@@ -51,24 +55,25 @@ const SectionObject = styled.div`
 
     .bg-image {
       opacity: 0.6;
+      @media (max-width: 575px) {
+        display: none;
+      }
     }
 
     .imageOne {
       position: absolute;
       top: 5vw;
-      left: 0;
+      left: 160px;
 
-      .mobile-img {
-        width: 500px;
+      @media (max-width: 575px) {
+        position: static;
+        width: 80%;
+        margin: auto;
       }
-    }
-    .imageTwo {
-      position: absolute;
-      top: 2vw;
-      left: 180px;
 
       .mobile-img {
-        width: 500px;
+        width: auto;
+        max-height: 600px;
       }
     }
   }

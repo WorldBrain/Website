@@ -7,6 +7,8 @@ import Heading from 'reusecore/src/elements/Heading';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FeatureSectionWrapper from './featureSection.style';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Fade from 'react-reveal/Fade';
 
 const FeatureSection = ({
   row,
@@ -18,6 +20,7 @@ const FeatureSection = ({
   iconStyles,
   iconStyle,
   contentStyle,
+  heading,
   blockWrapperStyle,
 }) => {
   const Data = useStaticQuery(graphql`
@@ -25,34 +28,39 @@ const FeatureSection = ({
       saasJson {
         Features {
           id
-          title
           icon
+          title
+          path
         }
       }
     }
   `);
 
   return (
-    <FeatureSectionWrapper id="service_section">
+    <FeatureSectionWrapper>
       <Container>
-        <Box {...sectionHeader}>
-        <Heading content="Features" />
-        </Box>
-        <Box className="row" {...row}>
-          {Data.saasJson.Features.map((feature, index) => (
-            <Box className="col" {...col} key={index}>
-              <FeatureBlock
-                icon={<i className={feature.icon} />}
-                wrapperStyle={blockWrapperStyle}
-                iconStyle={iconStyle}
-                contentStyle={contentStyle}
-                iconPosition="left"
-                title={<Heading content={feature.title} {...featureTitle} />}
-                className="saasFeature"
-              />
-            </Box>
-          ))}
-        </Box>
+        <Fade>
+          <Box {...sectionHeader}>
+          <Heading content="Features" {...heading} />
+          </Box>
+          <Box className="row" {...row}>
+            {Data.saasJson.Features.map((feature, index) => (
+              <Box className="col" {...col} key={index}>
+                <AnchorLink href={feature.path}>
+                  <FeatureBlock
+                    icon={<i className={feature.icon} />}
+                    wrapperStyle={blockWrapperStyle}
+                    iconStyle={iconStyle}
+                    contentStyle={contentStyle}
+                    iconPosition="left"
+                    title={<Heading as="h3" content={feature.title} {...featureTitle} />}
+                    className="saasFeature"
+                  />
+                </AnchorLink>
+              </Box>
+            ))}
+          </Box>
+        </Fade>
       </Container>
     </FeatureSectionWrapper>
   );
@@ -73,7 +81,7 @@ FeatureSection.propTypes = {
 FeatureSection.defaultProps = {
   // section header default style
   sectionHeader: {
-    mb: ['40px', '40px', '40px', '80px'],
+    mb: ['40px', '40px', '40px', '40px'],
   },
   // feature row default style
   row: {
@@ -90,14 +98,13 @@ FeatureSection.defaultProps = {
     alignItems: 'center'
   },
 
-  title: {
-    color: 'headingColor',
+  heading: {
+    fontSize: ['1.5625rem', '2rem', '2rem'],
   },
   // feature icon default style
   iconStyle: {
     width: ['60px', '60px', '60px', '60px'],
     height: ['60px', '60px', '60px', '60px'],
-    borderRadius: '50%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -105,7 +112,6 @@ FeatureSection.defaultProps = {
     color: '#ffffff',
     overflow: 'hidden',
     mb: ['20px', '20px', '20px', '30px'],
-    borderBottomLeftRadius: '50%',
   },
   // feature content default style
   contentStyle: {
@@ -116,7 +122,7 @@ FeatureSection.defaultProps = {
   featureTitle: {
     fontSize: '1.125rem',
     fontWeight: '400',
-    color: 'headingColor',
+    color: 'textColor',
     lineHeight: '1.5',
     mb: ['10px', '10px', '10px', '20px'],
   },

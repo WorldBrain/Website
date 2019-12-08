@@ -23,8 +23,9 @@ const AnnotationsSection = ({
   gifStyle,
 }) => {
   return (
-    <AnnotationsSectionWrapper id="visitorSection">
-      <Container>
+    <AnnotationsSectionWrapper id="annotationsSection">
+
+      <Container className="text-container">
         <Box {...textArea}>
           <FeatureBlock
             title={
@@ -42,10 +43,11 @@ const AnnotationsSection = ({
           />
         </Box>
       </Container>
+
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
+            <Image src={ImageBg} className="bg-img" alt="Background image" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
             <Fade right>
@@ -77,6 +79,7 @@ AnnotationsSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

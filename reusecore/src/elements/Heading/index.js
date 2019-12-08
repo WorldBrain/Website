@@ -71,6 +71,7 @@ Heading.defaultProps = {
   as: 'h2',
   mt: 0,
   mb: '1rem',
-  fontWeight: '500',
+  fontWeight: '600',
+  fontSize: '2rem',
   color: 'headingColor',
 };

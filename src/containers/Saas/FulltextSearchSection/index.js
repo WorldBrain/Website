@@ -22,7 +22,7 @@ const FulltextSearchSection = ({
   imageWrapper,
 }) => {
   return (
-    <FulltextSearchSectionWrapper id="visitorSection">
+    <FulltextSearchSectionWrapper id="fullTextSearchSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>

@@ -10,12 +10,14 @@ import FeatureSection from '../../containers/Saas/FeatureSection';
 import FulltextSearchSection from '../../containers/Saas/FulltextSearchSection';
 import Footer from '../../containers/Saas/Footer';
 import PricingSection from '../../containers/Saas/PricingSection';
-import PartnerSection from '../../containers/Saas/PartnerSection';
+import ImportSection from '../../containers/Saas/ImportSection';
+import SponsorsSection from '../../containers/Saas/SponsorsSection';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import FlexiblyOrganiseSection from '../../containers/Saas/FlexiblyOrganiseSection';
 import StoreLocalSection from '../../containers/StoreLocalSection';
 import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
 import MobileSection from '../../containers/Saas/MobileSection';
+import CommunitySection from '../../containers/Saas/CommunitySection';
 
 export default () => {
   return (
@@ -36,8 +38,10 @@ export default () => {
           <FlexiblyOrganiseSection />
           <MobileSection />
           <StoreLocalSection />
-          <PartnerSection />
+          <ImportSection />
           <PricingSection />
+          <CommunitySection />
+          <SponsorsSection />
           <Footer />
         </ContentWrapper>
       </Fragment>

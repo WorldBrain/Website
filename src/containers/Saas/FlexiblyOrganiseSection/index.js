@@ -11,7 +11,6 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FlexiblyOrganiseSectionWrapper, { SectionObject } from './flexibly.style';
-
 import ImageOne from '../../../img/organisation.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
@@ -22,7 +21,7 @@ const FlexiblyOrganiseSection = ({
   imageWrapper,
 }) => {
   return (
-    <FlexiblyOrganiseSectionWrapper id="Flexibly Organise Section">
+    <FlexiblyOrganiseSectionWrapper id="tagsSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>
@@ -76,6 +75,7 @@ FlexiblyOrganiseSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
+    mt: '-20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
