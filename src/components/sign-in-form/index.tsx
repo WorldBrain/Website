@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { navigate } from 'gatsby';
-
-import { SignInForm as SignInFormStyle } from './styles.scss';
+import Heading from 'reusecore/src/elements/Heading';
+import Button from 'reusecore/src/elements/Button';
+import SignInWrapper, { ErrorMessage } from './signin.style';
 
 export default class SignInForm extends Component {
   constructor(props) {
@@ -71,44 +72,34 @@ export default class SignInForm extends Component {
     }
 
     return (
-      <div className={SignInFormStyle}>
-        <h3 className="center">Sign In</h3>
-        <div
-          className="form-field"
-        >
-          <input
-            type="text"
-            name="email"
-            placeholder="Your email"
-            value={email}
-            onChange={this.handleFieldChange('email')}
-          />
-        </div>
-
-        <div
-          className="form-field"
-        >
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={this.handleFieldChange('password')}
-          />
-        </div>
-
-        <p>
-          <a href="#">I forgot my password</a>
-        </p>
+      <SignInWrapper>
+        <Heading as="h3" content="Login"/>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="Your email"
+          value={email}
+          onChange={this.handleFieldChange('email')}
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={password}
+          onChange={this.handleFieldChange('password')}
+        />
 
         {error && <p className="error">
           <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
         </p>}
 
-        <div className="center">
-          <input type="submit" onClick={this.handleOnLogin} className="btn btn-primary btn-large" value="Next" />
-        </div>
-      </div>
+        <Button type="submit" onClick={this.handleOnLogin} title="Login" />
+        
+        <a href="#">I forgot my password</a>
+
+      </SignInWrapper>
     )
   }
 }

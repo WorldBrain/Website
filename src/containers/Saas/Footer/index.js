@@ -7,8 +7,7 @@ import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
 import FooterWrapper, { List, ListItem, FooterLink } from './footer.style';
-
-import LogoImage from '../../../img/worldbrain_logo_1.svg';
+import LogoWorldbrain from '../../../img/logos/logo-worldbrain.svg';
 import SubscribeForm from '../../../components/subscribe-form';
 import Link from 'reusecore/src/elements/Link';
 
@@ -54,30 +53,33 @@ const Footer = ({
               </Box>
             ))}
 
-            <Box className="col" {...col}>
+            <Box className="col subscribe" {...col}>
               <Heading content="Stay up to date!" {...titleStyle} />
-              {/* <SubscribeForm /> */}
+              <p>Get a monthly updates on our progress and a reading list of our team.</p>
+              <SubscribeForm />
             </Box>
           </Box>
           {/* End of footer List column */}
         </Box>
 
-        <Box className="row" {...endlink}>
+        <Box className="row support-links" {...endlink}>
           <Logo
-            logoSrc={LogoImage}
+            logoSrc={LogoWorldbrain}
             logoStyle={logoStyle}
+            title="Memex"
           />
-          <Link>
+          <Link href="https://community.worldbrain.io/">
             support@worldbrain.io
-            </Link>
-          <Link>
+          </Link>
+          <Link href="https://community.worldbrain.io/c/bug-reports">
             Report a bug
-            </Link>
-          <Link>
+          </Link>
+          <Link href="https://www.flaticon.com/authors/smashicons">
             Icons by <u>Smashicons</u> from <u>Flaticons.com</u>
           </Link>
         </Box>
       </Container>
+      
     </FooterWrapper>
   );
 };
@@ -110,7 +112,7 @@ Footer.defaultProps = {
   },
   // Footer col default style
   col: {
-    width: ['100%', '33%', '33%', '33%'],
+    width: ['50%', '50%', '33%', '33%'],
     pl: '15px',
     pr: '15px',
     mb: '30px',
@@ -128,7 +130,7 @@ Footer.defaultProps = {
   },
   // Default logo size
   logoStyle: {
-    width: '250px',
+    width: ['200px', '250px', '190px', '250px'],
   },
   // widget text default style
   textStyle: {

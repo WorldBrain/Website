@@ -1,0 +1,16 @@
+import styled from 'styled-components';
+import { themeGet } from 'styled-system';
+
+const SignInWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-width: 400px;
+`;
+
+const ErrorMessage = styled.p`
+  color: ${themeGet('colors.warning')};
+`
+export { ErrorMessage };
+
+export default SignInWrapper;

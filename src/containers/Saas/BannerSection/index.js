@@ -8,17 +8,16 @@ import Button from 'reusecore/src/elements/Button';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import BannerWrapper, {
-  DiscountLabel,
   BannerObject,
+  BrowserIcons,
 } from './bannerSection.style';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
 import BannerObject2 from '../../../img/main_screen_new.png';
-
-import ChromeIcon from '../../../img/logo-chrome.svg';
-import FirefoxIcon from '../../../img/logo-firefox.svg';
-import BraveIcon from '../../../img/logo-brave.svg';
-
+import ChromeIcon from '../../../img/logos/logo-chrome.svg';
+import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
+import BraveIcon from '../../../img/logos/logo-brave.svg';
+import Fade from 'react-reveal/Fade';
 const BannerSection = ({
   row,
   col,
@@ -30,9 +29,11 @@ const BannerSection = ({
   const ButtonGroup = () => (
     <Fragment>
       <Button title="Download for free" {...btnStyle} />
-      <Image src={ChromeIcon} className="browser-icon" />
-      <Image src={FirefoxIcon} className="browser-icon" />
-      <Image src={BraveIcon} className="browser-icon" />
+      <BrowserIcons>
+        <Image src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
+        <Image src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
+        <Image src={BraveIcon} className="browser-icon" alt="Brave logo"/>
+      </BrowserIcons>
     </Fragment>
   );
   return (
@@ -40,9 +41,11 @@ const BannerSection = ({
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
+          <Fade>
             <FeatureBlock
               title={
                 <Heading
+                  as="h1"
                   content="Bookmarking for the
                   power users of the web"
                   {...title}
@@ -64,16 +67,19 @@ const BannerSection = ({
               content="No account necessary. All data stored locally."
               {...downloadDescription}
             />
+            </Fade>
           </Box>
         </Box>
       </Container>
       <BannerObject>
-        <div className="objectWrapper">
-          <Image src={BannerObject1} className="banner-bg" />
-          <div className="dashboardWrapper">
-            <Image src={BannerObject2} alt="BannerObject2" />
+        <Fade>
+          <div className="objectWrapper">
+            <Image src={BannerObject1} className="banner-bg" alt="Background colour"/>
+            <div className="dashboardWrapper">
+              <Image src={BannerObject2} alt="Screenshot of the dashboard page" />
+            </div>
           </div>
-        </div>
+        </Fade>
       </BannerObject>
     </BannerWrapper>
   );
@@ -83,10 +89,6 @@ BannerSection.propTypes = {
   title: PropTypes.object,
   btnStyle: PropTypes.object,
   description: PropTypes.object,
-  contentStyle: PropTypes.object,
-  contentStyle: PropTypes.object,
-  discountAmount: PropTypes.object,
-  outlineBtnStyle: PropTypes.object,
 };
 
 BannerSection.defaultProps = {
@@ -103,54 +105,31 @@ BannerSection.defaultProps = {
     width: [1, '70%', '70%', '55%'],
   },
   title: {
-    fontSize: ['1.375rem', '2.125rem', '1.875rem', '2rem'],
+    fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.5rem'],
     fontWeight: '600',
     color: 'headingColor',
-    letterSpacing: '-0.025em',
     mb: ['20px', '25px'],
     lineHeight: '1.3',
-    width: '80%',
+    width: ['100%', '70%', '70%', '80%'],
   },
   description: {
     fontSize: '1.125rem',
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
-    width: '80%',
+    width: ['100%', '70%', '70%', '80%'],
   },
   downloadDescription: {
     fontSize: '0.8125rem',
     color: 'lightestText',
     lineHeight: '1.5',
-    width: '320px',
+    width: ['100%', '320px'],
     mb: '5px',
   },
   btnStyle: {
-    minWidth: ['120px', '120px', '120px', '156px'],
-    fontSize: ['1.125rem', '1.125rem', '1.375rem'],
+    minWidth: ['100%', '100%', '120px', '265px'],
+    fontSize: ['1.125rem', '1.125rem', '1rem', '1.375rem'],
     colors: 'primaryWithBg',
-  },
-  outlineBtnStyle: {
-    minWidth: '156px',
-    fontSize: '14px',
-    fontWeight: '500',
-    color: '#5167db',
-    ml: '18px',
-  },
-  discountAmount: {
-    fontSize: '14px',
-    color: '#eb4d4b',
-    mb: 0,
-    as: 'span',
-    mr: '0.4em',
-    fontWeight: 700,
-  },
-  discountText: {
-    fontSize: ['0.8125rem', '0.875rem'],
-    color: '#0f2137',
-    mb: 0,
-    as: 'span',
-    fontWeight: 500,
   },
 };
 

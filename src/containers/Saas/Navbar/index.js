@@ -10,7 +10,7 @@ import Container from 'common/src/components/UI/Container';
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
 import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 
-import LogoImage from '../../../img/logo.svg';
+import LogoImage from '../../../img/logos/logo-memex.svg';
 
 const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
   const Data = useStaticQuery(graphql`
@@ -20,6 +20,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
           label
           path
           offset
+          staticLink
         }
       }
     }
@@ -39,7 +40,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
       <Container>
         <Box {...row}>
           <Logo
-            href="#"
+            href="/"
             logoSrc={LogoImage}
             title="Memex"
             logoStyle={logoStyle}
@@ -98,15 +99,7 @@ Navbar.defaultProps = {
   },
   logoStyle: {
     maxWidth: '130px',
-    mr: [0, 0, 0, '166px'],
-  },
-  button: {
-    type: 'button',
-    fontSize: '13px',
-    color: 'white',
-    pl: '15px',
-    pr: '15px',
-    colors: 'primaryWithBg',
+    mr: [0, 0, 0, '120px'],
   },
   menuWrapper: {
     flexBox: true,

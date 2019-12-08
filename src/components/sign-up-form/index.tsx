@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { navigate } from 'gatsby';
-
-import { SignUpForm as SignUpStyle } from './styles.scss';
+import Heading from 'reusecore/src/elements/Heading';
+import Button from 'reusecore/src/elements/Button';
+import SignUpWrapper, { ErrorMessage } from './signup.style';
 
 export default class SignUpForm extends Component {
   constructor(props) {
@@ -61,40 +62,32 @@ export default class SignUpForm extends Component {
     }
 
     return (
-      <div className={SignUpStyle}>
-        <h3 className="center">Sign Up</h3>
-        <div
-          className="form-field"
-        >
-          <input
-            type="text"
-            name="email"
-            placeholder="Your email"
-            value={email}
-            onChange={this.handleFieldChange('email')}
-          />
-        </div>
+      <SignUpWrapper>
+        <Heading as="h3" content="Sign Up"/>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="Your email"
+          value={email}
+          onChange={this.handleFieldChange('email')}
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={password}
+          onChange={this.handleFieldChange('password')}
+        />
 
-        <div
-          className="form-field"
-        >
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={this.handleFieldChange('password')}
-          />
-        </div>
+        {error && <ErrorMessage>
+          {error}
+        </ErrorMessage>}
 
-        {error && <p className="error">
-          <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
-        </p>}
+        <Button type="submit" onClick={this.handleSignUp} title="Sign up" />
 
-        <div className="center">
-          <input type="submit" onClick={this.handleSignUp} className="btn btn-primary btn-large" value="Next" />
-        </div>
-      </div>
+      </SignUpWrapper>
     )
   }
 }

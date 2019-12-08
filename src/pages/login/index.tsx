@@ -3,6 +3,8 @@ import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
 import SignInForm from '../../components/sign-in-form'
 import SignUpForm from '../../components/sign-up-form';
+import Container from 'common/src/components/UI/Container';
+import LoginForms from './loginForms.style';
 
 export default class LoginPage extends Page {
   render() {
@@ -10,14 +12,12 @@ export default class LoginPage extends Page {
 
     return (
       <DefaultPageLayout pageTitle="Login">
-        <div className="row">
-          <div className="col-sm-6">
-            <SignInForm authService={auth} currentUser={auth.user} />
-          </div>
-          <div className="col-sm-6">
-            <SignUpForm authService={auth} currentUser={auth.user} />
-          </div>
-        </div>
+        <Container>
+          <LoginForms>
+             <SignInForm authService={auth} currentUser={auth.user} />
+             <SignUpForm authService={auth} currentUser={auth.user} />
+          </LoginForms>
+        </Container>
       </DefaultPageLayout>
     )
   }

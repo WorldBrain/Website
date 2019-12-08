@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BgImage from 'common/src/assets/image/saas/map.png';
 
-const PartnerSectionWrapper = styled.section`
+const ImportSectionWrapper = styled.section`
   background-color: #fafbff;
   background-image: url(${BgImage});
   background-repeat: no-repeat;
@@ -19,4 +19,4 @@ const PartnerSectionWrapper = styled.section`
   }
 `;
 
-export default PartnerSectionWrapper;
+export default ImportSectionWrapper;

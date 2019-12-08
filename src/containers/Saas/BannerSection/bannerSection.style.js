@@ -2,14 +2,31 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
+
+const BrowserIcons = styled.div`
+  display: flex;
+  justify-content: center;
+  .browser-icon {
+    width: 48px;
+    height: 48px;
+    margin-left: 25px;
+    @media (max-width: 990px) {
+      margin-left: 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    justify-content: space-around;
+  }
+`;
+
 const BannerWrapper = styled.section`
   padding-top: 120px;
-  padding-bottom: 250px;
+  padding-bottom: 120px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   @media (max-width: 990px) {
-    padding-top: 180px;
     padding-bottom: 60px;
     min-height: auto;
   }
@@ -17,6 +34,10 @@ const BannerWrapper = styled.section`
     padding-top: 50px;
     padding-bottom: 20px;
     min-height: auto;
+  }
+
+  @media (max-width: 576px) {
+    text-align: center;
   }
 
   .content__wrapper {
@@ -30,21 +51,32 @@ const BannerWrapper = styled.section`
 
   .button__wrapper {
     display: flex;
-    margin-top: 40px;
+    align-items: center;
+    margin-top: 60px;
     margin-bottom: 32px;
-    @media (max-width: 767px) {
-      margin-bottom: 30px;
+    width: 90%;
+    @media (max-width: 990px) {
+      width: 70%;
     }
-    .reusecore__button {
-      &.outlined {
-        border-color: rgba(82, 104, 219, 0.2);
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+    button {
+      font-weight: 600;
+      padding: 12px 20px;
+      min-height: 0;
+      @media (max-width: 767px) {
+        padding: 10px 14px;
+        margin-bottom: 20px;
       }
     }
-
-    .browser-icon {
-      width: 48px;
-      height: 48px;
-      margin-left: 20px;
+    button:hover {
+      box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.25);
     }
   }
 `;
@@ -53,10 +85,14 @@ const BannerObject = styled.div`
   position: absolute;
   width: 50%;
   height: 100%;
-  top: 30px;
+  top: 0;
   right: 0;
   display: flex;
   align-items: center;
+  @media (max-width: 576px) {
+    width: 100%;
+    position: static;
+  }
 
   .objectWrapper {
     margin-left: auto;
@@ -64,33 +100,21 @@ const BannerObject = styled.div`
 
     .banner-bg {
       width: 85%;
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
     .dashboardWrapper {
       position: absolute;
       top: 50px;
       right: -40px;
-      .chatObject {
-        position: absolute;
-        top: 20px;
-        left: 120px;
+      @media (max-width: 576px) {
+        position: static;
       }
     }
   }
 `;
 
-const DiscountLabel = styled.div`
-  display: inline-block;
-  border-radius: 4em;
-  border: 1px solid ${themeGet('colors.lightBorder', '#f1f4f6')};
-  padding: 7px 25px;
-  box-shadow: 0px 7px 25px 0px rgba(22, 53, 76, 0.05);
-  margin-bottom: 30px;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  @media (max-width: 767px) {
-    padding: 7px 15px;
-  }
-`;
-
-export { DiscountLabel, BannerObject };
+export { BannerObject, BrowserIcons };
 
 export default BannerWrapper;

@@ -127,8 +127,8 @@ export const ContentWrapper = styled.div`
   .sticky-nav-active {
     .hosting_navbar {
       background: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-      padding: 15px 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
+      padding: 10px 0;
     }
   }
 
@@ -158,7 +158,7 @@ export const ContentWrapper = styled.div`
         }
         a {
           padding: 5px;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
           color: #343d48;
           transition: 0.15s ease-in-out;

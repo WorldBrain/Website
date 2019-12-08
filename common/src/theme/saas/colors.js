@@ -16,6 +16,7 @@ const colors = {
   secondaryHover: '#435EBD', // 11
   yellow: '#fdb32a', // 12
   yellowHover: '#F29E02', // 13
+  warning: '#fd706d',
   primaryBoxShadow: ' 0px 9px 19.74px 1.26px rgba(82, 104, 219, 0.57) ',
 };
 
