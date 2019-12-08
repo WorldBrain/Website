@@ -18,8 +18,6 @@ export default class LoginPage extends Page {
 
   render() {
     const { auth } = this.getServices();
-    window.auth = auth;
-    console.log('render login');
 
     return (
       <DefaultPageLayout pageTitle="Login">
