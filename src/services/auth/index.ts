@@ -9,8 +9,6 @@ export class AuthService {
   private listeners: Array<Function> = [];
 
   constructor() {
-    console.log('Fire base constructor');
-    console.log(firebase)
     // Check on static build
     if (typeof window !== 'undefined') {
       if (!firebase.apps.length)
@@ -21,14 +19,11 @@ export class AuthService {
         );
 
       this.firebase = firebase.apps[0];
+      this.firebase.auth().onAuthStateChanged((user) => {
+        this.user = user;
+        this.onUpdate();
+      })
     }
-
-    this.firebase.auth().onAuthStateChanged((user) => {
-      console.log('auth changed');
-      console.log({ user })
-      this.user = user;
-      this.onUpdate();
-    })
   }
 
   setOnUpdate(onUpdate = () => { }): void {
