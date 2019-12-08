@@ -6,7 +6,7 @@ import { ResetCSS } from 'common/src/assets/css/style';
 import { GlobalStyle, ContentWrapper } from '../../../containers/Saas/saas.style';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import Navbar from '../../../containers/Saas/Navbar';
-import Footer from '../../../containers/Saas/footer';
+import Footer from '../../../containers/Saas/Footer';
 import FirebaseProvider from '../../../store';
 
 export interface DefaultPageLayoutProps {
@@ -19,23 +19,23 @@ export default class DefaultPageLayout extends React.Component<
   > {
   render() {
     return (
-    <ThemeProvider theme={saasTheme}>
-      <Fragment>
-        <ResetCSS />
-        <GlobalStyle />
-        <FirebaseProvider>
-        <ContentWrapper>
-          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <DrawerProvider>
-              <Navbar />
-            </DrawerProvider>
-          </Sticky>
-          {this.props.children}
-          </ContentWrapper>
-        </FirebaseProvider>
-        <Footer />
-      </Fragment>
-    </ThemeProvider>
+      <ThemeProvider theme={saasTheme}>
+        <Fragment>
+          <ResetCSS />
+          <GlobalStyle />
+          <FirebaseProvider>
+            <ContentWrapper>
+              <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+                <DrawerProvider>
+                  <Navbar />
+                </DrawerProvider>
+              </Sticky>
+              {this.props.children}
+            </ContentWrapper>
+          </FirebaseProvider>
+          <Footer />
+        </Fragment>
+      </ThemeProvider>
     )
   }
 }
