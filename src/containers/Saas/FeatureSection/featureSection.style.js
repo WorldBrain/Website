@@ -12,6 +12,10 @@ const FeatureSectionWrapper = styled.section`
     padding: 60px 0 30px 0;
   }
 
+  @media (max-width: 575px) {
+    padding: 60px 0 0 0;
+  }
+
   .feature__block {
     position: relative;
     height: 100%;

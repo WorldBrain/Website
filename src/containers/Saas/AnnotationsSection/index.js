@@ -24,7 +24,6 @@ const AnnotationsSection = ({
 }) => {
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
-
       <Container className="text-container">
         <Box {...textArea}>
           <FeatureBlock
@@ -67,10 +66,6 @@ AnnotationsSection.propTypes = {
 };
 
 AnnotationsSection.defaultProps = {
-  textArea: {
-    width: ['100%', '100%', '45%'],
-    mr: [0, 0, '58%'],
-  },
   imageWrapper: {
     boxShadow: 'none',
   },
@@ -79,24 +74,15 @@ AnnotationsSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
-    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
   description: {
     fontSize: '1.125rem',
     lineHeight: '1.5',
+    mb: '0',
     color: 'textColor',
-    mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-  },
-  btnStyle: {
-    minWidth: '156px',
-    fontSize: '0.875rem',
-    color: '#fff',
-    pl: '22px',
-    pr: '22px',
-    colors: 'primaryWithBg',
   },
 };
 

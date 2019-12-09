@@ -19,6 +19,7 @@ const FlexiblyOrganiseSection = ({
   description,
   textArea,
   imageWrapper,
+  textWrapper,
 }) => {
   return (
     <FlexiblyOrganiseSectionWrapper id="tagsSection">
@@ -60,6 +61,7 @@ FlexiblyOrganiseSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
+  textWrapper: PropTypes.object,
 };
 
 FlexiblyOrganiseSection.defaultProps = {
@@ -74,8 +76,6 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
     color: 'headingColor',
-    mb: '20px',
-    mt: '-20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
@@ -83,7 +83,7 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
+    mb: '0',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {

@@ -102,7 +102,7 @@ BannerSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: [1, '70%', '70%', '55%'],
+    width: [1, 1, '70%', '50%'],
   },
   title: {
     fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.5rem'],
@@ -110,25 +110,25 @@ BannerSection.defaultProps = {
     color: 'headingColor',
     mb: ['20px', '25px'],
     lineHeight: '1.3',
-    width: ['100%', '70%', '70%', '80%'],
+    width: ['100%', '100%', '70%', '80%'],
   },
   description: {
     fontSize: '1.125rem',
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
-    width: ['100%', '70%', '70%', '80%'],
+    width: ['100%', '100%', '70%', '80%'],
   },
   downloadDescription: {
     fontSize: '0.8125rem',
     color: 'lightestText',
     lineHeight: '1.5',
-    width: ['100%', '320px'],
+    width: ['100%', '100%', '320px'],
     mb: '5px',
   },
   btnStyle: {
     minWidth: ['100%', '100%', '120px', '265px'],
-    fontSize: ['1.125rem', '1.125rem', '1rem', '1.375rem'],
+    fontSize: ['1.125rem', '1.125rem', '1rem', '1.25rem'],
     colors: 'primaryWithBg',
   },
 };
