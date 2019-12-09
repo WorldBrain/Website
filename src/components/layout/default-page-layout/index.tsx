@@ -6,7 +6,7 @@ import { ResetCSS } from 'common/src/assets/css/style';
 import { GlobalStyle, ContentWrapper } from '../../../containers/Saas/saas.style';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import Navbar from '../../../containers/Saas/Navbar';
-import Footer from '../../../containers/Saas/footer';
+import Footer from '../../../containers/Saas/Footer';
 import FirebaseProvider from '../../../store';
 
 export interface DefaultPageLayoutProps {
