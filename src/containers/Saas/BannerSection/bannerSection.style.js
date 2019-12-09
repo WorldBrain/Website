@@ -47,7 +47,6 @@ const BannerWrapper = styled.section`
     align-items: center;
     margin-top: 60px;
     margin-bottom: 32px;
-    width: 90%;
     @media (max-width: 990px) {
       width: 70%;
     }
@@ -64,7 +63,7 @@ const BannerWrapper = styled.section`
       min-height: 0;
       @media (max-width: 767px) {
         padding: 10px 14px;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
       }
     }
     button:hover {

@@ -76,7 +76,7 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
     color: 'headingColor',
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    maxWidth: ['100%', '100%', '100%', '440px'],
     lineHeight: '1.5',
   },
   description: {
@@ -84,7 +84,7 @@ FlexiblyOrganiseSection.defaultProps = {
     lineHeight: '1.5',
     color: 'textColor',
     mb: '0',
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    maxWidth: ['100%', '100%', '100%', '440px'],
   },
   btnStyle: {
     minWidth: '156px',

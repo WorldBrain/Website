@@ -12,7 +12,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import AnnotationsSectionWrapper, { SectionObject } from './annotations.style';
 
-import ImageOne from '../../../img/annotate_raw1270x760.gif';
+import ImageOne from '../../../img/annotate.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
 const AnnotationsSection = ({
@@ -69,13 +69,16 @@ AnnotationsSection.defaultProps = {
   imageWrapper: {
     boxShadow: 'none',
   },
+  textArea: {
+    width: ['100%', '100%', '45%'],
+    ml: '0',
+    mt: ['20px', 0, 0, 0],
+  },
   title: {
     fontSize: ['1.375rem', '1.5rem', '1.75rem'],
     fontWeight: '400',
     color: 'headingColor',
-    mb: '20px',
-    mt: ['20px', '20px', '-20px', '-20px'],
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    maxWidth: ['100%', '100%', '100%', '440px'],
     lineHeight: '1.5',
   },
   description: {
@@ -83,7 +86,7 @@ AnnotationsSection.defaultProps = {
     lineHeight: '1.5',
     mb: '0',
     color: 'textColor',
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    maxWidth: ['100%', '100%', '100%%', '440px'],
   },
 };
 

@@ -48,7 +48,7 @@ export default class SignInForm extends Component {
           switch (error.code) {
             case 'auth/user-not-found':
               this.setState({
-                error: 'Not found any credential. Did you sign up?'
+                error: 'That email and password combination is incorrect.'
               });
               break;
             default:

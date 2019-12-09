@@ -4,14 +4,16 @@ const MobileSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 55px;
+  margin-bottom: 140px;
+  margin-top: 140px;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 370px;
-    margin-bottom: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   @media (max-width: 767px) {
     min-height: auto;
