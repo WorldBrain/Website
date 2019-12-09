@@ -6,6 +6,12 @@ const SignInWrapper = styled.div`
   flex-direction: column;
   width: 40%;
   max-width: 400px;
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
 `;
 
 const ErrorMessage = styled.p`

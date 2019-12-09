@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
-
 const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;
@@ -28,12 +27,10 @@ const BannerWrapper = styled.section`
   overflow: hidden;
   align-items: center;
   display: flex;
-
   @media (max-width: 990px) {
     padding-bottom: 60px;
     min-height: auto;
   }
-
   @media (max-width: 767px) {
     padding-top: 100px;
     padding-bottom: 20px;
@@ -41,12 +38,10 @@ const BannerWrapper = styled.section`
     flex-direction: column;
     text-align: center;
   }
-
   .row {
     position: relative;
     z-index: 1;
   }
-
   .button__wrapper {
     display: flex;
     align-items: center;

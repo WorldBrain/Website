@@ -17,7 +17,7 @@ const Input = ({
 }) => {
   // use toggle hooks
   const [state, setState] = useState({
-    toggle: false,
+    toggle: true,
     focus: false,
     value: ''
   });
@@ -227,9 +227,9 @@ Input.defaultProps = {
   inputType: 'text',
   isMaterial: false,
   iconPosition: 'left',
-  onBlur: () => {},
-  onFocus: () => {},
-  onChange: () => {}
+  onBlur: () => { },
+  onFocus: () => { },
+  onChange: () => { }
 };
 
 export default Input;

@@ -19,32 +19,47 @@ import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
 import MobileSection from '../../containers/Saas/MobileSection';
 import CommunitySection from '../../containers/Saas/CommunitySection';
 
-export default () => {
-  return (
-    <ThemeProvider theme={saasTheme}>
-      <Fragment>
-        <ResetCSS />
-        <GlobalStyle />
-        <ContentWrapper>
-          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <DrawerProvider>
-              <Navbar />
-            </DrawerProvider>
-          </Sticky>
-          <BannerSection />
-          <FeatureSection />
-          <FulltextSearchSection />
-          <AnnotationsSection />
-          <FlexiblyOrganiseSection />
-          <MobileSection />
-          <StoreLocalSection />
-          <ImportSection />
-          <PricingSection />
-          <CommunitySection />
-          <SponsorsSection />
-          <Footer />
-        </ContentWrapper>
-      </Fragment>
-    </ThemeProvider>
-  );
+import Page from '../../components/page'
+
+export default class HomePage extends Page {
+  constructor(props) {
+    super(props);
+
+    const { auth } = this.getServices();
+    auth.setOnUpdate(() => {
+      this.forceUpdate()
+    });
+  }
+
+  render() {
+    const { auth } = this.getServices();
+
+    return (
+      <ThemeProvider theme={saasTheme}>
+        <Fragment>
+          <ResetCSS />
+          <GlobalStyle />
+          <ContentWrapper>
+            <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+              <DrawerProvider>
+                <Navbar user={auth.user} />
+              </DrawerProvider>
+            </Sticky>
+            <BannerSection />
+            <FeatureSection />
+            <FulltextSearchSection />
+            <AnnotationsSection />
+            <FlexiblyOrganiseSection />
+            <MobileSection />
+            <StoreLocalSection />
+            <ImportSection />
+            <PricingSection />
+            <CommunitySection />
+            <SponsorsSection />
+            <Footer />
+          </ContentWrapper>
+        </Fragment>
+      </ThemeProvider>
+    );
+  }
 };

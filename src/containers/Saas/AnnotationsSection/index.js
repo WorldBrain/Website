@@ -74,6 +74,7 @@ AnnotationsSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

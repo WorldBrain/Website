@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { navigate } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
+import Input from 'reusecore/src/elements/Input';
 import Button from 'reusecore/src/elements/Button';
 import SignUpWrapper, { ErrorMessage } from './signup.style';
 
@@ -24,9 +25,9 @@ export default class SignUpForm extends Component {
 
   }
 
-  handleFieldChange = (field) => (e: Event) => {
+  handleFieldChange = (field) => (value) => {
     this.setState({
-      [field]: e.target.value,
+      [field]: value,
     });
   }
 
@@ -63,9 +64,9 @@ export default class SignUpForm extends Component {
 
     return (
       <SignUpWrapper>
-        <Heading as="h3" content="Sign Up"/>
+        <Heading as="h3" content="Sign Up" />
         <label for="email">Email</label>
-        <input
+        <Input
           type="text"
           name="email"
           placeholder="Your email"
@@ -73,13 +74,14 @@ export default class SignUpForm extends Component {
           onChange={this.handleFieldChange('email')}
         />
         <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
+        <Input
+          inputType="password"
+          passwordShowHide
           placeholder="Password"
           value={password}
           onChange={this.handleFieldChange('password')}
         />
+        <br />
 
         {error && <ErrorMessage>
           {error}

@@ -12,7 +12,7 @@ import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 
 import LogoImage from '../../../img/logos/logo-memex.svg';
 
-const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
+const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper, user }) => {
   const Data = useStaticQuery(graphql`
     query {
       saasJson {
@@ -50,6 +50,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
               className="main_menu"
               menuItems={Data.saasJson.MENU_ITEMS}
               offset={-70}
+              user={user}
             />
             <Drawer
               width="420px"
@@ -63,6 +64,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper }) => {
                 menuItems={Data.saasJson.MENU_ITEMS}
                 drawerClose={true}
                 offset={-100}
+                user={user}
               />
             </Drawer>
           </Box>

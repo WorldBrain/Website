@@ -19,23 +19,23 @@ export default class DefaultPageLayout extends React.Component<
   > {
   render() {
     return (
-    <ThemeProvider theme={saasTheme}>
-      <Fragment>
-        <ResetCSS />
-        <GlobalStyle />
-        <FirebaseProvider>
-        <ContentWrapper>
-          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <DrawerProvider>
-              <Navbar />
-            </DrawerProvider>
-          </Sticky>
-          {this.props.children}
-          </ContentWrapper>
-        </FirebaseProvider>
-        <Footer />
-      </Fragment>
-    </ThemeProvider>
+      <ThemeProvider theme={saasTheme}>
+        <Fragment>
+          <ResetCSS />
+          <GlobalStyle />
+          <FirebaseProvider>
+            <ContentWrapper>
+              <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+                <DrawerProvider>
+                  <Navbar />
+                </DrawerProvider>
+              </Sticky>
+              {this.props.children}
+            </ContentWrapper>
+          </FirebaseProvider>
+          <Footer />
+        </Fragment>
+      </ThemeProvider>
     )
   }
 }
