@@ -69,10 +69,6 @@ export const ResetCSS = createGlobalStyle`
     text-decoration: none;
   }
 
-  a:hover {
-    text-decoration: none;
-  }
-
   .reuseModalHolder {
     padding: 0 !important;
     &.demo_switcher_modal {

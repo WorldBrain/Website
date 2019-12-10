@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { navigate } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
+import Link from 'reusecore/src/elements/Link';
 import Input from 'reusecore/src/elements/Input';
-import SignInWrapper, { ErrorMessage } from './signin.style';
+import LoginForm, { ErrorMessage, FormActions, LoginHeading } from './login.style';
 
 export default class SignInForm extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class SignInForm extends Component {
           switch (error.code) {
             case 'auth/user-not-found':
               this.setState({
-                error: 'Not found any credential. Did you sign up?'
+                error: 'That email and password combination is incorrect.'
               });
               break;
             default:
@@ -76,22 +77,22 @@ export default class SignInForm extends Component {
     }
 
     return (
-      <SignInWrapper>
+      <LoginForm>
+        <Heading as="h3" content="Welcome Back" />
         <form onSubmit={this.handleOnLogin}>
-          <Heading as="h3" content="Login" />
-          <label forhtml="email">Email</label>
           <Input
             inputType="email"
             name="email"
+            label="Email"
             placeholder="Your email"
             value={email}
             onChange={this.handleFieldChange('email')}
           />
           <br />
-          <label forhtml="password">Password</label>
           <Input
             inputType="password"
             passwordShowHide
+            label="Password"
             placeholder="Password"
             value={password}
             onChange={this.handleFieldChange('password')}
@@ -102,11 +103,13 @@ export default class SignInForm extends Component {
             <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
           </ErrorMessage>}
 
-          <Button type="submit" onClick={this.handleOnLogin} title="Login" />
-
-          <a href="#">I forgot my password</a>
+          <FormActions>
+            <Button type="submit" onClick={this.handleOnLogin} title="Login" />
+            <Link href="#">I forgot my password</Link>
+          </FormActions>
         </form>
-      </SignInWrapper>
+
+      </LoginForm>
     )
   }
 }

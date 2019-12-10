@@ -2,13 +2,12 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
-
 const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;
   .browser-icon {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     margin-left: 25px;
     @media (max-width: 990px) {
       margin-left: 15px;
@@ -26,42 +25,34 @@ const BannerWrapper = styled.section`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  align-items: center;
+  display: flex;
   @media (max-width: 990px) {
     padding-bottom: 60px;
     min-height: auto;
   }
   @media (max-width: 767px) {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 20px;
     min-height: auto;
-  }
-
-  @media (max-width: 576px) {
+    flex-direction: column;
     text-align: center;
   }
-
-  .content__wrapper {
-    margin-top: 65px;
-  }
-
   .row {
     position: relative;
     z-index: 1;
   }
-
   .button__wrapper {
     display: flex;
     align-items: center;
     margin-top: 60px;
     margin-bottom: 32px;
-    width: 90%;
     @media (max-width: 990px) {
       width: 70%;
     }
     @media (max-width: 767px) {
       flex-direction: column;
-      margin-bottom: 30px;
-      margin-top: 30px;
+      margin: 30px auto;
     }
     @media (max-width: 576px) {
       width: 100%;
@@ -72,7 +63,7 @@ const BannerWrapper = styled.section`
       min-height: 0;
       @media (max-width: 767px) {
         padding: 10px 14px;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
       }
     }
     button:hover {
@@ -83,33 +74,26 @@ const BannerWrapper = styled.section`
 
 const BannerObject = styled.div`
   position: absolute;
-  width: 50%;
+  width: 44%;
   height: 100%;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
-  @media (max-width: 576px) {
-    width: 100%;
-    position: static;
+  @media (max-width: 767px) {
+    display: none;
   }
-
   .objectWrapper {
     margin-left: auto;
     position: relative;
-
-    .banner-bg {
-      width: 85%;
-      @media (max-width: 576px) {
-        display: none;
-      }
-    }
     .dashboardWrapper {
       position: absolute;
-      top: 50px;
-      right: -40px;
-      @media (max-width: 576px) {
-        position: static;
+      top: -9px;
+      right: -18px;
+      .chatObject {
+        position: absolute;
+        top: 20px;
+        left: 120px;
       }
     }
   }

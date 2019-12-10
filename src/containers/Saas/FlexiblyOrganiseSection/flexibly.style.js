@@ -4,14 +4,14 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 55px;
+  margin-bottom: 100px;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 370px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
   @media (max-width: 767px) {
     min-height: auto;
@@ -31,9 +31,13 @@ const SectionObject = styled.div`
   @media (max-width: 767px) {
     width: 100%;
     position: relative;
+    padding: 0 30px;
     height: auto;
     top: auto;
     left: auto;
+    .bg-img {
+      display: none;
+    }
   }
   img {
     margin-right: 20px;
@@ -46,6 +50,9 @@ const SectionObject = styled.div`
       position: absolute;
       top: 4vw;
       left: 0;
+      @media (max-width: 767px) {
+        position: static;
+      }
 
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);

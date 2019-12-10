@@ -49,9 +49,9 @@ const MobileSection = ({
       </Container>
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
+          <Fade>
             <Image src={ImageBg} className="bg-image" alt="BgImage" />
-          </Zoom>
+          </Fade>
           <Card className="imageOne" {...imageWrapper}>
             <Fade right>
               <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
