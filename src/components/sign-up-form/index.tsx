@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { navigate } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
-import Input from 'reusecore/src/elements/Input';
 import Button from 'reusecore/src/elements/Button';
-import SignUpWrapper, { ErrorMessage } from './signup.style';
+import Link from 'reusecore/src/elements/Link';
+import Input from 'reusecore/src/elements/Input';
+import SignupForm, { ErrorMessage, FormActions } from './signup.style';
 
 export default class SignUpForm extends Component {
   constructor(props) {
@@ -63,20 +64,21 @@ export default class SignUpForm extends Component {
     }
 
     return (
-      <SignUpWrapper>
+      <SignupForm>
         <Heading as="h3" content="Sign Up" />
-        <label for="email">Email</label>
         <Input
           type="text"
           name="email"
+          label="Email"
           placeholder="Your email"
           value={email}
           onChange={this.handleFieldChange('email')}
         />
-        <label for="password">Password</label>
+        <br />
         <Input
           inputType="password"
           passwordShowHide
+          label="Password"
           placeholder="Password"
           value={password}
           onChange={this.handleFieldChange('password')}
@@ -86,10 +88,11 @@ export default class SignUpForm extends Component {
         {error && <ErrorMessage>
           {error}
         </ErrorMessage>}
-
-        <Button type="submit" onClick={this.handleSignUp} title="Sign up" />
-
-      </SignUpWrapper>
+        <FormActions>
+          <Button type="submit" onClick={this.handleSignUp} title="Sign up" />
+          <Link href="#">Already have an account? Login</Link>
+        </FormActions>
+      </SignupForm>
     )
   }
 }

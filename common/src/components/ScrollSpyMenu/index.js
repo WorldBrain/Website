@@ -4,7 +4,7 @@ import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
-import { Link } from 'gatsby';
+import Link from 'reusecore/src/elements/Link';
 
 const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...props }) => {
 

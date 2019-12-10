@@ -4,20 +4,28 @@ import background from './icon-features-sprite.svg';
 const FeatureSectionWrapper = styled.section`
   background: #f9fbfd;
   padding: 40px 0 60px 0;
+  margin-bottom: 60px;
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
   }
   @media (max-width: 767px) {
     padding: 60px 0 30px 0;
+    background: none;
   }
   @media (max-width: 575px) {
     padding: 60px 0 0 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
   .feature__block {
     position: relative;
     height: 100%;
     transition: box-shadow 0.3s ease;
     padding-left: 0;
+
     &:hover {
       cursor: pointer;
     }

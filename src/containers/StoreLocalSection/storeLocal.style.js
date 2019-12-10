@@ -35,6 +35,9 @@ const SectionObject = styled.div`
     height: auto;
     top: auto;
     left: auto;
+    .bg-img {
+      display: none;
+    }
   }
   img {
     margin-right: 20px;
@@ -48,6 +51,9 @@ const SectionObject = styled.div`
       position: absolute;
       top: 4vw;
       left: 0;
+      @media (max-width: 767px) {
+        position: static;
+      }
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         border-radius: 5px;

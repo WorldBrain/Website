@@ -119,11 +119,11 @@
           "text": "Privacy Policy"
         },
         {
-          "url": "https://worldbrain.io/tos/",
+          "url": "/terms-of-service",
           "text": "Terms of Service"
         },
         {
-          "url": "https://worldbrain.io/imprint/",
+          "url": "/imprint/",
           "text": "Imprint"
         }
       ]
