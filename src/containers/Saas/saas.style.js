@@ -71,13 +71,13 @@ export const GlobalStyle = createGlobalStyle`
               font-size: 18px;
             }
             &:hover {
-              color: #5671CF;
+              color: ${themeGet('colors.primary')};
             }
             &:before{
               content: '';
               width: 7px;
               height: 7px;
-              background: #5671CF;
+              background: ${themeGet('colors.primary')};
               border-radius: 50%;
               position: absolute;
               top: 50%;
@@ -88,7 +88,7 @@ export const GlobalStyle = createGlobalStyle`
           }
           &.is-current {
             a {
-              color: #5671CF;
+              color: ${themeGet('colors.primary')};
               &:before{
                 opacity: 1;
               }
@@ -119,7 +119,7 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #5671CF;
+        color: ${themeGet('colors.primary')};
         transform: rotate(45deg);
         display: block;
       }
@@ -131,7 +131,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${themeGet('colors.white', '#ffffff')} !important;
 
     &.alt {
-      background-color: ${themeGet('colors.primary', '#5268db')} !important;
+      background-color: ${themeGet('colors.primary')} !important;
       box-shadow: 0px 9px 20px -5px rgba(82, 104, 219, 0.57) !important;
     }   
   }
