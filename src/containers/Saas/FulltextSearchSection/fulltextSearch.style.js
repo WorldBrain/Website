@@ -6,6 +6,7 @@ const FulltextSearchSectionWrapper = styled.section`
   align-items: center;
   margin-bottom: 55px;
   position: relative;
+  margin-top: 20px;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
