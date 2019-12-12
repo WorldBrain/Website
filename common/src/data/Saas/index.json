@@ -1,0 +1,244 @@
+{
+  "Faq": [
+    {
+      "id": 1,
+      "expend": true,
+      "title": "How to contact with Customer Service?",
+      "description": "Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!. "
+    },
+    {
+      "id": 2,
+      "title": "App installation failed, how to update system information?",
+      "description": "Please read the documentation carefully . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum . "
+    },
+    {
+      "id": 3,
+      "title": "Website reponse taking time, how to improve?",
+      "description": "At first, Please check your internet connection . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum ."
+    },
+    {
+      "id": 4,
+      "title": "New update fixed all bug and issues?",
+      "description": "We are giving the update of this theme continuously . You will receive an email Notification when we push an update. Always try to be updated with us ."
+    },
+    {
+      "id": 4,
+      "title": "New update fixed all bug and issues?",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+    }
+  ],
+  "Features": [
+    {
+      "id": 1,
+      "icon": "fulltext-search",
+      "title": "Full text search",
+      "path": "#fullTextSearchSection"
+    },
+    {
+      "id": 2,
+      "icon": "annotations",
+      "title": "Annotations on the web",
+      "path": "#annotationsSection"
+    },
+    {
+      "id": 3,
+      "icon": "tags-collections",
+      "title": "Tags and collections",
+      "path": "#tagsSection"
+    },
+    {
+      "id": 4,
+      "icon": "stored-locally",
+      "title": "All data stored locally",
+      "path": "#dataSection"
+    },
+    {
+      "id": 5,
+      "icon": "sync-devices",
+      "title": "Sync between devices",
+      "path": "#deviceSection"
+    }
+  ],
+  "Sponsors": [
+    {
+      "id": 1,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "European Comission",
+      "url": "https://ec.europa.eu"
+    },
+    {
+      "id": 2,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Ledger",
+      "url": "https://ledgerproject.eu"
+    },
+    {
+      "id":3,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Mozilla",
+      "url": "https://foundation.mozilla.org/en/"
+    },
+    {
+      "id": 4,
+      "logo": "../../assets/image/agency/client/denny.png",
+      "company": "Digital Science",
+      "url": "https://www.digital-science.com"
+    }
+  ],
+  "Footer_Data": [
+    {
+      "title": "About",
+      "menuItems": [
+        {
+          "url": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
+          "text": "Vision"
+        },
+        {
+          "url": "https://www.notion.so/worldbrain/Release-Notes-Roadmap-262a367f7a2a48ff8115d2c71f700c14",
+          "text": "Roadmap"
+        },
+        {
+          "url": "https://medium.com/@WorldBrain",
+          "text": "Blog"
+        },
+        {
+          "url": "https://community.worldbrain.io/",
+          "text": "Community"
+        },
+        {
+          "url": "https://github.com/WorldBrain",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "title": "Legal",
+      "menuItems": [
+        {
+          "url": "https://www.notion.so/worldbrain/Privacy-Policy-061ac77759f8445282c36fcf6702a81c",
+          "text": "Privacy Policy"
+        },
+        {
+          "url": "https://worldbrain.io/tos/",
+          "text": "Terms of Service"
+        },
+        {
+          "url": "https://worldbrain.io/imprint/",
+          "text": "Imprint"
+        }
+      ]
+    }
+  ],
+  "MENU_ITEMS": [
+    {
+      "label": "Values",
+      "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
+      "offset": "70",
+      "staticLink" : true
+    },
+    {
+      "label": "Upgrade",
+      "path": "#pricingSection",
+      "offset": "70"
+    },
+    {
+      "label": "Community",
+      "path": "#communitySection",
+      "offset": "70"
+    },
+    {
+      "label": "Blog",
+      "path": "https://medium.com/@WorldBrain",
+      "offset": "70",
+      "staticLink": true
+    },
+    {
+      "label": "GitHub",
+      "path": "https://github.com/WorldBrain",
+      "offset": "70",
+      "staticLink": true
+    }
+  ],
+  "MONTHLY_PRICING_TABLE": [
+    {
+      "freePlan": true,
+      "name": "Basic",
+      "price": "Free",
+      "buttonLabel": "Get started",
+      "url": "#",
+      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
+      "listItems": [
+        {
+          "content": "Full-text history search"
+        },
+        {
+          "content": "Annotations"
+        },
+        {
+          "content": "Collections & tags"
+        },
+        {
+          "content": "Manual backup to any cloud provider"
+        }
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "€1",
+      "buttonLabel": "Upgrade",
+      "url": "#",
+      "listItems": [
+        {
+          "content": "Everything in basic"
+        },
+        {
+          "content": "+ Automatic backups"
+        },
+        {
+          "content": "Sync between your devices"
+        }
+      ]
+    }
+  ],
+  "YEARLY_PRICING_TABLE": [
+    {
+      "freePlan": true,
+      "name": "Basic",
+      "price": "Free",
+      "buttonLabel": "Get started",
+      "url": "#",
+      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
+      "listItems": [
+        {
+          "content": "Full-text history search"
+        },
+        {
+          "content": "Annotations"
+        },
+        {
+          "content": "Collections & tags"
+        },
+        {
+          "content": "Manual backup to any cloud provider"
+        }
+      ]
+    },
+    {
+      "name": "Pro",
+      "price": "€12.00",
+      "buttonLabel": "Upgrade",
+      "url": "#",
+      "listItems": [
+        {
+          "content": "Everything in basic"
+        },
+        {
+          "content": "+ Automatic backups"
+        },
+        {
+          "content": "+ Sync between your devices"
+        }
+      ]
+    }
+  ]
+}

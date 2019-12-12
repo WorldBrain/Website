@@ -1,0 +1,28 @@
+:local(.Section1) {
+  background-color: #f6f6f8;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0100px 0px 0px 0150px;
+  width: 100%;
+  height: 100vh;
+
+  .guide-text {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.3em;
+  }
+
+  h2 {
+    margin-bottom: 80px;
+  }
+
+  .cta-install {
+    margin-bottom: 10px;
+  }
+
+  .section-img {
+    width: 100%;
+    padding-right: 20px;
+  }
+}
