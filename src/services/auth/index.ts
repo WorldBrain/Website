@@ -47,6 +47,9 @@ export class AuthService {
   }
 
   currentUser(): AuthenticatedUser | null {
+    if (!this.firebase) {
+      return null;
+    }
     return this.firebase.auth().currentUser;
   }
 
