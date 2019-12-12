@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
@@ -70,6 +70,7 @@ export default class ForgotForm extends Component {
           </SuccessMessage>}
           <br />
           <Button type="submit" onClick={this.handleForgot} title="Get my password" />
+          <Link to="/login">Back to login</Link>
         </form>
       </SignInWrapper>
     )
