@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Text from '../../Text';
 import Link from '../../Link';
 import Image from '../../Image';
+import { Link as GatsbyLink } from 'gatsby';
 
 const Logo = ({
   logoWrapperStyle,
@@ -14,26 +15,26 @@ const Logo = ({
   title,
   ...props
 }) => (
-  <Link {...props} {...logoWrapperStyle}>
-    {withAchor ? (
-      <a {...anchorProps}>
-        {logoSrc ? (
-          <Image src={logoSrc} alt={title} {...logoStyle} />
-        ) : (
-          <Text content={title} {...titleStyle} />
+    <Link {...props} {...logoWrapperStyle}>
+      {withAchor ? (
+        <GatsbyLink {...anchorProps} to={anchorProps.href}>
+          {logoSrc ? (
+            <Image src={logoSrc} alt={title} {...logoStyle} />
+          ) : (
+              <Text content={title} {...titleStyle} />
+            )}
+        </GatsbyLink>
+      ) : (
+          <>
+            {logoSrc ? (
+              <Image src={logoSrc} alt={title} {...logoStyle} />
+            ) : (
+                <Text content={title} {...titleStyle} />
+              )}
+          </>
         )}
-      </a>
-    ) : (
-      <>
-        {logoSrc ? (
-          <Image src={logoSrc} alt={title} {...logoStyle} />
-        ) : (
-          <Text content={title} {...titleStyle} />
-        )}
-      </>
-    )}
-  </Link>
-);
+    </Link>
+  );
 
 Logo.propTypes = {
   logoSrc: PropTypes.string,
