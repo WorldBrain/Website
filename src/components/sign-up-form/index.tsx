@@ -10,19 +10,10 @@ export default class SignUpForm extends Component {
     super(props);
 
     this.state = {
-      firebase: null,
       email: '',
       password: '',
       error: ''
     };
-  }
-
-  componentDidMount() {
-    const { authService } = this.props;
-    this.setState({
-      firebase: authService.firebase
-    });
-
   }
 
   handleFieldChange = (field) => (value) => {
@@ -32,34 +23,31 @@ export default class SignUpForm extends Component {
   }
 
   handleSignUp = (e) => {
-    const { firebase, email, password } = this.state;
-    if (firebase) {
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(data => {
-          // TODO: Shoud navigate back to last state
-          // Eg: Shoping cart
-          navigate('/');
+    const { authService } = this.props;
+    const { email, password } = this.state;
+    authService.register(email, password)
+      .then(data => {
+        // TODO: Shoud navigate back to last state
+        // Eg: Shoping cart
+        navigate('/');
 
-        })
-        .catch(error => {
-          this.setState({
-            error: error.message
-          });
-        })
-    }
+      })
+      .catch(error => {
+        this.setState({
+          error: error.message
+        });
+      })
   }
 
   render() {
-    const { authService, currentUser } = this.props;
-    const { firebase, error, email, password } = this.state;
+    const { authService } = this.props;
+    const { error, email, password } = this.state;
+
+    const currentUser = authService.currentUser();
     if (currentUser) {
       return (
         <p>Hello {currentUser.displayName}</p>
       )
-    }
-
-    if (!firebase) {
-      return null;
     }
 
     return (

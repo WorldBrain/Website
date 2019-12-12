@@ -6,6 +6,8 @@ import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
 import { Link } from 'gatsby';
 
+import { HoverMenu } from './scrollSpyMenu.style';
+
 const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
@@ -15,6 +17,13 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
   menuItems.forEach(item => {
     scrollItems.push(item.path.slice(1));
   });
+
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    if (props.authService) {
+      props.authService.logOut();
+    }
+  }
 
   // Add all classs to an array
   const addAllClasses = ['scrollspy__menu'];
@@ -62,9 +71,15 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
         </li>
       ))}
       {user ? (
-        <li>
-          <Link to="/account">Hello {user.displayName}</Link>
-        </li>
+        <HoverMenu>
+          <Link to="/account">Hello {user.displayName}
+            <ul className="sub-menu">
+              <li>
+                <a href="#" onClick={handleLogOut}>Log Out</a>
+              </li>
+            </ul>
+          </Link>
+        </HoverMenu>
       ) : (
           <li>
             <Link to="/login">Login</Link>

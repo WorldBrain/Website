@@ -38,11 +38,23 @@ export class AuthService {
     this.listeners.forEach(func => func());
   }
 
+  register(email, password): Promise<any> {
+    return this.firebase.auth().createUserWithEmailAndPassword(email, password);
+  }
+
+  logIn(email, password): Promise<any> {
+    return this.firebase.auth().signInWithEmailAndPassword(email, password);
+  }
+
   currentUser(): AuthenticatedUser | null {
     return this.firebase.auth().currentUser;
   }
 
-  logOut(): null {
+  forgotPassword(email): Promise<any> {
+    return this.firebase.auth().sendPasswordResetEmail(email);
+  }
+
+  logOut(): void {
     return this.firebase.auth().signOut();
   }
 }

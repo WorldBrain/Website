@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { navigate } from 'gatsby';
+import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
@@ -10,19 +10,10 @@ export default class SignInForm extends Component {
     super(props);
 
     this.state = {
-      firebase: null,
       email: '',
       password: '',
       error: ''
     };
-  }
-
-  componentDidMount() {
-    const { authService } = this.props;
-    this.setState({
-      firebase: authService.firebase
-    });
-
   }
 
   handleFieldChange = (field) => (value) => {
@@ -33,46 +24,40 @@ export default class SignInForm extends Component {
 
   handleOnLogin = (e: Event) => {
     e.preventDefault();
+    const { authService } = this.props;
+    const { email, password } = this.state;
+    authService.logIn(email, password)
+      .then(data => {
+        // TODO: Shoud navigate back to last state
+        // Eg: Shoping cart
+        navigate('/');
 
-    const { firebase, email, password } = this.state;
-    if (firebase) {
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(data => {
-          // TODO: Shoud navigate back to last state
-          // Eg: Shoping cart
-          navigate('/');
-
-        })
-        .catch(error => {
-          console.log(error);
-          switch (error.code) {
-            case 'auth/user-not-found':
-              this.setState({
-                error: 'Not found any credential. Did you sign up?'
-              });
-              break;
-            default:
-              this.setState({
-                error: error.message
-              });
-          }
-        })
-    }
+      })
+      .catch(error => {
+        console.log(error);
+        switch (error.code) {
+          case 'auth/user-not-found':
+            this.setState({
+              error: 'Not found any credential. Did you sign up?'
+            });
+            break;
+          default:
+            this.setState({
+              error: error.message
+            });
+        }
+      })
   }
 
   render() {
-    const { authService, currentUser } = this.props;
-    const { firebase, error, email, password } = this.state;
-    console.log({ currentUser })
+    const { authService } = this.props;
+    const { error, email, password } = this.state;
 
+    const currentUser = authService.currentUser();
     if (currentUser) {
       return (
         <p>Hello {currentUser.displayName}</p>
       )
-    }
-
-    if (!firebase) {
-      return null;
     }
 
     return (
@@ -104,7 +89,7 @@ export default class SignInForm extends Component {
 
           <Button type="submit" onClick={this.handleOnLogin} title="Login" />
 
-          <a href="#">I forgot my password</a>
+          <Link to="/forgot">I forgot my password</Link>
         </form>
       </SignInWrapper>
     )

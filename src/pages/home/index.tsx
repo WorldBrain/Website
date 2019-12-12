@@ -41,7 +41,7 @@ export default class HomePage extends Page {
           <ContentWrapper>
             <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
               <DrawerProvider>
-                <Navbar user={auth.user} />
+                <Navbar user={auth.user} authService={auth} />
               </DrawerProvider>
             </Sticky>
             <BannerSection />

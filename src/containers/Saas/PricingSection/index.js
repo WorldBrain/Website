@@ -113,7 +113,7 @@ const PricingSection = ({
                   <PricingPrice>
                     <Text content={pricingTable.price} {...priceStyle} />
                   </PricingPrice>
-                  
+
                   <span>TODO - hide on free, make functional</span>
                   <DeviceSelection>
                     <span>for</span>
@@ -137,11 +137,11 @@ const PricingSection = ({
                 </>
                 <PricingButton>
                   <a href={pricingTable.url}>
-                      <Button
-                        title={pricingTable.buttonLabel}
-                        colors={pricingTable.freePlan ? "primaryWithBg" : "secondaryWithBg"}
-                        {...buttonStyle}
-                      />
+                    <Button
+                      title={pricingTable.buttonLabel}
+                      colors={pricingTable.freePlan ? "primaryWithBg" : "secondaryWithBg"}
+                      {...buttonStyle}
+                    />
                   </a>
                 </PricingButton>
               </PricingTable>

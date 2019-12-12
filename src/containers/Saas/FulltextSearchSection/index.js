@@ -25,7 +25,7 @@ const FulltextSearchSection = ({
     <FulltextSearchSectionWrapper id="fullTextSearchSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
+          <Zoom left duration={700}>
             <Image src={ImageBg} alt="BgImage" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
