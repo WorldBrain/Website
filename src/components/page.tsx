@@ -25,6 +25,14 @@ export default class Page<State extends {} = {}> extends React.Component<
   PageProps,
   State
   > {
+  constructor(props) {
+    super(props);
+
+    const { auth } = this.getServices();
+    auth.setOnUpdate(() => {
+      this.forceUpdate()
+    });
+  }
   protected getServices() {
     return this.props.services || dependenciesSingleton().services
   }
