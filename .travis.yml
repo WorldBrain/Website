@@ -5,12 +5,8 @@ os:
   - osx
 
 node_js:
-  - 'node'
-  - 'lts/*'
-  - '7'
-  - '8'
   - '10'
 
 script:
-  - npm install
-  - npm run build
+  - yarn
+  - yarn run build
