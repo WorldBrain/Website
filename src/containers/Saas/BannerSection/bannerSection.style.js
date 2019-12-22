@@ -95,7 +95,6 @@ const BannerObject = styled.div`
   }
 
   .objectWrapper {
-    margin-left: auto;
     position: relative;
 
     .banner-bg {
