@@ -2,11 +2,37 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { detect } from 'detect-browser';
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
 import { Link } from 'gatsby';
 
 import { HoverMenu } from './scrollSpyMenu.style';
+
+const onClickDownload = (e: Event) => {
+  e.preventDefault();
+  const browser = detect();
+  let downloadLink = '';
+  switch (browser && browser.name) {
+    case 'chrome':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    case 'firefox':
+      downloadLink = 'https://addons.mozilla.org/en-US/firefox/addon/worldbrain/';
+      break;
+    case 'brave':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    default:
+      // TODO: Fallback case? Default is Chrome link
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+  }
+
+  if (window) {
+    window.open(downloadLink, '_blank');
+  }
+}
 
 const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
@@ -88,7 +114,7 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
       }
 
       <li>
-        <Button title="Download" {...btnStyle} />
+        <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       </li>
     </Scrollspy>
   );
