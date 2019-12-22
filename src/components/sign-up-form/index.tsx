@@ -1,84 +1,102 @@
-import React, { Component } from 'react'
-import { navigate } from 'gatsby';
+import React, { Component, useState } from 'react'
+import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Input from 'reusecore/src/elements/Input';
 import Button from 'reusecore/src/elements/Button';
 import SignUpWrapper, { ErrorMessage } from './signup.style';
+import { PageHOC } from '../page';
 
-export default class SignUpForm extends Component {
-  constructor(props) {
-    super(props);
+const SignUpForm = ({
+  auth,
+  payment,
+  location,
+  ...props
+}) => {
+  const [formValue, setFormValue] = useState({
+    email: '',
+    password: '',
+    error: '',
+    isLoading: false,
+  })
 
-    this.state = {
-      email: '',
-      password: '',
-      error: ''
-    };
-  }
-
-  handleFieldChange = (field) => (value) => {
-    this.setState({
-      [field]: value,
+  const handleFieldChange = (field) => (value) => {
+    setFormValue({
+      ...formValue,
+      [field]: value
     });
   }
 
-  handleSignUp = (e) => {
-    const { authService } = this.props;
-    const { email, password } = this.state;
-    authService.register(email, password)
+  const rehydratePayment = (planId) => {
+    console.log('Start rehydrate');
+    payment.upgrade(planId);
+  }
+
+  const handleSignUp = (e: Event | React.FormEvent) => {
+    const { email, password } = formValue;
+    handleFieldChange('isLoading')(true);
+    auth.register(email, password)
       .then(data => {
-        // TODO: Shoud navigate back to last state
-        // Eg: Shoping cart
+        navigate('/');
+        setFormValue({
+          ...formValue,
+          isLoading: false
+        })
+
+        // Navigate back to Homepage
         navigate('/');
 
+        // Rehydrate payment
+        if (location.state && location.state.planId) {
+          rehydratePayment(location.state.planId);
+        }
       })
-      .catch(error => {
-        this.setState({
-          error: error.message
-        });
+      .catch((error: Error) => {
+        setFormValue({
+          ...formValue,
+          error: error.message,
+          isLoading: false
+        })
       })
   }
 
-  render() {
-    const { authService } = this.props;
-    const { error, email, password } = this.state;
-
-    const currentUser = authService.currentUser();
-    if (currentUser) {
-      return (
-        <p>Hello {currentUser.displayName}</p>
-      )
-    }
-
+  const currentUser = auth.currentUser();
+  if (currentUser) {
     return (
-      <SignUpWrapper>
-        <Heading as="h3" content="Sign Up" />
-        <label for="email">Email</label>
+      <p>Hello {currentUser.displayName}</p>
+    )
+  }
+
+  return (
+    <SignUpWrapper>
+      <form onSubmit={handleSignUp}>
+        <Heading as="h3" content="Register" />
+        <label htmlFor="email">Email</label>
         <Input
-          type="text"
+          inputType="email"
           name="email"
           placeholder="Your email"
-          value={email}
-          onChange={this.handleFieldChange('email')}
+          value={formValue.email}
+          onChange={handleFieldChange('email')}
         />
         <br />
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <Input
           inputType="password"
           passwordShowHide
           placeholder="Password"
-          value={password}
-          onChange={this.handleFieldChange('password')}
+          value={formValue.email}
+          onChange={handleFieldChange('password')}
         />
         <br />
 
-        {error && <ErrorMessage>
-          {error}
+        {formValue.error && <ErrorMessage>
+          <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {formValue.error}
         </ErrorMessage>}
 
-        <Button type="submit" onClick={this.handleSignUp} title="Sign up" />
+        <Button isLoading={formValue.isLoading} type="submit" onClick={handleSignUp} title="Register" />
+      </form>
+    </SignUpWrapper>
+  )
+};
 
-      </SignUpWrapper>
-    )
-  }
-}
+export default PageHOC(({ auth, payment }) => ({ auth, payment }))(SignUpForm);

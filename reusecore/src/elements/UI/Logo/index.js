@@ -9,15 +9,14 @@ const Logo = ({
   logoWrapperStyle,
   logoStyle,
   titleStyle,
-  withAchor,
-  anchorProps,
+  isInternal,
   logoSrc,
   title,
   ...props
 }) => (
     <Link {...props} {...logoWrapperStyle}>
-      {withAchor ? (
-        <GatsbyLink {...anchorProps} to={anchorProps.href}>
+      {isInternal ? (
+        <GatsbyLink to={props.href}>
           {logoSrc ? (
             <Image src={logoSrc} alt={title} {...logoStyle} />
           ) : (
@@ -42,8 +41,7 @@ Logo.propTypes = {
   logoWrapperStyle: PropTypes.object,
   logoStyle: PropTypes.object,
   titleStyle: PropTypes.object,
-  withAchor: PropTypes.bool,
-  anchorProps: PropTypes.object
+  isInternal: PropTypes.bool,
 };
 
 Logo.defaultProps = {

@@ -37,3 +37,15 @@ export default class Page<State extends {} = {}> extends React.Component<
     return this.props.services || dependenciesSingleton().services
   }
 }
+
+export const PageHOC = (serviceSelector = (services: Services) => services) => (View) => {
+  const PageComponent = class PageComponent extends Page {
+    render() {
+      return (
+        <View {...this.props} {...serviceSelector(this.getServices())} />
+      );
+    }
+  };
+
+  return PageComponent;
+}

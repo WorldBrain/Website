@@ -41,6 +41,7 @@ const Navbar = ({ navbarStyle, logoStyle, row, menuWrapper, user, authService })
         <Box {...row}>
           <Logo
             href="/"
+            isInternal
             logoSrc={LogoImage}
             title="Memex"
             logoStyle={logoStyle}
