@@ -32,6 +32,7 @@ const SignUpForm = ({
   }
 
   const handleSignUp = (e: Event | React.FormEvent) => {
+    e.preventDefault();
     const { email, password } = formValue;
     handleFieldChange('isLoading')(true);
     auth.register(email, password)
