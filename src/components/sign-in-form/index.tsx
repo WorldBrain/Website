@@ -26,9 +26,9 @@ const SignInForm = ({
     });
   }
 
-  const rehydratePayment = (planId) => {
+  const rehydratePayment = (plan) => {
     console.log('Start rehydrate');
-    payment.upgrade(planId);
+    payment.upgrade(plan);
   }
 
   const handleOnLogin = (e: Event | React.FormEvent) => {
@@ -47,7 +47,7 @@ const SignInForm = ({
 
         // Rehydrate payment
         if (location.state && location.state.planId) {
-          rehydratePayment(location.state.planId);
+          rehydratePayment(location.state);
         }
       })
       .catch(error => {

@@ -189,7 +189,7 @@
     {
       "name": "Pro",
       "price": "€ 2",
-      "planId": "pro-2-devices",
+      "planId": "pro-monthly",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
@@ -238,7 +238,7 @@
     {
       "name": "Pro",
       "price": "€ 20.00",
-      "planId": "pro-2-devices-yrl",
+      "planId": "pro-yearly",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [

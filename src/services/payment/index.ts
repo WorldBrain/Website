@@ -71,13 +71,13 @@ export class PaymentService {
     }
   }
 
-  upgrade(planId, onError, onSuccess) {
+  upgrade(plan, onError, onSuccess) {
     if (!this.chargeBee) {
       console.warn('ChargeBee is not initialized');
       return;
     }
 
-    const checkoutLink = this.getCheckoutLink({ planId }).catch((error: Error) => {
+    const checkoutLink = this.getCheckoutLink(plan).catch((error: Error) => {
       if (onError) {
         onError(error)
       }

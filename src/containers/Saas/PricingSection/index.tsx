@@ -90,7 +90,8 @@ const PricingSection = ({
       if (error.message === 'Not Authenticated') {
         navigate('/login', {
           state: {
-            planId
+            planId,
+            quantity: 2, // TODO: Update me when change UI
           }
         });
       }
