@@ -6,6 +6,15 @@ const StoreLocalSectionWrapper = styled.section`
   align-items: center;
   margin-bottom: 55px;
   position: relative;
+
+  @media (max-width: 2600px) {
+    min-height: 1000px;
+  }
+
+  @media (max-width: 1440px) {
+    min-height: 700px;
+  }
+
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
