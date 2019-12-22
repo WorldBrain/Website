@@ -36,7 +36,7 @@ const CommunitySection = ({
                 {...title}
               />
               <Text content="Leave your feature ideas, engage in the feedback process and shape the future of Memex." {...text}/>
-              <Link href="https://community.worldbrain.io/">Join our forums</Link>
+              <Link href="https://community.worldbrain.io/" target="_blank">Join our forums</Link>
             </CommunityText>
           </Box>
           <Box {...col}>
@@ -48,7 +48,7 @@ const CommunitySection = ({
                 {...title}
               />
               <Text content="Copy. Modify. Innovate. Contribute. Adapt Memex' code and move your data to a version that suits you best." {...text}/>
-              <Link href="https://github.com/WorldBrain/Memex">Join us on Github</Link>
+              <Link href="https://github.com/WorldBrain/Memex" target="_blank">Join us on Github</Link>
             </CommunityText>
           </Box>
         </Box>

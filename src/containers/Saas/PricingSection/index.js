@@ -113,14 +113,14 @@ const PricingSection = ({
                   <PricingPrice>
                     <Text content={pricingTable.price} {...priceStyle} />
                   </PricingPrice>
-
+{/*
                   <span>TODO - hide on free, make functional</span>
                   <DeviceSelection>
                     <span>for</span>
                     <Input inputType="number" value="1" />
                     <span>device</span>
                   </DeviceSelection>
-
+*/}
                   <PricingList>
                     {pricingTable.listItems.map((item, index) => (
                       <ListItem key={`pricing-table-list-${index}`}>

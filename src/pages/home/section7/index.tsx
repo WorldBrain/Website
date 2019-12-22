@@ -20,7 +20,7 @@ export default class Section7 extends React.Component {
                 </h3>
                 <p>
                   Nobody has access to your data unless you share it with someone. Your data is not our business model.<br />
-                  <a href="https://worldbrain.io/manifesto">Learn More >></a> 
+                  <a href="https://worldbrain.io/manifesto" target="_blank">Learn More >></a> 
                 </p>
               </div>
               <div className="col-sm-6">
@@ -35,7 +35,7 @@ export default class Section7 extends React.Component {
                 <h3>
                   <img className="emoji" alt="🔐" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f510.svg" /> No VC Money, No-Lock-ins
                 </h3>
-                <p>We don't want to lock-in our users for the sake of growth and maximising shareholder value. We are a <a href="https://purpose-economy.org">Steward Ownership</a> company that wants to be successful if we provide real value to our users, not by hyping up our valuation.</p>
+                <p>We don't want to lock-in our users for the sake of growth and maximising shareholder value. We are a <a href="https://purpose-economy.org" target="_blank">Steward Ownership</a> company that wants to be successful if we provide real value to our users, not by hyping up our valuation.</p>
               </div>
               <div className="col-sm-6">
                 <h3>

@@ -44,7 +44,7 @@ const Footer = ({
                 <List>
                   {widget.menuItems.map((item, index) => (
                     <ListItem key={`footer-list-item-${index}`}>
-                      <a href={item.url} className="ListItem">
+                      <a href={item.url} className="ListItem" target="_blank">
                         {item.text}
                       </a>
                     </ListItem>
@@ -68,13 +68,13 @@ const Footer = ({
             logoStyle={logoStyle}
             title="Memex"
           />
-          <Link href="https://community.worldbrain.io/">
+          <Link href="mailto:support@worldbrain.io" target="_blank">
             support@worldbrain.io
           </Link>
-          <Link href="https://community.worldbrain.io/c/bug-reports">
+          <Link href="https://community.worldbrain.io/c/bug-reports" target="_blank">
             Report a bug
           </Link>
-          <Link href="https://www.flaticon.com/authors/smashicons">
+          <Link href="https://www.flaticon.com/authors/smashicons" target="_blank">
             Icons by <u>Smashicons</u> from <u>Flaticons.com</u>
           </Link>
         </Box>

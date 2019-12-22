@@ -27,7 +27,7 @@ const MobileSection = ({
       <Container>
         <Box {...textArea}>
           <Heading
-            content="Comming soon"
+            content="Coming soon"
             {...tag}
           />
           <FeatureBlock

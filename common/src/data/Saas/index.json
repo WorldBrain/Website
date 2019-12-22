@@ -168,23 +168,26 @@
       "url": "#",
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
-        {
-          "content": "Full-text history search"
+         {
+          "content": "∞ Full-Text History Search"
         },
         {
-          "content": "Annotations"
+          "content": "∞ Annotations"
         },
         {
-          "content": "Collections & tags"
+          "content": "∞ Collections & Tags"
         },
         {
-          "content": "Manual backup to any cloud provider"
+          "content": "Mobile App for iOS & Android [SOON]"
+        },
+        {
+          "content": "∞ Manual backup to any cloud provider"
         }
       ]
     },
     {
       "name": "Pro",
-      "price": "€1",
+      "price": "€ 2",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
@@ -192,10 +195,13 @@
           "content": "Everything in basic"
         },
         {
-          "content": "+ Automatic backups"
+          "content": "Automatic backups"
         },
         {
-          "content": "Sync between your devices"
+          "content": "End2End Encrypted Sync between Devices. 2 included. [SOON]"
+        },
+        {
+          "content": "+1€ per additional device"
         }
       ]
     }
@@ -210,22 +216,25 @@
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
         {
-          "content": "Full-text history search"
+          "content": "∞ Full-Text History Search"
         },
         {
-          "content": "Annotations"
+          "content": "∞ Annotations"
         },
         {
-          "content": "Collections & tags"
+          "content": "∞ Collections & Tags"
         },
         {
-          "content": "Manual backup to any cloud provider"
+          "content": "Mobile App for iOS & Android [SOON]"
+        },
+        {
+          "content": "∞ Manual backup to any cloud provider"
         }
       ]
     },
     {
       "name": "Pro",
-      "price": "€12.00",
+      "price": "€ 20.00",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
@@ -233,10 +242,13 @@
           "content": "Everything in basic"
         },
         {
-          "content": "+ Automatic backups"
+          "content": "Automatic backups"
         },
         {
-          "content": "+ Sync between your devices"
+          "content": "End2End Encrypted Sync between Devices. 2 included. [SOON]"
+        },
+        {
+          "content": "+10€ per additional device"
         }
       ]
     }

@@ -35,16 +35,16 @@ const SponsorsSection = ({
           <Text className="sub-text" content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
         </Box>
         <Box className="row" {...row}>
-          <Link href="http://https://ec.europa.eu">
+          <Link href="https://ec.europa.eu" target="_blank">
             <Image width="100px" src={EuComissionLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
-          <Link href="https://ledgerproject.eu">
+          <Link href="https://ledgerproject.eu" target="_blank">
             <Image {...image} src={LedgerLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
-          <Link href="https://foundation.mozilla.org/en">
+          <Link href="https://foundation.mozilla.org/en" target="_blank">
           <Image {...image} src={MozillaLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
-          <Link href="https://www.digital-science.com">
+          <Link href="https://www.digital-science.com" target="_blank">
           <Image {...image} src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
         </Box>

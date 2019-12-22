@@ -9,7 +9,7 @@ const PricingTable = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 600px;
   width: 40%;
   max-width: 400px;
