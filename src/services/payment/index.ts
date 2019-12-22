@@ -32,10 +32,16 @@ export class PaymentService {
       this.chargeBee = window['Chargebee'].init({
         site: this.chargebeeConfig.site
       });
+    }).catch(error => {
+      console.log(error);
+      console.log('Can not init ChargeBee');
     })
   }
 
   loadScript() {
+    if (typeof document === 'undefined') {
+      return Promise.reject('Server side rendering');
+    }
     const script = document.createElement('script');
     script.src = this.script;
     script.async = true;
