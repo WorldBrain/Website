@@ -73,7 +73,7 @@
       "url": "https://ledgerproject.eu"
     },
     {
-      "id":3,
+      "id": 3,
       "logo": "../../assets/image/agency/client/denny.png",
       "company": "Mozilla",
       "url": "https://foundation.mozilla.org/en/"
@@ -134,7 +134,7 @@
       "label": "Values",
       "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
       "offset": "70",
-      "staticLink" : true
+      "staticLink": true
     },
     {
       "label": "Upgrade",
@@ -164,11 +164,12 @@
       "freePlan": true,
       "name": "Basic",
       "price": "Free",
+      "planId": "free",
       "buttonLabel": "Get started",
       "url": "#",
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
-         {
+        {
           "content": "∞ Full-Text History Search"
         },
         {
@@ -188,6 +189,7 @@
     {
       "name": "Pro",
       "price": "€ 2",
+      "planId": "pro-monthly",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [
@@ -211,6 +213,7 @@
       "freePlan": true,
       "name": "Basic",
       "price": "Free",
+      "planId": "free",
       "buttonLabel": "Get started",
       "url": "#",
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
@@ -235,6 +238,7 @@
     {
       "name": "Pro",
       "price": "€ 20.00",
+      "planId": "pro-yearly",
       "buttonLabel": "Upgrade",
       "url": "#",
       "listItems": [

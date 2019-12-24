@@ -1,97 +1,114 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
 import SignInWrapper, { ErrorMessage } from './signin.style';
+import { PageHOC } from '../page';
 
-export default class SignInForm extends Component {
-  constructor(props) {
-    super(props);
+const SignInForm = ({
+  auth,
+  payment,
+  location,
+  ...props
+}) => {
+  const [formValue, setFormValue] = useState({
+    email: '',
+    password: '',
+    error: '',
+    isLoading: false,
+  })
 
-    this.state = {
-      email: '',
-      password: '',
-      error: ''
-    };
-  }
-
-  handleFieldChange = (field) => (value) => {
-    this.setState({
-      [field]: value,
+  const handleFieldChange = (field) => (value) => {
+    setFormValue({
+      ...formValue,
+      [field]: value
     });
   }
 
-  handleOnLogin = (e: Event) => {
+  const rehydratePayment = (plan) => {
+    console.log('Start rehydrate');
+    payment.upgrade(plan);
+  }
+
+  const handleOnLogin = (e: Event | React.FormEvent) => {
     e.preventDefault();
-    const { authService } = this.props;
-    const { email, password } = this.state;
-    authService.logIn(email, password)
+    const { email, password } = formValue;
+    handleFieldChange('isLoading')(true);
+    auth.logIn(email, password)
       .then(data => {
-        // TODO: Shoud navigate back to last state
-        // Eg: Shoping cart
+        setFormValue({
+          ...formValue,
+          isLoading: false
+        })
+
+        // Navigate back to Homepage
         navigate('/');
 
-      })
-      .catch(error => {
-        console.log(error);
-        switch (error.code) {
-          case 'auth/user-not-found':
-            this.setState({
-              error: 'Not found any credential. Did you sign up?'
-            });
-            break;
-          default:
-            this.setState({
-              error: error.message
-            });
+        // Rehydrate payment
+        if (location.state && location.state.planId) {
+          rehydratePayment(location.state);
         }
       })
+      .catch(error => {
+        let errorMessage = '';
+        switch (error.code) {
+          case 'auth/user-not-found':
+            errorMessage = 'Not found any credential. Did you sign up?';
+            break;
+          default:
+            errorMessage = error.message;
+            break;
+        }
+
+        setFormValue({
+          ...formValue,
+          error: errorMessage,
+          isLoading: false
+        })
+      })
   }
 
-  render() {
-    const { authService } = this.props;
-    const { error, email, password } = this.state;
-
-    const currentUser = authService.currentUser();
-    if (currentUser) {
-      return (
-        <p>Hello {currentUser.displayName}</p>
-      )
-    }
-
+  const currentUser = auth.currentUser();
+  if (currentUser) {
     return (
-      <SignInWrapper>
-        <form onSubmit={this.handleOnLogin}>
-          <Heading as="h3" content="Login" />
-          <label forhtml="email">Email</label>
-          <Input
-            inputType="email"
-            name="email"
-            placeholder="Your email"
-            value={email}
-            onChange={this.handleFieldChange('email')}
-          />
-          <br />
-          <label forhtml="password">Password</label>
-          <Input
-            inputType="password"
-            passwordShowHide
-            placeholder="Password"
-            value={password}
-            onChange={this.handleFieldChange('password')}
-          />
-          <br />
-
-          {error && <ErrorMessage>
-            <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {error}
-          </ErrorMessage>}
-
-          <Button type="submit" onClick={this.handleOnLogin} title="Login" />
-
-          <Link to="/forgot">I forgot my password</Link>
-        </form>
-      </SignInWrapper>
+      <p>Hello {currentUser.displayName}</p>
     )
   }
-}
+
+  return (
+    <SignInWrapper>
+      <form onSubmit={handleOnLogin}>
+        <Heading as="h3" content="Login" />
+        <label htmlFor="email">Email</label>
+        <Input
+          inputType="email"
+          name="email"
+          placeholder="Your email"
+          value={formValue.email}
+          onChange={handleFieldChange('email')}
+        />
+        <br />
+        <label htmlFor="password">Password</label>
+        <Input
+          inputType="password"
+          passwordShowHide
+          placeholder="Password"
+          value={formValue.email}
+          onChange={handleFieldChange('password')}
+        />
+        <br />
+
+        {formValue.error && <ErrorMessage>
+          <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {formValue.error}
+        </ErrorMessage>}
+
+        <Button isLoading={formValue.isLoading} type="submit" onClick={handleOnLogin} title="Login" />
+
+        <Link to="/forgot">I forgot my password</Link>
+      </form>
+    </SignInWrapper>
+  )
+};
+
+export default PageHOC(({ auth, payment }) => ({ auth, payment }))(SignInForm);

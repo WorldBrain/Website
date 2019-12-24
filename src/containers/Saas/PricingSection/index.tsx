@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql, navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import Icon from 'react-icons-kit';
+import ScriptLoader from 'react-script-loader-hoc';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Container from 'common/src/components/UI/Container';
-import Input from 'reusecore/src/elements/Input';
+// import Input from 'reusecore/src/elements/Input';
+
+const chargeBeeScriptSource = 'https://js.chargebee.com/v2/chargebee.js'
 
 import PricingTable, {
   PricingHead,
@@ -20,6 +23,7 @@ import PricingTable, {
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
+import { PageHOC } from '../../../components/page';
 
 const PricingSection = ({
   sectionWrapper,
@@ -33,6 +37,9 @@ const PricingSection = ({
   buttonFillStyle,
   listContentStyle,
   subContentStyle,
+  payment,
+  scriptsLoadedSuccessfully,
+  ...rest
 }) => {
   const Data = useStaticQuery(graphql`
     query {
@@ -43,6 +50,7 @@ const PricingSection = ({
           buttonLabel
           url
           freePlan
+          planId
           subContent
           listItems {
             content
@@ -54,6 +62,7 @@ const PricingSection = ({
           buttonLabel
           url
           freePlan
+          planId
           subContent
           listItems {
             content
@@ -67,6 +76,27 @@ const PricingSection = ({
     data: Data.saasJson.MONTHLY_PRICING_TABLE,
     active: true,
   });
+
+  const handleClickUpgrade = (e: Event, planId: String) => {
+    e.preventDefault();
+
+    if (planId === 'free') {
+      // TODO: Redirect to download Extension page
+      return;
+    }
+
+    payment.upgrade(planId, (error: Error) => {
+      console.log(error);
+      if (error.message === 'Not Authenticated') {
+        navigate('/login', {
+          state: {
+            planId,
+            quantity: 2, // TODO: Update me when change UI
+          }
+        });
+      }
+    });
+  }
 
   const data = state.data;
   const activeStatus = state.active;
@@ -101,8 +131,9 @@ const PricingSection = ({
         </Box>
         <Box {...row}>
           <>
-            {data.map((pricingTable, index) => (
+            {data.map((pricingTable) => (
               <PricingTable
+                key={pricingTable.planId}
                 freePlan={pricingTable.freePlan}
                 className={pricingTable.freePlan ? "free-plan pricing-table" : "pro-plan pricing-table"}
               >
@@ -113,7 +144,7 @@ const PricingSection = ({
                   <PricingPrice>
                     <Text content={pricingTable.price} {...priceStyle} />
                   </PricingPrice>
-{/*
+                  {/*
                   <span>TODO - hide on free, make functional</span>
                   <DeviceSelection>
                     <span>for</span>
@@ -139,6 +170,7 @@ const PricingSection = ({
                   <a href={pricingTable.url}>
                     <Button
                       title={pricingTable.buttonLabel}
+                      onClick={(e: Event) => handleClickUpgrade(e, pricingTable.planId)}
                       colors={pricingTable.freePlan ? "primaryWithBg" : "secondaryWithBg"}
                       {...buttonStyle}
                     />
@@ -176,7 +208,6 @@ PricingSection.defaultProps = {
     flexWrap: 'wrap',
     ml: '-15px',
     mr: '-15px',
-    alignItems: 'center',
     justifyContent: 'center',
     alignItems: 'stretch',
   },
@@ -239,4 +270,4 @@ PricingSection.defaultProps = {
   },
 };
 
-export default PricingSection;
+export default PageHOC(({ payment }) => ({ payment }))(PricingSection);

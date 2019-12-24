@@ -178,7 +178,7 @@ Input.propTypes = {
   label: PropTypes.string,
 
   /** The input value, required for a controlled component. */
-  value: PropTypes.oneOf(['string', 'number']),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   /** Make default input into material style input. */
   isMaterial: PropTypes.bool,
@@ -222,7 +222,7 @@ Input.propTypes = {
   onChange: PropTypes.func
 };
 
-/** Inout default type. */
+/** Input default type. */
 Input.defaultProps = {
   inputType: 'text',
   isMaterial: false,
