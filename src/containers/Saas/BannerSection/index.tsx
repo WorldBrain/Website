@@ -7,6 +7,7 @@ import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
+import { detect } from 'detect-browser';
 import BannerWrapper, {
   BannerObject,
   BrowserIcons,
@@ -18,6 +19,32 @@ import ChromeIcon from '../../../img/logos/logo-chrome.svg';
 import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
 import BraveIcon from '../../../img/logos/logo-brave.svg';
 import Fade from 'react-reveal/Fade';
+
+const onClickDownload = (e: Event) => {
+  e.preventDefault();
+  const browser = detect();
+  let downloadLink = '';
+  switch (browser && browser.name) {
+    case 'chrome':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    case 'firefox':
+      downloadLink = 'https://addons.mozilla.org/en-US/firefox/addon/worldbrain/';
+      break;
+    case 'brave':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    default:
+      // TODO: Fallback case? Default is Chrome link
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+  }
+
+  if (window) {
+    window.open(downloadLink, '_blank');
+  }
+}
+
 const BannerSection = ({
   row,
   col,
@@ -28,7 +55,7 @@ const BannerSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Download for free" {...btnStyle} />
+      <Button title="Download for free" onClick={onClickDownload} {...btnStyle} />
       <BrowserIcons>
         <Image src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
         <Image src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
@@ -36,6 +63,7 @@ const BannerSection = ({
       </BrowserIcons>
     </Fragment>
   );
+
   return (
     <BannerWrapper id="banner_section">
       <Container>
