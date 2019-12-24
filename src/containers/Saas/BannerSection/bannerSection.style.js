@@ -26,6 +26,19 @@ const BannerWrapper = styled.section`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 1024px) {
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 800px;
+  }
+
+  @media (min-width: 2560px) {
+    min-height: 1000px;
+  }
+
   @media (max-width: 990px) {
     padding-bottom: 60px;
     min-height: auto;
@@ -82,9 +95,9 @@ const BannerWrapper = styled.section`
 `;
 
 const BannerObject = styled.div`
+  margin-top: 70px;
   position: absolute;
   width: 50%;
-  height: 100%;
   top: 0;
   right: 0;
   display: flex;
@@ -95,7 +108,6 @@ const BannerObject = styled.div`
   }
 
   .objectWrapper {
-    margin-left: auto;
     position: relative;
 
     .banner-bg {

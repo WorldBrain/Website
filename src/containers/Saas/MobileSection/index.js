@@ -49,7 +49,7 @@ const MobileSection = ({
       </Container>
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
+          <Zoom duration={500}>
             <Image src={ImageBg} className="bg-image" alt="BgImage" />
           </Zoom>
           <Card className="imageOne" {...imageWrapper}>
