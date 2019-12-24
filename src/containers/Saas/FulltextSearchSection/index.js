@@ -23,19 +23,7 @@ const FulltextSearchSection = ({
 }) => {
   return (
     <FulltextSearchSectionWrapper id="fullTextSearchSection">
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom left duration={700}>
-            <Image src={ImageBg} alt="BgImage" />
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade left>
-              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
-            </Fade>
-          </Card>
-        </Card>
-      </SectionObject>
-      <Container>
+      <Container className="text-container">
         <Box {...textArea}>
           <FeatureBlock
             title={
@@ -53,6 +41,19 @@ const FulltextSearchSection = ({
           />
         </Box>
       </Container>
+
+      <SectionObject>
+        <Card className="objectWrapper" {...imageWrapper}>
+          <Zoom left duration={700}>
+            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
+          </Zoom>
+          <Card className="dashboardWrapper" {...imageWrapper}>
+            <Fade left>
+              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
+            </Fade>
+          </Card>
+        </Card>
+      </SectionObject>
     </FulltextSearchSectionWrapper>
   );
 };
@@ -76,6 +77,7 @@ FulltextSearchSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

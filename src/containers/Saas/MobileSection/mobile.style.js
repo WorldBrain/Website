@@ -45,7 +45,6 @@ const SectionObject = styled.div`
     left: auto;
   }
   img {
-    margin-right: 20px;
     height: auto;
   }
   .objectWrapper {

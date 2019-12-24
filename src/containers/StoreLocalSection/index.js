@@ -24,18 +24,6 @@ const StoreLocalSection = ({
 }) => {
   return (
     <StoreLocalSectionWrapper id="storeLocalSection">
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade left>
-              <Image src={ImageOne} className="banner-img" alt="Store local" />
-            </Fade>
-          </Card>
-        </Card>
-      </SectionObject>
       <Container>
         <Box {...textArea}>
           <FeatureBlock
@@ -54,6 +42,18 @@ const StoreLocalSection = ({
           />
         </Box>
       </Container>
+      <SectionObject>
+        <Card className="objectWrapper" {...imageWrapper}>
+          <Zoom>
+            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
+          </Zoom>
+          <Card className="dashboardWrapper" {...imageWrapper}>
+            <Fade left>
+              <Image src={ImageOne} className="banner-img" alt="Store local" />
+            </Fade>
+          </Card>
+        </Card>
+      </SectionObject>
     </StoreLocalSectionWrapper>
   );
 };

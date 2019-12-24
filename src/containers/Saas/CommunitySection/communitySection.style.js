@@ -5,7 +5,10 @@ const CommunityWrapper = styled.section`
   padding: 40px 0 40px 0;
 
   .container {
-    max-width: 900px;
+    max-width: 1200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
   }
 
   @media (max-width: 990px) {
@@ -17,7 +20,7 @@ const CommunityWrapper = styled.section`
   .community-image {
     float: left;
     margin-right: 5%;
-    width: 20%;
+    width: 15%;
   }
 `;
 

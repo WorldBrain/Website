@@ -10,7 +10,7 @@ const ImportSectionWrapper = styled.section`
   padding: 40px 0;
 
   img {
-    max-width: 400px;
+    max-width: 350px;
     margin: auto;
   }
 

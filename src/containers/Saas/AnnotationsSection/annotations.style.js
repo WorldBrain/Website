@@ -14,10 +14,12 @@ const AnnotationsSectionWrapper = styled.section`
     margin-bottom: 40px;
   }
   @media (max-width: 767px) {
-    min-height: auto;
-    flex-direction: column;
+     min-height: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
     .text-container {
-      order: 1;
+      order: 0;
       width: 100%;
     }
   }
@@ -28,14 +30,15 @@ const SectionObject = styled.div`
   width: 51%;
   top: 0;
   right: 0;
+  padding: 5px;
+  border-radius: 5px
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  order: 0;
+  order: 1;
   @media (max-width: 767px) {
     width: 100%;
     position: relative;
-    padding: 0 30px;
     height: auto;
     top: auto;
     left: auto;

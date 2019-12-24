@@ -39,7 +39,7 @@ const MobileSection = ({
             }
             description={
               <Text
-                content="Securely sync your Memex between browsers, iOS & Android devices."
+                content="End2End encrypted sync between your computer, iOS & Android devices."
                 {...description}
               />
             }

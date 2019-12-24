@@ -24,7 +24,6 @@ const AnnotationsSection = ({
 }) => {
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
-
       <Container className="text-container">
         <Box {...textArea}>
           <FeatureBlock

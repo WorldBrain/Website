@@ -21,19 +21,7 @@ const FlexiblyOrganiseSection = ({
   imageWrapper,
 }) => {
   return (
-    <FlexiblyOrganiseSectionWrapper id="tagsSection">
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" />
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade left>
-              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
-            </Fade>
-          </Card>
-        </Card>
-      </SectionObject>
+    <FlexiblyOrganiseSectionWrapper id="tagsSection">   
       <Container>
         <Box {...textArea}>
           <FeatureBlock
@@ -52,6 +40,19 @@ const FlexiblyOrganiseSection = ({
           />
         </Box>
       </Container>
+
+      <SectionObject>
+        <Card className="objectWrapper" {...imageWrapper}>
+          <Zoom>
+            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
+          </Zoom>
+          <Card className="dashboardWrapper" {...imageWrapper}>
+            <Fade left>
+              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
+            </Fade>
+          </Card>
+        </Card>
+      </SectionObject>
     </FlexiblyOrganiseSectionWrapper>
   );
 };
@@ -75,7 +76,7 @@ FlexiblyOrganiseSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
-    mt: '-20px',
+    mt: ['20px', '20px', '-20px', '-20px'],
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

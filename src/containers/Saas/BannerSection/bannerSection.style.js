@@ -22,22 +22,11 @@ const BrowserIcons = styled.div`
 
 const BannerWrapper = styled.section`
   padding-top: 120px;
-  padding-bottom: 120px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-
-  @media (min-width: 1024px) {
-    min-height: 100vh;
-  }
-
-  @media (min-width: 1440px) {
-    min-height: 800px;
-  }
-
-  @media (min-width: 2560px) {
-    min-height: 1000px;
-  }
+  display: flex;
+  align-items: center;
 
   @media (max-width: 990px) {
     padding-bottom: 60px;
@@ -51,10 +40,6 @@ const BannerWrapper = styled.section`
 
   @media (max-width: 576px) {
     text-align: center;
-  }
-
-  .content__wrapper {
-    margin-top: 65px;
   }
 
   .row {
@@ -95,10 +80,9 @@ const BannerWrapper = styled.section`
 `;
 
 const BannerObject = styled.div`
-  margin-top: 70px;
   position: absolute;
   width: 50%;
-  top: 0;
+  margin-top: -10px;
   right: 0;
   display: flex;
   align-items: center;
