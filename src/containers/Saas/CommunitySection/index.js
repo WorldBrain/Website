@@ -81,7 +81,7 @@ CommunitySection.defaultProps = {
     textAlign: 'center',
     pl: '15px',
     pr: '5px',
-    mb: '50px',
+    mb: ['50px', '0px']
   },
   text: {
     color: 'textColor',

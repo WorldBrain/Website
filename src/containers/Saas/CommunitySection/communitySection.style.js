@@ -3,7 +3,9 @@ import styled from 'styled-components';
 const CommunityWrapper = styled.section`
   background: #F8F9FE;
   padding: 40px 0 40px 0;
-  height: 300px;
+  display: flex;
+  align-items: center;
+  height: 300px
   
   .container {
     max-width: 1200px;  
@@ -11,13 +13,10 @@ const CommunityWrapper = styled.section`
     align-items: center;
   }
 
-  @media (max-width: 990px) {
-    padding: 60px 0 60px 0;
-  }
   @media (max-width: 850px) {
-    padding: 60px 0 30px 0;
-    height: 80vh;
+    padding-top: 100px;
     text-align: left;
+    height: 500px;
   }
   .community-image {
     float: left;

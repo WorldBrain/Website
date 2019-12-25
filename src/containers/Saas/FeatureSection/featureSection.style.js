@@ -11,7 +11,6 @@ const FeatureSectionWrapper = styled.section`
   @media (max-width: 850px) {
     padding: 40px 0 0px 0;
     text-align: center;
-    font-size: 2rem;
   }
 
   .feature__block {
