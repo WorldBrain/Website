@@ -38,6 +38,8 @@ const BannerWrapper = styled.section`
     display: flex;
     text-align: center;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
   }
 
@@ -57,7 +59,7 @@ const BannerWrapper = styled.section`
     margin-bottom: 32px;
     width: 90%;
     @media (max-width: 850px) {
-      width: 70%;
+      width: 100%;
     }
     @media (max-width: 850px) {
       flex-direction: column;
@@ -96,10 +98,13 @@ const BannerObject = styled.div`
 
   .objectWrapper {
     position: relative;
+    @media (max-width: 850px) {
+        display: none;
+      }
 
     .banner-bg {
       width: 85%;
-      @media (max-width: 576px) {
+      @media (max-width: 850px) {
         display: none;
       }
     }

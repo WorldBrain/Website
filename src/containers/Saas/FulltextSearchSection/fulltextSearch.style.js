@@ -5,7 +5,6 @@ const FulltextSearchSectionWrapper = styled.section`
   min-height: 700px;
   display: flex;
   align-items: center;
-  margin-bottom: 55px;
   position: relative;
   margin-top: 20px;
   padding: 5px;

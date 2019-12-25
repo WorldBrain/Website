@@ -4,7 +4,6 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
   min-height: 700px;
   display: flex;
   align-items: center;
-  margin-bottom: 55px;
   position: relative;
   padding: 5px;
   @media only screen and (max-width: 1200px) {
