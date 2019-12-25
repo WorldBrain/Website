@@ -23,8 +23,10 @@ const MobileSectionWrapper = styled.section`
   .mobileDownload {
     opacity: 0.5;
     margin-left: -15px;
-    @media (max-width: 767px) {
+    @media (max-width: 850px) {
       margin: auto;
+      width: 100%;
+      height: auto;
     }
   }
 `;

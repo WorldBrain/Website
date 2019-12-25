@@ -13,7 +13,7 @@ const AnnotationsSectionWrapper = styled.section`
     min-height: 370px;
     margin-bottom: 40px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
      min-height: auto;
     display: block;
     text-align: center;
@@ -36,7 +36,7 @@ const SectionObject = styled.div`
   align-items: center;
   justify-content: flex-end;
   order: 1;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: relative;
     height: auto;
@@ -57,7 +57,7 @@ const SectionObject = styled.div`
       position: absolute;
       top: 4vw;
       left: 0;
-      @media (max-width: 767px) {
+      @media (max-width: 850px) {
         position: static;
       }
 

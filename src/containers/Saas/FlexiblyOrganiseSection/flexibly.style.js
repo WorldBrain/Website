@@ -14,7 +14,7 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
     min-height: 370px;
     margin-bottom: 40px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     min-height: auto;
     display: block;
     text-align: center;
@@ -32,7 +32,7 @@ const SectionObject = styled.div`
   border-radius: 5px;
   align-items: center;
   justify-content: flex-end;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: relative;
     height: auto;
@@ -53,7 +53,7 @@ const SectionObject = styled.div`
       top: 4vw;
       left: 0;
       position: absolute;
-      @media (max-width: 767px) {
+      @media (max-width: 850px) {
         position: relative;
         top: 0vw;
       }

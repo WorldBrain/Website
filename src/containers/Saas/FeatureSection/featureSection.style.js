@@ -8,8 +8,10 @@ const FeatureSectionWrapper = styled.section`
     padding: 60px 0 60px 0;
   }
 
-  @media (max-width: 767px) {
-    padding: 60px 0 30px 0;
+  @media (max-width: 850px) {
+    padding: 40px 0 0px 0;
+    text-align: center;
+    font-size: 2rem;
   }
 
   .feature__block {
@@ -28,7 +30,7 @@ const FeatureSectionWrapper = styled.section`
       background-position-x: -154px
     }
 
-    @media (max-width: 775px) {
+    @media (max-width: 850px) {
       display: none;
     }
   }

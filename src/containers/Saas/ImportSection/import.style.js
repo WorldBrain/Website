@@ -12,10 +12,14 @@ const ImportSectionWrapper = styled.section`
   img {
     max-width: 350px;
     margin: auto;
+
+    @media (max-width: 850px) {
+      max-width: 100%;
+    }
   }
 
-  @media (max-width: 575px) {
-    background-image: none;
+  @media (max-width: 850px) {
+    text-align: center;
   }
 `;
 

@@ -35,7 +35,7 @@ const StoreLocalSection = ({
             }
             description={
               <Text
-                content="Offline first - Your data is stored locally unless you choose to backup to a cloud service provider."
+                content="Memex is offline first. You have full control over your data."
                 {...description}
               />
             }

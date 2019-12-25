@@ -74,6 +74,4 @@ Heading.defaultProps = {
   fontWeight: '600',
   fontSize: '2rem',
   color: 'headingColor',
-  width: ['100%', '70%', '70%', '80%'],
-  textAlign: ['center', 'left', 'left', 'left'],
 };

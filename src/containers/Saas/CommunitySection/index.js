@@ -79,8 +79,9 @@ CommunitySection.defaultProps = {
   col: {
     width: [1, 1 / 2],
     textAlign: 'center',
-    pl: '25px',
-    pr: '25px',
+    pl: '15px',
+    pr: '5px',
+    mb: '50px',
   },
   text: {
     color: 'textColor',

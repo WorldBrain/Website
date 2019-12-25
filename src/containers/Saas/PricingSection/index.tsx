@@ -215,14 +215,14 @@ PricingSection.defaultProps = {
     mb: ['50px', '75px'],
   },
   secText: {
-    content: 'PRICING PLAN',
+    content: 'Pricing Plan',
     as: 'span',
     display: 'block',
     textAlign: 'center',
-    fontSize: '14px',
+    fontSize: '1.5625rem',
     letterSpacing: '0.15em',
     fontWeight: '700',
-    color: 'secondary',
+    color: 'headingColor',
     mb: '10px',
   },
   col: {
