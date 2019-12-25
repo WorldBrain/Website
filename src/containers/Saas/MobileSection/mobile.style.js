@@ -9,7 +9,7 @@ const MobileSectionWrapper = styled.section`
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
-    min-height: 370px;
+    min-height: 500px;
     margin-bottom: 40px;
   }
   @media (max-width: 767px) {
@@ -21,8 +21,9 @@ const MobileSectionWrapper = styled.section`
 
   .mobileDownload {
     opacity: 0.5;
-    margin-left: -15px;
+    margin-left: -5px;
     max-width: 350px;
+    height: auto;
     margin-bottom: 10px;
 
     @media (max-width: 850px) {
@@ -75,6 +76,10 @@ const SectionObject = styled.div`
       .mobile-img {
         width: auto;
         max-height: 600px;
+
+       @media (max-width: 850px) {
+          max-height: 450px;
+       } 
       }
     }
   }

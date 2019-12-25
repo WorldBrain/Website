@@ -11,11 +11,11 @@ const BrowserIcons = styled.div`
     height: 48px;
     margin-left: 25px;
     @media (max-width: 990px) {
-      margin-left: 15px;
+      margin-left: 0px;
     }
   }
   @media (max-width: 850px) {
-    width: 100%;
+    width:  50%;
     justify-content: space-around;
   }
 `;

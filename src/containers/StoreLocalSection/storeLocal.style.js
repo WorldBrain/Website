@@ -12,7 +12,7 @@ const StoreLocalSectionWrapper = styled.section`
   }
 
   @media (max-width: 1440px) {
-    min-height: 700px;
+    min-height: 600px;
   }
 
   @media only screen and (max-width: 1200px) {
