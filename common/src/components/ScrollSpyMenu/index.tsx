@@ -98,7 +98,7 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
       ))}
       {user ? (
         <HoverMenu>
-          <Link to="/account">Hello {user.displayName}
+          <Link to="/account">My Account
             <ul className="sub-menu">
               <li>
                 <a href="#" onClick={handleLogOut}>Log Out</a>
