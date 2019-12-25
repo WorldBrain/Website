@@ -104,7 +104,7 @@ const BannerSection = ({
           <div className="objectWrapper">
             <Image src={BannerObject1} className="banner-bg" alt="Background colour"/>
             <div className="dashboardWrapper">
-              <Image src={BannerObject2} alt="Screenshot of the dashboard page" />
+              <Image src={BannerObject2} alt="Screenshot of the dashboard page"/>
             </div>
           </div>
         </Fade>

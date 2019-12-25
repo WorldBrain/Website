@@ -108,10 +108,12 @@ const BannerObject = styled.div`
         display: none;
       }
     }
+
     .dashboardWrapper {
       position: absolute;
       top: 50px;
       right: -40px;
+      
       @media (max-width: 850px) {
         display: none; 
       }
