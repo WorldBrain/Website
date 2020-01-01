@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
@@ -48,9 +47,7 @@ const StoreLocalSection = ({
             <Image src={ImageBg} alt="BgImage" className="bg-img"/>
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade left>
               <Image src={ImageOne} className="banner-img" alt="Store local" />
-            </Fade>
           </Card>
         </Card>
       </SectionObject>

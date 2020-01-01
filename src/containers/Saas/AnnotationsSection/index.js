@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
@@ -49,9 +48,7 @@ const AnnotationsSection = ({
             <Image src={ImageBg} className="bg-img" alt="Background image" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
-            <Fade right>
               <Image src={ImageOne} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
-            </Fade>
           </Card>
         </Card>
       </SectionObject>

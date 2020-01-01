@@ -18,7 +18,6 @@ import BannerObject2 from '../../../img/main_screen_new.png';
 import ChromeIcon from '../../../img/logos/logo-chrome.svg';
 import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
 import BraveIcon from '../../../img/logos/logo-brave.svg';
-import Fade from 'react-reveal/Fade';
 
 const onClickDownload = (e: Event) => {
   e.preventDefault();
@@ -69,7 +68,6 @@ const BannerSection = ({
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
-          <Fade>
             <FeatureBlock
               title={
                 <Heading
@@ -95,19 +93,16 @@ const BannerSection = ({
               content="No account necessary. All data stored locally."
               {...downloadDescription}
             />
-            </Fade>
           </Box>
         </Box>
       </Container>
       <BannerObject>
-        <Fade>
           <div className="objectWrapper">
             <Image src={BannerObject1} className="banner-bg" alt="Background colour"/>
             <div className="dashboardWrapper">
               <Image src={BannerObject2} alt="Screenshot of the dashboard page"/>
             </div>
           </div>
-        </Fade>
       </BannerObject>
     </BannerWrapper>
   );

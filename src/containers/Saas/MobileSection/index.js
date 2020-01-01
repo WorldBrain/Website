@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
@@ -53,9 +52,7 @@ const MobileSection = ({
             <Image src={ImageBg} className="bg-image" alt="BgImage" />
           </Zoom>
           <Card className="imageOne" {...imageWrapper}>
-            <Fade right>
               <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
-            </Fade>
           </Card>
         </Card>
       </SectionObject>

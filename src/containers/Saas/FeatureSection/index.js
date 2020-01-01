@@ -8,7 +8,6 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FeatureSectionWrapper from './featureSection.style';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Fade from 'react-reveal/Fade';
 
 const FeatureSection = ({
   row,
@@ -39,7 +38,6 @@ const FeatureSection = ({
   return (
     <FeatureSectionWrapper>
       <Container>
-        <Fade>
           <Box {...sectionHeader}>
           <Heading content="Features" {...heading} />
           </Box>
@@ -60,7 +58,6 @@ const FeatureSection = ({
               </Box>
             ))}
           </Box>
-        </Fade>
       </Container>
     </FeatureSectionWrapper>
   );
