@@ -1,31 +1,30 @@
 export const firebaseConfig = {
   staging: {
-    apiKey: 'AIzaSyCyxWY7qZSWlncB_JDYOSzeTOfRnYhNcS8',
-    authDomain: 'worldbrain-staging.firebaseapp.com',
-    databaseURL: 'https://worldbrain-staging.firebaseio.com',
-    projectId: 'worldbrain-staging',
-    messagingSenderId: '840601505816',
-    appId: '1:840601505816:web:69fbb7a789882e399fb36d',
+    apiKey: process.env.GATSBY_STAGING_FIREBASE_API_KEY,
+    authDomain: process.env.GATSBY_STAGING_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.GATSBY_STAGING_FIREBASE_DATABASEURL,
+    projectId: process.env.GATSBY_STAGING_FIREBASE_PROJECT_ID,
+    appId: process.env.GATSBY_STAGING_FIREBASE_APP_ID,
   },
-  // TODO: Add production keys
   production: {
-    apiKey: 'AIzaSyCyxWY7qZSWlncB_JDYOSzeTOfRnYhNcS8',
-    authDomain: 'worldbrain-staging.firebaseapp.com',
-    databaseURL: 'https://worldbrain-staging.firebaseio.com',
-    projectId: 'worldbrain-staging',
-    messagingSenderId: '840601505816',
-    appId: '1:840601505816:web:69fbb7a789882e399fb36d',
+    apiKey: process.env.GATSBY_PRODUCTION_FIREBASE_API_KEY,
+    authDomain: process.env.GATSBY_PRODUCTION_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.GATSBY_PRODUCTION_FIREBASE_DATABASEURL,
+    projectId: process.env.GATSBY_PRODUCTION_FIREBASE_PROJECT_ID,
+    appId: process.env.GATSBY_PRODUCTION_FIREBASE_APP_ID,
   },
 }
 
 export const chargebeeConfig = {
   staging: {
-    site: 'worldbrain-test',
-    domain: 'memex-gatsby.netlify.com'
+    site: process.env.GATSBY_STAGING_CHARGEBEE_SITE,
   },
-  // TODO: Add production keys
   production: {
-    site: 'worldbrain-test',
-    domain: 'memex-gatsby.netlify.com'
+    site:  process.env.GATSBY_PRODUCTION_CHARGEBEE_SITE,
   }
 }
+
+export const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+
