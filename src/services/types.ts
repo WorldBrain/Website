@@ -7,10 +7,3 @@ export interface Services {
     network: NetworkService,
     payment: PaymentService
 }
-
-export type UserPlans =
-    | 'free'
-    | 'backup-monthly'
-    | 'backup-yearly'
-    | 'sync-monthly'
-    | 'sync-yearly'

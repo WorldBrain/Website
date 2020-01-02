@@ -85,13 +85,13 @@ const PricingSection = ({
       return;
     }
 
-    payment.upgrade(planId, (error: Error) => {
+    payment.upgrade(planId, 1, (error: Error) => {
       console.log(error);
       if (error.message === 'Not Authenticated') {
         navigate('/login', {
           state: {
             planId,
-            quantity: 2, // TODO: Update me when change UI
+            quantity: 1, // TODO: Update me when change UI
           }
         });
       }
