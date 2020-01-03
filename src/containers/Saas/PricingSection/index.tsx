@@ -20,6 +20,7 @@ import PricingTable, {
   ListItem,
   PricingButtonWrapper,
   DeviceSelection,
+  UpperSection,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -137,7 +138,7 @@ const PricingSection = ({
                 freePlan={pricingTable.freePlan}
                 className={pricingTable.freePlan ? "free-plan pricing-table" : "pro-plan pricing-table"}
               >
-                <>
+                <UpperSection>
                   <PricingHead>
                     <Heading content={pricingTable.name} {...nameStyle} />
                   </PricingHead>
@@ -165,7 +166,7 @@ const PricingSection = ({
                     ))}
                   </PricingList>
                   <Text content={pricingTable.subContent} {...subContentStyle} />
-                </>
+                </UpperSection>
                 <PricingButton>
                   <a href={pricingTable.url}>
                     <Button

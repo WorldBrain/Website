@@ -16,6 +16,9 @@ const PricingTable = styled.div`
 
   &.free-plan {
     border: 3px solid ${themeGet('colors.primary')};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-right: 15px;
     h2 {
       color: ${themeGet('colors.primary')};
@@ -28,6 +31,9 @@ const PricingTable = styled.div`
   &.pro-plan {
     border: 3px solid ${themeGet('colors.secondary')};
     margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h2 {
       color: ${themeGet('colors.secondary')};
     }
@@ -57,6 +63,13 @@ const DeviceSelection = styled.div`
   align-items: center;
   margin-bottom: 20px;
 `;
+
+
+const UpperSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ `;
 
 
 const PricingHead = styled.div`
@@ -176,5 +189,6 @@ export {
   SwitchWrapper,
   PricingButtonWrapper,
   DeviceSelection,
+  UpperSection,
 };
 export default PricingTable;
