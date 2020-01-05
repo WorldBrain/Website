@@ -2,6 +2,7 @@ import * as firebase from 'firebase/app';
 import 'firebase/functions';
 import { firebaseConfig, chargebeeConfig, activeEnv } from '../config'
 import { CheckoutLinkResult } from './types';
+import { EventEmitter } from "events"
 
 export class PaymentService {
   public firebase = null;
@@ -91,6 +92,22 @@ export class PaymentService {
           onSuccess(id);
         }
       },
+      close: () => console.log('closed'),
+    })
+  }
+
+  async manage( ) {
+    if (!this.chargeBee) {
+      console.warn('ChargeBee is not initialized');
+      return;
+    }
+
+    await this.chargeBee.setPortalSession(async () => {
+      return this.getManageLink({})
+    })
+
+    const cbPortal = this.chargeBee.createChargebeePortal()
+    cbPortal.open({
       close: () => console.log('closed'),
     })
   }
