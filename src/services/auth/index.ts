@@ -1,7 +1,7 @@
 import { AuthenticatedUser } from "./types";
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import { activeEnv, firebaseConfig } from '../config'
+import { firebaseConfig } from '../config'
 
 export class AuthService {
   public firebase = null;
@@ -12,11 +12,7 @@ export class AuthService {
     // Check on static build
     if (typeof window !== 'undefined') {
       if (!firebase.apps.length)
-        firebase.initializeApp(
-          activeEnv === 'production'
-            ? firebaseConfig.production
-            : firebaseConfig.staging,
-        );
+        firebase.initializeApp(firebaseConfig);
 
       this.firebase = firebase.apps[0];
       this.firebase.auth().onAuthStateChanged((user) => {

@@ -1,12 +1,11 @@
 import * as firebase from 'firebase/app';
 import 'firebase/functions';
-import { firebaseConfig, chargebeeConfig, activeEnv } from '../config'
+import { firebaseConfig, chargebeeConfig } from '../config'
 import { CheckoutLinkResult } from './types';
-import { EventEmitter } from "events"
 
 export class PaymentService {
   public firebase = null;
-  public chargebeeConfig = activeEnv === 'production' ? chargebeeConfig.production : chargebeeConfig.staging
+  public chargebeeConfig = chargebeeConfig
   public chargeBee = null;
   private script = 'https://js.chargebee.com/v2/chargebee.js';
 
@@ -14,11 +13,7 @@ export class PaymentService {
     // Check on static build
     if (typeof window !== 'undefined') {
       if (!firebase.apps.length)
-        firebase.initializeApp(
-          activeEnv === 'production'
-            ? firebaseConfig.production
-            : firebaseConfig.staging,
-        );
+        firebase.initializeApp(firebaseConfig);
 
       this.firebase = firebase.apps[0];
     }
