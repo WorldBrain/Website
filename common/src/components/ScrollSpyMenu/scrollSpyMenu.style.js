@@ -9,7 +9,7 @@ const HoverMenu = styled.li`
         left: 50%;
         top: 25px;
         transform: translateX(-50%);
-        width: 100px;
+        width: 120px;
         background-color: #fff;
         padding: 10px;
         border-radius: 3px;
