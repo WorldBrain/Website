@@ -52,7 +52,7 @@ const MobileSection = ({
             <Image src={ImageBg} className="bg-image" alt="BgImage" />
           </Zoom>
           <Card className="imageOne" {...imageWrapper}>
-              <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
+            <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
           </Card>
         </Card>
       </SectionObject>

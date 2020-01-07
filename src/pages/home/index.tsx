@@ -18,6 +18,7 @@ import StoreLocalSection from '../../containers/StoreLocalSection';
 import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
 import MobileSection from '../../containers/Saas/MobileSection';
 import CommunitySection from '../../containers/Saas/CommunitySection';
+
 import Page from '../../components/page'
 
 export default class HomePage extends Page {

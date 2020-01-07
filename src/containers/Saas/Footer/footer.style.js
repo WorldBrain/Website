@@ -8,9 +8,11 @@ const FooterWrapper = styled.footer`
   background: linear-gradient(to bottom, #fff 0%, #fafbff 100%);
   a, p {
     color: #265A4E;
+    text-decoration: none;
   }
   a:hover {
     color: #13382F;
+    text-decoration: none;
   }
   padding-top: 130px;
   &:before {

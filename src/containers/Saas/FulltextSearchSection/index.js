@@ -22,7 +22,7 @@ const FulltextSearchSection = ({
 }) => {
   return (
     <FulltextSearchSectionWrapper id="fullTextSearchSection">
-      <Container className="text-container">
+      <Container>
         <Box {...textArea}>
           <FeatureBlock
             title={
@@ -40,14 +40,13 @@ const FulltextSearchSection = ({
           />
         </Box>
       </Container>
-
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom left duration={700}>
-            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
+            <Image src={ImageBg} className="bg-img" alt="Background image" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
-              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
+            <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
           </Card>
         </Card>
       </SectionObject>
@@ -74,7 +73,7 @@ FulltextSearchSection.defaultProps = {
     fontWeight: '400',
     color: 'headingColor',
     mb: '20px',
-    mt: ['20px', '20px', '-20px', '-20px'],
+    mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },

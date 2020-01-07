@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
 const FulltextSearchSectionWrapper = styled.section`
-  position: absolute;
-  min-height: 700px;
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  position: relative;
-  margin-top: 20px;
+  margin: 100px 0;
   padding: 5px;
+  position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 370px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
   @media (max-width: 767px) {
     min-height: auto;
     display: block;
     text-align: center;
     margin-bottom: 100px;
+    flex-direction: column;
   }
 `;
 
@@ -33,9 +33,10 @@ const SectionObject = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  order: 0;
   @media (max-width: 767px) {
     width: 100%;
-    position: relative;
+    position: static;
     height: auto;
     top: auto;
     left: auto;
@@ -49,7 +50,6 @@ const SectionObject = styled.div`
   }
   .objectWrapper {
     position: relative;
-
     .dashboardWrapper {
       top: 4vw;
       left: 0;
@@ -58,7 +58,6 @@ const SectionObject = styled.div`
         position: relative;
         top: 0vw;
       }
-
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         border-radius: 5px;

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 const FlexiblyOrganiseSectionWrapper = styled.section`
-  min-height: 600px;
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  position: relative;
+  margin: 100px 0;
   padding: 5px;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
   @media only screen and (max-width: 991px) {
-    min-height: 500px;
-    margin-bottom: 40px;
+    min-height: 370px;
+    margin-bottom: 80px;
   }
   @media (max-width: 850px) {
     min-height: auto;
@@ -47,7 +47,6 @@ const SectionObject = styled.div`
   }
   .objectWrapper {
     position: relative;
-
     .dashboardWrapper {
       top: 4vw;
       left: 0;
@@ -56,7 +55,6 @@ const SectionObject = styled.div`
         position: relative;
         top: 0vw;
       }
-
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
@@ -64,7 +62,6 @@ const SectionObject = styled.div`
     }
   }
 `;
-
 export { SectionObject };
 
 export default FlexiblyOrganiseSectionWrapper;

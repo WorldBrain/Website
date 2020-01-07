@@ -11,7 +11,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import AnnotationsSectionWrapper, { SectionObject } from './annotations.style';
 
-import ImageOne from '../../../img/annotate_raw1270x760.gif';
+import ImageOne from '../../../img/annotate.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 
 const AnnotationsSection = ({
@@ -48,7 +48,7 @@ const AnnotationsSection = ({
             <Image src={ImageBg} className="bg-img" alt="Background image" />
           </Zoom>
           <Card className="dashboardWrapper" {...imageWrapper}>
-              <Image src={ImageOne} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+            <Image src={ImageOne} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Card>
         </Card>
       </SectionObject>

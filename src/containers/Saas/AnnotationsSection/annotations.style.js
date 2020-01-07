@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 const AnnotationsSectionWrapper = styled.section`
-  min-height: 600px;
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 100px;
+  padding: 5px;
   @media only screen and (max-width: 1200px) {
-    min-height: 500px;
-  }
-  @media only screen and (max-width: 991px) {
     min-height: 500px;
     margin-bottom: 40px;
   }
   @media (max-width: 850px) {
-     min-height: auto;
+    min-height: auto;
     display: block;
     text-align: center;
     margin-bottom: 60px;

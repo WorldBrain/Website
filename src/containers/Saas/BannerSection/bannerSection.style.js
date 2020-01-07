@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
-
 const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;

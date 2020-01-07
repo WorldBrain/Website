@@ -4,6 +4,8 @@ const MobileSectionWrapper = styled.section`
   min-height: 730px;
   display: flex;
   align-items: center;
+  margin-bottom: 140px;
+  margin-top: 140px;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
@@ -16,7 +18,6 @@ const MobileSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
-
   }
 
   .mobileDownload {

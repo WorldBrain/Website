@@ -4,6 +4,7 @@ import { themeGet } from 'styled-system';
 export const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Poppins', sans-serif;
+    color: ${themeGet('colors.textColor')};
   }
 
   h1,
@@ -13,6 +14,23 @@ export const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-family: 'Poppins', sans-serif;
+  }
+
+  a {
+    color: ${themeGet('colors.secondary')};
+    text-decoration: underline;
+    &:hover {
+      color: #8BA2F1;
+      text-decoration: underline;
+    }
+  }
+
+  ol li, ul li {
+    margin-bottom: 10px;
+  }
+
+  ol li {
+    list-style-type: decimal;
   }
 
   section {
@@ -46,19 +64,20 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 20px;
             font-weight: 400;
             color: #343d48;
+            text-decoration: none;
             position: relative;
             transition: 0.15s ease-in-out;
             @media (max-width: 767px) {
               font-size: 18px;
             }
             &:hover {
-              color: #5671CF;
+              color: ${themeGet('colors.primary')};
             }
             &:before{
               content: '';
               width: 7px;
               height: 7px;
-              background: #5671CF;
+              background: ${themeGet('colors.primary')};
               border-radius: 50%;
               position: absolute;
               top: 50%;
@@ -69,7 +88,7 @@ export const GlobalStyle = createGlobalStyle`
           }
           &.is-current {
             a {
-              color: #5671CF;
+              color: ${themeGet('colors.primary')};
               &:before{
                 opacity: 1;
               }
@@ -100,7 +119,7 @@ export const GlobalStyle = createGlobalStyle`
         content: '\f10b';
         font-family: Flaticon;
         font-size: 26px;
-        color: #5671CF;
+        color: ${themeGet('colors.primary')};
         transform: rotate(45deg);
         display: block;
       }
@@ -112,7 +131,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${themeGet('colors.white', '#ffffff')} !important;
 
     &.alt {
-      background-color: ${themeGet('colors.primary', '#5268db')} !important;
+      background-color: ${themeGet('colors.primary')} !important;
       box-shadow: 0px 9px 20px -5px rgba(82, 104, 219, 0.57) !important;
     }   
   }
@@ -121,9 +140,10 @@ export const GlobalStyle = createGlobalStyle`
 export const ContentWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  a:-webkit-any-link {
-    text-decoration: none;
-  }
+  /* for pages with minimal content we want to footer to still be at the bottom */
+  /* calc page height as total minus footer and header height */
+  min-height: calc(100vh - 502px);
+
   .sticky-nav-active {
     .hosting_navbar {
       background: #fff;
@@ -145,6 +165,7 @@ export const ContentWrapper = styled.div`
         display: inline-block;
         padding-left: 13px;
         padding-right: 13px;
+        margin-bottom: 0;
         &:first-child {
           padding-left: 0;
         }
@@ -153,17 +174,18 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #5671CF;
+            color: ${themeGet('colors.secondary')};
           }
         }
         a {
+          color: ${themeGet('colors.headingColor')};
+          text-decoration: none;
           padding: 5px;
           font-size: 14px;
           font-weight: 400;
-          color: #343d48;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: #5671CF;
+            color: ${themeGet('colors.secondary')};
           }
         }
       }
@@ -187,20 +209,6 @@ export const ContentWrapper = styled.div`
     }
   }
 
-  .trial-section {
-    background: linear-gradient(to bottom, #fafbff 0%, #f7f8fd 100%);
-
-    .button_group {
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 990px) {
-    .glide__slide--active .pricing_table {
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
-      border: 0;
-    }
-  }
 `;
 
 export const ButtonGroup = styled.div``;

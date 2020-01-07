@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const StoreLocalSectionWrapper = styled.section`
-  min-height: 700px;
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  margin: 100px 0;
   position: relative;
   padding: 5px;
   @media (min-width: 2000px) and (max-width: 2600px) {
@@ -21,8 +21,9 @@ const StoreLocalSectionWrapper = styled.section`
 
   @media only screen and (max-width: 991px) {
     min-height: 370px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
+
   @media (max-width: 767px) {
     min-height: auto;
     display: block;
@@ -63,7 +64,6 @@ const SectionObject = styled.div`
         position: relative;
         top: 0vw;
       }
-
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         border-radius: 5px;

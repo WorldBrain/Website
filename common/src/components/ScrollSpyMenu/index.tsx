@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { detect } from 'detect-browser';
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
-import { Link } from 'gatsby';
+import Link from 'reusecore/src/elements/Link';
 
 import { HoverMenu } from './scrollSpyMenu.style';
 
@@ -35,6 +35,7 @@ const onClickDownload = (e: Event) => {
 }
 
 const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...props }) => {
+
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
@@ -112,7 +113,6 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
           </li>
         )
       }
-
       <li>
         <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       </li>

@@ -18,9 +18,21 @@ const FlexiblyOrganiseSection = ({
   description,
   textArea,
   imageWrapper,
+  textWrapper,
 }) => {
   return (
-    <FlexiblyOrganiseSectionWrapper id="tagsSection">   
+
+    <FlexiblyOrganiseSectionWrapper id="tagsSection">
+      <SectionObject>
+        <Card className="objectWrapper" {...imageWrapper}>
+          <Zoom>
+            <Image src={ImageBg} className="bg-img" alt="Background image" />
+          </Zoom>
+          <Card className="dashboardWrapper" {...imageWrapper}>
+            <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
+          </Card>
+        </Card>
+      </SectionObject>
       <Container>
         <Box {...textArea}>
           <FeatureBlock
@@ -39,17 +51,6 @@ const FlexiblyOrganiseSection = ({
           />
         </Box>
       </Container>
-
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
-          </Card>
-        </Card>
-      </SectionObject>
     </FlexiblyOrganiseSectionWrapper>
   );
 };
@@ -58,6 +59,7 @@ FlexiblyOrganiseSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
+  textWrapper: PropTypes.object,
 };
 
 FlexiblyOrganiseSection.defaultProps = {
@@ -81,8 +83,8 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    mb: '0',
+    maxWidth: ['100%', '100%', '100%', '440px'],
   },
   btnStyle: {
     minWidth: '156px',

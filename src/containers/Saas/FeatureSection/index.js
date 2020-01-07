@@ -78,7 +78,7 @@ FeatureSection.propTypes = {
 FeatureSection.defaultProps = {
   // section header default style
   sectionHeader: {
-    mb: ['40px', '40px', '40px', '40px'],
+    mb: ['0', '40px', '40px', '40px'],
   },
   // feature row default style
   row: {
