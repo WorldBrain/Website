@@ -1,11 +1,11 @@
 import * as firebase from 'firebase/app';
 import 'firebase/functions';
-import { firebaseConfig, chargebeeConfig, activeEnv } from '../config'
+import { firebaseConfig, chargebeeConfig } from '../config'
 import { CheckoutLinkResult } from './types';
 
 export class PaymentService {
   public firebase = null;
-  public chargebeeConfig = activeEnv === 'production' ? chargebeeConfig.production : chargebeeConfig.staging
+  public chargebeeConfig = chargebeeConfig
   public chargeBee = null;
   private script = 'https://js.chargebee.com/v2/chargebee.js';
 
@@ -13,11 +13,7 @@ export class PaymentService {
     // Check on static build
     if (typeof window !== 'undefined') {
       if (!firebase.apps.length)
-        firebase.initializeApp(
-          activeEnv === 'production'
-            ? firebaseConfig.production
-            : firebaseConfig.staging,
-        );
+        firebase.initializeApp(firebaseConfig);
 
       this.firebase = firebase.apps[0];
     }
@@ -91,6 +87,22 @@ export class PaymentService {
           onSuccess(id);
         }
       },
+      close: () => console.log('closed'),
+    })
+  }
+
+  async manage( ) {
+    if (!this.chargeBee) {
+      console.warn('ChargeBee is not initialized');
+      return;
+    }
+
+    await this.chargeBee.setPortalSession(async () => {
+      return this.getManageLink({})
+    })
+
+    const cbPortal = this.chargeBee.createChargebeePortal()
+    cbPortal.open({
       close: () => console.log('closed'),
     })
   }
