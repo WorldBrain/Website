@@ -29,6 +29,7 @@ export default class Subscriptions extends Page {
 
   render() {
     const { auth } = this.getServices();
+    this.open()
 
       return (<ThemeProvider theme={saasTheme}>
         <Fragment>
@@ -45,9 +46,6 @@ export default class Subscriptions extends Page {
               <Box className="row">
                 <Box className="col" >
                   <Center>
-                    <ManageSubscriptionsButton onClick={this.open}>
-                      Manage Existing Subscriptions
-                    </ManageSubscriptionsButton>
                   </Center>
 
                 </Box>
@@ -66,7 +64,9 @@ const Center = styled.div`
   margin-top: 100px
   margin-bottom:50px;
   display:flex;
+  height: calc(100vh - 400px);
  `
+
 
 
 const ManageSubscriptionsButton = styled.div`

@@ -98,13 +98,10 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
       ))}
       {user ? (
         <HoverMenu>
-          <Link>My Account
+          <Link to="/subscriptions">My Account
             <ul className="sub-menu">
               <li>
-                  <Link to="/subscriptions">Subscriptions</Link>
-              </li>
-              <li>
-                <a href="#" onClick={handleLogOut}>Log Out</a>
+                <Link href="#" onClick={handleLogOut}>Log Out</Link>
               </li>
             </ul>
           </Link>
