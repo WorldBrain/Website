@@ -23,16 +23,6 @@ const FlexiblyOrganiseSection = ({
   return (
 
     <FlexiblyOrganiseSectionWrapper id="tagsSection">
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} className="bg-img" alt="Background image" />
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-            <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
-          </Card>
-        </Card>
-      </SectionObject>
       <Container>
         <Box {...textArea}>
           <FeatureBlock
@@ -50,6 +40,16 @@ const FlexiblyOrganiseSection = ({
             }
           />
         </Box>
+        <SectionObject>
+          <Card className="objectWrapper" {...imageWrapper}>
+            <Zoom left duration={700}>
+              <Image src={ImageBg} className="bg-img" alt="Background image" />
+            </Zoom>
+            <Card className="dashboardWrapper" {...imageWrapper}>
+              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
+            </Card>
+          </Card>
+        </SectionObject>
       </Container>
     </FlexiblyOrganiseSectionWrapper>
   );
@@ -83,8 +83,7 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '0',
-    maxWidth: ['100%', '100%', '100%', '440px'],
+    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {
     minWidth: '156px',

@@ -23,7 +23,7 @@ const AnnotationsSection = ({
 }) => {
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
-      <Container className="text-container">
+      <Container>
         <Box {...textArea}>
           <FeatureBlock
             title={

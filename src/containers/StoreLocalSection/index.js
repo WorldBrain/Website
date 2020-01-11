@@ -22,7 +22,7 @@ const StoreLocalSection = ({
   gifStyle,
 }) => {
   return (
-    <StoreLocalSectionWrapper id="storeLocalSection">
+    <StoreLocalSectionWrapper id="dataSection">
       <SectionObject>
         <Card className="objectWrapper" {...imageWrapper}>
           <Zoom>

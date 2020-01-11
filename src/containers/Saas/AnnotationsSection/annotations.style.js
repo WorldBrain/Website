@@ -4,22 +4,31 @@ const AnnotationsSectionWrapper = styled.section`
   min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  position: relative;
-  margin-bottom: 100px;
+  margin: 100px 0;
   padding: 5px;
-  @media only screen and (max-width: 1200px) {
-    min-height: 500px;
-    margin-bottom: 40px;
+
+  @media (min-width: 2000px) and (max-width: 2600px) {
+    min-height: 823px;
   }
-  @media (max-width: 850px) {
+
+  @media (max-width: 1440px) {
+    min-height: 620px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    min-height: 520px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    min-height: 370px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 767px) {
     min-height: auto;
     display: block;
     text-align: center;
     margin-bottom: 60px;
-    .text-container {
-      order: 0;
-      width: 100%;
-    }
   }
 `;
 
@@ -32,11 +41,9 @@ const SectionObject = styled.div`
   border-radius: 5px
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  order: 1;
-  @media (max-width: 850px) {
+  @media (max-width: 767px) {
     width: 100%;
-    position: relative;
+    position: static;
     height: auto;
     top: auto;
     left: auto;
@@ -50,15 +57,14 @@ const SectionObject = styled.div`
   }
   .objectWrapper {
     position: relative;
-
     .dashboardWrapper {
-      position: absolute;
       top: 4vw;
       left: 0;
-      @media (max-width: 850px) {
-        position: static;
+      position: absolute;
+      @media (max-width: 767px) {
+        position: relative;
+        top: 0vw;
       }
-
       .banner-img {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
         border-radius: 5px;

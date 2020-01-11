@@ -81,7 +81,6 @@ FulltextSearchSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {

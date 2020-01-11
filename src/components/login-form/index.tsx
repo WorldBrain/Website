@@ -3,7 +3,7 @@ import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
-import SignInWrapper, { ErrorMessage } from './signin.style';
+import LoginWrapper, { ErrorMessage, FormActions } from './loginin.style';
 import { PageHOC } from '../page';
 
 const SignInForm = ({
@@ -77,7 +77,7 @@ const SignInForm = ({
   }
 
   return (
-    <SignInWrapper>
+    <LoginWrapper>
       <form onSubmit={handleOnLogin}>
         <Heading as="h3" content="Login" />
         <label htmlFor="email">Email</label>
@@ -102,12 +102,12 @@ const SignInForm = ({
         {formValue.error && <ErrorMessage>
           <i className="fa fa-exclamation-circle" aria-hidden="true"></i> {formValue.error}
         </ErrorMessage>}
-
-        <Button isLoading={formValue.isLoading} type="submit" onClick={handleOnLogin} title="Login" />
-
-        <Link to="/forgot">I forgot my password</Link>
+        <FormActions>
+          <Button isLoading={formValue.isLoading} type="submit" onClick={handleOnLogin} title="Login" />
+          <Link to="/forgot">I forgot my password</Link>
+        </FormActions>
       </form>
-    </SignInWrapper>
+    </LoginWrapper>
   )
 };
 

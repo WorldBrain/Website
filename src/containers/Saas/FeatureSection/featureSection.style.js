@@ -4,13 +4,15 @@ import background from './icon-features-sprite.svg';
 const FeatureSectionWrapper = styled.section`
   background: #f9fbfd;
   padding: 40px 0 60px 0;
+  a { text-decoration: none; }
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
   }
 
   @media (max-width: 850px) {
-    padding: 40px 0 0px 0;
+    padding: 0;
     text-align: center;
+    background: none;
   }
 
   .feature__block {

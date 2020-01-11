@@ -6,20 +6,29 @@ const FulltextSearchSectionWrapper = styled.section`
   align-items: center;
   margin: 100px 0;
   padding: 5px;
-  position: relative;
-  @media only screen and (max-width: 1200px) {
-    min-height: 500px;
+
+  @media (min-width: 2000px) and (max-width: 2600px) {
+    min-height: 900px;
   }
+
+  @media (max-width: 1440px) {
+    min-height: 620px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    min-height: 520px;
+  }
+
   @media only screen and (max-width: 991px) {
     min-height: 370px;
     margin-bottom: 80px;
   }
+
   @media (max-width: 767px) {
     min-height: auto;
     display: block;
     text-align: center;
-    margin-bottom: 100px;
-    flex-direction: column;
+    margin-bottom: 60px;
   }
 `;
 
@@ -32,8 +41,6 @@ const SectionObject = styled.div`
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  order: 0;
   @media (max-width: 767px) {
     width: 100%;
     position: static;
@@ -65,7 +72,6 @@ const SectionObject = styled.div`
     }
   }
 `;
-
 export { SectionObject };
 
 export default FulltextSearchSectionWrapper;

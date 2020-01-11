@@ -56,6 +56,10 @@ const SectionObject = styled.div`
   .objectWrapper {
     position: relative;
 
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
     .bg-image {
       opacity: 0.6;
       @media (max-width: 575px) {

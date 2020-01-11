@@ -6,14 +6,25 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
   align-items: center;
   margin: 100px 0;
   padding: 5px;
-  @media only screen and (max-width: 1200px) {
-    min-height: 500px;
+
+  @media (min-width: 2000px) and (max-width: 2600px) {
+    min-height: 900px;
   }
+
+  @media (max-width: 1440px) {
+    min-height: 620px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    min-height: 520px;
+  }
+
   @media only screen and (max-width: 991px) {
     min-height: 370px;
     margin-bottom: 80px;
   }
-  @media (max-width: 850px) {
+
+  @media (max-width: 767px) {
     min-height: auto;
     display: block;
     text-align: center;
@@ -26,14 +37,13 @@ const SectionObject = styled.div`
   width: 51%;
   top: 0;
   left: 0;
-  display: flex;
   padding: 5px;
   border-radius: 5px;
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
-  @media (max-width: 850px) {
+  @media (max-width: 767px) {
     width: 100%;
-    position: relative;
+    position: static;
     height: auto;
     top: auto;
     left: auto;
@@ -51,7 +61,7 @@ const SectionObject = styled.div`
       top: 4vw;
       left: 0;
       position: absolute;
-      @media (max-width: 850px) {
+      @media (max-width: 767px) {
         position: relative;
         top: 0vw;
       }

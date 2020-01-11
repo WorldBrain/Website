@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 const StoreLocalSectionWrapper = styled.section`
-  min-height: 630px; // this height is needed to vertically position the text correctly
+  min-height: 570px; // this gif has a smaller height to the rest
   display: flex;
   align-items: center;
   margin: 100px 0;
-  position: relative;
   padding: 5px;
+
   @media (min-width: 2000px) and (max-width: 2600px) {
-    min-height: 1000px;
+    min-height: 900px;
   }
 
   @media (max-width: 1440px) {
-    min-height: 600px;
+    min-height: 590px;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -24,12 +24,6 @@ const StoreLocalSectionWrapper = styled.section`
     margin-bottom: 80px;
   }
 
-  @media (max-width: 767px) {
-    min-height: auto;
-    display: block;
-    text-align: center;
-    margin-bottom: 60px;
-  }
 `;
 
 const SectionObject = styled.div`
@@ -46,8 +40,6 @@ const SectionObject = styled.div`
     width: 100%;
     position: relative;
     height: auto;
-    top: auto;
-    left: auto;
     .bg-img {
       display: none;
     }
