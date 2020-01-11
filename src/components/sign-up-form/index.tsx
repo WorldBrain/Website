@@ -70,7 +70,7 @@ const SignUpForm = ({
   return (
     <SignUpWrapper>
       <form onSubmit={handleSignUp}>
-        <Heading as="h3" content="Register" />
+        <Heading as="h3" content="Sign Up" />
         <label htmlFor="email">Email</label>
         <Input
           inputType="email"

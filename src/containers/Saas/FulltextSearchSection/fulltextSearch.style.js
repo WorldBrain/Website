@@ -28,7 +28,7 @@ const FulltextSearchSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
-    margin-bottom: 60px;
+    margin: 0 0 60px 0 ;
   }
 `;
 

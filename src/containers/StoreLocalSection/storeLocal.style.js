@@ -24,6 +24,13 @@ const StoreLocalSectionWrapper = styled.section`
     margin-bottom: 80px;
   }
 
+  @media (max-width: 767px) {
+    min-height: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
 `;
 
 const SectionObject = styled.div`

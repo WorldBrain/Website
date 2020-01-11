@@ -3,10 +3,10 @@ import { navigate, Link } from 'gatsby';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Input from 'reusecore/src/elements/Input';
-import LoginWrapper, { ErrorMessage, FormActions } from './loginin.style';
+import LoginWrapper, { ErrorMessage, FormActions } from './login.style';
 import { PageHOC } from '../page';
 
-const SignInForm = ({
+const LoginForm = ({
   auth,
   payment,
   location,
@@ -54,7 +54,7 @@ const SignInForm = ({
         let errorMessage = '';
         switch (error.code) {
           case 'auth/user-not-found':
-            errorMessage = 'Not found any credential. Did you sign up?';
+            errorMessage = 'Email or password is not correct';
             break;
           default:
             errorMessage = error.message;
@@ -111,4 +111,4 @@ const SignInForm = ({
   )
 };
 
-export default PageHOC(({ auth, payment }) => ({ auth, payment }))(SignInForm);
+export default PageHOC(({ auth, payment }) => ({ auth, payment }))(LoginForm);

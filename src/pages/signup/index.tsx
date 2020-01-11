@@ -1,7 +1,7 @@
 import React from 'react'
 import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
-import LoginForm from '../../components/login-form';
+import SignUpForm from '../../components/sign-up-form';
 import Container from 'common/src/components/UI/Container';
 
 export default class SignupPage extends Page {

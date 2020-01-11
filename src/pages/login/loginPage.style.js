@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 
-const SignupMessage = styled.div`
-  width: 40%;
+const Message = styled.div`
+  width: 60%;
   max-width: 400px;
   margin: 40px auto 0;
   color: ${themeGet('colors.lightestText')};
@@ -30,4 +30,4 @@ const SignupMessage = styled.div`
   }
 `;
 
-export default SignupMessage;
+export default Message;

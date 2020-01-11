@@ -6,6 +6,7 @@ const SignUpWrapper = styled.div`
   flex-direction: column;
   width: 40%;
   max-width: 400px;
+  margin: auto;
   @media (max-width: 767px) {
      width: 100%;
   }
