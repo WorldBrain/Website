@@ -51,6 +51,13 @@ const FooterWrapper = styled.footer`
   }
 `;
 
+const Button = styled.div`
+    padding: 10px 20px;
+    background-color: #3a2f45;
+    color: white;
+    text-decoration: none;
+`;
+
 const List = styled.ul``;
 
 const ListItem = styled.li`
@@ -65,6 +72,6 @@ const ListItem = styled.li`
   }
 `;
 
-export { List, ListItem };
+export { List, ListItem, Button};
 
 export default FooterWrapper;

@@ -6,7 +6,7 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
-import FooterWrapper, { List, ListItem, FooterLink } from './footer.style';
+import FooterWrapper, { List, ListItem, FooterLink, Button } from './footer.style';
 import LogoWorldbrain from '../../../img/logos/logo-worldbrain.svg';
 import SubscribeForm from '../../../components/subscribe-form';
 import Link from 'reusecore/src/elements/Link';
@@ -18,6 +18,7 @@ const Footer = ({
   titleStyle,
   endlink,
   logoStyle,
+  buttonStyle,
 }) => {
   const Data = useStaticQuery(graphql`
     query {
@@ -55,8 +56,8 @@ const Footer = ({
 
             <Box className="col subscribe" {...col}>
               <Heading content="Stay up to date!" {...titleStyle} />
-              <p>Get a monthly updates on our progress and a reading list of our team.</p>
-              <SubscribeForm />
+              <p>Get a monthly updates on our progress and irregular announcements.</p>
+              <div className="Button"><a href="http://eepurl.com/bOHM05"><strong>Subscribe</strong></a></div>
             </Box>
           </Box>
           {/* End of footer List column */}
@@ -93,6 +94,7 @@ Footer.propTypes = {
   titleStyle: PropTypes.object,
   textStyle: PropTypes.object,
   logoStyle: PropTypes.object,
+  ButtonStyle: PropTypes.object,
 };
 
 // Footer default style
