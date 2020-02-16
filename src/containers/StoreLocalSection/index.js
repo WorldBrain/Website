@@ -9,48 +9,48 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import StoreLocalSectionWrapper, { SectionObject } from './storeLocal.style';
+import StoreLocalSectionWrapper, { SectionObject, View } from './storeLocal.style';
 
-import ImageOne from '../../img/store_local.gif';
+import ImageOne from '../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
+import browserImg from '../../img/browser.svg';
 
 const StoreLocalSection = ({
   title,
   description,
   textArea,
   imageWrapper,
+  sectionWrapper,
   gifStyle,
 }) => {
   return (
     <StoreLocalSectionWrapper id="storeLocalSection">
-      <Container>
-        <Box {...textArea}>
-          <FeatureBlock
-            title={
-              <Heading
-                content="All Data Stored Locally"
-                {...title}
-              />
-            }
-            description={
-              <Text
-                content="Memex is offline first. You have full control over your data."
-                {...description}
-              />
-            }
-          />
-        </Box>
-      </Container>
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-              <Image src={ImageOne} className="banner-img" alt="Store local" />
-          </Card>
-        </Card>
-      </SectionObject>
+      <View {...sectionWrapper} className="sectionBox">
+          <Box {...textArea}>
+            <FeatureBlock
+              title={
+                <Heading
+                  content="All Data Stored Locally"
+                  {...title}
+                />
+              }
+              description={
+                <Text
+                  content="Memex is offline first. You have full control over your data."
+                  {...description}
+                />
+              }
+            />
+          </Box>
+          <SectionObject>
+            <Card className="objectWrapper" {...imageWrapper}>
+              <Card className="dashboardWrapper">
+                <Image src={browserImg} className="browser"/>
+                <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
+              </Card>
+            </Card>
+          </SectionObject>
+      </View>
     </StoreLocalSectionWrapper>
   );
 };
@@ -63,17 +63,23 @@ StoreLocalSection.propTypes = {
 
 StoreLocalSection.defaultProps = {
   textArea: {
-    width: ['100%', '100%', '45%'],
-    ml: [0, 0, '58%'],
+    width: ['50%', '50%', '40%'],
+    pl: [0, 0, 60],
+    pr: [30, 30, 30],
+  },
+  sectionWrapper: {
+      maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',
+    mr: [20, 20, 20, 20],
   },
   title: {
-    fontSize: ['1.375rem', '1.5rem', '1.75rem'],
-    fontWeight: '400',
+    fontSize: ['2rem', '1.6rem', '1.5rem'],
+    fontWeight: '700',
     color: 'headingColor',
-    mb: '20px',
+    mb: '10px',
+    mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
@@ -81,7 +87,6 @@ StoreLocalSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {

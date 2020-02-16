@@ -34,6 +34,7 @@ const PricingSection = ({
   nameStyle,
   descriptionStyle,
   priceStyle,
+  linkStyle,
   buttonStyle,
   buttonFillStyle,
   listContentStyle,
@@ -168,7 +169,7 @@ const PricingSection = ({
                   <Text content={pricingTable.subContent} {...subContentStyle} />
                 </UpperSection>
                 <PricingButton>
-                  <a href={pricingTable.url}>
+                  <a {...linkStyle} href={pricingTable.url}>
                     <Button
                       title={pricingTable.buttonLabel}
                       onClick={(e: Event) => handleClickUpgrade(e, pricingTable.planId)}
@@ -203,6 +204,9 @@ PricingSection.defaultProps = {
     as: 'section',
     pt: ['60px', '80px', '80px', '80px', '120px'],
     pb: ['20px', '20px', '20px', '80px'],
+  },
+  linkStyle: {
+    textDecoration: 'none',
   },
   row: {
     flexBox: true,
@@ -257,6 +261,7 @@ PricingSection.defaultProps = {
     width: '222px',
     maxWidth: '100%',
     display: 'flex',
+    textDecoration: 'none',
   },
   listContentStyle: {
     fontSize: ['15px', '16px', '16px', '16px', '16px'],

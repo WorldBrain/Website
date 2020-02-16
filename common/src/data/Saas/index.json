@@ -119,11 +119,11 @@
           "text": "Privacy Policy"
         },
         {
-          "url": "https://worldbrain.io/tos/",
+          "url": "/terms-of-service",
           "text": "Terms of Service"
         },
         {
-          "url": "https://worldbrain.io/imprint/",
+          "url": "/imprint/",
           "text": "Imprint"
         }
       ]
@@ -165,7 +165,7 @@
       "name": "Basic",
       "price": "Free",
       "planId": "free",
-      "buttonLabel": "Get started",
+      "buttonLabel": "Download",
       "url": "#",
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
@@ -179,7 +179,7 @@
           "content": "∞ Collections & Tags"
         },
         {
-          "content": "Mobile App for iOS & Android [SOON]"
+          "content": "Mobile App for iOS & Android"
         },
         {
           "content": "∞ Manual backup to any cloud provider"
@@ -200,10 +200,7 @@
           "content": "Automatic backups"
         },
         {
-          "content": "End2End Encrypted Sync between Devices. 2 included. [SOON]"
-        },
-        {
-          "content": "+1€ per additional device"
+          "content": "End2End Encrypted Sync between your mobile phone"
         }
       ]
     }
@@ -214,7 +211,7 @@
       "name": "Basic",
       "price": "Free",
       "planId": "free",
-      "buttonLabel": "Get started",
+      "buttonLabel": "Download",
       "url": "#",
       "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
       "listItems": [
@@ -228,7 +225,7 @@
           "content": "∞ Collections & Tags"
         },
         {
-          "content": "Mobile App for iOS & Android [SOON]"
+          "content": "Mobile App for iOS & Android"
         },
         {
           "content": "∞ Manual backup to any cloud provider"
@@ -249,10 +246,7 @@
           "content": "Automatic backups"
         },
         {
-          "content": "End2End Encrypted Sync between Devices. 2 included. [SOON]"
-        },
-        {
-          "content": "+10€ per additional device"
+          "content": "End2End Encrypted Sync between your mobile phone"
         }
       ]
     }

@@ -11,6 +11,7 @@ import { detect } from 'detect-browser';
 import BannerWrapper, {
   BannerObject,
   BrowserIcons,
+  View, 
 } from './bannerSection.style';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
@@ -51,6 +52,7 @@ const BannerSection = ({
   btnStyle,
   description,
   downloadDescription,
+  SectionWrapper,
 }) => {
   const ButtonGroup = () => (
     <Fragment>
@@ -65,7 +67,8 @@ const BannerSection = ({
 
   return (
     <BannerWrapper id="banner_section">
-      <Container>
+      <View className="sectionBox">
+        <View className="textBox">
         <Box className="row" {...row}>
           <Box className="col" {...col}>
             <FeatureBlock
@@ -95,15 +98,13 @@ const BannerSection = ({
             />
           </Box>
         </Box>
-      </Container>
-      <BannerObject>
-          <div className="objectWrapper">
-            <Image src={BannerObject1} className="banner-bg" alt="Background colour"/>
-            <div className="dashboardWrapper">
-              <Image src={BannerObject2} alt="Screenshot of the dashboard page"/>
+        </View>
+        <BannerObject>
+            <div className="objectWrapper">
+                <Image src={BannerObject2} alt="Screenshot of the dashboard page"/>
             </div>
-          </div>
-      </BannerObject>
+        </BannerObject>
+      </View>
     </BannerWrapper>
   );
 };
@@ -125,23 +126,24 @@ BannerSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: [1, '70%', '70%', '55%'],
+    width: [1, '80%', '80%', '80%'],
     alignItems: ['flexStart', 'center', 'center', 'center'],
   },
   title: {
-    fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.5rem'],
-    fontWeight: '600',
+    fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.2rem'],
+    fontWeight: '700',
+    letterSpacing: '1px',
     color: 'headingColor',
     mb: ['20px', '25px'],
     lineHeight: '1.3',
-    width: ['100%', '100%', '100%', '70%', '80%'],
+    width: ['100%', '100%', '100%', '100%', '100%'],
   },
   description: {
     fontSize: '1.125rem',
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
-    width: ['100%', '100%', '100%', '80%'],
+    width: ['100%', '100%', '100%', '100%'],
   },
   downloadDescription: {
     fontSize: '0.8125rem',

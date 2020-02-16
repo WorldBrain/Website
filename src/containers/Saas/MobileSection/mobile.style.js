@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 const MobileSectionWrapper = styled.section`
-  min-height: 730px;
+  min-height: 630px;
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  justify-content: center;
   position: relative;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
@@ -16,15 +19,13 @@ const MobileSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
-
   }
 
   .mobileDownload {
-    opacity: 0.5;
-    margin-left: -5px;
-    max-width: 350px;
+    max-width: 150px;
     height: auto;
-    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
 
     @media (max-width: 850px) {
       margin: auto;
@@ -34,14 +35,56 @@ const MobileSectionWrapper = styled.section`
   }
 `;
 
+const View = styled.div `
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px
+    flex-direction: row-reverse;
+ 
+    @media (max-width: 850px) {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0 3%;
+
+      & * {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+      }
+
+      & h2 {
+        font-size: 1.5rem;
+      }
+
+      & p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+`;
+
+const DownloadButtons = styled.div `
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+`;
+
 const SectionObject = styled.div`
-  position: absolute;
-  width: 55%;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
   @media (max-width: 767px) {
     position: relative;
     width: auto;
@@ -51,9 +94,20 @@ const SectionObject = styled.div`
   }
   img {
     height: auto;
+    width: 90%
   }
+
+  @media (max-width: 850px) {
+      & img {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
   .objectWrapper {
     position: relative;
+    justify-content: flex-start;
+    display: flex;
 
     .bg-image {
       opacity: 0.6;
@@ -85,6 +139,6 @@ const SectionObject = styled.div`
   }
 `;
 
-export { SectionObject };
+export { SectionObject, View, DownloadButtons };
 
 export default MobileSectionWrapper;

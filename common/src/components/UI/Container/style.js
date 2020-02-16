@@ -4,6 +4,11 @@ const ContainerWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   ${props =>
+    props.margin &&
+    css`
+      margin: auto;
+    `};
+  ${props =>
     props.fullWidth &&
     css`
       width: 100%;

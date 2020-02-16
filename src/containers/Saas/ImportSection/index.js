@@ -76,7 +76,7 @@ ImportSection.defaultProps = {
   },
   title: {
     fontSize: ['1.375rem', '1.5rem', '1.75rem'],
-    fontWeight: '400',
+    fontWeight: '700',
     color: 'headingColor',
     mb: '15px',
     lineHeight: '1.5',

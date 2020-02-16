@@ -10,7 +10,7 @@ export default class ForgotPage extends Page {
     const { auth } = this.getServices();
 
     return (
-      <DefaultPageLayout pageTitle="Login">
+      <DefaultPageLayout pageTitle="Forgot Password?">
         <Container>
           <ForgotFormContainer>
             <ForgotForm authService={auth} currentUser={auth && auth.user} />

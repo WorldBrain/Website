@@ -79,8 +79,8 @@ SponsorsSection.defaultProps = {
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: '1.125rem',
-    fontWeight: '500',
+    fontSize: '1.7em',
+    fontWeight: '700',
   },
   text: {
     color: 'lightestText',

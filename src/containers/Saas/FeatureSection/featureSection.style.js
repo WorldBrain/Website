@@ -8,9 +8,19 @@ const FeatureSectionWrapper = styled.section`
     padding: 60px 0 60px 0;
   }
 
+  & a {
+    text-decoration: none;
+  }
+
   @media (max-width: 850px) {
-    padding: 40px 0 0px 0;
+    padding: 20px 0 20px 0;
     text-align: center;
+
+    & h2 {
+      margin: 0px;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
   }
 
   .feature__block {

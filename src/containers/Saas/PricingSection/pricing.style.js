@@ -83,6 +83,10 @@ const PricingPrice = styled.div`
 
 const PricingButton = styled.div`
   flex-direction: column;
+
+  & a {
+    text-decoration: none;
+  }
 `;
 
 const PricingList = styled.div`

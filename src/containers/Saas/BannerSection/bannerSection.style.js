@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 
-
 const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;
@@ -20,6 +19,45 @@ const BrowserIcons = styled.div`
   }
 `;
 
+const View = styled.div `
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px
+    justify-content: center;
+
+    .textBox {
+        padding-left: 50px;
+    }
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0 3%;
+
+      & * {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+      }
+
+      & h1 {
+        margin-bottom: 10px;
+      }
+
+      .textBox {
+        padding: 5%;
+      }
+
+      & h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+`;
+
 const BannerWrapper = styled.section`
   padding-top: 120px;
   min-height: 100vh;
@@ -27,6 +65,7 @@ const BannerWrapper = styled.section`
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 990px) {
     padding-bottom: 60px;
@@ -64,7 +103,7 @@ const BannerWrapper = styled.section`
     @media (max-width: 850px) {
       flex-direction: column;
       margin-bottom: 30px;
-      margin-top: 30px;
+      margin-top: 80px;
     }
     @media (max-width: 576px) {
       width: 100%;
@@ -85,8 +124,8 @@ const BannerWrapper = styled.section`
 `;
 
 const BannerObject = styled.div`
-  position: absolute;
-  width: 50%;
+  max-width: 100%;
+  height: auto;
   margin-top: -10px;
   right: 0;
   display: flex;
@@ -98,12 +137,17 @@ const BannerObject = styled.div`
 
   .objectWrapper {
     position: relative;
+    max-width: 100%;
+    height: auto;
+
+    & img {
+      max-width: 100%;
+    }
+
     @media (max-width: 850px) {
         display: none;
       }
-
     .banner-bg {
-      width: 85%;
       @media (max-width: 850px) {
         display: none;
       }
@@ -111,11 +155,31 @@ const BannerObject = styled.div`
 
     .dashboardWrapper {
       position: absolute;
+      max-width: 100%;
+      height: auto;
       top: 50px;
       right: -40px;
       
+      & img {
+        max-width: 120%;
+        height: auto;
+      }
+
+      @media (max-width: 1000px) {
+        display: none; 
+
+        & img {
+          max-width: 80%;
+          height: auto;
+        }
+      }
+
       @media (max-width: 850px) {
         display: none; 
+
+        & img {
+          display:none
+        }
       }
       @media (max-width: 576px) {
         position: static;
@@ -124,6 +188,6 @@ const BannerObject = styled.div`
   }
 `;
 
-export { BannerObject, BrowserIcons };
+export { BannerObject, BrowserIcons, View };
 
 export default BannerWrapper;

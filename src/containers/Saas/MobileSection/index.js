@@ -6,56 +6,51 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
+import Link from 'reusecore/src/elements/Link';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import MobileSectionWrapper, { SectionObject } from './mobile.style';
+import MobileSectionWrapper, { SectionObject, View, DownloadButtons } from './mobile.style';
 import MobileSync from '../../../img/mobileSync.png';
-import DownloadMobile from '../../../img/download-mobile.png';
+import DownloadAndroid from '../../../img/googlePlay.png';
+import DownloadiOS from '../../../img/appStore.png';
 import ImageBg from 'common/src/assets/image/saas/banner/bannerObject1.png';
 
 const MobileSection = ({
-  tag,
   title,
   description,
   textArea,
   imageWrapper,
-  imageDownload,
+  sectionWrapper,
 }) => {
   return (
     <MobileSectionWrapper id="deviceSection">
-      <Container>
-        <Box {...textArea}>
-          <Heading
-            content="Coming soon"
-            {...tag}
-          />
-          <FeatureBlock
-            title={
-              <Heading
-                content="Quickly save & organise content on the go"
-                {...title}
-              />
-            }
-            description={
-              <Text
-                content="End2End encrypted sync between your computer, iOS & Android devices."
-                {...description}
-              />
-            }
-          />
-          <Image src={DownloadMobile} {...imageDownload} className="mobileDownload" alt="Download mobile" />
-        </Box>
-      </Container>
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom duration={500}>
-            <Image src={ImageBg} className="bg-image" alt="BgImage" />
-          </Zoom>
-          <Card className="imageOne" {...imageWrapper}>
-              <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
-          </Card>
-        </Card>
-      </SectionObject>
+          <View {...sectionWrapper} className="sectionBox">
+              <Box {...textArea}>
+                <FeatureBlock
+                  title={
+                    <Heading
+                      content="Quickly save & organise content on the go"
+                      {...title}
+                    />
+                  }
+                  description={
+                    <Text
+                      content="End2End encrypted sync between your computer, iOS & Android devices."
+                      {...description}
+                    />
+                  }
+                />
+                <DownloadButtons>
+                  <Link href="https://apps.apple.com/app/id1471860331" target="_blank"><Image src={DownloadiOS} className="mobileDownload" alt="Download iOS" /></Link>
+                  <Link href="https://play.google.com/store/apps/details?id=io.worldbrain" target="_blank"><Image src={DownloadAndroid} className="mobileDownload" alt="Download Android" /></Link>
+                </DownloadButtons>
+              </Box>
+            <SectionObject>
+              <Card className="objectWrapper" {...imageWrapper}>
+                  <Image src={MobileSync} className="mobile-img" alt="Two screens showing saving tags on mobile" />
+              </Card>
+            </SectionObject>
+          </View>
     </MobileSectionWrapper>
   );
 };
@@ -64,38 +59,36 @@ MobileSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
+  textWrapper: PropTypes.object,
 };
 
 MobileSection.defaultProps = {
   textArea: {
-    width: ['100%', '100%', '45%'],
-    mr: [0, 0, '58%'],
+    width: ['50%', '50%', '40%'],
+    pl: [0, 0, 60],
+    pr: [30, 30, 30],
+  },
+  sectionWrapper: {
+      maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',
-  },
-  tag: {
-    fontWeight: '600',
-    fontSize: '1.5rem',
+    ml: [20, 20, 20, 20],
   },
   title: {
-    fontSize: ['1.375rem', '1.5rem', '1.75rem', '2rem'],
-    fontWeight: '400',
+    fontSize: ['2rem', '1.6rem', '1.5rem'],
+    fontWeight: '700',
     color: 'headingColor',
-    mb: '20px',
+    mb: '10px',
+    mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-    lineHeight: '1.4',
+    lineHeight: '1.5',
   },
   description: {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
-  },
-  imageDownload: {
-    opacity: 0.5,
-    height: '80px',
   },
   btnStyle: {
     minWidth: '156px',

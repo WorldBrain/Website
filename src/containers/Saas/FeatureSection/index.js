@@ -19,6 +19,7 @@ const FeatureSection = ({
   iconStyles,
   iconStyle,
   contentStyle,
+  anchorLinkStyle,
   heading,
   blockWrapperStyle,
 }) => {
@@ -44,7 +45,7 @@ const FeatureSection = ({
           <Box className="row" {...row}>
             {Data.saasJson.Features.map((feature, index) => (
               <Box className="col" {...col} key={index}>
-                <AnchorLink href={feature.path}>
+                <AnchorLink {...anchorLinkStyle} href={feature.path}>
                   <FeatureBlock
                     icon={<i className={feature.icon} />}
                     wrapperStyle={blockWrapperStyle}
@@ -78,7 +79,7 @@ FeatureSection.propTypes = {
 FeatureSection.defaultProps = {
   // section header default style
   sectionHeader: {
-    mb: ['40px', '40px', '40px', '40px'],
+    mb: ['0', '40px', '40px', '40px'],
   },
   // feature row default style
   row: {
@@ -94,7 +95,9 @@ FeatureSection.defaultProps = {
     p: ['30px', '20px', '20px', '20px'],
     alignItems: 'center'
   },
-
+  anchorLinkStyle: {
+    textDecoration: 'none',
+  },
   heading: {
     fontSize: ['1.5625rem', '2rem', '2rem'],
   },

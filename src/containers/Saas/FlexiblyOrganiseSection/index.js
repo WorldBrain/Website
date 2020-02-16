@@ -9,47 +9,47 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import FlexiblyOrganiseSectionWrapper, { SectionObject } from './flexibly.style';
-import ImageOne from '../../../img/organisation.gif';
+import FlexiblyOrganiseSectionWrapper, { SectionObject, View } from './flexibly.style';
+import ImageOne from '../../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
+import browserImg from '../../../img/browser.svg';
 
 const FlexiblyOrganiseSection = ({
   title,
   description,
   textArea,
   imageWrapper,
+  textWrapper,
+  sectionWrapper,
 }) => {
   return (
-    <FlexiblyOrganiseSectionWrapper id="tagsSection">   
-      <Container>
-        <Box {...textArea}>
-          <FeatureBlock
-            title={
-              <Heading
-                content="Flexibly Organise"
-                {...title}
-              />
-            }
-            description={
-              <Text
-                content="Tag and sort what you find online into full-text searchable collections."
-                {...description}
-              />
-            }
-          />
-        </Box>
-      </Container>
-
-      <SectionObject>
-        <Card className="objectWrapper" {...imageWrapper}>
-          <Zoom>
-            <Image src={ImageBg} alt="BgImage" className="bg-img"/>
-          </Zoom>
-          <Card className="dashboardWrapper" {...imageWrapper}>
-              <Image src={ImageOne} className="banner-img" alt="Gif showing tags and notes being applied while on a website" />
+    <FlexiblyOrganiseSectionWrapper id="tagsSection">
+      <View {...sectionWrapper} className="sectionBox">
+          <Box {...textArea}>
+            <FeatureBlock
+              title={
+                <Heading
+                  content="Tags, Lists & Bookmarks"
+                  {...title}
+                />
+              }
+              description={
+                <Text
+                  content="Quickly organise content via the sidebar or keyboard shortcuts"
+                  {...description}
+                />
+              }
+            />
+          </Box>
+        <SectionObject>
+          <Card className="objectWrapper" {...imageWrapper}>
+            <Card className="dashboardWrapper">
+              <Image src={browserImg} className="browser"/>
+              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
+            </Card>
           </Card>
-        </Card>
-      </SectionObject>
+        </SectionObject>
+      </View>
     </FlexiblyOrganiseSectionWrapper>
   );
 };
@@ -58,22 +58,28 @@ FlexiblyOrganiseSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
+  textWrapper: PropTypes.object,
 };
 
 FlexiblyOrganiseSection.defaultProps = {
   textArea: {
-    width: ['100%', '100%', '45%'],
-    ml: [0, 0, '58%'],
+    width: ['50%', '50%', '40%'],
+    pl: [0, 0, 60],
+    pr: [30, 30, 30],
+  },
+  sectionWrapper: {
+      maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',
+    mr: [20, 20, 20, 20],
   },
   title: {
-    fontSize: ['1.375rem', '1.5rem', '1.75rem'],
-    fontWeight: '400',
+    fontSize: ['2rem', '1.6rem', '1.5rem'],
+    fontWeight: '700',
     color: 'headingColor',
-    mb: '20px',
-    mt: ['20px', '20px', '-20px', '-20px'],
+    mb: '10px',
+    mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
   },
@@ -81,7 +87,6 @@ FlexiblyOrganiseSection.defaultProps = {
     fontSize: '1.125rem',
     lineHeight: '1.5',
     color: 'textColor',
-    mb: '33px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
   },
   btnStyle: {

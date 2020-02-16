@@ -22,6 +22,7 @@ const ButtonStyle = styled.button`
   padding-left: ${themeGet('space.4', '15')}px;
   padding-right: ${themeGet('space.4', '15')}px;
   border: 0;
+  text-decoration: none;
   transition: all 0.3s ease;
   span.btn-icon {
     display: flex;
@@ -29,7 +30,7 @@ const ButtonStyle = styled.button`
       display: flex !important;
     }
   }
-
+  
   &:hover {
     background: #40B69A;
   }
