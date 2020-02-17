@@ -9,11 +9,11 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import StoreLocalSectionWrapper, { SectionObject, View } from './storeLocal.style';
+import StoreLocalSectionWrapper, { SectionObject, View, FloatingImage } from './storeLocal.style';
 
 import ImageOne from '../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
-import browserImg from '../../img/browser.svg';
+import privacyImage from '../../img/privacy.svg';
 
 const StoreLocalSection = ({
   title,
@@ -43,12 +43,9 @@ const StoreLocalSection = ({
             />
           </Box>
           <SectionObject>
-            <Card className="objectWrapper" {...imageWrapper}>
-              <Card className="dashboardWrapper">
-                <Image src={browserImg} className="browser"/>
-                <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
-              </Card>
-            </Card>
+            <FloatingImage className="floatingImage">
+                <Image src={privacyImage}/>
+            </FloatingImage>
           </SectionObject>
       </View>
     </StoreLocalSectionWrapper>
@@ -64,8 +61,8 @@ StoreLocalSection.propTypes = {
 StoreLocalSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
-    pr: [30, 30, 30],
+    pl: [0, 0, 200],
+    pr: [0, 0, 0],
   },
   sectionWrapper: {
       maxWidth: 1000,

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const FlexiblyOrganiseSectionWrapper = styled.section`
-  min-height: 500px; // this height is needed to vertically position the text correctly
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  margin: 100px 0;
+  margin: 150px 0;
   padding: 5px;
   position: relative;
   justify-content: center;
@@ -15,13 +15,15 @@ const FlexiblyOrganiseSectionWrapper = styled.section`
     min-height: 370px;
     margin-bottom: 80px;
   }
-  @media (max-width: 767px) {
-    min-height: auto;
-    display: block;
-    text-align: center;
-    margin-bottom: 100px;
-    flex-direction: column;
-  }
+  @media (max-width: 850px) {
+      min-height: auto;
+      display: block;
+      text-align: center;
+      margin-bottom: 60px;
+      .text-container {
+        order: 0;
+        width: 100%;
+      }
 `;
 
 const View = styled.div `
@@ -29,6 +31,7 @@ const View = styled.div `
     align-items: center;
     width: 100%;
     max-width: 1500px
+    justify-content: center;
 
     @media (max-width: 850px) {
       flex-direction: column;
@@ -63,11 +66,11 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  padding: 5px;
   border-radius: 5px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   order: 0;
   @media (max-width: 767px) {
     width: 100%;
@@ -83,6 +86,7 @@ const SectionObject = styled.div`
     position: relative;
     .dashboardWrapper {
       max-width: 100%;
+      width: 100%;
       height: auto;
       align-items: flex-start;
       diplay: flex;
@@ -95,7 +99,7 @@ const SectionObject = styled.div`
         top: 0vw;
       }
       .browser {
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
       .banner-img {

@@ -4,8 +4,8 @@ const MobileSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 150px;
+  margin-top: 150px;
   justify-content: center;
   position: relative;
   @media only screen and (max-width: 1200px) {

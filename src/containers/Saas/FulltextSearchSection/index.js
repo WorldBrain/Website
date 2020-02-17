@@ -13,7 +13,7 @@ import FulltextSearchSectionWrapper, { SectionObject, View } from './fulltextSea
 
 import ImageOne from '../../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
-import browserImg from '../../../img/browser.svg';
+import browserImg from '../../../img/browser.png';
 
 const FulltextSearchSection = ({
   title,
@@ -24,7 +24,7 @@ const FulltextSearchSection = ({
 }) => {
   return (
     <FulltextSearchSectionWrapper id="fullTextSearchSection">
-      <View {...sectionWrapper} className="sectionBox">
+      <View className="sectionBox">
           <Box {...textArea}>
             <FeatureBlock
               title={

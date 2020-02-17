@@ -10,9 +10,9 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FlexiblyOrganiseSectionWrapper, { SectionObject, View } from './flexibly.style';
-import ImageOne from '../../../img/search.gif';
+import ImageOne from '../../../img/organisation.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
-import browserImg from '../../../img/browser.svg';
+import browserImg from '../../../img/browser.png';
 
 const FlexiblyOrganiseSection = ({
   title,

@@ -28,6 +28,7 @@ const View = styled.div `
 
     .textBox {
         padding-left: 50px;
+        width: 60%;
     }
 
     @media (max-width: 850px) {

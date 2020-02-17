@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const StoreLocalSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 250px;
+  margin-top: 150px;
   justify-content: center;
   position: relative;
   @media only screen and (max-width: 1200px) {
@@ -36,6 +36,21 @@ const StoreLocalSectionWrapper = styled.section`
   }
 `;
 
+const float = keyframes `
+      0% {
+          transform: translateY(0px);
+      }
+
+      50% {
+          transform: translateY(-20px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+`;
+
+ 
 const View = styled.div `
     display: flex;
     align-items: center;
@@ -68,6 +83,17 @@ const View = styled.div `
 }
 `;
 
+const FloatingImage = styled.div `
+    animation-name:  ${float}, scale-in-center;
+    animation-duration: 6s, 1s;
+    animation-timing-function: ease-in-out, ease;
+    animation-iteration-count: infinite, 1;
+    width: 210px;
+    margin: 1rem auto 2rem;
+    width: 80%;
+}
+`;
+
 const SectionObject = styled.div`
   top: 0;
   right: 0;
@@ -95,7 +121,6 @@ const SectionObject = styled.div`
       diplay: flex;
       flex-direction: column;
       width: auto;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       @media (max-width: 767px) {
         position: relative;
@@ -116,6 +141,6 @@ const SectionObject = styled.div`
   }
 `;
 
-export { SectionObject, View };
+export { SectionObject, View, FloatingImage};
 
 export default StoreLocalSectionWrapper;

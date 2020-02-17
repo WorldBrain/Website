@@ -1,26 +1,26 @@
 import styled from 'styled-components';
 
 const FulltextSearchSectionWrapper = styled.section`
-  min-height: 500px; // this height is needed to vertically position the text correctly
+  min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
-  margin: 100px 0;
-  padding: 5px;
   position: relative;
+  margin-bottom: 150px;
+  margin-top: 150px;
   justify-content: center;
+  padding: 5px;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
-  @media only screen and (max-width: 991px) {
-    min-height: 370px;
-    margin-bottom: 80px;
-  }
-  @media (max-width: 767px) {
+    @media (max-width: 850px) {
     min-height: auto;
     display: block;
     text-align: center;
-    margin-bottom: 100px;
-    flex-direction: column;
+    margin-bottom: 60px;
+    .text-container {
+      order: 0;
+      width: 100%;
+    }
   }
 `;
 
@@ -29,6 +29,7 @@ const View = styled.div `
     align-items: center;
     width: 100%;
     max-width: 1500px
+    justify-content: center;
     
     @media (max-width: 850px) {
       flex-direction: column;
@@ -57,7 +58,7 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  padding: 5px;
+  width: 100%;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -77,6 +78,7 @@ const SectionObject = styled.div`
     position: relative;
     .dashboardWrapper {
       max-width: 100%;
+      width: 100%;
       height: auto;
       align-items: flex-start;
       diplay: flex;
@@ -89,7 +91,7 @@ const SectionObject = styled.div`
         top: 0vw;
       }
       .browser {
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
       .banner-img {

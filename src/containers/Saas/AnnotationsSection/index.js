@@ -11,8 +11,8 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import AnnotationsSectionWrapper, { SectionObject, View } from './annotations.style';
 
-import ImageOne from '../../../img/search.gif';
-import browserImg from '../../../img/browser.svg';
+import ImageOne from '../../../img/annotate.gif';
+import browserImg from '../../../img/browser.png';
 
 const AnnotationsSection = ({
   title,
@@ -29,7 +29,7 @@ const AnnotationsSection = ({
           <FeatureBlock
             title={
               <Heading
-                content="Annotations on the web"
+                content="Highlights & Annotations"
                 {...title}
               />
             }

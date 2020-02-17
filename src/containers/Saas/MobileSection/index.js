@@ -35,7 +35,7 @@ const MobileSection = ({
                   }
                   description={
                     <Text
-                      content="End2End encrypted sync between your computer, iOS & Android devices."
+                      content="Encrypted sync between your computer, iOS & Android devices."
                       {...description}
                     />
                   }

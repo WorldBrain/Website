@@ -11,7 +11,6 @@ const AnnotationsSectionWrapper = styled.section`
   padding: 5px;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
-    margin-bottom: 40px;
   }
   @media (max-width: 850px) {
     min-height: auto;
@@ -60,7 +59,7 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  padding: 5px;
+  width: 100%;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -81,6 +80,7 @@ const SectionObject = styled.div`
     .dashboardWrapper {
       max-width: 100%;
       height: auto;
+      width: 100%;
       align-items: flex-start;
       diplay: flex;
       flex-direction: column;
@@ -92,7 +92,7 @@ const SectionObject = styled.div`
         top: 0vw;
       }
       .browser {
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
       .banner-img {
