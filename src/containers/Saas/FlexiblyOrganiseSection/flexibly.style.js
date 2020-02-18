@@ -67,7 +67,7 @@ const SectionObject = styled.div`
   top: 0;
   left: 0;
   border-radius: 5px;
-  width: 100%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;

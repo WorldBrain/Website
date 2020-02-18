@@ -16,7 +16,9 @@ const FulltextSearchSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
+    margin-top: 50px;
+    
     .text-container {
       order: 0;
       width: 100%;
@@ -58,17 +60,18 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   order: 0;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: static;
     height: auto;
     top: auto;
+
     left: auto;
     .bg-img {
       display: none;

@@ -59,7 +59,7 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
   display: flex;
   align-items: center;

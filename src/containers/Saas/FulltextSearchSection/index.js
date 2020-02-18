@@ -29,13 +29,13 @@ const FulltextSearchSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Full Text Search "
+                  content="Full Text History Search "
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Instantly recover anything you've seen before without doing any upfront work."
+                  content="Automatically indexes websites you visit. Instantly recover anything you've seen without upfront work."
                   {...description}
                 />
               }

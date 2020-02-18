@@ -50,6 +50,7 @@ const View = styled.div `
 
       .textBox {
         padding: 5%;
+        width: 100%;
       }
 
       & h2 {

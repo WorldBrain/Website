@@ -31,7 +31,7 @@
     {
       "id": 1,
       "icon": "fulltext-search",
-      "title": "Full text search",
+      "title": "Full Text History Search",
       "path": "#fullTextSearchSection"
     },
     {
@@ -138,7 +138,7 @@
     },
     {
       "label": "Upgrade",
-      "path": "#pricingSection",
+      "path": "./#pricingSection",
       "offset": "70"
     },
     {
