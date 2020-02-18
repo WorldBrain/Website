@@ -29,13 +29,13 @@ const FulltextSearchSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Full Text History Search "
+                  content="Full-Text Search your Web History & Bookmarks"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Automatically indexes websites you visit. Instantly recover anything you've seen without upfront work."
+                  content="Automatically indexes websites you visit, so you can search with any word you remember. All data stored locally."
                   {...description}
                 />
               }
@@ -63,8 +63,8 @@ FulltextSearchSection.propTypes = {
 FulltextSearchSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
-    pr: [30, 30, 30],
+    pl: [0, 0, 70],
+    pr: [20, 20, 20],
   },
   sectionWrapper: {
       maxWidth: 1000,
@@ -79,7 +79,7 @@ FulltextSearchSection.defaultProps = {
     color: 'headingColor',
     mb: '10px',
     mt: '20px',
-    maxWidth: ['100%', '100%', '100%', '440px', '440px'],
+    maxWidth: ['100%', '100%', '100%', '340px', '340px'],
     lineHeight: '1.5',
   },
   description: {

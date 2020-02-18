@@ -15,6 +15,10 @@ import ImageOne from '../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import privacyImage from '../../img/privacy.svg';
 
+const clickLearnMore = () => {
+    window.open('https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75', '_blank');
+}
+
 const StoreLocalSection = ({
   title,
   description,
@@ -22,6 +26,7 @@ const StoreLocalSection = ({
   imageWrapper,
   sectionWrapper,
   gifStyle,
+  btnStyle,
 }) => {
   return (
     <StoreLocalSectionWrapper id="storeLocalSection">
@@ -30,17 +35,18 @@ const StoreLocalSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="All Data Stored Locally"
+                  content="Your data and attention is yours! "
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Memex is offline first. You have full control over your data."
+                  content="Memex is offline first. WorldBrain.io is a steward-owned company funded without Venture Capital investments."
                   {...description}
                 />
               }
             />
+            <Button {...btnStyle} onClick={clickLearnMore} title="Learn More"/>
           </Box>
           <SectionObject>
             <FloatingImage className="floatingImage">
@@ -61,7 +67,7 @@ StoreLocalSection.propTypes = {
 StoreLocalSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 200],
+    pl: [0, 0, 150],
     pr: [0, 0, 0],
   },
   sectionWrapper: {

@@ -35,7 +35,7 @@ const FlexiblyOrganiseSection = ({
               }
               description={
                 <Text
-                  content="Quickly organise content via the sidebar or keyboard shortcuts"
+                  content="Blazing fast organisation of websites & notes via the sidebar & keyboard shortcuts."
                   {...description}
                 />
               }

@@ -35,7 +35,7 @@ const AnnotationsSection = ({
             }
             description={
               <Text
-                content="Keep your thoughts organized with their original context."
+                content="Drop copy-pasting text and links into other documents. Keep your thoughts connected to the content they are about."
                 {...description}
               />
             }

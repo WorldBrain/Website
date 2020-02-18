@@ -75,14 +75,13 @@ const BannerSection = ({
               title={
                 <Heading
                   as="h1"
-                  content="Bookmarking for the
-                  power users of the web"
+                  content="Too many open tabs, unused bookmarks and scattered notes?"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="A privacy focused extension to annotate, search and organize what you've seen online.                  "
+                  content="A browser extension to un-chaos your online research without upfront work"
                   {...description}
                 />
               }
@@ -139,7 +138,7 @@ BannerSection.defaultProps = {
     width: ['100%', '100%', '100%', '100%', '100%'],
   },
   description: {
-    fontSize: '1.125rem',
+    fontSize: '1.4rem',
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
