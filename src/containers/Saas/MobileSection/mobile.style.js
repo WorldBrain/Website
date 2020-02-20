@@ -102,7 +102,7 @@ const SectionObject = styled.div`
       & img {
         width: 100%;
         margin-top: 20px;
-        height: auto;
+        height: 100%;
       }
     }
 
@@ -128,11 +128,12 @@ const SectionObject = styled.div`
         position: static;
         width: 80%;
         margin: auto;
+        height: 100%;
       }
 
       .mobile-img {
         width: auto;
-        max-height: 600px;
+        height: 100%;
 
        @media (max-width: 850px) {
           max-height: 450px;
