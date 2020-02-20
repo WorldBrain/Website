@@ -70,9 +70,11 @@ MobileSection.defaultProps = {
   },
   sectionWrapper: {
       maxWidth: 1000,
+      height: 'auto',
   },
   imageWrapper: {
     boxShadow: 'none',
+    height: 'auto',
     ml: [20, 20, 20, 20],
   },
   title: {

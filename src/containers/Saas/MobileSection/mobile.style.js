@@ -95,6 +95,7 @@ const SectionObject = styled.div`
   img {
     height: auto;
     width: 90%
+    max-height: 100%;
   }
 
   @media (max-width: 850px) {
@@ -109,6 +110,7 @@ const SectionObject = styled.div`
     position: relative;
     justify-content: flex-start;
     display: flex;
+    height: 'auto',
 
     .bg-image {
       opacity: 0.6;
