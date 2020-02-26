@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Icon from 'react-icons-kit';
 import ScriptLoader from 'react-script-loader-hoc';
 import Box from 'reusecore/src/elements/Box';
+import Image from 'reusecore/src/elements/Image';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
@@ -11,6 +12,7 @@ import Container from 'common/src/components/UI/Container';
 // import Input from 'reusecore/src/elements/Input';
 
 const chargeBeeScriptSource = 'https://js.chargebee.com/v2/chargebee.js'
+import moneyback from '../../../img/moneyback.svg'
 
 import PricingTable, {
   PricingHead,
@@ -21,6 +23,7 @@ import PricingTable, {
   PricingButtonWrapper,
   DeviceSelection,
   UpperSection,
+  PricingWrapper,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -36,6 +39,9 @@ const PricingSection = ({
   priceStyle,
   linkStyle,
   buttonStyle,
+  moneybackBox,
+  moneybackText,
+  moneybackImg,
   buttonFillStyle,
   listContentStyle,
   subContentStyle,
@@ -104,13 +110,13 @@ const PricingSection = ({
   const activeStatus = state.active;
 
   return (
-    <Box {...sectionWrapper} id="pricingSection">
-      <Container>
+    <PricingWrapper>
+      <Container >
         <Box {...secTitleWrapper}>
           <Text {...secText} />
           <PricingButtonWrapper>
             <Button
-              title="Monthly Plan"
+              title="Monthly"
               className={activeStatus ? 'active-item' : ''}
               onClick={() =>
                 setState({
@@ -120,7 +126,7 @@ const PricingSection = ({
               }
             />
             <Button
-              title="Annual Plan"
+              title="Yearly -20%"
               className={activeStatus === false ? 'active-item' : ''}
               onClick={() =>
                 setState({
@@ -130,6 +136,10 @@ const PricingSection = ({
               }
             />
           </PricingButtonWrapper>
+        </Box>
+        <Box {...moneybackBox}>
+          <Image src={moneyback} {...moneybackImg}></Image>
+          <Text {...moneybackText}/> 
         </Box>
         <Box {...row}>
           <>
@@ -183,7 +193,7 @@ const PricingSection = ({
           </>
         </Box>
       </Container>
-    </Box>
+    </PricingWrapper>
   );
 };
 
@@ -212,12 +222,13 @@ PricingSection.defaultProps = {
     flexBox: true,
     flexWrap: 'wrap',
     ml: '-15px',
+    width: '100%',
     mr: '-15px',
     justifyContent: 'center',
     alignItems: 'stretch',
   },
   secTitleWrapper: {
-    mb: ['50px', '75px'],
+    mb: ['10px', '10px'],
   },
   secText: {
     content: 'Pricing Plan',
@@ -234,6 +245,27 @@ PricingSection.defaultProps = {
     width: [1, 1 / 2, 1 / 2, 1 / 2],
     pr: '15px',
     pl: '15px',
+  },
+  moneybackBox: {
+    display: 'flex',
+    verticalAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    mb: 10,
+    mt: 3,
+  },
+  moneybackImg: {
+    height: 40,
+    verticalAlign: 'center',
+  },
+  moneybackText: {
+    content: '30 days money back guarantee',
+    fontSize: 20,
+    alignSelf: 'center',
+    color: '#3a2f45',
+    ml: 3,
+    mb: 0,
+    fontWeight: '300',
   },
   nameStyle: {
     fontSize: ['1.5rem', '1.5rem', '1.5rem', '2rem'],

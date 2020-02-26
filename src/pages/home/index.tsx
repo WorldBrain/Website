@@ -18,6 +18,7 @@ import StoreLocalSection from '../../containers/StoreLocalSection';
 import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
 import MobileSection from '../../containers/Saas/MobileSection';
 import CommunitySection from '../../containers/Saas/CommunitySection';
+import View from 'reusecore/src/elements/Box';
 
 import Page from '../../components/page'
 
@@ -53,6 +54,7 @@ export default class HomePage extends Page {
             <MobileSection />
             <StoreLocalSection />
             <ImportSection />
+            <View id="upgrade"/>
             <PricingSection />
             <CommunitySection />
             <SponsorsSection />

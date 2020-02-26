@@ -1,6 +1,20 @@
 import styled from 'styled-components';
 import { themeGet } from 'styled-system';
 
+const PricingWrapper= styled.section`
+  padding: 40px 0 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  .container {
+    max-width: 1500px;  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+
 const PricingTable = styled.div`
   border-radius: 5px;
   padding: 60px 45px;
@@ -194,5 +208,6 @@ export {
   PricingButtonWrapper,
   DeviceSelection,
   UpperSection,
+  PricingWrapper
 };
 export default PricingTable;
