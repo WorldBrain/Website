@@ -96,6 +96,7 @@ const SectionObject = styled.div`
     height: auto;
     width: 90%
     max-height: 100%;
+    align-self: flex-start;
   }
 
   @media (max-width: 850px) {
