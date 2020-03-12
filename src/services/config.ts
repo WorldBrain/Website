@@ -8,6 +8,7 @@ export const firebaseConfig = {
 
 export const chargebeeConfig = {
     site: process.env.GATSBY_CHARGEBEE_SITE,
+    enableGTMTracking: true,
 }
 
 export const activeEnv =
