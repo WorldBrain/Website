@@ -165,9 +165,9 @@
       "name": "Basic",
       "price": "Free",
       "planId": "free",
-      "buttonLabel": "Download",
+      "buttonLabel": "Free Download",
       "url": "#",
-      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
+"subContent": "Make backups to your local hard drive, Google Drive or any cloud provider that syncs via a folder (e.g. Dropbox).",
       "listItems": [
         {
           "content": "∞ Full-Text History Search"
@@ -182,7 +182,7 @@
           "content": "Mobile App for iOS & Android"
         },
         {
-          "content": "∞ Manual backup to any cloud provider"
+          "content": "∞ Manual backups"
         }
       ]
     },
@@ -211,9 +211,9 @@
       "name": "Basic",
       "price": "Free",
       "planId": "free",
-      "buttonLabel": "Download",
+      "buttonLabel": "Free Download",
       "url": "#",
-      "subContent": "You can make backups to your local hard drive and any cloud provider that syncs via a folder (e.g. Dropbox). You just have to remember doing them regularly.",
+      "subContent": "Make backups to your local hard drive, Google Drive or any cloud provider that syncs via a folder (e.g. Dropbox).",
       "listItems": [
         {
           "content": "∞ Full-Text History Search"
@@ -228,7 +228,7 @@
           "content": "Mobile App for iOS & Android"
         },
         {
-          "content": "∞ Manual backup to any cloud provider"
+          "content": "∞ Manual backups"
         }
       ]
     },

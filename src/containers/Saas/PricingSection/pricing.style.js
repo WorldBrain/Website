@@ -38,7 +38,10 @@ const PricingTable = styled.div`
       color: ${themeGet('colors.primary')};
     }
     @media (max-width: 767px) {
-      margin-right: 0;
+      margin-right: 0px;
+    }
+    @media (max-width: 900px) {
+      margin-right: 10px;
     }
   }
 
@@ -52,14 +55,18 @@ const PricingTable = styled.div`
       color: ${themeGet('colors.secondary')};
     }
     @media (max-width: 767px) {
-      margin-left: 0;
+      margin-left: 0px;
+    }
+    @media (max-width: 900px) {
+      margin-right: 10px;
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 900px) {
     padding: 35px 25px;
-    width: 100%;
     min-height: 0;
+    width: 100%;
+    margin: 10 0;
   }
 `;
 
@@ -106,6 +113,11 @@ const PricingButton = styled.div`
 const PricingList = styled.div`
   display: flex;
   flex-direction: column;
+  width: 90%;
+
+  @media (max-width: 900px) {
+      width: 98%;
+  }
 `;
 
 const ListItem = styled.div`

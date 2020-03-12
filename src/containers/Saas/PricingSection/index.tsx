@@ -40,11 +40,14 @@ const PricingSection = ({
   linkStyle,
   buttonStyle,
   moneybackBox,
+  noText,
   moneybackText,
   moneybackImg,
   buttonFillStyle,
   listContentStyle,
+  moneybackTextSmall,
   subContentStyle,
+  pricingButtonBox,
   payment,
   scriptsLoadedSuccessfully,
   ...rest
@@ -178,6 +181,7 @@ const PricingSection = ({
                   </PricingList>
                   <Text content={pricingTable.subContent} {...subContentStyle} />
                 </UpperSection>
+                <div {...pricingButtonBox} >
                 <PricingButton>
                   <a {...linkStyle} href={pricingTable.url}>
                     <Button
@@ -188,6 +192,8 @@ const PricingSection = ({
                     />
                   </a>
                 </PricingButton>
+                  {pricingTable.freePlan ? <Text {...noText}/> : <Text {...moneybackTextSmall}/>}
+                </div>
               </PricingTable>
             ))}
           </>
@@ -231,7 +237,7 @@ PricingSection.defaultProps = {
     mb: ['10px', '10px'],
   },
   secText: {
-    content: 'Pricing Plan',
+    content: 'Pricing',
     as: 'span',
     display: 'block',
     textAlign: 'center',
@@ -258,8 +264,31 @@ PricingSection.defaultProps = {
     height: 40,
     verticalAlign: 'center',
   },
+  moneybackTextSmall: {
+    content: '14 days free trial',
+    fontSize: 16,
+    alignSelf: 'center',
+    color: '#3a2f45',
+    fontWeight: '300',
+    textAlign: 'center',
+    mt: 2,
+  },
+  noText: {
+    content: 't',
+    fontSize: 16,
+    alignSelf: 'center',
+    color: 'white',
+    fontWeight: '300',
+    textAlign: 'center',
+    mt: 2,
+  },
+  pricingButtonBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
   moneybackText: {
-    content: '30 days money back guarantee',
+    content: '14 days free trial',
     fontSize: 20,
     alignSelf: 'center',
     color: '#3a2f45',
@@ -304,6 +333,7 @@ PricingSection.defaultProps = {
     fontSize: '13px',
     color: 'lightestText',
     mt: '20px',
+    textAlign: 'center',
     display: 'flex',
   },
 };
