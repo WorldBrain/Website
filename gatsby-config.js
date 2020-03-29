@@ -67,7 +67,7 @@ module.exports = {
         enableDuringDevelop: false, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
         defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
       },
-    }
+    },
     `gatsby-plugin-react-helmet`,
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
