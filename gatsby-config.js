@@ -60,6 +60,14 @@ module.exports = {
         icon: `src/assets/logo.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: '05013744-c145-49c2-9c84-bfb682316599',
+        enableDuringDevelop: false, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+      },
+    }
     `gatsby-plugin-react-helmet`,
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
