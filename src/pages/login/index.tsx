@@ -19,7 +19,7 @@ export default class LoginPage extends React.PureComponent {
             <Heading as="h4" content="Don't have an account?" />
             <div className="line"/>
           </div>
-          <p>You don’t need an account to use Memex. Simply <Link href="./">download</Link> the extension and get started. If you wish to use a paid feature you will need to <Link href="/signup">create an account</Link> so we can magane your payments. Easy!</p>
+          <p>You don’t need an account to use Memex. Simply <Link href="./">download</Link> the extension and get started. If you wish to use a paid feature you will need to <Link href="/signup">create an account</Link> so we can manage your payments. Easy!</p>
         </SignupMessage>
       </DefaultPageLayout>
     )
