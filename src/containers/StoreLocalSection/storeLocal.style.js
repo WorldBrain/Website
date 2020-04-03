@@ -19,6 +19,7 @@ const StoreLocalSectionWrapper = styled.section`
     min-height: auto;
     display: block;
     text-align: center;
+    margin-top: 80px;
   }
 
   .mobileDownload {
@@ -64,6 +65,7 @@ const View = styled.div `
       justify-content: center;
       align-items: center;
       padding: 0 3%;
+      text-align: center;
 
       & * {
         margin: 0px;
@@ -79,9 +81,20 @@ const View = styled.div `
         font-size: 1.1rem;
         margin-bottom: 15px;
       }
+
+      & button {
+        max-width: 150px;
+        width: 150px;
+        margin-bottom: 30px;
+      }
     }
 }
 `;
+
+const infoContainer = styled.div`
+    flex-direction: column;
+    align-items: flex-start;
+`  
 
 const FloatingImage = styled.div `
     animation-name:  ${float}, scale-in-center;
@@ -103,7 +116,7 @@ const SectionObject = styled.div`
   justify-content: flex-start;
   @media (max-width: 767px) {
     position: relative;
-    width: auto;
+    width: 40%;
     height: auto;
     top: auto;
     left: auto;
@@ -111,6 +124,7 @@ const SectionObject = styled.div`
   img {
     height: auto;
     width: 90%
+    margin: auto;
   }
   .objectWrapper {
     position: relative;

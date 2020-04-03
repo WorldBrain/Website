@@ -52,7 +52,8 @@ const View = styled.div `
 
       & p {
         font-size: 1.1rem;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
+        padding: 0px 20px;
       }
     }
 }`;

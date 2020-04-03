@@ -47,6 +47,7 @@ const View = styled.div `
       width: 100%;
       justify-content: center;
       align-items: center;
+      text-align: center;
       padding: 0 3%;
 
       & * {
@@ -62,6 +63,7 @@ const View = styled.div `
       & p {
         font-size: 1.1rem;
         margin-bottom: 15px;
+        padding: 0px 20px;
       }
 
       & img {
@@ -75,6 +77,13 @@ const DownloadButtons = styled.div `
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: 30px;
+
+    @media (max-width: 850px) {
+      align-items: center;
+      margin-bottom: 35px;
+      margin-top: 15px;
+    }
   }
 `;
 

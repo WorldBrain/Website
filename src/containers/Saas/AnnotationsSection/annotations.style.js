@@ -50,7 +50,8 @@ const View = styled.div `
 
       & p {
         font-size: 1.1rem;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
+        padding: 0px 20px;
       }
     }
   }
@@ -65,7 +66,7 @@ const SectionObject = styled.div`
   align-items: center;
   justify-content: center;
   order: 0;
-  @media (max-width: 767px) {
+  @media (max-width: 850px) {
     width: 100%;
     position: static;
     height: auto;

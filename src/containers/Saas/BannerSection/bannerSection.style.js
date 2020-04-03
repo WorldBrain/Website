@@ -10,10 +10,10 @@ const BrowserIcons = styled.div`
     height: 48px;
     margin-left: 25px;
     @media (max-width: 990px) {
-      margin-left: 0px;
+      flex-direction: column;
     }
   }
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     width:  50%;
     justify-content: space-around;
   }
@@ -22,7 +22,7 @@ const BrowserIcons = styled.div`
 const View = styled.div `
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1800px
     justify-content: center;
 
@@ -31,12 +31,17 @@ const View = styled.div `
         width: 60%;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
       width: 100%;
       justify-content: center;
       align-items: center;
       padding: 0 3%;
+
+      & div {
+        padding: 0 15px;
+        width: fit-content;
+      }
 
       & * {
         margin: 0px;
@@ -61,7 +66,7 @@ const View = styled.div `
 `;
 
 const BannerWrapper = styled.section`
-  padding-top: 120px;
+  padding-top: 90px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -72,8 +77,12 @@ const BannerWrapper = styled.section`
   @media (max-width: 990px) {
     padding-bottom: 60px;
     min-height: auto;
+
+    & img {
+      margin: 20px 20px 10px 20px;
+    }
   }
-  @media (max-width: 850px) {
+  @media (max-width: 1000px) {
     padding-top: 140px;
     padding-bottom: 20px;
     display: flex;
@@ -99,24 +108,25 @@ const BannerWrapper = styled.section`
     margin-top: 60px;
     margin-bottom: 32px;
     width: 90%;
-    @media (max-width: 850px) {
-      width: 100%;
+    @media (max-width: 1000px) {
+      flex-direction: column;
     }
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
       margin-bottom: 30px;
       margin-top: 80px;
-    }
-    @media (max-width: 576px) {
       width: 100%;
+    }
+    @media (max-width: 650px) {
+      width: 100%;
+      flex-direction: column;
     }
     button {
       font-weight: 600;
       padding: 12px 20px;
       min-height: 0;
-      @media (max-width: 850px) {
+      @media (max-width: 1000px) {
         padding: 10px 14px;
-        margin-bottom: 20px;
       }
     }
     button:hover {
@@ -146,12 +156,10 @@ const BannerObject = styled.div`
       max-width: 100%;
     }
 
-    @media (max-width: 850px) {
-        display: none;
+    @media (max-width: 1000px) {
       }
     .banner-bg {
-      @media (max-width: 850px) {
-        display: none;
+      @media (max-width: 1000px) {
       }
     }
 
@@ -168,7 +176,6 @@ const BannerObject = styled.div`
       }
 
       @media (max-width: 1000px) {
-        display: none; 
 
         & img {
           max-width: 80%;
@@ -176,7 +183,7 @@ const BannerObject = styled.div`
         }
       }
 
-      @media (max-width: 850px) {
+      @media (max-width: 1000px) {
         display: none; 
 
         & img {

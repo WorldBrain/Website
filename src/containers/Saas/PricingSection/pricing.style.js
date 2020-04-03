@@ -37,11 +37,8 @@ const PricingTable = styled.div`
     h2 {
       color: ${themeGet('colors.primary')};
     }
-    @media (max-width: 767px) {
+    @media (max-width: 850px) {
       margin-right: 0px;
-    }
-    @media (max-width: 900px) {
-      margin-right: 10px;
     }
   }
 
@@ -54,11 +51,8 @@ const PricingTable = styled.div`
     h2 {
       color: ${themeGet('colors.secondary')};
     }
-    @media (max-width: 767px) {
-      margin-left: 0px;
-    }
-    @media (max-width: 900px) {
-      margin-right: 10px;
+    @media (max-width: 850px) {
+      margin-right: 0px;
     }
   }
 

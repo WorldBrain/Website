@@ -49,7 +49,7 @@
     {
       "id": 4,
       "icon": "stored-locally",
-      "title": "All data stored locally",
+      "title": "Your data & attention is yours",
       "path": "#dataSection"
     },
     {
@@ -98,6 +98,10 @@
           "text": "Roadmap"
         },
         {
+          "url": "https://OpenCollective.com/WorldBrain",
+          "text": "OpenCollective"
+        },
+        {
           "url": "https://medium.com/@WorldBrain",
           "text": "Blog"
         },
@@ -131,8 +135,8 @@
   ],
   "MENU_ITEMS": [
     {
-      "label": "Values",
-      "path": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
+      "label": "Vision",
+      "path": "https://medium.com/@WorldBrain/vision-mission-values-2020-update-d70aa35a638",
       "offset": "70",
       "staticLink": true
     },
@@ -149,6 +153,12 @@
     {
       "label": "Blog",
       "path": "https://medium.com/@WorldBrain",
+      "offset": "70",
+      "staticLink": true
+    },
+    {
+      "label": "OpenCollective",
+      "path": "https://opencollective.com/worldbrain",
       "offset": "70",
       "staticLink": true
     },

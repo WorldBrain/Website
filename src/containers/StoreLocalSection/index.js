@@ -9,8 +9,7 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import StoreLocalSectionWrapper, { SectionObject, View, FloatingImage } from './storeLocal.style';
-
+import StoreLocalSectionWrapper, { SectionObject, View, FloatingImage, infoContainer } from './storeLocal.style';
 import ImageOne from '../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import privacyImage from '../../img/privacy.svg';
@@ -22,6 +21,8 @@ const StoreLocalSection = ({
   imageWrapper,
   sectionWrapper,
   gifStyle,
+  buttonStyle,
+  infoContainer,
 }) => {
   return (
     <StoreLocalSectionWrapper id="storeLocalSection">
@@ -30,15 +31,18 @@ const StoreLocalSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="All Data Stored Locally"
+                  content="Your Data and Attention is yours"
                   {...title}
                 />
               }
               description={
-                <Text
-                  content="Memex is offline first. You have full control over your data."
-                  {...description}
-                />
+                <infoContainer>
+                  <Text
+                    content="Memex is offline first & WorldBrain.io introduced a cap on investor returns so we don't exploit your attention and data to maximise investor profits."
+                    {...description}
+                  />
+                  <Button title="Learn More" onClick={()=> window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle}/>
+                </infoContainer>
               }
             />
           </Box>
@@ -61,7 +65,7 @@ StoreLocalSection.propTypes = {
 StoreLocalSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 200],
+    pl: [0, 0, 60],
     pr: [0, 0, 0],
   },
   sectionWrapper: {
@@ -79,6 +83,16 @@ StoreLocalSection.defaultProps = {
     mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
+  },
+  buttonStyle: {
+    fontSize: '1.125rem',
+    lineHeight: '1.3',
+    width: '150px',
+    mb: 30,
+    backgroundColor: '#5cd9a6',
+    padding: '5px 25px',
+    color: 'white',
+    mt: '5',
   },
   description: {
     fontSize: '1.125rem',

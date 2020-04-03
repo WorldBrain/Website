@@ -53,14 +53,15 @@ const BannerSection = ({
   description,
   downloadDescription,
   SectionWrapper,
+  browserImage,
 }) => {
   const ButtonGroup = () => (
     <Fragment>
       <Button title="Download for free" onClick={onClickDownload} {...btnStyle} />
       <BrowserIcons>
-        <Image src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
-        <Image src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
-        <Image src={BraveIcon} className="browser-icon" alt="Brave logo"/>
+        <Image {...browserImage} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
+        <Image {...browserImage} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
+        <Image {...browserImage} src={BraveIcon} className="browser-icon" alt="Brave logo"/>
       </BrowserIcons>
     </Fragment>
   );
@@ -128,6 +129,9 @@ BannerSection.defaultProps = {
     pl: '15px',
     width: [1, '80%', '80%', '80%'],
     alignItems: ['flexStart', 'center', 'center', 'center'],
+  },
+  browserImage: {
+    margin: '0 10px',
   },
   title: {
     fontSize: ['1.5625rem', '2.125rem', '1.875rem', '2.2rem'],

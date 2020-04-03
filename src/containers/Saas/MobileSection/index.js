@@ -65,8 +65,8 @@ MobileSection.propTypes = {
 MobileSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
-    pr: [30, 30, 30],
+    pl: [0, 0, 30],
+    pr: [30, 30, 50],
   },
   sectionWrapper: {
       maxWidth: 1000,
