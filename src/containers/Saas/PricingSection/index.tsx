@@ -46,6 +46,8 @@ const PricingSection = ({
   buttonFillStyle,
   listContentStyle,
   moneybackTextSmall,
+  moneybackTextSmallLineTwo,
+  moneybackTextLineTwo,
   subContentStyle,
   pricingButtonBox,
   payment,
@@ -142,7 +144,8 @@ const PricingSection = ({
         </Box>
         <Box {...moneybackBox}>
           <Image src={moneyback} {...moneybackImg}></Image>
-          <Text {...moneybackText}/> 
+          <Text {...moneybackText}/> {'\n'}
+          <Text {...moneybackTextLineTwo}/> 
         </Box>
         <Box {...row}>
           <>
@@ -192,7 +195,7 @@ const PricingSection = ({
                     />
                   </a>
                 </PricingButton>
-                  {pricingTable.freePlan ? <Text {...noText}/> : <Text {...moneybackTextSmall}/>}
+                  {pricingTable.freePlan ? <Text {...noText}/> : <><Text {...moneybackTextSmall}/><Text {...moneybackTextSmallLineTwo}/></>}
                 </div>
               </PricingTable>
             ))}
@@ -264,15 +267,6 @@ PricingSection.defaultProps = {
     height: 40,
     verticalAlign: 'center',
   },
-  moneybackTextSmall: {
-    content: '14 days free trial',
-    fontSize: 16,
-    alignSelf: 'center',
-    color: '#3a2f45',
-    fontWeight: '300',
-    textAlign: 'center',
-    mt: 2,
-  },
   noText: {
     content: 't',
     fontSize: 16,
@@ -295,6 +289,33 @@ PricingSection.defaultProps = {
     ml: 3,
     mb: 0,
     fontWeight: '300',
+  },
+  moneybackTextLineTwo: {
+    content: 'No Credit Card Required',
+    fontSize: 20,
+    alignSelf: 'center',
+    color: '#3a2f45',
+    ml: 3,
+    mb: 0,
+    fontWeight: '300',
+  },
+   moneybackTextSmall: {
+    content: '14 days free trial. No Credit Card Required',
+    fontSize: 13,
+    alignSelf: 'center',
+    color: '#3a2f45',
+    fontWeight: '300',
+    textAlign: 'center',
+    mt: 2,
+  },
+   moneybackTextSmallLine2: {
+    content: 'No Credit Card Required',
+    fontSize: 16,
+    alignSelf: 'center',
+    color: '#3a2f45',
+    fontWeight: '300',
+    textAlign: 'center',
+    mt: 2,
   },
   nameStyle: {
     fontSize: ['1.5rem', '1.5rem', '1.5rem', '2rem'],

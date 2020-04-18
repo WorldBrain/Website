@@ -4,6 +4,8 @@ const SponsorsWrapper = styled.section`
   padding: 40px 0 60px 0;
   margin-bottom: -100px;
   z-index: 1;
+  text-align: center;
+
 
   @media (max-width: 990px) {
     padding: 60px 0 60px 0;
@@ -25,4 +27,11 @@ const SponsorsWrapper = styled.section`
   }
 `;
 
-export default SponsorsWrapper;
+
+const SubText = styled.div`
+  margin-bottom: 30px;
+  display:inline-block;
+  text-align: center;
+ `
+
+export { SponsorsWrapper, SubText };

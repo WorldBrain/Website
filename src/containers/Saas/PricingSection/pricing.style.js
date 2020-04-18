@@ -97,7 +97,9 @@ const PricingPrice = styled.div`
 `;
 
 const PricingButton = styled.div`
-  flex-direction: column;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
 
   & a {
     text-decoration: none;

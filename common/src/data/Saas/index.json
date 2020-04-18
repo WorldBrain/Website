@@ -102,6 +102,10 @@
           "text": "OpenCollective"
         },
         {
+          "url": "/wallofthanks",
+          "text": "Wall of Thanks"
+        },
+        {
           "url": "https://medium.com/@WorldBrain",
           "text": "Blog"
         },
@@ -141,14 +145,15 @@
       "staticLink": true
     },
     {
-      "label": "Upgrade",
+      "label": "Pricing",
       "path": "#upgrade",
       "offset": "70"
     },
     {
       "label": "Community",
       "path": "#communitySection",
-      "offset": "70"
+      "offset": "70",
+      "staticLink": true
     },
     {
       "label": "Blog",

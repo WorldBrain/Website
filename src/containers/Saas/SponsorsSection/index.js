@@ -11,7 +11,7 @@ import EuComissionLogo from '../../../img/logos/logo-eu.png';
 import LedgerLogo from '../../../img/logos/logo-ledger.png';
 import DigitalScienceLogo from '../../../img/logos/logo-digitalscience.png';
 import MozillaLogo from '../../../img/logos/logo-mozilla.svg';
-import SponsorsWrapper from './sponsorsSection.style';
+import { SponsorsWrapper, SubText } from './sponsorsSection.style';
 
 const SponsorsSection = ({
   row,
@@ -21,19 +21,20 @@ const SponsorsSection = ({
   sectionWrapper,
   text,
   image,
+  containerBox,
 }) => {
 
   return (
     <SponsorsWrapper id="sponsorsSection">
-      <Container>
+      <Container {...containerBox}>
         <Box>
           <Heading 
             as="h5" 
             content="Supported by"
             {...sectionTitle}
           />
-          <Text className="sub-text" content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
         </Box>
+        <SubText> Thanks to <Link href="/wallofthanks">all our contributors, financial supporters and investors</Link> for making this journey possible.</SubText>
         <Box className="row" {...row}>
           <Link href="https://ec.europa.eu" target="_blank">
             <Image width="100px" src={EuComissionLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
@@ -48,6 +49,7 @@ const SponsorsSection = ({
           <Image {...image} src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
         </Box>
+        <Text className="sub-text" content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
       </Container>
     </SponsorsWrapper>
   );
@@ -76,6 +78,10 @@ SponsorsSection.defaultProps = {
   col: {
     width: [1, 1 / 2, 1 / 3, 1 / 4],
     textAlign: 'center',
+  },
+  containerBox: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   sectionTitle: {
     textAlign: 'center',
