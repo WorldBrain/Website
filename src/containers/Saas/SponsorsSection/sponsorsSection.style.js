@@ -32,6 +32,8 @@ const SubText = styled.div`
   margin-bottom: 30px;
   display:inline-block;
   text-align: center;
- `
+ `;
 
 export { SponsorsWrapper, SubText };
+
+export default SponsorsWrapper;
