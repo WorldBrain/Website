@@ -153,6 +153,20 @@ const SectionObject = styled.div`
   }
 `;
 
-export { SectionObject, View, DownloadButtons };
+const BetaPill = styled.div`
+  width: 60px;
+  background-color: #5cd9a6;
+  color: #3A2F45
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+
+export { SectionObject, View, DownloadButtons, BetaPill };
 
 export default MobileSectionWrapper;

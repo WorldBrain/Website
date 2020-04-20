@@ -9,7 +9,7 @@ import Image from 'reusecore/src/elements/Image';
 import Link from 'reusecore/src/elements/Link';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import MobileSectionWrapper, { SectionObject, View, DownloadButtons } from './mobile.style';
+import MobileSectionWrapper, { SectionObject, View, DownloadButtons, BetaPill} from './mobile.style';
 import MobileSync from '../../../img/mobileSync.png';
 import DownloadAndroid from '../../../img/googlePlay.png';
 import DownloadiOS from '../../../img/appStore.png';
@@ -26,6 +26,9 @@ const MobileSection = ({
     <MobileSectionWrapper id="deviceSection">
           <View {...sectionWrapper} className="sectionBox">
               <Box {...textArea}>
+                <BetaPill>
+                  Beta
+                </BetaPill>
                 <FeatureBlock
                   title={
                     <Heading
@@ -40,6 +43,7 @@ const MobileSection = ({
                     />
                   }
                 />
+
                 <DownloadButtons>
                   <Link href="https://apps.apple.com/app/id1471860331" target="_blank"><Image src={DownloadiOS} className="mobileDownload" alt="Download iOS" /></Link>
                   <Link href="https://play.google.com/store/apps/details?id=io.worldbrain" target="_blank"><Image src={DownloadAndroid} className="mobileDownload" alt="Download Android" /></Link>
