@@ -69,8 +69,8 @@ MobileSection.propTypes = {
 MobileSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 30],
-    pr: [30, 30, 50],
+    pl: [0, 0, 0],
+    pr: [30, 30, 120],
   },
   sectionWrapper: {
       maxWidth: 1000,
@@ -79,7 +79,7 @@ MobileSection.defaultProps = {
   imageWrapper: {
     boxShadow: 'none',
     height: 'auto',
-    ml: [20, 20, 20, 20],
+    ml: [20, 20, 20, 70],
   },
   title: {
     fontSize: ['2rem', '1.6rem', '1.5rem'],

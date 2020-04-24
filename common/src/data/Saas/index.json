@@ -162,12 +162,6 @@
       "staticLink": true
     },
     {
-      "label": "OpenCollective",
-      "path": "https://opencollective.com/worldbrain",
-      "offset": "70",
-      "staticLink": true
-    },
-    {
       "label": "GitHub",
       "path": "https://github.com/WorldBrain",
       "offset": "70",

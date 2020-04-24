@@ -65,7 +65,7 @@ StoreLocalSection.propTypes = {
 StoreLocalSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
+    pl: [0, 0, 130],
     pr: [0, 0, 0],
   },
   sectionWrapper: {

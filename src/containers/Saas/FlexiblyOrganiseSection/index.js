@@ -64,7 +64,7 @@ FlexiblyOrganiseSection.propTypes = {
 FlexiblyOrganiseSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
+    pl: [0, 0, 130],
     pr: [30, 30, 30],
   },
   sectionWrapper: {

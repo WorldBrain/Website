@@ -63,8 +63,8 @@ FulltextSearchSection.propTypes = {
 FulltextSearchSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
-    pl: [0, 0, 60],
-    pr: [30, 30, 30],
+    pl: [0, 0, 130],
+    pr: [60, 60, 60],
   },
   sectionWrapper: {
       maxWidth: 1000,
