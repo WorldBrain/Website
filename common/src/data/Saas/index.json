@@ -197,7 +197,7 @@
     },
     {
       "name": "Pro",
-      "price": "€ 2",
+      "price": "€ 3",
       "planId": "pro-monthly",
       "buttonLabel": "Upgrade",
       "url": "#",
@@ -243,7 +243,7 @@
     },
     {
       "name": "Pro",
-      "price": "€ 20",
+      "price": "€ 30",
       "planId": "pro-yearly",
       "buttonLabel": "Upgrade",
       "url": "#",
