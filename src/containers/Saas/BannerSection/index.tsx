@@ -83,7 +83,7 @@ const BannerSection = ({
               }
               description={
                 <Text
-                  content="A privacy focused extension to annotate, search and organize what you've seen online.                  "
+                  content="An offline-first browser extension to annotate, search and organize what you've seen online.                  "
                   {...description}
                 />
               }
