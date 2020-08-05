@@ -29,7 +29,7 @@ const ImportSection = ({
           <Box {...col} {...textArea}>
             <Heading
               {...title}
-              content="Easily migrate from your (previously) favorite tools"
+              content="Easily migrate from your (previously) favourite tools"
             />
             <Text
               {...description}

@@ -158,7 +158,7 @@ BannerSection.defaultProps = {
   },
   btnStyle: {
     minWidth: ['100%', '100%', '120px', '265px'],
-    fontSize: ['1.125rem', '1.125rem', '1rem', '1.375rem'],
+    fontSize: ['1.125rem', '1.125rem', '1rem', '1.125rem'],
     colors: 'primaryWithBg',
   },
 };

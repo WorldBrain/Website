@@ -9,6 +9,7 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Container from 'common/src/components/UI/Container';
+import { detect } from 'detect-browser';
 // import Input from 'reusecore/src/elements/Input';
 
 const chargeBeeScriptSource = 'https://js.chargebee.com/v2/chargebee.js'
@@ -24,10 +25,69 @@ import PricingTable, {
   DeviceSelection,
   UpperSection,
   PricingWrapper,
+  SubscriptionOptionsContainer,
+  PriceInputBox,
+  PriceText,
+  PriceBox,
+  ColExplorer,
+  ColThinker,
+  ColPioneer,
+  Line,
+  PricingGrid,
+  PricingGridCheck,
+  PricingGridPlanTitle,
+  PricingGridFeatureTitle,
+  PricingGridFeatureDescription,
+  PricingGridPlanSpacer,
+  PricingGridButton,
+  PricingPlanTitle,
+  PricingPlanItem,
+  PlanTitle,
+  PlanName,
+  PlanBox,
+  LoginTitle,
+  LoginButton,
+  WhiteSpacer30,
+  PricingHeadTitle,
+  SwitchWrapper,
+  PricingBox,
+  TimeButtonLeft,
+  TimeButtonRight,
+  TimeButtonBox,
+  LinkSpan,
+  AdditionalText,
+  PricingGridCheckWithText,
+  UpgradeInfo,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
 import { PageHOC } from '../../../components/page';
+
+
+const onClickDownload = (e: Event) => {
+  e.preventDefault();
+  const browser = detect();
+  let downloadLink = '';
+  switch (browser && browser.name) {
+    case 'chrome':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    case 'firefox':
+      downloadLink = 'https://addons.mozilla.org/en-US/firefox/addon/worldbrain/';
+      break;
+    case 'brave':
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+    default:
+      // TODO: Fallback case? Default is Chrome link
+      downloadLink = 'https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali';
+      break;
+  }
+
+  if (window) {
+    window.open(downloadLink, '_blank');
+  }
+}
 
 const PricingSection = ({
   sectionWrapper,
@@ -86,8 +146,8 @@ const PricingSection = ({
   `);
 
   const [state, setState] = useState({
-    data: Data.saasJson.MONTHLY_PRICING_TABLE,
-    active: true,
+    monthly: true,
+    yearly: false,
   });
 
   const handleClickUpgrade = (e: Event, planId: String) => {
@@ -111,97 +171,164 @@ const PricingSection = ({
     });
   }
 
-  const data = state.data;
-  const activeStatus = state.active;
 
   return (
     <PricingWrapper>
-      <Container >
-        <Box {...secTitleWrapper}>
-          <Text {...secText} />
-          <PricingButtonWrapper>
-            <Button
-              title="Monthly"
-              className={activeStatus ? 'active-item' : ''}
-              onClick={() =>
-                setState({
-                  data: Data.saasJson.MONTHLY_PRICING_TABLE,
-                  active: true,
-                })
-              }
-            />
-            <Button
-              title="Yearly -20%"
-              className={activeStatus === false ? 'active-item' : ''}
-              onClick={() =>
-                setState({
-                  data: Data.saasJson.YEARLY_PRICING_TABLE,
-                  active: false,
-                })
-              }
-            />
-          </PricingButtonWrapper>
-        </Box>
-        <Box {...moneybackBox}>
-          <Image src={moneyback} {...moneybackImg}></Image>
-          <Text {...moneybackText}/> {'\n'}
-          <Text {...moneybackTextLineTwo}/> 
-        </Box>
-        <Box {...row}>
-          <>
-            {data.map((pricingTable) => (
-              <PricingTable
-                key={pricingTable.planId}
-                freePlan={pricingTable.freePlan}
-                className={pricingTable.freePlan ? "free-plan pricing-table" : "pro-plan pricing-table"}
+     <Text {...secText} />
+     <SubscriptionOptionsContainer>
+          <TimeButtonBox>
+              <TimeButtonLeft
+                active={state.monthly}
+                onClick={() =>
+                  setState({
+                    monthly: true,
+                    yearly: false,
+                  })
+                }
               >
-                <UpperSection>
-                  <PricingHead>
-                    <Heading content={pricingTable.name} {...nameStyle} />
-                  </PricingHead>
-                  <PricingPrice>
-                    <Text content={pricingTable.price} {...priceStyle} />
-                  </PricingPrice>
-                  {/*
-                  <span>TODO - hide on free, make functional</span>
-                  <DeviceSelection>
-                    <span>for</span>
-                    <Input inputType="number" value="1" />
-                    <span>device</span>
-                  </DeviceSelection>
-*/}
-                  <PricingList>
-                    {pricingTable.listItems.map((item, index) => (
-                      <ListItem key={`pricing-table-list-${index}`}>
-                        <Icon
-                          icon={checkmark}
-                          className="price_list_icon"
-                          size={13}
-                        />
-                        <Text content={item.content} {...listContentStyle} />
-                      </ListItem>
-                    ))}
-                  </PricingList>
-                  <Text content={pricingTable.subContent} {...subContentStyle} />
-                </UpperSection>
-                <div {...pricingButtonBox} >
-                <PricingButton>
-                  <a {...linkStyle} href={pricingTable.url}>
-                    <Button
-                      title={pricingTable.buttonLabel}
-                      onClick={(e: Event) => handleClickUpgrade(e, pricingTable.planId)}
-                      colors={pricingTable.freePlan ? "primaryWithBg" : "secondaryWithBg"}
-                      {...buttonStyle}
-                    />
-                  </a>
-                </PricingButton>
-                  {pricingTable.freePlan ? <Text {...noText}/> : <><Text {...moneybackTextSmall}/><Text {...moneybackTextSmallLineTwo}/></>}
-                </div>
-              </PricingTable>
-            ))}
-          </>
-        </Box>
-      </Container>
+                  Monthly
+              </TimeButtonLeft>
+              <TimeButtonRight
+                active={state.yearly}
+                onClick={() =>
+                  setState({
+                    monthly: false,
+                    yearly: true,
+                  })
+                }
+              >
+                  Yearly
+              </TimeButtonRight>
+          </TimeButtonBox>
+          <PricingGrid>
+              <PricingGridPlanSpacer />
+              <PricingGridPlanTitle> Explorer </PricingGridPlanTitle>
+              <PricingGridPlanTitle> Thinker </PricingGridPlanTitle>
+              <PricingGridPlanTitle> Pioneer </PricingGridPlanTitle>
+
+              <PricingGridFeatureDescription>
+                  Search, Organise and Annotate
+              </PricingGridFeatureDescription>
+              <ColExplorer>
+                  {' '}
+                  <PricingGridCheck />{' '}
+              </ColExplorer>
+              <ColThinker>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColThinker>
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
+              <PricingGridFeatureDescription>
+                  Mobile App for iOS and Android
+              </PricingGridFeatureDescription>
+              <ColExplorer>
+                  {' '}
+                  <PricingGridCheck />{' '}
+              </ColExplorer>
+              <ColThinker>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColThinker>
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
+              <PricingGridFeatureDescription>
+                  Sync between mobile and desktop
+              </PricingGridFeatureDescription>
+              <ColThinker>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColThinker>
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
+              <PricingGridFeatureDescription>
+                  Backup locally or your favourite cloud
+              </PricingGridFeatureDescription>
+              <ColExplorer>
+                  <PricingGridCheckWithText
+                  />
+                  <AdditionalText>
+                      manual
+                  </AdditionalText>
+              </ColExplorer>
+              <ColThinker>
+                  <PricingGridCheckWithText
+                  />
+                  <AdditionalText>
+                      automatic
+                  </AdditionalText>
+              </ColThinker>
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
+              <PricingGridFeatureDescription>
+                  Early access to beta features
+              </PricingGridFeatureDescription>
+
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
+              <PricingGridFeatureDescription
+                  onClick={() =>
+                      window.open('https://worldbrain.io/vision')
+                  }
+              >
+                  Support the development of an<LinkSpan> ethical business</LinkSpan>{' '}
+              </PricingGridFeatureDescription>
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+
+              <ColExplorer>
+                  <PriceText> Free</PriceText>
+              </ColExplorer>
+
+              <ColThinker>
+                  <PriceBox>
+                      {state.monthly ? (<PriceText>3€</PriceText>):(<PriceText>30€</PriceText>)}
+                  </PriceBox>
+              </ColThinker>
+
+              <ColPioneer>
+                  <PriceBox>
+                      {state.monthly ? (<PriceText>8€</PriceText>):(<PriceText>80€</PriceText>)}
+                   </PriceBox>
+              </ColPioneer>
+          </PricingGrid>
+          <UpgradeInfo
+            onClick={onClickDownload}
+          >
+              Upgrade via the Memex Extension. 
+          </UpgradeInfo>
+      </SubscriptionOptionsContainer>
     </PricingWrapper>
   );
 };

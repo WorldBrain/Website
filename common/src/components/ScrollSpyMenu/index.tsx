@@ -109,22 +109,6 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
             </ul>
           </Link>
       </HoverMenu>
-      {user ? (
-        <HoverMenu>
-          <Link href="/subscriptions">My Account
-            <ul className="sub-menu">
-              <li>
-                  <Link href="#" onClick={handleLogOut}>Log Out</Link>
-              </li>
-            </ul>
-          </Link>
-        </HoverMenu>
-      ) : (
-          <li>
-            <Link href="/login">Login</Link>
-          </li>
-        )
-      }
       <li>
         <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       </li>
