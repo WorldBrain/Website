@@ -58,6 +58,7 @@ import PricingTable, {
   AdditionalText,
   PricingGridCheckWithText,
   UpgradeInfo,
+  TrialTag,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -308,12 +309,17 @@ const PricingSection = ({
               </ColPioneer>
 
               <ColExplorer>
-                  <PriceText> Free</PriceText>
+                <PriceBox>
+                    <PriceText> Free</PriceText>
+                </PriceBox>
               </ColExplorer>
 
               <ColThinker>
                   <PriceBox>
                       {state.monthly ? (<PriceText>3€</PriceText>):(<PriceText>30€</PriceText>)}
+                    <TrialTag>
+                        14 day trial
+                    </TrialTag>
                   </PriceBox>
               </ColThinker>
 

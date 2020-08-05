@@ -485,6 +485,7 @@ const PricingGrid = styled.div`
     background-color: #fff;
     width: 100%;
     margin-top: 40px;
+    margin-bottom: 20px;
 
     @media (max-width: 1300px) {
         grid-template-columns: 52% 16% 16% 16%;
@@ -592,8 +593,8 @@ const ColPioneer = styled.div`
 `
 const PriceBox = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     height: 40px;
 `
@@ -608,6 +609,15 @@ const AdditionalText = styled.div`
     font-size: 12px;
     font-color: ${themeGet('colors.textColor')};
     font-weight: bold
+`
+
+const TrialTag = styled.div`
+    font-size: 12px;
+    font-color: ${themeGet('colors.textColor')};
+    font-weight: bold
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
 `
 
 const PriceInputBox = styled.select`
@@ -673,5 +683,6 @@ export {
   AdditionalText,
   PricingGridCheckWithText,
   UpgradeInfo,
+  TrialTag,
 };
 export default PricingTable;
