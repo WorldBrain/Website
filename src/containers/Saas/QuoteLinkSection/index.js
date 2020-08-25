@@ -9,7 +9,7 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import QuoteLinkSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './QuoteLink.style';
+import QuoteLinkSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './quoteLink.style';
 
 import ImageOne from '../../../img/QuoteLink.png';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
