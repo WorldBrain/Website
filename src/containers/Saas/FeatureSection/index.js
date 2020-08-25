@@ -42,23 +42,6 @@ const FeatureSection = ({
           <Box {...sectionHeader}>
           <Heading content="Features" {...heading} />
           </Box>
-          <Box className="row" {...row}>
-            {Data.saasJson.Features.map((feature, index) => (
-              <Box className="col" {...col} key={index}>
-                <AnchorLink {...anchorLinkStyle} href={feature.path}>
-                  <FeatureBlock
-                    icon={<i className={feature.icon} />}
-                    wrapperStyle={blockWrapperStyle}
-                    iconStyle={iconStyle}
-                    contentStyle={contentStyle}
-                    iconPosition="left"
-                    title={<Heading as="h3" content={feature.title} {...featureTitle} />}
-                    className="saasFeature"
-                  />
-                </AnchorLink>
-              </Box>
-            ))}
-          </Box>
       </Container>
     </FeatureSectionWrapper>
   );

@@ -26,9 +26,6 @@ const MobileSection = ({
     <MobileSectionWrapper id="deviceSection">
           <View {...sectionWrapper} className="sectionBox">
               <Box {...textArea}>
-                <BetaPill>
-                  Beta
-                </BetaPill>
                 <FeatureBlock
                   title={
                     <Heading

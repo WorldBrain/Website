@@ -69,6 +69,4 @@ Text.propTypes = {
 
 Text.defaultProps = {
   as: 'p',
-  mt: 0,
-  mb: '0'
 };

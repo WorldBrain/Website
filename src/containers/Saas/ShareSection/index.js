@@ -9,12 +9,12 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import AnnotationsSectionWrapper, { SectionObject, View } from './annotations.style';
+import ShareSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './share.style';
 
-import ImageOne from '../../../img/annotate.gif';
+import ImageOne from '../../../img/shareImg.png';
 import browserImg from '../../../img/browser.png';
 
-const AnnotationsSection = ({
+const ShareSection = ({
   title,
   description, 
   textArea,
@@ -23,23 +23,35 @@ const AnnotationsSection = ({
   btnStyle,
 }) => {
   return (
-    <AnnotationsSectionWrapper id="annotationsSection">
+    <ShareSectionWrapper id="annotationsSection">
       <View className="sectionBox">
         <Box {...textArea}>
           <FeatureBlock
             title={
               <Heading
-                content="Add your thoughts as you go"
+                content="Share your research with the world"
                 {...title}
               />
             }
             description={
               <Text
-                content="Make Highlights and Notes directly on the websites you are looking at."
+                content="Share collections of pages and your notes. Easily share sentence-level feedback about websites."
                 {...description}
               />
             }
           />
+          <ButtonGroup>
+              <PrimaryButton
+                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
+              >
+              Get Early Access
+              </PrimaryButton>
+              <SecondaryButton
+                onClick={()=>window.open('https://worldbrain.io/tutorials/memex-social')}
+              >
+              Learn More
+              </SecondaryButton>
+            </ButtonGroup>
         </Box>
         <SectionObject>
             <Card className="objectWrapper" {...imageWrapper}>
@@ -50,17 +62,17 @@ const AnnotationsSection = ({
             </Card>
          </SectionObject>
       </View>
-    </AnnotationsSectionWrapper>
+    </ShareSectionWrapper>
   );
 };
 
-AnnotationsSection.propTypes = {
+ShareSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
 };
 
-AnnotationsSection.defaultProps = {
+ShareSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
     pl: [0, 0, 80],
@@ -98,4 +110,4 @@ AnnotationsSection.defaultProps = {
   },
 };
 
-export default AnnotationsSection;
+export default ShareSection;

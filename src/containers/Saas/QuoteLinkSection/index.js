@@ -9,58 +9,70 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import FulltextSearchSectionWrapper, { SectionObject, View } from './fulltextSearch.style';
+import QuoteLinkSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './QuoteLink.style';
 
-import ImageOne from '../../../img/search.gif';
+import ImageOne from '../../../img/QuoteLink.png';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import browserImg from '../../../img/browser.png';
 
-const FulltextSearchSection = ({
+const QuoteLinkSection = ({
   title,
   description,
   textArea,
   imageWrapper,
   sectionWrapper,
+  buttonGroup,
 }) => {
   return (
-    <FulltextSearchSectionWrapper id="fullTextSearchSection">
+    <QuoteLinkSectionWrapper id="QuoteLinkSection">
       <View className="sectionBox">
           <Box {...textArea}>
             <FeatureBlock
               title={
                 <Heading
-                  content="Easily find what you saved"
+                  content="Quote sections of websites"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Full-Text search your notes and websites you saved or annotated."
+                  content="Share links to highlights and notes to point people to relevant sections."
                   {...description}
                 />
               }
             />
+            <ButtonGroup {...buttonGroup}>
+              <PrimaryButton
+                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
+              >
+              Get Early Access
+              </PrimaryButton>
+              <SecondaryButton
+                onClick={()=>window.open('https://worldbrain.io/tutorials/memex-social')}
+              >
+              Learn More
+              </SecondaryButton>
+            </ButtonGroup>
           </Box>
         <SectionObject>
           <Card className="objectWrapper" {...imageWrapper}>
             <Card className="dashboardWrapper">
-              <Image src={browserImg} className="browser"/>
               <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
           </Card>
         </SectionObject>
       </View>
-    </FulltextSearchSectionWrapper>
+    </QuoteLinkSectionWrapper>
   );
 };
 
-FulltextSearchSection.propTypes = {
+QuoteLinkSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
 };
 
-FulltextSearchSection.defaultProps = {
+QuoteLinkSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
     pl: [0, 0, 130],
@@ -68,6 +80,9 @@ FulltextSearchSection.defaultProps = {
   },
   sectionWrapper: {
       maxWidth: 1000,
+  },
+  buttonGroup: {
+      zIndex: 1,
   },
   imageWrapper: {
     boxShadow: 'none',
@@ -98,4 +113,4 @@ FulltextSearchSection.defaultProps = {
   },
 };
 
-export default FulltextSearchSection;
+export default QuoteLinkSection;

@@ -6,9 +6,9 @@ const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;
   .browser-icon {
-    width: 48px;
-    height: 48px;
-    margin-left: 25px;
+    width: 30px;
+    height: 30px;
+    margin: 0 12px;
     @media (max-width: 990px) {
       flex-direction: column;
     }
@@ -25,10 +25,12 @@ const View = styled.div `
     width: 90%;
     max-width: 1800px
     justify-content: center;
+    flex-direction: column;
 
     .textBox {
-        padding-left: 50px;
         width: 60%;
+        text-align: center;
+        margin: 50px 0px;
     }
 
     @media (max-width: 1000px) {
@@ -73,6 +75,7 @@ const BannerWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 3px solid #e0e0e0;
 
   @media (max-width: 990px) {
     padding-bottom: 60px;
@@ -100,14 +103,16 @@ const BannerWrapper = styled.section`
   .row {
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .button__wrapper {
     display: flex;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 32px;
-    width: 90%;
+    flex-direction: column;
     @media (max-width: 1000px) {
       flex-direction: column;
     }
@@ -123,7 +128,9 @@ const BannerWrapper = styled.section`
     }
     button {
       font-weight: 600;
-      padding: 12px 20px;
+      margin-bottom: 15px;
+      padding: 10px 14px;
+      font-size: 16px;
       min-height: 0;
       @media (max-width: 1000px) {
         padding: 10px 14px;
@@ -141,7 +148,9 @@ const BannerObject = styled.div`
   margin-top: -10px;
   right: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
+
   @media (max-width: 576px) {
     width: 100%;
     position: static;

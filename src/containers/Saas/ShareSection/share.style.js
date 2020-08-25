@@ -1,38 +1,76 @@
 import styled from 'styled-components';
 
-const FulltextSearchSectionWrapper = styled.section`
+
+const ButtonGroup = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content flex-start;
+
+  @media (max-width: 850px) {
+      justify-content: center;
+      margin-bottom: 50px;
+  }
+`
+
+
+const PrimaryButton = styled.div`
+    border-radius: 5px;
+    border: 2px solid #5cd9a6;
+    margin: 0 15px 0 0;
+    padding: 5px 20px;
+    background-color: #5cd9a6;
+    font-weight: 500;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+`
+
+const SecondaryButton = styled.div`
+    border-radius: 5px;
+    border: 2px solid #5671CF;
+    margin: 0 5px 0 15px;
+    padding: 5px 20px;
+    font-weight: 500;
+    color: #5671CF;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+`
+
+
+const ShareSectionWrapper = styled.section`
   min-height: 630px; // this height is needed to vertically position the text correctly
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 150px;
-  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-top: 100px;
   justify-content: center;
   padding: 5px;
   @media only screen and (max-width: 1200px) {
     min-height: 500px;
   }
-    @media (max-width: 850px) {
+  @media (max-width: 850px) {
     min-height: auto;
     display: block;
     text-align: center;
-    margin-bottom: 120px;
-    margin-top: 100px;
-    
+    margin-bottom: 60px;
     .text-container {
       order: 0;
       width: 100%;
     }
   }
 `;
-
 const View = styled.div `
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 1500px
     justify-content: center;
-    
+    flex-direction: row-reverse;
+
     @media (max-width: 850px) {
       flex-direction: column;
       width: 100%;
@@ -40,7 +78,7 @@ const View = styled.div `
       align-items: center;
       padding: 0 3%;
 
-      & * {
+      & > div {
         margin: 0px;
         padding: 0px;
         width: 100%;
@@ -56,7 +94,8 @@ const View = styled.div `
         padding: 0px 20px;
       }
     }
-}`;
+  }
+`;
 
 const SectionObject = styled.div`
   top: 0;
@@ -65,14 +104,13 @@ const SectionObject = styled.div`
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   order: 0;
   @media (max-width: 850px) {
     width: 100%;
     position: static;
     height: auto;
     top: auto;
-
     left: auto;
     .bg-img {
       display: none;
@@ -82,8 +120,8 @@ const SectionObject = styled.div`
     position: relative;
     .dashboardWrapper {
       max-width: 100%;
-      width: 100%;
       height: auto;
+      width: 100%;
       align-items: flex-start;
       diplay: flex;
       flex-direction: column;
@@ -109,6 +147,6 @@ const SectionObject = styled.div`
   }
 `;
 
-export { SectionObject, View};
+export { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup };
 
-export default FulltextSearchSectionWrapper;
+export default ShareSectionWrapper;

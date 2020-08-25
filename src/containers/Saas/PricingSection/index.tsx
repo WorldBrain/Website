@@ -295,6 +295,17 @@ const PricingSection = ({
               </ColPioneer>
               <Line />
 
+              <PricingGridFeatureDescription>
+                  Sharing & Quoting
+              </PricingGridFeatureDescription>
+
+              <ColPioneer>
+                  {' '}
+                  <PricingGridCheck
+                  />{' '}
+              </ColPioneer>
+              <Line />
+
               <PricingGridFeatureDescription
                   onClick={() =>
                       window.open('https://worldbrain.io/vision')

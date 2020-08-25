@@ -9,12 +9,12 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import AnnotationsSectionWrapper, { SectionObject, View } from './annotations.style';
+import CopyPasterSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './copyPaster.style';
 
-import ImageOne from '../../../img/annotate.gif';
+import ImageOne from '../../../img/copyPasterImg.png';
 import browserImg from '../../../img/browser.png';
 
-const AnnotationsSection = ({
+const CopyPasterSection = ({
   title,
   description, 
   textArea,
@@ -23,44 +23,55 @@ const AnnotationsSection = ({
   btnStyle,
 }) => {
   return (
-    <AnnotationsSectionWrapper id="annotationsSection">
+    <CopyPasterSectionWrapper id="annotationsSection">
       <View className="sectionBox">
         <Box {...textArea}>
           <FeatureBlock
             title={
               <Heading
-                content="Add your thoughts as you go"
+                content="Copy/paste data to other knowledge tools"
                 {...title}
               />
             }
             description={
               <Text
-                content="Make Highlights and Notes directly on the websites you are looking at."
+                content="Create custom templates to copy-paste pages and notes to Roam, Notion or your own blog"
                 {...description}
               />
             }
           />
+          <ButtonGroup>
+              <PrimaryButton
+                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
+              >
+              Get Early Access
+              </PrimaryButton>
+              <SecondaryButton
+                onClick={()=>window.open('https://worldbrain.io/tutorials/copy-paster')}
+              >
+              Learn More
+              </SecondaryButton>
+            </ButtonGroup>
         </Box>
         <SectionObject>
             <Card className="objectWrapper" {...imageWrapper}>
               <Card className="dashboardWrapper">
-                <Image src={browserImg} className="browser"/>
                 <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
               </Card>
             </Card>
          </SectionObject>
       </View>
-    </AnnotationsSectionWrapper>
+    </CopyPasterSectionWrapper>
   );
 };
 
-AnnotationsSection.propTypes = {
+CopyPasterSection.propTypes = {
   title: PropTypes.object,
   description: PropTypes.object,
   btnStyle: PropTypes.object,
 };
 
-AnnotationsSection.defaultProps = {
+CopyPasterSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
     pl: [0, 0, 80],
@@ -98,4 +109,4 @@ AnnotationsSection.defaultProps = {
   },
 };
 
-export default AnnotationsSection;
+export default CopyPasterSection;

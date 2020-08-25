@@ -10,12 +10,16 @@ import FeatureSection from '../../containers/Saas/FeatureSection';
 import FulltextSearchSection from '../../containers/Saas/FulltextSearchSection';
 import Footer from '../../containers/Saas/Footer';
 import PricingSection from '../../containers/Saas/PricingSection';
+import UpdateSection from '../../containers/Saas/UpdateSection';
 import ImportSection from '../../containers/Saas/ImportSection';
 import SponsorsSection from '../../containers/Saas/SponsorsSection';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import FlexiblyOrganiseSection from '../../containers/Saas/FlexiblyOrganiseSection';
 import StoreLocalSection from '../../containers/StoreLocalSection';
 import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
+import ShareSection from '../../containers/Saas/ShareSection';
+import CopyPasterSection from '../../containers/Saas/CopyPasterSection';
+import QuoteLinkSection from '../../containers/Saas/QuoteLinkSection';
 import MobileSection from '../../containers/Saas/MobileSection';
 import CommunitySection from '../../containers/Saas/CommunitySection';
 import View from 'reusecore/src/elements/Box';
@@ -41,16 +45,19 @@ export default class HomePage extends Page {
           <ResetCSS />
           <GlobalStyle />
           <ContentWrapper>
+            <UpdateSection/>
             <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
               <DrawerProvider>
                 <Navbar user={auth.user} authService={auth} />
               </DrawerProvider>
             </Sticky>
             <BannerSection />
-            <FeatureSection />
-            <FulltextSearchSection />
-            <AnnotationsSection />
             <FlexiblyOrganiseSection />
+            <AnnotationsSection />
+            <FulltextSearchSection />
+            <ShareSection />
+            <QuoteLinkSection />
+            <CopyPasterSection/>
             <MobileSection />
             <StoreLocalSection />
             <ImportSection />

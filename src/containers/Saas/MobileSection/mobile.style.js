@@ -5,7 +5,7 @@ const MobileSectionWrapper = styled.section`
   display: flex;
   align-items: center;
   margin-bottom: 150px;
-  margin-top: 150px;
+  margin-top: 50px;
   justify-content: center;
   position: relative;
   @media only screen and (max-width: 1200px) {
@@ -83,6 +83,10 @@ const DownloadButtons = styled.div `
       align-items: center;
       margin-bottom: 35px;
       margin-top: 15px;
+
+      & img {
+        margin: 0 10px;
+      }
     }
   }
 `;

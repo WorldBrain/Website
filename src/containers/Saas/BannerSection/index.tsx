@@ -15,7 +15,7 @@ import BannerWrapper, {
 } from './bannerSection.style';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
-import BannerObject2 from '../../../img/main_screen_new.png';
+import BannerObject2 from '../../../img/bannerImg.png';
 import ChromeIcon from '../../../img/logos/logo-chrome.svg';
 import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
 import BraveIcon from '../../../img/logos/logo-brave.svg';
@@ -70,35 +70,23 @@ const BannerSection = ({
     <BannerWrapper id="banner_section">
       <View className="sectionBox">
         <View className="textBox">
-        <Box className="row" {...row}>
-          <Box className="col" {...col}>
-            <FeatureBlock
-              title={
-                <Heading
-                  as="h1"
-                  content="Bookmarking for the
-                  power users of the web"
-                  {...title}
-                />
-              }
-              description={
-                <Text
-                  content="An offline-first browser extension to annotate, search and organize what you've seen online.                  "
-                  {...description}
-                />
-              }
-              button={<ButtonGroup />}
-            />
-            <Text
-              content="Get started in less than 30 seconds."
-              {...downloadDescription}
-            />
-            <Text
-              content="No account necessary. All data stored locally."
-              {...downloadDescription}
-            />
-          </Box>
-        </Box>
+              <FeatureBlock
+                title={
+                  <Heading
+                    as="h1"
+                    content="Bookmarking for
+                    power users"
+                    {...title}
+                  />
+                }
+                description={
+                  <Text
+                    content="Annotate, organize and share what you find online."
+                    {...description}
+                  />
+                }
+                button={<ButtonGroup />}
+              />
         </View>
         <BannerObject>
             <div className="objectWrapper">
@@ -119,16 +107,18 @@ BannerSection.propTypes = {
 BannerSection.defaultProps = {
   row: {
     flexBox: true,
-    flexWrap: 'wrap',
-    ml: '-15px',
-    mr: '-15px',
-    justifyContent: ['center', 'center', 'center', 'flex-start', 'flex-start'],
+    justifyContent: 'center',
+    textAlign: 'middle',
+    alignItems: 'center',
+    fontSize: 40,
   },
   col: {
-    pr: '15px',
-    pl: '15px',
-    width: [1, '80%', '80%', '80%'],
-    alignItems: ['flexStart', 'center', 'center', 'center'],
+    flexBox: true,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'middle',
+    alignItems: 'center',
   },
   browserImage: {
     margin: '0 10px',
@@ -147,6 +137,7 @@ BannerSection.defaultProps = {
     color: 'textColor',
     lineHeight: '1.5',
     mb: '0',
+    mt: '-10px',
     width: ['100%', '100%', '100%', '100%'],
   },
   downloadDescription: {

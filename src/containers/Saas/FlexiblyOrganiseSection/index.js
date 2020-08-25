@@ -29,13 +29,13 @@ const FlexiblyOrganiseSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Tags, Lists & Bookmarks"
+                  content="Flexibly organise what you find"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Quickly organise content via the sidebar or keyboard shortcuts"
+                  content="Use tags, collections and bookmarks."
                   {...description}
                 />
               }
