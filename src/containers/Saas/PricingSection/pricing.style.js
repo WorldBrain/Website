@@ -508,6 +508,13 @@ const PricingGridPlanTitle = styled.div`
     align-items: center;
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
+
+    @media (max-width: 700px) {
+        padding: 0px;
+        font-size: 12px;
+    }
+
 `
 
 const PricingGridFeatureTitle = styled.div`
