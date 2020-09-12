@@ -480,16 +480,34 @@ const PlanName = styled.div`
 
 const PricingGrid = styled.div`
     display: grid;
-    grid-template-columns: 52% 16% 16% 16%;
+    grid-template-columns: 52% 25% 25%;
     //grid-gap: 10px;
     background-color: #fff;
     width: 100%;
     margin-top: 40px;
-    margin-bottom: 20px;
 
     @media (max-width: 1300px) {
-        grid-template-columns: 52% 16% 16% 16%;
+        grid-template-columns: 52% 25% 25%;
     }
+`
+
+const PricingGridWide = styled.div`
+    display: grid;
+    grid-template-columns: 50% 50%;
+    //grid-gap: 10px;
+    background-color: #fff;
+    width: 100%;
+`
+
+const PricingGridPricing = styled.div`
+    display: grid;
+    grid-template-columns: 52% 25% 25%;
+    //grid-gap: 10px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
 `
 
 const gridPadding = css`
@@ -535,6 +553,10 @@ const PricingGridFeatureDescription = styled.div`
     @media (max-width: 1300px) {
         padding: 0px;
         padding-left: 30px;
+    }
+
+    & strong {
+        padding-left: 5px;
     }
 `
 
@@ -620,7 +642,7 @@ const AdditionalText = styled.div`
 
 const TrialTag = styled.div`
     font-size: 12px;
-    font-color: ${themeGet('colors.textColor')};
+    color: ${themeGet('colors.textColor')};
     font-weight: bold
     padding: 5px 10px;
     background-color: #e0e0e0;
@@ -647,12 +669,31 @@ const UpgradeInfo = styled.div`
     cursor: pointer;
 `
 
+const BetaButton = styled.div`
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: ${themeGet('colors.textColor')};
+    background-color: #5cd9a6;
+    border-radius: 5px;
+    cursor: pointer;
+`
+
+const ColWide = styled.div`
+    width: 100%
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 export {
   PricingHead,
+  BetaButton,
   PricingPrice,
   PricingButton,
   PricingList,
   ListItem,
+  ColWide,
   SwitchWrapper,
   PricingButtonWrapper,
   DeviceSelection,
@@ -667,6 +708,8 @@ export {
   ColPioneer,
   Line,
   PricingGrid,
+  PricingGridWide,
+  PricingGridPricing,
   PricingGridCheck,
   PricingGridPlanTitle,
   PricingGridFeatureTitle,

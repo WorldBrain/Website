@@ -41,13 +41,8 @@ const CopyPasterSection = ({
             }
           />
           <ButtonGroup>
-              <PrimaryButton
-                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
-              >
-              Get Early Access
-              </PrimaryButton>
               <SecondaryButton
-                onClick={()=>window.open('https://worldbrain.io/tutorials/copy-paster')}
+                onClick={()=>window.open('https://worldbrain.io/tutorials/copy-templates')}
               >
               Learn More
               </SecondaryButton>

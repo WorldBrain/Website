@@ -20,6 +20,7 @@ import PricingTable, {
   PricingPrice,
   PricingButton,
   PricingList,
+  BetaButton,
   ListItem,
   PricingButtonWrapper,
   DeviceSelection,
@@ -34,6 +35,8 @@ import PricingTable, {
   ColPioneer,
   Line,
   PricingGrid,
+  PricingGridWide,
+  PricingGridPricing,
   PricingGridCheck,
   PricingGridPlanTitle,
   PricingGridFeatureTitle,
@@ -59,6 +62,7 @@ import PricingTable, {
   PricingGridCheckWithText,
   UpgradeInfo,
   TrialTag,
+  ColWide,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -205,8 +209,19 @@ const PricingSection = ({
               <PricingGridPlanSpacer />
               <PricingGridPlanTitle> Explorer </PricingGridPlanTitle>
               <PricingGridPlanTitle> Thinker </PricingGridPlanTitle>
-              <PricingGridPlanTitle> Pioneer </PricingGridPlanTitle>
+              {/*<PricingGridPlanTitle> Pioneer </PricingGridPlanTitle>*/}
+     
+              <ColExplorer>
+                <PriceBox>
+                    <PriceText> Free</PriceText>
+                </PriceBox>
+              </ColExplorer>
 
+              <ColThinker>
+                  <PriceBox>
+                      {state.monthly ? (<PriceText>3€</PriceText>):(<PriceText>30€</PriceText>)}
+                  </PriceBox>
+              </ColThinker>
               <PricingGridFeatureDescription>
                   Search, Organise and Annotate
               </PricingGridFeatureDescription>
@@ -219,11 +234,11 @@ const PricingSection = ({
                   <PricingGridCheck
                   />{' '}
               </ColThinker>
-              <ColPioneer>
+              {/*<ColPioneer>
                   {' '}
                   <PricingGridCheck
                   />{' '}
-              </ColPioneer>
+              </ColPioneer>*/}
               <Line />
 
               <PricingGridFeatureDescription>
@@ -238,11 +253,11 @@ const PricingSection = ({
                   <PricingGridCheck
                   />{' '}
               </ColThinker>
-              <ColPioneer>
+              {/*<ColPioneer>
                   {' '}
                   <PricingGridCheck
                   />{' '}
-              </ColPioneer>
+              </ColPioneer>*/}
               <Line />
 
               <PricingGridFeatureDescription>
@@ -253,11 +268,11 @@ const PricingSection = ({
                   <PricingGridCheck
                   />{' '}
               </ColThinker>
-              <ColPioneer>
+              {/*<ColPioneer>
                   {' '}
                   <PricingGridCheck
                   />{' '}
-              </ColPioneer>
+              </ColPioneer>*/}
               <Line />
 
               <PricingGridFeatureDescription>
@@ -277,13 +292,15 @@ const PricingSection = ({
                       automatic
                   </AdditionalText>
               </ColThinker>
-              <ColPioneer>
+              {/*<ColPioneer>
                   {' '}
                   <PricingGridCheck
                   />{' '}
-              </ColPioneer>
+              {/*</ColPioneer>*/}
+              </PricingGrid>
+              <PricingGridWide>
               <Line />
-
+              {/*
               <PricingGridFeatureDescription>
                   Early access to beta features
               </PricingGridFeatureDescription>
@@ -294,18 +311,20 @@ const PricingSection = ({
                   />{' '}
               </ColPioneer>
               <Line />
-
+              */}
               <PricingGridFeatureDescription>
-                  Sharing & Quoting
+                  Sharing & Quoting <strong>BETA</strong>
               </PricingGridFeatureDescription>
 
-              <ColPioneer>
+              <ColWide>
                   {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>
-              <Line />
+                  <BetaButton
+                    onClick={()=>window.open('https://worldbrain.io/beta')}
 
+                  >Get Early Access</BetaButton>
+                   {' '}
+              </ColWide>
+              {/*
               <PricingGridFeatureDescription
                   onClick={() =>
                       window.open('https://worldbrain.io/vision')
@@ -317,29 +336,8 @@ const PricingSection = ({
                   {' '}
                   <PricingGridCheck
                   />{' '}
-              </ColPioneer>
-
-              <ColExplorer>
-                <PriceBox>
-                    <PriceText> Free</PriceText>
-                </PriceBox>
-              </ColExplorer>
-
-              <ColThinker>
-                  <PriceBox>
-                      {state.monthly ? (<PriceText>3€</PriceText>):(<PriceText>30€</PriceText>)}
-                    <TrialTag>
-                        14 day trial
-                    </TrialTag>
-                  </PriceBox>
-              </ColThinker>
-
-              <ColPioneer>
-                  <PriceBox>
-                      {state.monthly ? (<PriceText>8€</PriceText>):(<PriceText>80€</PriceText>)}
-                   </PriceBox>
-              </ColPioneer>
-          </PricingGrid>
+              </ColPioneer>*/}
+              </PricingGridWide>
           <UpgradeInfo
             onClick={onClickDownload}
           >
