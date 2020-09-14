@@ -57,7 +57,7 @@ const Footer = ({
             <Box className="col subscribe" {...col}>
               <Heading content="Stay up to date!" {...titleStyle} />
               <p>Get a monthly updates on our progress and irregular announcements.</p>
-              <div className="Button"><a href="http://eepurl.com/bOHM05"><strong>Subscribe</strong></a></div>
+              <div className="Button"><a href="http://eepurl.com/hbZCg5"><strong>Subscribe</strong></a></div>
             </Box>
           </Box>
           {/* End of footer List column */}
