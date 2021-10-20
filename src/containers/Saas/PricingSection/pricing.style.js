@@ -6,7 +6,7 @@ import checkMark from '../../../img/check.svg';
 
 
 const PricingWrapper= styled.section`
-  padding: 40px 0 40px 0;
+  padding: 100px 0 40px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,6 +18,97 @@ const PricingWrapper= styled.section`
     flex-direction: column;
   }
 `;
+
+const PricingInfoBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 50px;
+    margin-bottom: 100px;
+`
+
+const PricingInfoTitle = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+`
+
+const PricingInfoSubTitle = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    text-align: center;
+`
+
+const PricingInfoAmount = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    margin: 20px 0px;
+    font-size: 40px;
+    font-color: #3a2f45;
+`
+
+const PricingInfoAmountBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    margin: 20px 0px;
+    font-size: 40px;
+    font-color: #3a2f45;
+`
+
+const PricingInfoAmountSubtext = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    margin: 20px 0px;
+    font-size: 20px;
+    font-color: #3a2f45;
+`
+
+
+const PricingInfoButtonBox = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: center
+    grid-auto-flow: column;
+    grid-gap: 10px;
+
+    .LearnMore {
+        background: none;
+        color: #5cd9a6;
+        border: 2px solid #5cd9a6; 
+    }
+
+    .Support {
+        border: 2px solid #5cd9a6; 
+    }
+
+`
+
+const PricingInfoButtonLearnMore = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+
+`
+
+const PricingInfoButtonUpgrade = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+
+`
+
 
 // const PricingTable = styled.div`
 //   border-radius: 5px;
@@ -734,5 +825,14 @@ export {
   PricingGridCheckWithText,
   UpgradeInfo,
   TrialTag,
+  PricingInfoTitle,
+  PricingInfoAmount,
+  PricingInfoButtonBox,
+  PricingInfoButtonLearnMore,
+  PricingInfoButtonUpgrade,
+  PricingInfoBox,
+  PricingInfoAmountSubtext,
+  PricingInfoAmountBox,
+  PricingInfoSubTitle,
 };
 export default PricingTable;

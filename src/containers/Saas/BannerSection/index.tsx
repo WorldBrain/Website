@@ -57,7 +57,7 @@ const BannerSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Download for free" onClick={onClickDownload} {...btnStyle} />
+      <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       <BrowserIcons>
         <Image {...browserImage} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
         <Image {...browserImage} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
@@ -74,14 +74,13 @@ const BannerSection = ({
                 title={
                   <Heading
                     as="h1"
-                    content="Bookmarking for
-                    power users"
+                    content="Make sense of what you read online"
                     {...title}
                   />
                 }
                 description={
                   <Text
-                    content="Annotate, organize and share what you find online."
+                    content="Curate, annotate and discuss the web. As individuals, teams and communities."
                     {...description}
                   />
                 }

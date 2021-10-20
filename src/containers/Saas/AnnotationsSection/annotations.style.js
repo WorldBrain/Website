@@ -60,7 +60,7 @@ const View = styled.div `
 const SectionObject = styled.div`
   top: 0;
   left: 0;
-  width: 60%;
+  width: 100%;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -86,8 +86,7 @@ const SectionObject = styled.div`
       diplay: flex;
       flex-direction: column;
       width: auto;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
+      box-shadow: none;
       @media (max-width: 767px) {
         position: relative;
         top: 0vw;

@@ -97,18 +97,6 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
             )}
         </li>
       ))}
-      <HoverMenu>
-          <Link href="#">Contribute
-            <ul className="sub-menu">
-              <li>
-                <Link href="https://opencollective.com/worldbrain" target="_blank">OpenCollective</Link>
-              </li>
-              <li>
-                <Link href="https://www.notion.so/worldbrain/Work-with-Worldbrain-io-Memex-4d79e20aa01d4b9e8b8c12d88bb1b4ad" target="_blank">Work with Memex</Link>
-              </li>
-            </ul>
-          </Link>
-      </HoverMenu>
       <li>
         <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       </li>

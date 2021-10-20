@@ -31,14 +31,14 @@ const StoreLocalSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Your Data and Attention is yours"
+                  content="'Venture Capital'-free tools that protect your data & attention"
                   {...title}
                 />
               }
               description={
                 <infoContainer>
                   <Text
-                    content="Memex is offline first & WorldBrain.io introduced a cap on investor returns so we don't exploit your attention and data to maximise investor profits."
+                    content=<p>WorldBrain.io is a <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>Steward Ownership company</a>. We have introduced a cap on investor returns so we don't exploit your attention and data to maximise investor profits. You can use Memex offline, and export your data anytime.</p>
                     {...description}
                   />
                   <Button title="Learn More" onClick={()=> window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle}/>

@@ -67,6 +67,9 @@ const QuoteLinkSectionWrapper = styled.section`
       width: 100%;
     }
   }
+  .tools {
+    width: 60%;
+  }
 `;
 
 const View = styled.div `
@@ -114,7 +117,6 @@ const SectionObject = styled.div`
   align-items: center;
   justify-content: flex-end;
   order: 0;
-  z-index: -1;
   @media (max-width: 850px) {
     width: 100%;
     position: static;
@@ -133,10 +135,10 @@ const SectionObject = styled.div`
       width: 100%;
       height: auto;
       align-items: flex-start;
-      box-shadow: none;
       diplay: flex;
       flex-direction: column;
       width: auto;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       @media (max-width: 767px) {
         position: relative;

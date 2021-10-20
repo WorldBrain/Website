@@ -68,17 +68,18 @@ const View = styled.div `
 `;
 
 const BannerWrapper = styled.section`
-  padding-top: 90px;
+  padding-top: 190px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 100px;
 
   @media (max-width: 990px) {
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     min-height: auto;
 
     & img {
@@ -93,7 +94,6 @@ const BannerWrapper = styled.section`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
   }
 
   @media (max-width: 576px) {

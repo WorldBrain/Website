@@ -10,7 +10,7 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FlexiblyOrganiseSectionWrapper, { SectionObject, View } from './flexibly.style';
-import ImageOne from '../../../img/organisation.gif';
+import ImageOne from '../../../img/search.png';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import browserImg from '../../../img/browser.png';
 
@@ -29,13 +29,13 @@ const FlexiblyOrganiseSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Flexibly organise what you find"
+                  content="Instantly save & recover content. Without upfront organisation."
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Use tags, collections and bookmarks."
+                  content=<p>Save websites and PDFs with one click, and find them again in milliseconds. <br/>Search with any word you remember in title or text, the time frame, domain or tags.<br/><br/>You don't need to but you can organise what you find with tags and spaces.</p>
                   {...description}
                 />
               }
@@ -65,7 +65,7 @@ FlexiblyOrganiseSection.defaultProps = {
   textArea: {
     width: ['50%', '50%', '40%'],
     pl: [0, 0, 130],
-    pr: [30, 30, 30],
+    pr: [30, 30, 50],
   },
   sectionWrapper: {
       maxWidth: 1000,

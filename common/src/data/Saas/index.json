@@ -94,18 +94,6 @@
           "text": "Vision"
         },
         {
-          "url": "https://www.notion.so/worldbrain/Release-Notes-Roadmap-262a367f7a2a48ff8115d2c71f700c14",
-          "text": "Roadmap"
-        },
-        {
-          "url": "https://OpenCollective.com/WorldBrain",
-          "text": "OpenCollective"
-        },
-        {
-          "url": "/wallofthanks",
-          "text": "Wall of Thanks"
-        },
-        {
           "url": "https://medium.com/@WorldBrain",
           "text": "Blog"
         },
@@ -151,7 +139,7 @@
     },
     {
       "label": "Community",
-      "path": "#communitySection",
+      "path": "https://community.worldbrain.io/",
       "offset": "70",
       "staticLink": true
     },

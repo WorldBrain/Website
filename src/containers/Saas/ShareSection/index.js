@@ -11,7 +11,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import ShareSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './share.style';
 
-import ImageOne from '../../../img/shareImg.png';
+import ImageOne from '../../../img/publish.png';
 import browserImg from '../../../img/browser.png';
 
 const ShareSection = ({
@@ -29,29 +29,17 @@ const ShareSection = ({
           <FeatureBlock
             title={
               <Heading
-                content="Share your research with the world"
+                content="Publish your research to the world"
                 {...title}
               />
             }
             description={
               <Text
-                content="Share collections of pages and your notes. Easily share sentence-level feedback about websites."
+                content= <p>Constantly asked for good resources about the topics your passionate about? Want to share your research or reading lists with your friends and followers? <br/><br/> Share spaces with websites, papers and notes with people, even if they don't have Memex installed. </p>
                 {...description}
               />
             }
           />
-          <ButtonGroup>
-              <PrimaryButton
-                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
-              >
-              Get Early Access
-              </PrimaryButton>
-              <SecondaryButton
-                onClick={()=>window.open('https://worldbrain.io/tutorials/memex-social')}
-              >
-              Learn More
-              </SecondaryButton>
-            </ButtonGroup>
         </Box>
         <SectionObject>
             <Card className="objectWrapper" {...imageWrapper}>

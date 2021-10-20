@@ -11,7 +11,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import FulltextSearchSectionWrapper, { SectionObject, View } from './fulltextSearch.style';
 
-import ImageOne from '../../../img/search.gif';
+import ImageOne from '../../../img/collaborate.png';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import browserImg from '../../../img/browser.png';
 
@@ -29,13 +29,13 @@ const FulltextSearchSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Easily find what you saved"
+                  content="Collaboratively curate, annotate and discuss the web"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Full-Text search your notes and websites you saved or annotated."
+                  content=<p>Running a reading group, need to do research or due diligence with your team, or have a shared reading list with your peers or fellow students? <br/><br/>Collaboratively curate lists of websites and annotations, and have discussions about specific sections in them.</p>
                   {...description}
                 />
               }

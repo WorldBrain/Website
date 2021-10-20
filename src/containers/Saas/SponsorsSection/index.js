@@ -34,7 +34,7 @@ const SponsorsSection = ({
             {...sectionTitle}
           />
         </Box>
-        <SubText> Thanks to <Link href="/wallofthanks">all our contributors, financial supporters and investors</Link> for making this journey possible.</SubText>
+        <SubText> Thanks to all our contributors, financial supporters and investors for making this journey possible.</SubText>
         <Box className="row" {...row}>
           <Link href="https://ec.europa.eu" target="_blank">
             <Image width="100px" src={EuComissionLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />

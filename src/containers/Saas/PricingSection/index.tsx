@@ -63,6 +63,15 @@ import PricingTable, {
   UpgradeInfo,
   TrialTag,
   ColWide,
+  PricingInfoBox,
+  PricingInfoTitle,
+  PricingInfoAmount,
+  PricingInfoButtonBox,
+  PricingInfoButtonLearnMore,
+  PricingInfoButtonUpgrade,
+  PricingInfoAmountSubtext,
+  PricingInfoAmountBox,
+  PricingInfoSubTitle,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -92,6 +101,18 @@ const onClickDownload = (e: Event) => {
   if (window) {
     window.open(downloadLink, '_blank');
   }
+}
+
+const learnMore = () => {
+   if (window) {
+      window.open('https://worldbrain.io/announcements/back-to-beta', '_blank');
+   }
+}
+
+const Support = () => {
+   if (window) {
+      window.open('https://worldbrain.io/links/pioneer-website', '_blank');
+   }
 }
 
 const PricingSection = ({
@@ -176,173 +197,30 @@ const PricingSection = ({
     });
   }
 
-
   return (
     <PricingWrapper>
      <Text {...secText} />
      <SubscriptionOptionsContainer>
-          <TimeButtonBox>
-              <TimeButtonLeft
-                active={state.monthly}
-                onClick={() =>
-                  setState({
-                    monthly: true,
-                    yearly: false,
-                  })
-                }
-              >
-                  Monthly
-              </TimeButtonLeft>
-              <TimeButtonRight
-                active={state.yearly}
-                onClick={() =>
-                  setState({
-                    monthly: false,
-                    yearly: true,
-                  })
-                }
-              >
-                  Yearly
-              </TimeButtonRight>
-          </TimeButtonBox>
-          <PricingGrid>
-              <PricingGridPlanSpacer />
-              <PricingGridPlanTitle> Explorer </PricingGridPlanTitle>
-              <PricingGridPlanTitle> Thinker </PricingGridPlanTitle>
-              {/*<PricingGridPlanTitle> Pioneer </PricingGridPlanTitle>*/}
-     
-              <ColExplorer>
-                <PriceBox>
-                    <PriceText> Free</PriceText>
-                </PriceBox>
-              </ColExplorer>
-
-              <ColThinker>
-                  <PriceBox>
-                      {state.monthly ? (<PriceText>3€</PriceText>):(<PriceText>30€</PriceText>)}
-                  </PriceBox>
-              </ColThinker>
-              <PricingGridFeatureDescription>
-                  Search, Organise and Annotate
-              </PricingGridFeatureDescription>
-              <ColExplorer>
-                  {' '}
-                  <PricingGridCheck />{' '}
-              </ColExplorer>
-              <ColThinker>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColThinker>
-              {/*<ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>*/}
-              <Line />
-
-              <PricingGridFeatureDescription>
-                  Mobile App for iOS and Android
-              </PricingGridFeatureDescription>
-              <ColExplorer>
-                  {' '}
-                  <PricingGridCheck />{' '}
-              </ColExplorer>
-              <ColThinker>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColThinker>
-              {/*<ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>*/}
-              <Line />
-
-              <PricingGridFeatureDescription>
-                  Sync between mobile and desktop
-              </PricingGridFeatureDescription>
-              <ColThinker>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColThinker>
-              {/*<ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>*/}
-              <Line />
-
-              <PricingGridFeatureDescription>
-                  Backup locally or your favourite cloud
-              </PricingGridFeatureDescription>
-              <ColExplorer>
-                  <PricingGridCheckWithText
-                  />
-                  <AdditionalText>
-                      manual
-                  </AdditionalText>
-              </ColExplorer>
-              <ColThinker>
-                  <PricingGridCheckWithText
-                  />
-                  <AdditionalText>
-                      automatic
-                  </AdditionalText>
-              </ColThinker>
-              {/*<ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              {/*</ColPioneer>*/}
-              </PricingGrid>
-              <PricingGridWide>
-              <Line />
-              {/*
-              <PricingGridFeatureDescription>
-                  Early access to beta features
-              </PricingGridFeatureDescription>
-
-              <ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>
-              <Line />
-              */}
-              <PricingGridFeatureDescription>
-                  Sharing & Quoting <strong>BETA</strong>
-              </PricingGridFeatureDescription>
-
-              <ColWide>
-                  {' '}
-                  <BetaButton
-                    onClick={()=>window.open('https://worldbrain.io/beta')}
-
-                  >Get Early Access</BetaButton>
-                   {' '}
-              </ColWide>
-              {/*
-              <PricingGridFeatureDescription
-                  onClick={() =>
-                      window.open('https://worldbrain.io/vision')
-                  }
-              >
-                  Support the development of an<LinkSpan> ethical business</LinkSpan>{' '}
-              </PricingGridFeatureDescription>
-              <ColPioneer>
-                  {' '}
-                  <PricingGridCheck
-                  />{' '}
-              </ColPioneer>*/}
-              </PricingGridWide>
-          <UpgradeInfo
-            onClick={onClickDownload}
-          >
-              Upgrade via the Memex Extension. 
-          </UpgradeInfo>
+         <PricingInfoBox>
+           <PricingInfoTitle>
+               Memex is in Beta & Free for now.  
+           </PricingInfoTitle>
+           <PricingInfoSubTitle>
+               Support our development and a Venture Capital free infrastructure to get 60% off the upcoming premium subscription for 3 years. 
+           </PricingInfoSubTitle>
+           <PricingInfoAmountBox>
+             <PricingInfoAmount>
+               $150
+             </PricingInfoAmount>
+             <PricingInfoAmountSubtext>
+               /3 years
+             </PricingInfoAmountSubtext>
+           </PricingInfoAmountBox>
+           <PricingInfoButtonBox>
+             <Button title="Learn More" onClick={learnMore} className="LearnMore"/>
+             <Button title="Support" onClick={Support} className="Support"/>
+           </PricingInfoButtonBox>
+         </PricingInfoBox>
       </SubscriptionOptionsContainer>
     </PricingWrapper>
   );

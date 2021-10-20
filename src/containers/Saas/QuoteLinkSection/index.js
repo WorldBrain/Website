@@ -11,7 +11,8 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import QuoteLinkSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './quoteLink.style';
 
-import ImageOne from '../../../img/QuoteLink.png';
+import ImageOne from '../../../img/integrate.png';
+import Tools from '../../../img/tools.png';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import browserImg from '../../../img/browser.png';
 
@@ -30,33 +31,23 @@ const QuoteLinkSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Quote sections of websites"
+                  content="Integrates with your favorite tools and workflows"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Share links to highlights and notes to point people to relevant sections."
+                  content="Automatically sync annotations to your favourite note-taking app via Readwise or our customisable TextExporter, allowing you to freely design how to copy-paste search results, pages and annotations from Memex into your custom workflow. "
                   {...description}
                 />
               }
             />
-            <ButtonGroup {...buttonGroup}>
-              <PrimaryButton
-                onClick={()=>window.open('https://worldbrain.io/request-early-access')}
-              >
-              Get Early Access
-              </PrimaryButton>
-              <SecondaryButton
-                onClick={()=>window.open('https://worldbrain.io/tutorials/memex-social')}
-              >
-              Learn More
-              </SecondaryButton>
-            </ButtonGroup>
+            <Image src={Tools} className="tools"/>
           </Box>
         <SectionObject>
           <Card className="objectWrapper" {...imageWrapper}>
             <Card className="dashboardWrapper">
+              <Image src={browserImg} className="browser"/>
               <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
           </Card>

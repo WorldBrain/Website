@@ -11,7 +11,7 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import AnnotationsSectionWrapper, { SectionObject, View } from './annotations.style';
 
-import ImageOne from '../../../img/annotate.gif';
+import ImageOne from '../../../img/annotate.png';
 import browserImg from '../../../img/browser.png';
 
 const AnnotationsSection = ({
@@ -29,13 +29,13 @@ const AnnotationsSection = ({
           <FeatureBlock
             title={
               <Heading
-                content="Add your thoughts as you go"
+                content="Capture your thoughts without context switches"
                 {...title}
               />
             }
             description={
               <Text
-                content="Make Highlights and Notes directly on the websites you are looking at."
+                content=<p>No more copy-pasting important sections into your scattered notes. <br/><br/>Highlight & annotate websites on all your devices.</p>
                 {...description}
               />
             }
@@ -44,7 +44,6 @@ const AnnotationsSection = ({
         <SectionObject>
             <Card className="objectWrapper" {...imageWrapper}>
               <Card className="dashboardWrapper">
-                <Image src={browserImg} className="browser"/>
                 <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
               </Card>
             </Card>
@@ -81,6 +80,7 @@ AnnotationsSection.defaultProps = {
     mt: '20px',
     maxWidth: ['100%', '100%', '100%', '440px', '440px'],
     lineHeight: '1.5',
+    whiteSpace: 'nowrap',
   },
   description: {
     fontSize: '1.125rem',

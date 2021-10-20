@@ -10,7 +10,6 @@ import FeatureSection from '../../containers/Saas/FeatureSection';
 import FulltextSearchSection from '../../containers/Saas/FulltextSearchSection';
 import Footer from '../../containers/Saas/Footer';
 import PricingSection from '../../containers/Saas/PricingSection';
-import UpdateSection from '../../containers/Saas/UpdateSection';
 import ImportSection from '../../containers/Saas/ImportSection';
 import SponsorsSection from '../../containers/Saas/SponsorsSection';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
@@ -45,7 +44,6 @@ export default class HomePage extends Page {
           <ResetCSS />
           <GlobalStyle />
           <ContentWrapper>
-            <UpdateSection/>
             <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
               <DrawerProvider>
                 <Navbar user={auth.user} authService={auth} />
@@ -57,13 +55,10 @@ export default class HomePage extends Page {
             <FulltextSearchSection />
             <ShareSection />
             <QuoteLinkSection />
-            <CopyPasterSection/>
-            <MobileSection />
             <StoreLocalSection />
             <ImportSection />
             <View id="upgrade"/>
             <PricingSection />
-            <CommunitySection />
             <SponsorsSection />
             <Footer />
           </ContentWrapper>

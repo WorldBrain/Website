@@ -104,8 +104,6 @@ const SectionObject = styled.div`
         height: auto;
       }
       .banner-img {
-          border-bottom-right-radius: 10px;
-          border-bottom-left-radius: 10px;
           max-width: 100%;
           height: auto;
           width: 100%;
