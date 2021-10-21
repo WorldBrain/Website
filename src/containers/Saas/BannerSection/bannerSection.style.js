@@ -5,8 +5,8 @@ import BannerBG from 'common/src/assets/image/saas/saas-banner.jpg';
 const BrowserIcons = styled.div`
   display: flex;
   justify-content: center;
+  cursor: pointer;
   .browser-icon {
-    width: 30px;
     height: 30px;
     margin: 0 12px;
     @media (max-width: 990px) {

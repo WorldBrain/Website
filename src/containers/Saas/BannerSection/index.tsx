@@ -19,6 +19,8 @@ import BannerObject2 from '../../../img/bannerImg.png';
 import ChromeIcon from '../../../img/logos/logo-chrome.svg';
 import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
 import BraveIcon from '../../../img/logos/logo-brave.svg';
+import AppleIcon from '../../../img/logos/logo-apple.svg';
+import AndroidIcon from '../../../img/logos/logo-android.svg';
 
 const onClickDownload = (e: Event) => {
   e.preventDefault();
@@ -45,6 +47,22 @@ const onClickDownload = (e: Event) => {
   }
 }
 
+const downloadChrome = () => {
+  window.open('https://chrome.google.com/webstore/detail/abkfbakhjpmblaafnpgjppbmioombali', '_blank');
+}
+
+const downloadFirefox = () => {
+  window.open('https://addons.mozilla.org/en-US/firefox/addon/worldbrain/', '_blank');
+}
+
+const downloadIOS = () => {
+  window.open('https://apps.apple.com/us/app/memex-go/id1471860331', '_blank');
+}
+
+const downloadAndroid = () => {
+  window.open('https://play.google.com/store/apps/details?id=io.worldbrain&hl=en&gl=US', '_blank');
+}
+
 const BannerSection = ({
   row,
   col,
@@ -59,9 +77,11 @@ const BannerSection = ({
     <Fragment>
       <Button title="Download" onClick={onClickDownload} {...btnStyle} />
       <BrowserIcons>
-        <Image {...browserImage} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
-        <Image {...browserImage} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
-        <Image {...browserImage} src={BraveIcon} className="browser-icon" alt="Brave logo"/>
+        <Image {...browserImage} onClick={downloadChrome} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
+        <Image {...browserImage} onClick={downloadFirefox} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
+        <Image {...browserImage} onClick={downloadChrome} src={BraveIcon} className="browser-icon" alt="Brave logo"/>
+        <Image {...browserImage} onClick={downloadIOS} src={AppleIcon} className="browser-icon" alt="Brave logo"/>
+        <Image {...browserImage} onClick={downloadAndroid} src={AndroidIcon} className="browser-icon" alt="Brave logo"/>
       </BrowserIcons>
     </Fragment>
   );
