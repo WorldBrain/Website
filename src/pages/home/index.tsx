@@ -14,7 +14,8 @@ import ImportSection from '../../containers/Saas/ImportSection';
 import SponsorsSection from '../../containers/Saas/SponsorsSection';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 import FlexiblyOrganiseSection from '../../containers/Saas/FlexiblyOrganiseSection';
-import StoreLocalSection from '../../containers/StoreLocalSection';
+import StoreLocalSection from '../../containers/SaaS/StoreLocalSection';
+import StewardOwnershipSection from '../../containers/SaaS/StewardOwnershipSection';
 import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
 import ShareSection from '../../containers/Saas/ShareSection';
 import CopyPasterSection from '../../containers/Saas/CopyPasterSection';
@@ -56,6 +57,7 @@ export default class HomePage extends Page {
             <ShareSection />
             <QuoteLinkSection />
             <StoreLocalSection />
+            <StewardOwnershipSection />
             <ImportSection />
             <View id="upgrade"/>
             <PricingSection />

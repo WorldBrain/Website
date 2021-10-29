@@ -64,6 +64,18 @@ const View = styled.div `
         font-size: 1.5rem;
       }
     }
+
+    @media (max-width: 576px) {
+      padding: 0%;
+
+      .objectWrapper {
+        padding: 0px;
+        
+        img {
+          padding: 0px;
+        }
+      }
+    }
   }
 `;
 
@@ -98,6 +110,10 @@ const BannerWrapper = styled.section`
 
   @media (max-width: 576px) {
     text-align: center;
+
+    & img {
+      margin: 0px;
+    }
   }
 
   .row {
@@ -154,6 +170,17 @@ const BannerObject = styled.div`
   @media (max-width: 576px) {
     width: 100%;
     position: static;
+
+    .objectWrapper {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+
+      & img {
+        max-width: 100%;
+        margin-top: 0px;
+      }
+    }
   }
 
   .objectWrapper {
@@ -163,12 +190,14 @@ const BannerObject = styled.div`
 
     & img {
       max-width: 100%;
+      margin-top: 150px;
     }
 
-    @media (max-width: 1000px) {
-      }
-    .banner-bg {
-      @media (max-width: 1000px) {
+    @media (max-width: 576px) {
+      img {
+          max-width: 100%;
+          margin-top: 50px;
+        }
       }
     }
 

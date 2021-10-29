@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const StoreLocalSectionWrapper = styled.section`
+const StewardOwnershipSectionWrapper = styled.section`
   min-height: 630px;
   display: flex;
   align-items: center;
@@ -157,4 +157,4 @@ const SectionObject = styled.div`
 
 export { SectionObject, View, FloatingImage};
 
-export default StoreLocalSectionWrapper;
+export default StewardOwnershipSectionWrapper;

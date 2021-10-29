@@ -77,7 +77,8 @@ QuoteLinkSection.defaultProps = {
   },
   imageWrapper: {
     boxShadow: 'none',
-    mr: [20, 20, 20, 20],
+    mt: [20, 0, 0, 0],
+    mr: [0, 20, 20, 20],
   },
   title: {
     fontSize: ['2rem', '1.6rem', '1.5rem'],

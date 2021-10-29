@@ -61,6 +61,13 @@ const QuoteLinkSectionWrapper = styled.section`
     text-align: center;
     margin-bottom: 50px;
     margin-top: 100px;
+
+    .tools {
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      margin: -15px 0 10px 0;
+    }
     
     .text-container {
       order: 0;
@@ -90,6 +97,9 @@ const View = styled.div `
         margin: 0px;
         padding: 0px;
         width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
 
       & .textArea {

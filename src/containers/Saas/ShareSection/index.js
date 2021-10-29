@@ -71,7 +71,7 @@ ShareSection.defaultProps = {
   },
   imageWrapper: {
     boxShadow: 'none',
-    ml: [20, 20, 20, 20],
+    ml: [0, 20, 20, 20],
   },
   title: {
     fontSize: ['2rem', '1.6rem', '1.5rem'],

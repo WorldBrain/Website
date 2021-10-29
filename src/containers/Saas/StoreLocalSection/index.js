@@ -10,9 +10,9 @@ import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import StoreLocalSectionWrapper, { SectionObject, View, FloatingImage, infoContainer } from './storeLocal.style';
-import ImageOne from '../../img/search.gif';
+import ImageOne from '../../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
-import privacyImage from '../../img/privacy.svg';
+import planeImg from '../../../img/plane.png';
 
 const StoreLocalSection = ({
   title,
@@ -31,24 +31,23 @@ const StoreLocalSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="'Venture Capital'-free tools that protect your data & attention"
+                  content="Use Memex offline and across devices"
                   {...title}
                 />
               }
               description={
                 <infoContainer>
                   <Text
-                    content=<p>WorldBrain.io is a <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>Steward Ownership company</a>. We have introduced a cap on investor returns so we don't exploit your attention and data to maximise investor profits. You can use Memex offline, and export your data anytime.</p>
+                    content=<p>Your data is stored, searchable and exportable locally. <br/> Memex automatically backs up and syncs between devices.</p>
                     {...description}
                   />
-                  <Button title="Learn More" onClick={()=> window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle}/>
                 </infoContainer>
               }
             />
           </Box>
           <SectionObject>
             <FloatingImage className="floatingImage">
-                <Image src={privacyImage}/>
+                <Image src={planeImg}/>
             </FloatingImage>
           </SectionObject>
       </View>
