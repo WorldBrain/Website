@@ -9,7 +9,7 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import StewardOwnershipSectionWrapper, { SectionObject, View, FloatingImage, infoContainer } from './StewardOwnership.style';
+import StewardOwnershipSectionWrapper, { SectionObject, View, FloatingImage, infoContainer } from './stewardOwnership.style';
 import ImageOne from '../../../img/search.gif';
 import ImageBg from 'common/src/assets/image/saas/visitor_bg.png';
 import privacyImage from '../../../img/privacy.svg';
