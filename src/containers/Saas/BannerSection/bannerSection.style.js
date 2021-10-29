@@ -8,6 +8,7 @@ const BrowserIcons = styled.div`
   cursor: pointer;
   .browser-icon {
     height: 30px;
+    width: auto;
     margin: 0 12px;
     @media (max-width: 990px) {
       flex-direction: column;
