@@ -98,7 +98,7 @@
           "text": "Blog"
         },
         {
-          "url": "https://community.worldbrain.io/",
+          "url": "https://community.memex.social",
           "text": "Community"
         },
         {
@@ -140,7 +140,7 @@
     },
     {
       "label": "Community",
-      "path": "https://community.worldbrain.io/",
+      "path": "http://community.memex.social/",
       "offset": "70",
       "staticLink": true
     },
