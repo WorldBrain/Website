@@ -6,20 +6,30 @@ import Link from 'reusecore/src/elements/Link';
 import Box from 'reusecore/src/elements/Box';
 import Heading from 'reusecore/src/elements/Heading';
 import Image from 'reusecore/src/elements/Image';
-import {SubText, Header2, MainHeader} from './wallofthanks.style';
+import {SubText, Header2, MainHeader} from './tutorials.style';
 import EuComissionLogo from '../../img/logos/logo-eu.png';
 import LedgerLogo from '../../img/logos/logo-ledger.png';
 import DigitalScienceLogo from '../../img/logos/logo-digitalscience.png';
 import MozillaLogo from '../../img/logos/logo-mozilla.svg';
+import styled from 'styled-components';
 
 
-export default class ImprintPage extends Page {
+const NotionFrame = styled.iframe`
+    width: 100%;
+    height: 10000px;
+    overflow-y: none;
+    margin-top: -100px;
+    border: none; 
+`
+
+export default class TutorialsPage extends Page {
 
   render() {
-
     return (
-      <DefaultPageLayout pageTitle="Wall of Thanks">
-        <Container>
+      <DefaultPageLayout pageTitle="Tutorials">
+        <NotionFrame  src="https://tutorials.memex.social/"/>
+        {/*<Container>
+
           <MainHeader>Wall of Thanks 🙏 🎉 ⭐️</MainHeader>
           <Header2>Code Contributors</Header2>
               <SubText>Memex and StorexHub would not be possible without our contributors. Visit us on <a href="https://github.com/worldbrain" target="_blank">GitHub</a>.</SubText>
@@ -43,7 +53,7 @@ export default class ImprintPage extends Page {
               <Image height="50px" src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
             </Link>
           </Box>
-        </Container>
+        </Container>*/}  
       </DefaultPageLayout>
     )
   }

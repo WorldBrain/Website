@@ -134,8 +134,9 @@
     },
     {
       "label": "Pricing",
-      "path": "#upgrade",
-      "offset": "70"
+      "path": "/#upgrade",
+      "offset": "70",
+      "staticLink": true
     },
     {
       "label": "Community",
@@ -144,14 +145,14 @@
       "staticLink": true
     },
     {
-      "label": "Blog",
-      "path": "https://medium.com/@WorldBrain",
+      "label": "Tutorials",
+      "path": "/tutorials",
       "offset": "70",
       "staticLink": true
     },
     {
-      "label": "GitHub",
-      "path": "https://github.com/WorldBrain",
+      "label": "Blog",
+      "path": "https://medium.com/@WorldBrain",
       "offset": "70",
       "staticLink": true
     }
