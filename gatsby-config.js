@@ -2,11 +2,11 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    defaultTitle: `Memex by WorldBrain`,
+    defaultTitle: `Memex`,
     titleTemplate: ``,
     defaultDescription: `Eliminate time spent bookmarking, retracing steps to recall a webpage, or copy-pasting notes into scattered documents.`,
     twitterUsername: `@worldbrain`,
-    siteUrl: `https://worldbrain.io/`,
+    siteUrl: `https://memex.social`,
     defaultImage: `https://worldbrain.io/icons/icon-270x270.png`,
   },
   pathPrefix: '/gatsby-starter-blog',
