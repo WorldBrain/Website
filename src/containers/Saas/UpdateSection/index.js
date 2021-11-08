@@ -29,7 +29,7 @@ const UpdateSection = ({
         <Box {...containerBox}>
           <Text 
             {...sectionTitle}
-            content="Memex.Social is now in Beta"
+            content="Memex.Garden is now in Beta"
           />
           <ButtonGroup>
             <PrimaryButton

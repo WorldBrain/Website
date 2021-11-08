@@ -27,7 +27,7 @@ export default class TutorialsPage extends Page {
   render() {
     return (
       <DefaultPageLayout pageTitle="Tutorials">
-        <NotionFrame allow="clipboard-read; clipboard-write" src="https://tutorials.memex.social/"/>
+        <NotionFrame allow="clipboard-read; clipboard-write" src="https://tutorials.memex.garden/"/>
         {/*<Container>
 
           <MainHeader>Wall of Thanks 🙏 🎉 ⭐️</MainHeader>
