@@ -90,11 +90,11 @@
       "title": "About",
       "menuItems": [
         {
-          "url": "https://medium.com/@WorldBrain/where-we-are-heading-with-worldbrain-65f244f540b8",
+          "url": "https://medium.com/@Memex/where-we-are-heading-with-worldbrain-65f244f540b8",
           "text": "Vision"
         },
         {
-          "url": "https://medium.com/@WorldBrain",
+          "url": "https://medium.com/@Memex",
           "text": "Blog"
         },
         {
@@ -124,7 +124,7 @@
   "MENU_ITEMS": [
     {
       "label": "Vision",
-      "path": "https://medium.com/@WorldBrain/vision-mission-values-2020-update-d70aa35a638",
+      "path": "https://medium.com/@Memex/vision-mission-values-2020-update-d70aa35a638",
       "offset": "70",
       "staticLink": true
     },
@@ -148,7 +148,7 @@
     },
     {
       "label": "Blog",
-      "path": "https://medium.com/@WorldBrain",
+      "path": "https://medium.com/@Medium",
       "offset": "70",
       "staticLink": true
     }
