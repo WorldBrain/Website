@@ -6,7 +6,7 @@ import checkMark from '../../../img/check.svg';
 
 
 const PricingWrapper= styled.section`
-  padding: 100px 0 40px 0;
+  padding: 100px 0 200px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,11 +22,28 @@ const PricingWrapper= styled.section`
 const PricingInfoBox = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: space-between;
     flex-direction: column;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 5px 2px rgb(0 0 0 / 10%);
     padding: 50px;
-    margin-bottom: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 380px;
+
+    &:hover {
+        background: #f0f0f080;
+    }
+`
+
+const PricingBetaTitle = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
 `
 
 const PricingInfoTitle = styled.div`
@@ -35,15 +52,18 @@ const PricingInfoTitle = styled.div`
     align-items: center
     font-weight: bold;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 5px;
 `
 
-const PricingInfoSubTitle = styled.div`
-    display: flex;
+const PricingInfoSubTitle = styled.span`
+    display: inline-block;
     justify-content: center;
     align-items: center
     text-align: center;
+    margin-bottom: 80px;
+    font-size: 18px;
+    color: #757582;
 `
 
 const PricingInfoAmount = styled.div`
@@ -53,24 +73,25 @@ const PricingInfoAmount = styled.div`
     margin: 20px 0px;
     font-size: 40px;
     font-color: #3a2f45;
+    font-weight: bold;
 `
 
 const PricingInfoAmountBox = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center
-    margin: 20px 0px;
     font-size: 40px;
-    font-color: #3a2f45;
+    color: #3a2f45;
+    flex-direction: column;
 `
 
 const PricingInfoAmountSubtext = styled.span`
     display: flex;
     justify-content: center;
     align-items: center
-    margin: 20px 0px;
+    margin: 0px 0px 0px 0;
     font-size: 20px;
-    font-color: #3a2f45;
+    color: #757582;
 `
 
 
@@ -80,33 +101,60 @@ const PricingInfoButtonBox = styled.div`
     align-items: center
     grid-auto-flow: column;
     grid-gap: 10px;
+    margin-top: 5px;
 
     .LearnMore {
         background: none;
         color: #5cd9a6;
         border: 2px solid #5cd9a6; 
+        padding: 3px 15px;
+        
+        &:hover {
+            background: #5cd9a6;
+            color: white;
+        }
     }
 
     .Support {
         border: 2px solid #5cd9a6; 
     }
-
 `
 
 const PricingInfoButtonLearnMore = styled.div`
     display: flex;
     justify-content: center;
     align-items: center
-
-
 `
 
 const PricingInfoButtonUpgrade = styled.div`
     display: flex;
     justify-content: center;
     align-items: center
+`
 
+const PricingInfoDiscountPercent = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    font-size: 18px;
+    color: #5671cf;
+    font-weight: 600;
+`
 
+const PricingInfoBottom = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    flex-direction: column;
+`
+
+const EarlyBirdDisclaimer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center
+    color: #5671cf;
+    margin-top: 20px;
+    flex-direction: column;
 `
 
 
@@ -282,11 +330,18 @@ const UpperSection = styled.div`
 // `;
 
 const SubscriptionOptionsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     align-items: center;
     width: 80%;
     max-width: 800px;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+        grid-auto-flow: row;
+    }
 `
 
 const PricingTable = styled.div`
@@ -834,5 +889,9 @@ export {
   PricingInfoAmountSubtext,
   PricingInfoAmountBox,
   PricingInfoSubTitle,
+  EarlyBirdDisclaimer,
+  PricingInfoBottom,
+  PricingInfoDiscountPercent,
+  PricingBetaTitle,
 };
 export default PricingTable;

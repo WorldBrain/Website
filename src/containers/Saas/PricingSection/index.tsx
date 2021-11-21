@@ -12,9 +12,6 @@ import Container from 'common/src/components/UI/Container';
 import { detect } from 'detect-browser';
 // import Input from 'reusecore/src/elements/Input';
 
-const chargeBeeScriptSource = 'https://js.chargebee.com/v2/chargebee.js'
-import moneyback from '../../../img/moneyback.svg'
-
 import PricingTable, {
   PricingHead,
   PricingPrice,
@@ -72,6 +69,10 @@ import PricingTable, {
   PricingInfoAmountSubtext,
   PricingInfoAmountBox,
   PricingInfoSubTitle,
+  EarlyBirdDisclaimer,
+  PricingInfoBottom,
+  PricingInfoDiscountPercent,
+  PricingBetaTitle,
 } from './pricing.style';
 
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
@@ -105,14 +106,20 @@ const onClickDownload = (e: Event) => {
 
 const learnMore = () => {
    if (window) {
-      window.open('https://worldbrain.io/announcements/back-to-beta', '_blank');
+      window.open('https://links.memex.garden/announcements/back-to-beta', '_blank');
    }
 }
 
-const Support = () => {
+const SupportOneTime = () => {
    if (window) {
-      window.open('https://worldbrain.io/links/pioneer-website', '_blank');
+      window.open('https://links.memex.garden/early-bird-one-time', '_blank');
    }
+}
+
+const SupportMonthly = () => {
+  if (window) {
+     window.open('https://links.memex.garden/early-bird-monthly', '_blank');
+  }
 }
 
 const PricingSection = ({
@@ -200,28 +207,60 @@ const PricingSection = ({
   return (
     <PricingWrapper>
      <Text {...secText} />
-     <SubscriptionOptionsContainer>
-         <PricingInfoBox>
-           <PricingInfoTitle>
+          <PricingBetaTitle>
                Memex is in Beta & Free for now.  
-           </PricingInfoTitle>
+           </PricingBetaTitle>
            <PricingInfoSubTitle>
-               Support our development and a Venture Capital free infrastructure to get 60% off the upcoming premium subscription for 3 years. 
-           </PricingInfoSubTitle>
+           Support our development and a <a href="">Venture Capital free service</a> <br/> & get early bird discounts on our upcoming premium subscriptions.
+          </PricingInfoSubTitle>
+     <SubscriptionOptionsContainer>
+         <PricingInfoBox
+          onClick={SupportMonthly}
+         >
+           <PricingInfoAmountBox>
+              <PricingInfoTitle>
+                Monthly Early Bird
+              </PricingInfoTitle>
+             <PricingInfoAmount>
+               $10
+             </PricingInfoAmount>
+             <PricingInfoBottom>
+             <PricingInfoAmountSubtext>
+               get $15 credits / month
+             </PricingInfoAmountSubtext>
+             <PricingInfoDiscountPercent>
+                33% discount*
+             </PricingInfoDiscountPercent>
+             </PricingInfoBottom>
+           </PricingInfoAmountBox>
+         </PricingInfoBox>
+         <PricingInfoBox
+            onClick={SupportOneTime} className="Support"
+         >
+            <PricingInfoTitle>
+              One-Time Early Bird
+            </PricingInfoTitle>
            <PricingInfoAmountBox>
              <PricingInfoAmount>
-               $150
+                $150
              </PricingInfoAmount>
-             <PricingInfoAmountSubtext>
-               /3 years
-             </PricingInfoAmountSubtext>
+             <PricingInfoBottom>
+              <PricingInfoAmountSubtext>
+                  get $360 credits
+              </PricingInfoAmountSubtext>
+                <PricingInfoDiscountPercent>
+                    58% discount*
+                </PricingInfoDiscountPercent>
+             </PricingInfoBottom>
            </PricingInfoAmountBox>
-           <PricingInfoButtonBox>
-             <Button title="Learn More" onClick={learnMore} className="LearnMore"/>
-             <Button title="Support" onClick={Support} className="Support"/>
-           </PricingInfoButtonBox>
          </PricingInfoBox>
       </SubscriptionOptionsContainer>
+      <EarlyBirdDisclaimer>
+        *subscriptions will range from $5-$20/month and launch in early 2022
+        <PricingInfoButtonBox>
+             <Button title="Learn More" onClick={learnMore} className="LearnMore"/>
+        </PricingInfoButtonBox>
+      </EarlyBirdDisclaimer>
     </PricingWrapper>
   );
 };
