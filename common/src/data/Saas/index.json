@@ -90,14 +90,6 @@
       "title": "About",
       "menuItems": [
         {
-          "url": "https://medium.com/@Memex/where-we-are-heading-with-worldbrain-65f244f540b8",
-          "text": "Vision"
-        },
-        {
-          "url": "https://medium.com/@Memex",
-          "text": "Blog"
-        },
-        {
           "url": "https://community.memex.social",
           "text": "Community"
         }
@@ -123,12 +115,6 @@
   ],
   "MENU_ITEMS": [
     {
-      "label": "Vision",
-      "path": "https://medium.com/@Memex/vision-mission-values-2020-update-d70aa35a638",
-      "offset": "70",
-      "staticLink": true
-    },
-    {
       "label": "Pricing",
       "path": "/#upgrade",
       "offset": "70",
@@ -143,12 +129,6 @@
     {
       "label": "Tutorials",
       "path": "/tutorials",
-      "offset": "70",
-      "staticLink": true
-    },
-    {
-      "label": "Blog",
-      "path": "https://medium.com/@Medium",
       "offset": "70",
       "staticLink": true
     }
