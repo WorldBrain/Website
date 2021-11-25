@@ -186,13 +186,14 @@ export default class TutorialsPage extends Page {
               </TweetBox>
             </MultiTweetBox>
               <Paragraph>We see the root cause of extractive business practices in the uncapped profit expectations of Venture Capital and equity based reward models. They create strong profit maximisation incentives that after a while make every company do things for profit and not people.</Paragraph>
+              <Paragraph>Ultimately we asked ourselves the question: What is the biggest lever we have on the long-term impact and success of our mission, and to protect users' privacy, build better service and stay a net-positive actor in the knowledge ecosystem. </Paragraph>
               <Paragraph>To prevent Memex' purpose being coopted by profit-maximisation incentives, while still striving to be a profitable business, we use a model called Steward Ownership. It introduces 2 principles into the reward structure of our company:</Paragraph>
               <OrderedList>
                   <li><strong>Investor and team rewards are capped.</strong>
                     <br/>
                     Capping individual returns removes the greed for more value extraction, which usually ends up in worse services, lock-ins or social/environmental damages.
                     <br/>The key questions for every team member and investor "How much is enough for you to feel save, fairly rewarded for your efforts, have opportunities and not have to worry about money anymore?".
-
+                    <br/>As an example: The last round of investors got a 3X return on their investment, and we commmit on using up to 25% of our profits for the repayment (increasing with our profitability).
                   </li>
                   <li><strong>The company and its equity can never be sold.</strong>
                     <br/>This prevents the purpose of the company being coopted once the company is bought by other companies with different values and purposes, or from internal politics and pressure to sell the company afterall. 
@@ -200,9 +201,6 @@ export default class TutorialsPage extends Page {
                   </li>
               </OrderedList>
               <Paragraph>Because of the capped investor returns and profit payout, Memex continuously has spare profits and with that the economic freedom to do things like building more open tools, build features that only cost us money but make the tool effectively better, without lowering the total returns of investors. </Paragraph>
-              <Paragraph>Ultimately we asked ourselves the question: What are the most critical values to keep that have the most impact long-term on the success of our mission, and on the other values too. </Paragraph>
-              <Paragraph>We are convinced from the start that the economic incentives we set up in our company will play a crucial role in the way we run this business and protect user's privacy, build better service and stay a net-positive actor in the knowledge ecosystem. 
-              <br/>That's what we have the highest importance to protect: Being non-tradeable and keeping investor returns capped. </Paragraph>
               <Paragraph>Raising money as a Steward Owned company made our fundraising efforts extremely difficult. But we made it! So far raised 250k from investors that all have their cap. It took a while and is an expensive raise, as we have to pay this money (+ a multiplier) back in cash in the future. But we think its worth it and most important for the future of Memex being an open and privacy protecting tool.</Paragraph>
               <Paragraph>Currently we give users an early bird discount where you can support us with $10 monthly or $150 one-time. Once we launch our subscriptions in early 2022, you'll get $15 in credits for each $10 you supported us with, or $360 for the $150 support.
               <br/><a href='https://links.memex.garden/announcements/pioneer-plan'>Here</a> you can find out more about how to support us.</Paragraph>
