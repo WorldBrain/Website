@@ -99,7 +99,7 @@ const infoContainer = styled.div`
 
 const FloatingImage = styled.div `
     animation-name:  ${float}, scale-in-center;
-    animation-duration: 6s, 1s;
+    animation-duration: 8s, 1s;
     animation-timing-function: ease-in-out, ease;
     animation-iteration-count: infinite, 1;
     width: 210px;

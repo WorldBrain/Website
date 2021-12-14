@@ -37,7 +37,7 @@ const QuoteLinkSection = ({
               }
               description={
                 <Text
-                  content="Automatically sync annotations to your favourite note-taking app via Readwise or our customisable TextExporter, allowing you to freely design how to copy-paste search results, pages and annotations from Memex into your custom workflow. "
+                  content=<p>Automatically sync annotations to your favourite note-taking app via Readwise. <br/> Use our customisable TextExporter to freely design how to copy-paste search results, pages and annotations from Memex into any other app. </p>
                   {...description}
                 />
               }

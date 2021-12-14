@@ -211,7 +211,7 @@ const PricingSection = ({
                Memex is in Beta & Free for now.  
            </PricingBetaTitle>
            <PricingInfoSubTitle>
-           Support our development and a <a href="">Venture Capital free service</a> <br/> & get early bird discounts on our upcoming premium subscriptions.
+           Support our development and a <a href="https://community.memex.garden/t/why-worldbrain-io-does-not-take-venture-capital/75" target="_blank">Venture Capital free service</a> <br/> & get early bird discounts on our upcoming premium subscriptions.
           </PricingInfoSubTitle>
      <SubscriptionOptionsContainer>
          <PricingInfoBox

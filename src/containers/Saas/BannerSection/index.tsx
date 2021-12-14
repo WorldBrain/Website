@@ -94,7 +94,7 @@ const BannerSection = ({
                 title={
                   <Heading
                     as="h1"
-                    content="Make sense of what you read online"
+                    content="Battle information overload. Collaboratively."
                     {...title}
                   />
                 }

@@ -29,13 +29,13 @@ const ShareSection = ({
           <FeatureBlock
             title={
               <Heading
-                content="Publish your research to the world"
+                content="Share years of research in seconds"
                 {...title}
               />
             }
             description={
               <Text
-                content= <p>Constantly asked for good resources about the topics your passionate about? Want to share your research or reading lists with your friends and followers? <br/><br/> Share spaces with websites, papers and notes with people, even if they don't have Memex installed. </p>
+                content= <p>Constantly asked for good resources about the topics your passionate about? Want to share your research or reading lists with your friends and followers? <br/><br/> Easily share lists of saved pages and annotations with a link and let others follow your updates, even if they don't have Memex installed. </p>
                 {...description}
               />
             }

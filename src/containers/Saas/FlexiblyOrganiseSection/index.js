@@ -35,7 +35,8 @@ const FlexiblyOrganiseSection = ({
               }
               description={
                 <Text
-                  content=<p>Save websites and PDFs with one click, and find them again in milliseconds. <br/>Search with any word you remember in title or text, the time frame, domain or tags.<br/><br/>You don't need to but you can organise what you find with tags and spaces.</p>
+                  content=<p>Save websites and PDFs with one click, and find them again in milliseconds. 
+                  <br/><br/>Search for what you saved with any word you remember in title or text, the time frame, domain or tags.</p>
                   {...description}
                 />
               }

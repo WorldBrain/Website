@@ -43,7 +43,7 @@ const StewardOwnershipSection = ({
               description={
                 <infoContainer>
                   <Text
-                    content=<p>WorldBrain.io is a <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>Steward Ownership company</a>. We have introduced a cap on investor returns to remove incentives for exploiting your attention and data to maximise investor profits.</p>
+                    content=<p>Our team and investors <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>receive capped returns</a> to remove profit-maximisation incentives that usually lead to exploitation of your attention and data, and unhealthy lock-ins.</p>
                     {...description}
                   />
                   <Button title="Learn More" onClick={()=> window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle}/>

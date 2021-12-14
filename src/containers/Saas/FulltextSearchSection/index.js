@@ -29,13 +29,15 @@ const FulltextSearchSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Collaboratively curate, annotate and discuss the web"
+                  content="Never start at Zero again. Collaborate & build on each other's research."
                   {...title}
                 />
               }
               description={
                 <Text
-                  content=<p>Running a reading group, need to do research or due diligence with your team, or have a shared reading list with your peers or fellow students? <br/><br/>Collaboratively curate lists of websites and annotations, and have discussions about specific sections in them.</p>
+                  content=<p>Need to do research with your team or have a shared reading list with your friends?
+                  <br/>You can ditch group chats or shared docs where links are lost in the stream and discussions are disconnected from the content.
+                  <br/><br/>Co-curate lists of valuable content. View and reply to highlights of your peers as you read. </p>
                   {...description}
                 />
               }
