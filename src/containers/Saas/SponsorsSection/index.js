@@ -10,6 +10,7 @@ import Container from 'common/src/components/UI/Container';
 import EuComissionLogo from '../../../img/logos/logo-eu.png';
 import LedgerLogo from '../../../img/logos/logo-ledger.png';
 import DigitalScienceLogo from '../../../img/logos/logo-digitalscience.png';
+import GrantforthewebLogo from '../../../img/logos/logo-grantfortheweb.svg';
 import MozillaLogo from '../../../img/logos/logo-mozilla.svg';
 import { SponsorsWrapper, SubText } from './sponsorsSection.style';
 
@@ -28,8 +29,8 @@ const SponsorsSection = ({
     <SponsorsWrapper id="sponsorsSection">
       <Container {...containerBox}>
         <Box>
-          <Heading 
-            as="h5" 
+          <Heading
+            as="h5"
             content="Supported by"
             {...sectionTitle}
           />
@@ -43,10 +44,13 @@ const SponsorsSection = ({
             <Image {...image} src={LedgerLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
           <Link href="https://foundation.mozilla.org/en" target="_blank">
-          <Image {...image} src={MozillaLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+            <Image {...image} src={MozillaLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
           <Link href="https://www.digital-science.com" target="_blank">
-          <Image {...image} src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+            <Image {...image} src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
+          </Link>
+          <Link href="https://www.grantfortheweb.org" target="_blank">
+            <Image {...image} src={GrantforthewebLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
           </Link>
         </Box>
         <Text className="sub-text" content="This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268" {...text} />
@@ -96,7 +100,7 @@ SponsorsSection.defaultProps = {
   },
   image: {
     width: '150px',
-    mt: ['20px', '20px' , 0, 0]
+    mt: ['20px', '20px', 0, 0]
   }
 };
 

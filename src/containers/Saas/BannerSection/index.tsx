@@ -11,7 +11,7 @@ import { detect } from 'detect-browser';
 import BannerWrapper, {
   BannerObject,
   BrowserIcons,
-  View, 
+  View,
 } from './bannerSection.style';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
@@ -79,9 +79,9 @@ const BannerSection = ({
       <BrowserIcons>
         <Image {...browserImage} onClick={downloadChrome} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
         <Image {...browserImage} onClick={downloadFirefox} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
-        <Image {...browserImage} onClick={downloadChrome} src={BraveIcon} className="browser-icon" alt="Brave logo"/>
-        <Image {...browserImage} onClick={downloadIOS} src={AppleIcon} className="browser-icon" alt="Brave logo"/>
-        <Image {...browserImage} onClick={downloadAndroid} src={AndroidIcon} className="browser-icon" alt="Brave logo"/>
+        <Image {...browserImage} onClick={downloadChrome} src={BraveIcon} className="browser-icon" alt="Brave logo" />
+        <Image {...browserImage} onClick={downloadIOS} src={AppleIcon} className="browser-icon" alt="Brave logo" />
+        <Image {...browserImage} onClick={downloadAndroid} src={AndroidIcon} className="browser-icon" alt="Brave logo" />
       </BrowserIcons>
     </Fragment>
   );
@@ -90,27 +90,27 @@ const BannerSection = ({
     <BannerWrapper id="banner_section">
       <View className="sectionBox">
         <View className="textBox">
-              <FeatureBlock
-                title={
-                  <Heading
-                    as="h1"
-                    content="Battle information overload. Collaboratively."
-                    {...title}
-                  />
-                }
-                description={
-                  <Text
-                    content="Curate, annotate and discuss the web. As individuals, teams and communities."
-                    {...description}
-                  />
-                }
-                button={<ButtonGroup />}
+          <FeatureBlock
+            title={
+              <Heading
+                as="h1"
+                content="Go down the rabbit hole. Together."
+                {...title}
               />
+            }
+            description={
+              <Text
+                content=<p>Curate, annotate and discuss the most valuable content and ideas. <br/>As individuals, teams and communities.</p>
+                {...description}
+          />
+            }
+          button={<ButtonGroup />}
+          />
         </View>
         <BannerObject>
-            <div className="objectWrapper">
-                <Image src={BannerObject2} alt="Screenshot of the dashboard page"/>
-            </div>
+          <div className="objectWrapper">
+            <Image src={BannerObject2} alt="Screenshot of the dashboard page" />
+          </div>
         </BannerObject>
       </View>
     </BannerWrapper>

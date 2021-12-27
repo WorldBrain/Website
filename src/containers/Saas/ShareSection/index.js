@@ -9,14 +9,14 @@ import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
-import ShareSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup} from './share.style';
+import ShareSectionWrapper, { SectionObject, View, PrimaryButton, SecondaryButton, ButtonGroup } from './share.style';
 
 import ImageOne from '../../../img/publish.png';
 import browserImg from '../../../img/browser.png';
 
 const ShareSection = ({
   title,
-  description, 
+  description,
   textArea,
   imageWrapper,
   sectionWrapper,
@@ -35,20 +35,22 @@ const ShareSection = ({
             }
             description={
               <Text
-                content= <p>Constantly asked for good resources about the topics your passionate about? Want to share your research or reading lists with your friends and followers? <br/><br/> Easily share lists of saved pages and annotations with a link and let others follow your updates, even if they don't have Memex installed. </p>
+                content= <p>Want to share your research or reading lists with your friends, followers and clients? <br/><br/> 
+                Share <a href="https://memex.social/c/oiLz5UIXw9JXermqZmXW" target="_blank">spaces</a>, annotated <a href="https://memex.social/p/lfuD8KIDyvUsIN61DsGM" target="_blank">pages</a> and individual <a href="https://memex.social/a/YVTUgrUcAiK7cAjjllis" target="_blank">annotations</a> with just a link.<br/>
+                Your peers don’t need Memex installed to view or reply to your notes.</p>
                 {...description}
-              />
+          />
             }
           />
         </Box>
         <SectionObject>
-            <Card className="objectWrapper" {...imageWrapper}>
-              <Card className="dashboardWrapper">
-                <Image src={browserImg} className="browser"/>
-                <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
-              </Card>
+          <Card className="objectWrapper" {...imageWrapper}>
+            <Card className="dashboardWrapper">
+              <Image src={browserImg} className="browser" />
+              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
-         </SectionObject>
+          </Card>
+        </SectionObject>
       </View>
     </ShareSectionWrapper>
   );
@@ -67,7 +69,7 @@ ShareSection.defaultProps = {
     pr: [30, 30, 30],
   },
   sectionWrapper: {
-      maxWidth: 1000,
+    maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',

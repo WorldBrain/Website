@@ -27,30 +27,30 @@ const StewardOwnershipSection = ({
   return (
     <StewardOwnershipSectionWrapper id="StewardOwnershipSection">
       <View {...sectionWrapper} className="sectionBox">
-          <SectionObject>
-            <FloatingImage className="floatingImage">
-                <Image src={privacyImage}/>
-            </FloatingImage>
-          </SectionObject>
-          <Box {...textArea}>
-            <FeatureBlock
-              title={
-                <Heading
-                  content="'Venture Capital'-free tools that protect your data & attention"
-                  {...title}
-                />
-              }
-              description={
-                <infoContainer>
-                  <Text
-                    content=<p>Our team and investors <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>receive capped returns</a> to remove profit-maximisation incentives that usually lead to exploitation of your attention and data, and unhealthy lock-ins.</p>
-                    {...description}
+        <SectionObject>
+          <FloatingImage className="floatingImage">
+            <Image src={privacyImage} />
+          </FloatingImage>
+        </SectionObject>
+        <Box {...textArea}>
+          <FeatureBlock
+            title={
+              <Heading
+                content="Built without Venture Capital"
+                {...title}
+              />
+            }
+            description={
+              <infoContainer>
+                <Text
+                  content=<p>Memex can't be sold, and our team and investors <a target='_blank' href='https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75'>receive capped profits.</a><br /><br />We do this to remove profit-maximisation incentives that usually lead to exploitation of your attention and data, and unhealthy lock-ins.</p>
+                {...description}
                   />
-                  <Button title="Learn More" onClick={()=> window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle}/>
-                </infoContainer>
-              }
-            />
-          </Box>
+                <Button title="Learn More" onClick={() => window.open("https://community.worldbrain.io/t/why-worldbrain-io-does-not-take-venture-capital/75", "_blank")} {...buttonStyle} />
+              </infoContainer>
+            }
+          />
+        </Box>
       </View>
     </StewardOwnershipSectionWrapper>
   );
@@ -69,7 +69,7 @@ StewardOwnershipSection.defaultProps = {
     pr: [0, 0, 0],
   },
   sectionWrapper: {
-      maxWidth: 1000,
+    maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',

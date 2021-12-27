@@ -25,28 +25,27 @@ const FulltextSearchSection = ({
   return (
     <FulltextSearchSectionWrapper id="fullTextSearchSection">
       <View className="sectionBox">
-          <Box {...textArea}>
-            <FeatureBlock
-              title={
-                <Heading
-                  content="Never start at Zero again. Collaborate & build on each other's research."
-                  {...title}
-                />
-              }
-              description={
+        <Box {...textArea}>
+          <FeatureBlock
+            title={
+              <Heading
+                content=<p>Never start at Zero again. <br/> Build on each other's research.</p>
+                {...title}
+          />
+            }
+          description={
                 <Text
                   content=<p>Need to do research with your team or have a shared reading list with your friends?
-                  <br/>You can ditch group chats or shared docs where links are lost in the stream and discussions are disconnected from the content.
-                  <br/><br/>Co-curate lists of valuable content. View and reply to highlights of your peers as you read. </p>
+                  <br/><br/>Collaboratively collect content into spaces where discussions stay linked to the content. No more having to hunt for valuable comments lost in chat logs, email threads or documents.</p>
                   {...description}
-                />
+          />
               }
             />
-          </Box>
+        </Box>
         <SectionObject>
           <Card className="objectWrapper" {...imageWrapper}>
             <Card className="dashboardWrapper">
-              <Image src={browserImg} className="browser"/>
+              <Image src={browserImg} className="browser" />
               <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
           </Card>
@@ -69,7 +68,7 @@ FulltextSearchSection.defaultProps = {
     pr: [60, 60, 60],
   },
   sectionWrapper: {
-      maxWidth: 1000,
+    maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',

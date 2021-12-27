@@ -25,27 +25,27 @@ const FlexiblyOrganiseSection = ({
   return (
     <FlexiblyOrganiseSectionWrapper id="tagsSection">
       <View {...sectionWrapper} className="sectionBox">
-          <Box {...textArea}>
-            <FeatureBlock
-              title={
-                <Heading
-                  content="Instantly save & recover content. Without upfront organisation."
-                  {...title}
-                />
-              }
-              description={
+        <Box {...textArea}>
+          <FeatureBlock
+            title={
+              <Heading
+                content=<p>Effortlessly find bookmarks again without organising anything.</p>
+                {...title}
+          />
+            }
+          description={
                 <Text
-                  content=<p>Save websites and PDFs with one click, and find them again in milliseconds. 
-                  <br/><br/>Search for what you saved with any word you remember in title or text, the time frame, domain or tags.</p>
+                  content=<p>Save websites and PDFs with one click. 
+                  <br/><br/>Recover everything in milliseconds. Search with any words you remember from title or text, the time frame or domain.</p>
                   {...description}
-                />
+          />
               }
             />
-          </Box>
+        </Box>
         <SectionObject>
           <Card className="objectWrapper" {...imageWrapper}>
             <Card className="dashboardWrapper">
-              <Image src={browserImg} className="browser"/>
+              <Image src={browserImg} className="browser" />
               <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
           </Card>
@@ -69,7 +69,7 @@ FlexiblyOrganiseSection.defaultProps = {
     pr: [30, 30, 50],
   },
   sectionWrapper: {
-      maxWidth: 1000,
+    maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',

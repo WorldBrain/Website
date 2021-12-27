@@ -13,14 +13,16 @@ import AnnotationsSectionWrapper, { SectionObject, View } from './annotations.st
 
 import ImageOne from '../../../img/annotate.png';
 import browserImg from '../../../img/browser.png';
+import { styles } from 'reusecore/node_modules/styled-system';
 
 const AnnotationsSection = ({
   title,
-  description, 
+  description,
   textArea,
   imageWrapper,
   sectionWrapper,
   btnStyle,
+  disclaimer,
 }) => {
   return (
     <AnnotationsSectionWrapper id="annotationsSection">
@@ -29,27 +31,27 @@ const AnnotationsSection = ({
           <FeatureBlock
             title={
               <Heading
-                content="Capture your thoughts without context switches"
+                content="Declutter your notes about the things you read"
                 {...title}
               />
             }
             description={
               <Text
-                content=<p>No more copy-pasting important sections into your scattered notes. <br/><br/>Highlight & annotate websites on all your devices.</p>
-                {...description}
-              />
+                content=<p>No more copy-pasting important sections into your scattered notes. <br/><br/>Highlight & annotate websites & PDFs (even locally stored PDFs) on all your devices.*<br/><br/><span style={{fontSize: 14 + 'px', color: '#a0a0a0'}}>*PDF annotations only work on desktop so far.</span></p>
+        {...description}
+          />
             }
           />
         </Box>
         <SectionObject>
-            <Card className="objectWrapper" {...imageWrapper}>
-              <Card className="dashboardWrapper">
-                <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
-              </Card>
+          <Card className="objectWrapper" {...imageWrapper}>
+            <Card className="dashboardWrapper">
+              <Image src={ImageOne} className="banner-img" alt="Gif showing someone use asearch bar to find content" />
             </Card>
-         </SectionObject>
+          </Card>
+        </SectionObject>
       </View>
-    </AnnotationsSectionWrapper>
+    </AnnotationsSectionWrapper >
   );
 };
 
@@ -66,7 +68,7 @@ AnnotationsSection.defaultProps = {
     pr: [30, 30, 30],
   },
   sectionWrapper: {
-      maxWidth: 1000,
+    maxWidth: 1000,
   },
   imageWrapper: {
     boxShadow: 'none',
@@ -95,6 +97,9 @@ AnnotationsSection.defaultProps = {
     pl: '22px',
     pr: '22px',
     colors: 'primaryWithBg',
+  },
+  disclaimer: {
+    fontSize: '12px',
   },
 };
 
