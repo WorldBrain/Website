@@ -6,7 +6,7 @@ import Link from 'reusecore/src/elements/Link';
 import Box from 'reusecore/src/elements/Box';
 import Heading from 'reusecore/src/elements/Heading';
 import Image from 'reusecore/src/elements/Image';
-import {SubText, Header2, MainHeader} from './tutorials.style';
+import { SubText, Header2, MainHeader } from './tutorials.style';
 import EuComissionLogo from '../../img/logos/logo-eu.png';
 import LedgerLogo from '../../img/logos/logo-ledger.png';
 import DigitalScienceLogo from '../../img/logos/logo-digitalscience.png';
@@ -27,7 +27,7 @@ export default class TutorialsPage extends Page {
   render() {
     return (
       <DefaultPageLayout pageTitle="Tutorials">
-        <NotionFrame allow="clipboard-read; clipboard-write" src="https://tutorials.memex.garden/"/>
+        <NotionFrame allow="clipboard-read; clipboard-write" src="https://tutorials.memex.garden/tutorials" />
         {/*<Container>
 
           <MainHeader>Wall of Thanks 🙏 🎉 ⭐️</MainHeader>
@@ -53,7 +53,7 @@ export default class TutorialsPage extends Page {
               <Image height="50px" src={DigitalScienceLogo} className="banner-img" alt="A gif showing someone highlight content and add a note to it" />
             </Link>
           </Box>
-        </Container>*/}  
+        </Container>*/}
       </DefaultPageLayout>
     )
   }
