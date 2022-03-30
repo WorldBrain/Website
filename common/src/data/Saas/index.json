@@ -90,7 +90,7 @@
       "title": "About",
       "menuItems": [
         {
-          "url": "https://community.memex.social",
+          "url": "https://community.memex.garden",
           "text": "Community"
         }
       ]
@@ -122,7 +122,7 @@
     },
     {
       "label": "Community",
-      "path": "http://community.memex.social/",
+      "path": "http://community.memex.garden/",
       "offset": "70",
       "staticLink": true
     },
@@ -141,7 +141,7 @@
       "planId": "free",
       "buttonLabel": "Free Download",
       "url": "#",
-"subContent": "Make backups to your local hard drive, Google Drive or any cloud provider that syncs via a folder (e.g. Dropbox).",
+      "subContent": "Make backups to your local hard drive, Google Drive or any cloud provider that syncs via a folder (e.g. Dropbox).",
       "listItems": [
         {
           "content": "∞ Full-Text History Search"
