@@ -214,31 +214,31 @@ const PricingSection = ({
         Support our development and a <a href="https://community.memex.garden/t/why-worldbrain-io-does-not-take-venture-capital/75" target="_blank">Venture Capital free service</a> <br /> & get early bird discounts on our upcoming premium subscriptions.
       </PricingInfoSubTitle>
       <SubscriptionOptionsContainer>
-        <PricingInfoBox
+        {/* <PricingInfoBox
           onClick={SupportMonthly}
         >
           <PricingInfoAmountBox>
             <PricingInfoTitle>
-              Monthly Early Bird
+              Preorder Monthly
             </PricingInfoTitle>
             <PricingInfoAmount>
               $10
             </PricingInfoAmount>
             <PricingInfoBottom>
               <PricingInfoAmountSubtext>
-                get $15 credits / month
+                get $15 credits / month*
               </PricingInfoAmountSubtext>
               <PricingInfoDiscountPercent>
-                33% discount*
+                33% discount
               </PricingInfoDiscountPercent>
             </PricingInfoBottom>
           </PricingInfoAmountBox>
-        </PricingInfoBox>
+        </PricingInfoBox> */}
         <PricingInfoBox
           onClick={SupportOneTime} className="Support"
         >
           <PricingInfoTitle>
-            One-Time Early Bird
+            Early Bird Preorder
           </PricingInfoTitle>
           <PricingInfoAmountBox>
             <PricingInfoAmount>
@@ -246,17 +246,17 @@ const PricingSection = ({
             </PricingInfoAmount>
             <PricingInfoBottom>
               <PricingInfoAmountSubtext>
-                get $360 credits
+                get $360 credits*
               </PricingInfoAmountSubtext>
               <PricingInfoDiscountPercent>
-                58% discount*
+                58% discount
               </PricingInfoDiscountPercent>
             </PricingInfoBottom>
           </PricingInfoAmountBox>
         </PricingInfoBox>
       </SubscriptionOptionsContainer>
       <EarlyBirdDisclaimer>
-        * subscriptions will likely range from $5-$20/month.
+        * subscriptions will likely range from $5-$20/month once they launch.
         <PricingInfoButtonBox>
           <Button title="Learn More" onClick={learnMore} className="LearnMore" />
         </PricingInfoButtonBox>
