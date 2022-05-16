@@ -219,7 +219,7 @@ const PricingSection = ({
         >
           <PricingInfoAmountBox>
             <PricingInfoTitle>
-              Monthly Pre-order
+              Monthly Early Bird
             </PricingInfoTitle>
             <PricingInfoAmount>
               $10
@@ -238,7 +238,7 @@ const PricingSection = ({
           onClick={SupportOneTime} className="Support"
         >
           <PricingInfoTitle>
-            One-Time Pre-order
+            One-Time Early Bird
           </PricingInfoTitle>
           <PricingInfoAmountBox>
             <PricingInfoAmount>
@@ -256,6 +256,7 @@ const PricingSection = ({
         </PricingInfoBox>
       </SubscriptionOptionsContainer>
       <EarlyBirdDisclaimer>
+        * subscriptions will likely range from $5-$20/month.
         <PricingInfoButtonBox>
           <Button title="Learn More" onClick={learnMore} className="LearnMore" />
         </PricingInfoButtonBox>
