@@ -105,20 +105,20 @@ const onClickDownload = (e: Event) => {
 }
 
 const learnMore = () => {
-   if (window) {
-      window.open('https://links.memex.garden/announcements/back-to-beta', '_blank');
-   }
+  if (window) {
+    window.open('https://links.memex.garden/announcements/back-to-beta', '_blank');
+  }
 }
 
 const SupportOneTime = () => {
-   if (window) {
-      window.open('https://links.memex.garden/early-bird-one-time', '_blank');
-   }
+  if (window) {
+    window.open('https://links.memex.garden/early-bird-one-time', '_blank');
+  }
 }
 
 const SupportMonthly = () => {
   if (window) {
-     window.open('https://links.memex.garden/early-bird-monthly', '_blank');
+    window.open('https://links.memex.garden/early-bird-monthly', '_blank');
   }
 }
 
@@ -206,59 +206,58 @@ const PricingSection = ({
 
   return (
     <PricingWrapper>
-     <Text {...secText} />
-          <PricingBetaTitle>
-               Memex is in Beta & Free for now.  
-           </PricingBetaTitle>
-           <PricingInfoSubTitle>
-           Support our development and a <a href="https://community.memex.garden/t/why-worldbrain-io-does-not-take-venture-capital/75" target="_blank">Venture Capital free service</a> <br/> & get early bird discounts on our upcoming premium subscriptions.
-          </PricingInfoSubTitle>
-     <SubscriptionOptionsContainer>
-         <PricingInfoBox
+      <Text {...secText} />
+      <PricingBetaTitle>
+        Memex is in Beta & Free for now.
+      </PricingBetaTitle>
+      <PricingInfoSubTitle>
+        Support our development and a <a href="https://community.memex.garden/t/why-worldbrain-io-does-not-take-venture-capital/75" target="_blank">Venture Capital free service</a> <br /> & get early bird discounts on our upcoming premium subscriptions.
+      </PricingInfoSubTitle>
+      <SubscriptionOptionsContainer>
+        <PricingInfoBox
           onClick={SupportMonthly}
-         >
-           <PricingInfoAmountBox>
-              <PricingInfoTitle>
-                Monthly Early Bird
-              </PricingInfoTitle>
-             <PricingInfoAmount>
-               $10
-             </PricingInfoAmount>
-             <PricingInfoBottom>
-             <PricingInfoAmountSubtext>
-               get $15 credits / month
-             </PricingInfoAmountSubtext>
-             <PricingInfoDiscountPercent>
-                33% discount*
-             </PricingInfoDiscountPercent>
-             </PricingInfoBottom>
-           </PricingInfoAmountBox>
-         </PricingInfoBox>
-         <PricingInfoBox
-            onClick={SupportOneTime} className="Support"
-         >
+        >
+          <PricingInfoAmountBox>
             <PricingInfoTitle>
-              One-Time Early Bird
+              Monthly Pre-order
             </PricingInfoTitle>
-           <PricingInfoAmountBox>
-             <PricingInfoAmount>
-                $150
-             </PricingInfoAmount>
-             <PricingInfoBottom>
+            <PricingInfoAmount>
+              $10
+            </PricingInfoAmount>
+            <PricingInfoBottom>
               <PricingInfoAmountSubtext>
-                  get $360 credits
+                get $15 credits / month
               </PricingInfoAmountSubtext>
-                <PricingInfoDiscountPercent>
-                    58% discount*
-                </PricingInfoDiscountPercent>
-             </PricingInfoBottom>
-           </PricingInfoAmountBox>
-         </PricingInfoBox>
+              <PricingInfoDiscountPercent>
+                33% discount*
+              </PricingInfoDiscountPercent>
+            </PricingInfoBottom>
+          </PricingInfoAmountBox>
+        </PricingInfoBox>
+        <PricingInfoBox
+          onClick={SupportOneTime} className="Support"
+        >
+          <PricingInfoTitle>
+            One-Time Pre-order
+          </PricingInfoTitle>
+          <PricingInfoAmountBox>
+            <PricingInfoAmount>
+              $150
+            </PricingInfoAmount>
+            <PricingInfoBottom>
+              <PricingInfoAmountSubtext>
+                get $360 credits
+              </PricingInfoAmountSubtext>
+              <PricingInfoDiscountPercent>
+                58% discount*
+              </PricingInfoDiscountPercent>
+            </PricingInfoBottom>
+          </PricingInfoAmountBox>
+        </PricingInfoBox>
       </SubscriptionOptionsContainer>
       <EarlyBirdDisclaimer>
-        *subscriptions will range from $5-$20/month and launch in early 2022
         <PricingInfoButtonBox>
-             <Button title="Learn More" onClick={learnMore} className="LearnMore"/>
+          <Button title="Learn More" onClick={learnMore} className="LearnMore" />
         </PricingInfoButtonBox>
       </EarlyBirdDisclaimer>
     </PricingWrapper>
@@ -358,7 +357,7 @@ PricingSection.defaultProps = {
     mb: 0,
     fontWeight: '300',
   },
-   moneybackTextSmall: {
+  moneybackTextSmall: {
     content: '14 days free trial. No Credit Card Required',
     fontSize: 13,
     alignSelf: 'center',
@@ -367,7 +366,7 @@ PricingSection.defaultProps = {
     textAlign: 'center',
     mt: 2,
   },
-   moneybackTextSmallLine2: {
+  moneybackTextSmallLine2: {
     content: 'No Credit Card Required',
     fontSize: 16,
     alignSelf: 'center',
