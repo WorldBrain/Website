@@ -238,7 +238,7 @@ const PricingSection = ({
           onClick={SupportOneTime} className="Support"
         >
           <PricingInfoTitle>
-            Early Bird Preorder
+            Preorder Subscription
           </PricingInfoTitle>
           <PricingInfoAmountBox>
             <PricingInfoAmount>
@@ -246,10 +246,10 @@ const PricingSection = ({
             </PricingInfoAmount>
             <PricingInfoBottom>
               <PricingInfoAmountSubtext>
-                get $360 credits*
+                for $360 subscription credits
               </PricingInfoAmountSubtext>
               <PricingInfoDiscountPercent>
-                58% discount
+                58% discount - Up to 6 years*
               </PricingInfoDiscountPercent>
             </PricingInfoBottom>
           </PricingInfoAmountBox>
