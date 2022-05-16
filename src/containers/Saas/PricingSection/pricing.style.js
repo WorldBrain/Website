@@ -5,7 +5,7 @@ import { css } from 'styled-components'
 import checkMark from '../../../img/check.svg';
 
 
-const PricingWrapper= styled.section`
+const PricingWrapper = styled.section`
   padding: 100px 0 200px 0;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const PricingInfoBox = styled.div`
     padding: 50px;
     border-radius: 5px;
     cursor: pointer;
-    width: 380px;
+    width: 510px;
 
     &:hover {
         background: #f0f0f080;
@@ -92,6 +92,7 @@ const PricingInfoAmountSubtext = styled.span`
     margin: 0px 0px 0px 0;
     font-size: 20px;
     color: #757582;
+    text-align: center;
 `
 
 
@@ -833,65 +834,65 @@ const ColWide = styled.div`
 `
 
 export {
-  PricingHead,
-  BetaButton,
-  PricingPrice,
-  PricingButton,
-  PricingList,
-  ListItem,
-  ColWide,
-  SwitchWrapper,
-  PricingButtonWrapper,
-  DeviceSelection,
-  UpperSection,
-  PricingWrapper,
-  SubscriptionOptionsContainer,
-  PriceInputBox,
-  PriceText,
-  PriceBox,
-  ColExplorer,
-  ColThinker,
-  ColPioneer,
-  Line,
-  PricingGrid,
-  PricingGridWide,
-  PricingGridPricing,
-  PricingGridCheck,
-  PricingGridPlanTitle,
-  PricingGridFeatureTitle,
-  PricingGridFeatureDescription,
-  PricingGridPlanSpacer,
-  PricingGridButton,
-  PricingPlanTitle,
-  PricingPlanItem,
-  PlanTitle,
-  PlanName,
-  PlanBox,
-  LoginTitle,
-  LoginButton,
-  WhiteSpacer30,
-  PricingHeadTitle,
-  PricingBox,
-  TimeButtonLeft,
-  TimeButtonRight,
-  TimeButtonBox,
-  LinkSpan,
-  AdditionalText,
-  PricingGridCheckWithText,
-  UpgradeInfo,
-  TrialTag,
-  PricingInfoTitle,
-  PricingInfoAmount,
-  PricingInfoButtonBox,
-  PricingInfoButtonLearnMore,
-  PricingInfoButtonUpgrade,
-  PricingInfoBox,
-  PricingInfoAmountSubtext,
-  PricingInfoAmountBox,
-  PricingInfoSubTitle,
-  EarlyBirdDisclaimer,
-  PricingInfoBottom,
-  PricingInfoDiscountPercent,
-  PricingBetaTitle,
+    PricingHead,
+    BetaButton,
+    PricingPrice,
+    PricingButton,
+    PricingList,
+    ListItem,
+    ColWide,
+    SwitchWrapper,
+    PricingButtonWrapper,
+    DeviceSelection,
+    UpperSection,
+    PricingWrapper,
+    SubscriptionOptionsContainer,
+    PriceInputBox,
+    PriceText,
+    PriceBox,
+    ColExplorer,
+    ColThinker,
+    ColPioneer,
+    Line,
+    PricingGrid,
+    PricingGridWide,
+    PricingGridPricing,
+    PricingGridCheck,
+    PricingGridPlanTitle,
+    PricingGridFeatureTitle,
+    PricingGridFeatureDescription,
+    PricingGridPlanSpacer,
+    PricingGridButton,
+    PricingPlanTitle,
+    PricingPlanItem,
+    PlanTitle,
+    PlanName,
+    PlanBox,
+    LoginTitle,
+    LoginButton,
+    WhiteSpacer30,
+    PricingHeadTitle,
+    PricingBox,
+    TimeButtonLeft,
+    TimeButtonRight,
+    TimeButtonBox,
+    LinkSpan,
+    AdditionalText,
+    PricingGridCheckWithText,
+    UpgradeInfo,
+    TrialTag,
+    PricingInfoTitle,
+    PricingInfoAmount,
+    PricingInfoButtonBox,
+    PricingInfoButtonLearnMore,
+    PricingInfoButtonUpgrade,
+    PricingInfoBox,
+    PricingInfoAmountSubtext,
+    PricingInfoAmountBox,
+    PricingInfoSubTitle,
+    EarlyBirdDisclaimer,
+    PricingInfoBottom,
+    PricingInfoDiscountPercent,
+    PricingBetaTitle,
 };
 export default PricingTable;

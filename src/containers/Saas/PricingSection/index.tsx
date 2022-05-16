@@ -257,9 +257,9 @@ const PricingSection = ({
       </SubscriptionOptionsContainer>
       <EarlyBirdDisclaimer>
         * subscriptions will likely range from $5-$20/month once they launch.
-        <PricingInfoButtonBox>
+        {/* <PricingInfoButtonBox>
           <Button title="Learn More" onClick={learnMore} className="LearnMore" />
-        </PricingInfoButtonBox>
+        </PricingInfoButtonBox>*/}
       </EarlyBirdDisclaimer>
     </PricingWrapper>
   );
