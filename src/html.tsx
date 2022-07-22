@@ -13,6 +13,10 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         {props.headComponents}
+        <script
+          async
+          src="https://js.stripe.com/v3/pricing-table.js">
+        </script>
       </head>
       <body {...props.bodyAttributes}>
         <noscript key="noscript" id="gatsby-noscript">

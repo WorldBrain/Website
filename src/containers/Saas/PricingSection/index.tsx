@@ -9,6 +9,7 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Container from 'common/src/components/UI/Container';
+import PricingPage from './PricingPage';
 import { detect } from 'detect-browser';
 // import Input from 'reusecore/src/elements/Input';
 
@@ -213,7 +214,9 @@ const PricingSection = ({
       <PricingInfoSubTitle>
         Support our development and a <a href="https://community.memex.garden/t/why-worldbrain-io-does-not-take-venture-capital/75" target="_blank">Venture Capital free service</a> <br /> & get early bird discounts on our upcoming premium subscriptions.
       </PricingInfoSubTitle>
+      <PricingPage />
       <SubscriptionOptionsContainer>
+
         {/* <PricingInfoBox
           onClick={SupportMonthly}
         >
