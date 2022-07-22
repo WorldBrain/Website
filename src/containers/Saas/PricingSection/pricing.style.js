@@ -348,7 +348,7 @@ const SubscriptionOptionsContainer = styled.div`
 const PricingTable = styled.div`
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -798,7 +798,7 @@ const TrialTag = styled.div`
 
 const PriceInputBox = styled.select`
     display: inline-block;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     margin: 0 2px 0 5px;
 `

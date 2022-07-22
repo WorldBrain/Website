@@ -3,7 +3,7 @@ import { themeGet } from 'styled-system';
 
 export const GlobalStyle = createGlobalStyle`
   body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: ${themeGet('colors.textColor')};
   }
 
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   a {
@@ -143,10 +143,11 @@ export const ContentWrapper = styled.div`
   /* for pages with minimal content we want to footer to still be at the bottom */
   /* calc page height as total minus footer and header height */
   min-height: calc(100vh - 502px);
+  background: #15202B;
 
   .sticky-nav-active {
     .hosting_navbar {
-      background: #fff;
+      background: #15202B;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
       padding: 10px 0;
     }

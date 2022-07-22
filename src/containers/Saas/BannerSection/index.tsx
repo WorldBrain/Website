@@ -13,6 +13,7 @@ import BannerWrapper, {
   BrowserIcons,
   View,
 } from './bannerSection.style';
+import styled from 'styled-components';
 
 import BannerObject1 from 'common/src/assets/image/saas/banner/bannerObject1.png';
 import BannerObject2 from '../../../img/bannerImg.png';
@@ -21,6 +22,45 @@ import FirefoxIcon from '../../../img/logos/logo-firefox.svg';
 import BraveIcon from '../../../img/logos/logo-brave.svg';
 import AppleIcon from '../../../img/logos/logo-apple.svg';
 import AndroidIcon from '../../../img/logos/logo-android.svg';
+import styledComponents from 'styled-components';
+import ReactPlayer from 'react-player'
+
+const DownloadButton = styled.div`
+  background-color: #347AE2;
+  color: #F7F9F9;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  cursor: pointer;
+`
+
+const Spacer = styled.div<{ space: string }>`
+  height: ${props => props.space};
+`
+
+const BannerContainer = styled.div`
+border-radius: 30px;
+overflow: hidden;
+  max-width: 1000px;
+  height: auto;
+  min-height: 600px;
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+      max-width: 100%;
+      height: auto;
+
+      & img {
+        max-width: 100%;
+        margin-top: 0px;
+      }
+`
 
 const onClickDownload = (e: Event) => {
   e.preventDefault();
@@ -75,7 +115,9 @@ const BannerSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Download" onClick={onClickDownload} {...btnStyle} />
+      <Spacer space={"20px"} />
+      <DownloadButton onClick={onClickDownload}>Download</DownloadButton>
+      <Spacer space={"30px"} />
       <BrowserIcons>
         <Image {...browserImage} onClick={downloadChrome} src={ChromeIcon} className="browser-icon" alt="Chrome logo" />
         <Image {...browserImage} onClick={downloadFirefox} src={FirefoxIcon} className="browser-icon" alt="Firefox logo" />
@@ -94,13 +136,13 @@ const BannerSection = ({
             title={
               <Heading
                 as="h1"
-                content="Go down the rabbit hole. Together."
+                content="A reader made for collaboration."
                 {...title}
               />
             }
             description={
               <Text
-                content=<p>Curate, annotate and discuss the most valuable content and ideas. <br/>As individuals, teams and communities.</p>
+                content=<h2>Curate, annotate and discuss the most valuable content and ideas. <br/>By yourself, or with your team and community.</h2>
                 {...description}
           />
             }
@@ -108,14 +150,32 @@ const BannerSection = ({
           />
         </View>
         <BannerObject>
-          <div className="objectWrapper">
-            <Image src={BannerObject2} alt="Screenshot of the dashboard page" />
-          </div>
+          <BannerContainer>
+            <ReactPlayer url='https://share.descript.com/view/lid3wU41vUp'
+              light={BannerObject2}
+              autoplay
+              controls={true}
+              preload={false}
+              style={ReactPlayerStyles}
+              width="1280px"
+              height="640px"
+            />
+          </BannerContainer>
         </BannerObject>
       </View>
     </BannerWrapper>
   );
 };
+
+const ReactPlayerStyles = {
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
+  width: "1280px",
+  height: "640px",
+  maxWidth: "90%",
+  borderRadius: "15px",
+  overflow: "hidden",
+}
 
 BannerSection.propTypes = {
   title: PropTypes.object,
@@ -169,7 +229,8 @@ BannerSection.defaultProps = {
   btnStyle: {
     minWidth: ['100%', '100%', '120px', '265px'],
     fontSize: ['1.125rem', '1.125rem', '1rem', '1.125rem'],
-    colors: 'primaryWithBg',
+    colors: '#F7F9F9',
+    backgroundColor: '#347AE2',
   },
 };
 

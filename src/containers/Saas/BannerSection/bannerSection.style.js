@@ -20,13 +20,25 @@ const BrowserIcons = styled.div`
   }
 `;
 
-const View = styled.div `
+const View = styled.div`
     display: flex;
     align-items: center;
     width: 90%;
     max-width: 1800px
     justify-content: center;
     flex-direction: column;
+    
+    
+    h1 {
+      color: #4285F4;
+      font-size: 40px;
+    }
+    
+    h2 {
+        color: #F7F9F9;
+        font-size: 20px;
+        font-weight: 300;
+    }
 
     .textBox {
         width: 60%;
@@ -54,6 +66,7 @@ const View = styled.div `
 
       & h1 {
         margin-bottom: 10px;
+        color: #4285F4;
       }
 
       .textBox {
@@ -63,6 +76,7 @@ const View = styled.div `
 
       & h2 {
         font-size: 1.5rem;
+        color: #96A0B5;
       }
     }
 
@@ -88,7 +102,6 @@ const BannerWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #e0e0e0;
   padding-bottom: 100px;
 
   @media (max-width: 990px) {
@@ -167,6 +180,7 @@ const BannerObject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 576px) {
     width: 100%;
