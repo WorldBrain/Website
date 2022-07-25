@@ -57,13 +57,15 @@ export const GlobalStyle = createGlobalStyle`
         }
         li{
           margin-bottom: 35px;
+          padding: 5px 10px;
+          color: #347AE2;
           @media (max-width: 767px) {
             margin-bottom: 25px;
           }
           a{
             font-size: 20px;
             font-weight: 400;
-            color: #343d48;
+            color: #347AE2;
             text-decoration: none;
             position: relative;
             transition: 0.15s ease-in-out;
@@ -72,6 +74,8 @@ export const GlobalStyle = createGlobalStyle`
             }
             &:hover {
               color: ${themeGet('colors.primary')};
+              background: #fff003;
+
             }
             &:before{
               content: '';
@@ -150,6 +154,7 @@ export const ContentWrapper = styled.div`
       background: #15202B;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
       padding: 10px 0;
+      display: flex;
     }
   }
 
@@ -160,12 +165,14 @@ export const ContentWrapper = styled.div`
     width: 100%;
     transition: 0.35s ease-in-out;
     padding: 30px 0;
+    color: #347AE2;
     .main_menu {
       margin-right: 40px;
+      display: flex;
+      grid-gap: 20px;
       li {
         display: inline-block;
-        padding-left: 13px;
-        padding-right: 13px;
+        color: #347AE2;
         margin-bottom: 0;
         &:first-child {
           padding-left: 0;
@@ -179,14 +186,16 @@ export const ContentWrapper = styled.div`
           }
         }
         a {
-          color: ${themeGet('colors.headingColor')};
           text-decoration: none;
-          padding: 5px;
+          padding: 10px 20px;
+          border-radius: 5px;
+          color: #347AE2;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 500;
           transition: 0.15s ease-in-out;
           &:hover {
-            color: ${themeGet('colors.secondary')};
+            color: #F7F9F9;
+            background: #fffff005;
           }
         }
       }

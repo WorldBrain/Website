@@ -6,8 +6,19 @@ import { detect } from 'detect-browser';
 import { DrawerContext } from '../../contexts/DrawerContext';
 import Button from 'reusecore/src/elements/Button';
 import Link from 'reusecore/src/elements/Link';
+import styled from 'styled-components'
+import Image from 'reusecore/src/elements/Image';
 
 import { HoverMenu } from './scrollSpyMenu.style';
+
+import TwitterIconImage from '../../../../src/img/logos/twitterIcon.svg';
+
+const TwitterIcon = styled(Image)`
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+`
 
 const onClickDownload = (e: Event) => {
   e.preventDefault();
@@ -79,26 +90,27 @@ const ScrollSpyMenu = ({ user, btnStyle, className, menuItems, drawerClose, ...p
           {menu.staticLink ? (
             <a href={menu.path}>{menu.label}</a>
           ) : (
-              <>
-                {drawerClose ? (
-                  <AnchorLink
-                    href={menu.path}
-                    offset={menu.offset}
-                    onClick={toggleDrawer}
-                  >
-                    {menu.label}
-                  </AnchorLink>
-                ) : (
-                    <AnchorLink href={menu.path} offset={menu.offset}>
-                      {menu.label}
-                    </AnchorLink>
-                  )}
-              </>
-            )}
+            <>
+              {drawerClose ? (
+                <AnchorLink
+                  href={menu.path}
+                  offset={menu.offset}
+                  onClick={toggleDrawer}
+                >
+                  {menu.label}
+                </AnchorLink>
+              ) : (
+                <AnchorLink href={menu.path} offset={menu.offset}>
+                  {menu.label}
+                </AnchorLink>
+              )}
+            </>
+          )}
         </li>
       ))}
       <li>
-        <Button title="Download" onClick={onClickDownload} {...btnStyle} />
+        {/* <Button title="Download" onClick={onClickDownload} {...btnStyle} /> */}
+        <TwitterIcon onClick={() => window.open("https://twitter.com/memexgarden")} target="_blank" src={TwitterIconImage} />
       </li>
     </Scrollspy>
   );

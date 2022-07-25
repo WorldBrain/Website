@@ -32,6 +32,7 @@ const View = styled.div`
     h1 {
       color: #4285F4;
       font-size: 40px;
+      font-weight: 900;
     }
     
     h2 {

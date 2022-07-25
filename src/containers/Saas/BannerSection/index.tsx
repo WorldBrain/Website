@@ -142,7 +142,7 @@ const BannerSection = ({
             }
             description={
               <Text
-                content=<h2>Curate, annotate and discuss the most valuable content and ideas. <br/>By yourself, or with your team and community.</h2>
+                content=<h2>Organise, annotate and discuss the most valuable content and ideas on the web. <br/>By yourself, or with your team and community.</h2>
                 {...description}
           />
             }
@@ -151,7 +151,7 @@ const BannerSection = ({
         </View>
         <BannerObject>
           <BannerContainer>
-            <ReactPlayer url='https://share.descript.com/view/lid3wU41vUp'
+            <ReactPlayer url='https://youtu.be/MPgeMpGbma0'
               light={BannerObject2}
               autoplay
               controls={true}
@@ -172,6 +172,7 @@ const ReactPlayerStyles = {
   backgroundRepeat: "no-repeat",
   width: "1280px",
   height: "640px",
+  maxWidth: "90%",
   maxWidth: "90%",
   borderRadius: "15px",
   overflow: "hidden",

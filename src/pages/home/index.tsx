@@ -5,27 +5,36 @@ import { saasTheme } from 'common/src/theme/saas';
 import { ResetCSS } from 'common/src/assets/css/style';
 import { GlobalStyle, ContentWrapper } from '../../containers/Saas/saas.style';
 import Navbar from '../../containers/Saas/Navbar';
-import BannerSection from '../../containers/Saas/BannerSection';
-import FeatureSection from '../../containers/Saas/FeatureSection';
-import FulltextSearchSection from '../../containers/Saas/FulltextSearchSection';
-import Footer from '../../containers/Saas/Footer';
-import PricingSection from '../../containers/Saas/PricingSection';
-import ImportSection from '../../containers/Saas/ImportSection';
-import SponsorsSection from '../../containers/Saas/SponsorsSection';
+import BannerSection from '../../containers/Saas/BannerSection';;
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import FlexiblyOrganiseSection from '../../containers/Saas/FlexiblyOrganiseSection';
-import StoreLocalSection from '../../containers/Saas/StoreLocalSection';
-import StewardOwnershipSection from '../../containers/Saas/StewardOwnershipSection';
-import AnnotationsSection from '../../containers/Saas/AnnotationsSection';
-import ShareSection from '../../containers/Saas/ShareSection';
-import CopyPasterSection from '../../containers/Saas/CopyPasterSection';
-import QuoteLinkSection from '../../containers/Saas/QuoteLinkSection';
-import MobileSection from '../../containers/Saas/MobileSection';
-import CommunitySection from '../../containers/Saas/CommunitySection';
+import FeatureSectionContainer from '../../containers/Saas/FeatureSectionContainer'
+import FeatureSectionSeparator from '../../containers/Saas/FeatureSectionSeparator'
+import PricingSectionContainer from '../../containers/Saas/PricingSectionContainer'
 import View from 'reusecore/src/elements/Box';
-
 import Page from '../../components/page'
+import styled from 'styled-components'
 
+
+// Images
+import ImageOne from '../../img/search.png';
+import ContentTypeImage from '../../img/contentTypes.svg';
+import AnnotateAcrossDevices from '../../img/AnnotateAcrossDevices.svg';
+import OrganiseSpaces from '../../img/OrganiseSpaces.gif';
+import keyboardShortcuts from '../../img/keyboardShortcuts.svg';
+
+// Styles
+
+const FeatureSection = styled.div`
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  grid-gap: 200px;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0px;
+`
+
+// end Styles
 export default class HomePage extends Page {
   constructor(props) {
     super(props);
@@ -51,18 +60,37 @@ export default class HomePage extends Page {
               </DrawerProvider>
             </Sticky>
             <BannerSection />
-            <FlexiblyOrganiseSection />
-            <AnnotationsSection />
-            <FulltextSearchSection />
-            <ShareSection />
-            <QuoteLinkSection />
-            <StoreLocalSection />
-            <StewardOwnershipSection />
-            <ImportSection />
-            <View id="upgrade"/>
-            <PricingSection />
-            <SponsorsSection />
-            <Footer />
+            <FeatureSectionSeparator
+              heading={'Stay in the Flow of your research'}
+              description={'Designed to end context-switches.'}
+            />
+            <FeatureSection>
+              <FeatureSectionContainer
+                featureHeading={<span>Save anything with 1 click. <br /> Find it again in miliseconds.</span>}
+                featureDescription={<span>No need to organise things anymore in order to find them again.<br /> Search for any word you remember with our blazing fast full-text search.</span>}
+                featureImage={ContentTypeImage}
+              />
+              <FeatureSectionContainer
+                featureHeading={<span>Retain more without tedious copy-paste work.</span>}
+                featureDescription={<span>Highlight and annotate what you read, across all your devices</span>}
+                featureImage={AnnotateAcrossDevices}
+                flexDirection={'row-reverse'}
+              />
+              <FeatureSectionContainer
+                featureHeading={<span>Organise Content the way you need it.</span>}
+                featureDescription={<span>Add articles and annotations one or many Spaces. <br />They’re much like tags you can also share and co-curate.</span>}
+                featureImage={OrganiseSpaces}
+              />
+              <FeatureSectionContainer
+                featureHeading={<span>Keyboard Shortcuts <br /> for everything.</span>}
+                featureDescription={<span>Enjoy swift saving, annotating, organising & searching  with customisable keyboard shortcuts.</span>}
+                featureImage={keyboardShortcuts}
+                flexDirection={'row-reverse'}
+              />
+            </FeatureSection>
+
+            <View id="upgrade" />
+            <PricingSectionContainer />
           </ContentWrapper>
         </Fragment>
       </ThemeProvider>

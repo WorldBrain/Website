@@ -17,6 +17,11 @@ const HoverMenu = styled.li`
         margin-left: 0px;
     }
 
+    & ul {
+        display: flex;
+        grid-gap: 30px;
+    }
+
     & li {
         white-space: nowrap;
         padding-left: 0px !important;
