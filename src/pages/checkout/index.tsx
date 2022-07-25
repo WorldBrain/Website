@@ -2,7 +2,7 @@ import React from 'react'
 import DefaultPageLayout from '../../components/layout/default-page-layout'
 import Page from '../../components/page'
 import styled from 'styled-components';
-import PricingPage from '../../containers/Saas/PricingSection/PricingPage';
+import PricingPage from '../../containers/Saas/PricingSectionContainer/PricingPage';
 
 
 const PricingPageBox = styled.div`
